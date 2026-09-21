@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-21T14:46:44.536029+00:00",
+  "generated_at": "2026-09-21T15:18:24.132991+00:00",
   "current_season": "2026/27",
   "n_simulations": 10000,
   "league_avg_goals": 1.513,
@@ -8,9 +8,13 @@
       "team": "Hertha BSC",
       "current_points": 18,
       "current_gd": 10,
-      "avg_projected_position": 2.67,
-      "promotion_probability": 0.6075,
-      "champion_probability": 0.3846,
+      "matches_played": 6,
+      "wins": 6,
+      "draws": 0,
+      "losses": 0,
+      "avg_projected_position": 2.66,
+      "promotion_probability": 0.606,
+      "champion_probability": 0.3826,
       "elo_rating": 1563.6,
       "attack_rating": 1.046,
       "defense_rating": 0.874
@@ -19,9 +23,13 @@
       "team": "1. FC Nürnberg",
       "current_points": 16,
       "current_gd": 10,
-      "avg_projected_position": 3.44,
-      "promotion_probability": 0.4544,
-      "champion_probability": 0.2364,
+      "matches_played": 6,
+      "wins": 5,
+      "draws": 1,
+      "losses": 0,
+      "avg_projected_position": 3.49,
+      "promotion_probability": 0.4522,
+      "champion_probability": 0.2416,
       "elo_rating": 1552.5,
       "attack_rating": 1.033,
       "defense_rating": 0.874
@@ -30,9 +38,13 @@
       "team": "VfL Wolfsburg",
       "current_points": 11,
       "current_gd": 7,
-      "avg_projected_position": 3.72,
-      "promotion_probability": 0.4004,
-      "champion_probability": 0.1977,
+      "matches_played": 6,
+      "wins": 3,
+      "draws": 2,
+      "losses": 1,
+      "avg_projected_position": 3.77,
+      "promotion_probability": 0.3968,
+      "champion_probability": 0.1847,
       "elo_rating": 1519.8,
       "attack_rating": 1.245,
       "defense_rating": 0.956
@@ -41,9 +53,13 @@
       "team": "1. FC Heidenheim 1846",
       "current_points": 13,
       "current_gd": 2,
-      "avg_projected_position": 5.69,
-      "promotion_probability": 0.1691,
-      "champion_probability": 0.061,
+      "matches_played": 6,
+      "wins": 4,
+      "draws": 1,
+      "losses": 1,
+      "avg_projected_position": 5.7,
+      "promotion_probability": 0.1708,
+      "champion_probability": 0.0642,
       "elo_rating": 1526.0,
       "attack_rating": 1.203,
       "defense_rating": 1.121
@@ -52,9 +68,13 @@
       "team": "1. FC Kaiserslautern",
       "current_points": 11,
       "current_gd": 2,
-      "avg_projected_position": 6.35,
-      "promotion_probability": 0.1245,
-      "champion_probability": 0.0486,
+      "matches_played": 6,
+      "wins": 3,
+      "draws": 2,
+      "losses": 1,
+      "avg_projected_position": 6.38,
+      "promotion_probability": 0.1223,
+      "champion_probability": 0.0444,
       "elo_rating": 1525.7,
       "attack_rating": 0.967,
       "defense_rating": 0.874
@@ -63,9 +83,13 @@
       "team": "Hannover 96",
       "current_points": 7,
       "current_gd": -2,
-      "avg_projected_position": 6.92,
-      "promotion_probability": 0.0945,
-      "champion_probability": 0.0322,
+      "matches_played": 6,
+      "wins": 2,
+      "draws": 1,
+      "losses": 3,
+      "avg_projected_position": 6.83,
+      "promotion_probability": 0.1022,
+      "champion_probability": 0.0358,
       "elo_rating": 1540.9,
       "attack_rating": 1.086,
       "defense_rating": 0.901
@@ -74,9 +98,13 @@
       "team": "Energie Cottbus",
       "current_points": 8,
       "current_gd": 1,
-      "avg_projected_position": 8.66,
-      "promotion_probability": 0.04,
-      "champion_probability": 0.0125,
+      "matches_played": 6,
+      "wins": 2,
+      "draws": 2,
+      "losses": 2,
+      "avg_projected_position": 8.63,
+      "promotion_probability": 0.043,
+      "champion_probability": 0.0142,
       "elo_rating": 1501.5,
       "attack_rating": 1.203,
       "defense_rating": 1.162
@@ -85,9 +113,13 @@
       "team": "1. FC Magdeburg",
       "current_points": 10,
       "current_gd": 2,
-      "avg_projected_position": 9.33,
-      "promotion_probability": 0.0272,
-      "champion_probability": 0.008,
+      "matches_played": 6,
+      "wins": 3,
+      "draws": 1,
+      "losses": 2,
+      "avg_projected_position": 9.26,
+      "promotion_probability": 0.0288,
+      "champion_probability": 0.0101,
       "elo_rating": 1493.4,
       "attack_rating": 1.033,
       "defense_rating": 1.086
@@ -96,9 +128,13 @@
       "team": "FC St. Pauli",
       "current_points": 7,
       "current_gd": 0,
+      "matches_played": 6,
+      "wins": 1,
+      "draws": 4,
+      "losses": 1,
       "avg_projected_position": 9.98,
-      "promotion_probability": 0.0212,
-      "champion_probability": 0.0046,
+      "promotion_probability": 0.0207,
+      "champion_probability": 0.0072,
       "elo_rating": 1533.1,
       "attack_rating": 0.956,
       "defense_rating": 0.956
@@ -107,9 +143,13 @@
       "team": "VfL Bochum",
       "current_points": 7,
       "current_gd": -1,
-      "avg_projected_position": 9.99,
-      "promotion_probability": 0.022,
-      "champion_probability": 0.0053,
+      "matches_played": 6,
+      "wins": 2,
+      "draws": 1,
+      "losses": 3,
+      "avg_projected_position": 10.04,
+      "promotion_probability": 0.0182,
+      "champion_probability": 0.0054,
       "elo_rating": 1491.1,
       "attack_rating": 0.914,
       "defense_rating": 0.901
@@ -118,9 +158,13 @@
       "team": "SV Darmstadt 98",
       "current_points": 4,
       "current_gd": -8,
-      "avg_projected_position": 10.82,
-      "promotion_probability": 0.0139,
-      "champion_probability": 0.003,
+      "matches_played": 6,
+      "wins": 1,
+      "draws": 1,
+      "losses": 4,
+      "avg_projected_position": 10.76,
+      "promotion_probability": 0.0171,
+      "champion_probability": 0.0044,
       "elo_rating": 1477.5,
       "attack_rating": 1.02,
       "defense_rating": 0.967
@@ -129,9 +173,13 @@
       "team": "DSC Arminia Bielefeld",
       "current_points": 5,
       "current_gd": -2,
-      "avg_projected_position": 11.07,
-      "promotion_probability": 0.0114,
-      "champion_probability": 0.0033,
+      "matches_played": 6,
+      "wins": 1,
+      "draws": 2,
+      "losses": 3,
+      "avg_projected_position": 11.05,
+      "promotion_probability": 0.0082,
+      "champion_probability": 0.0021,
       "elo_rating": 1466.8,
       "attack_rating": 1.033,
       "defense_rating": 1.033
@@ -140,8 +188,12 @@
       "team": "VfL Osnabrück",
       "current_points": 7,
       "current_gd": -3,
-      "avg_projected_position": 12.16,
-      "promotion_probability": 0.006,
+      "matches_played": 6,
+      "wins": 2,
+      "draws": 1,
+      "losses": 3,
+      "avg_projected_position": 12.21,
+      "promotion_probability": 0.0049,
       "champion_probability": 0.0013,
       "elo_rating": 1466.2,
       "attack_rating": 0.997,
@@ -151,9 +203,13 @@
       "team": "Dynamo Dresden",
       "current_points": 4,
       "current_gd": -6,
-      "avg_projected_position": 12.79,
-      "promotion_probability": 0.0043,
-      "champion_probability": 0.0009,
+      "matches_played": 6,
+      "wins": 1,
+      "draws": 1,
+      "losses": 4,
+      "avg_projected_position": 12.77,
+      "promotion_probability": 0.0041,
+      "champion_probability": 0.001,
       "elo_rating": 1465.6,
       "attack_rating": 1.02,
       "defense_rating": 1.086
@@ -162,9 +218,13 @@
       "team": "Holstein Kiel",
       "current_points": 4,
       "current_gd": -3,
-      "avg_projected_position": 13.33,
-      "promotion_probability": 0.0021,
-      "champion_probability": 0.0002,
+      "matches_played": 6,
+      "wins": 0,
+      "draws": 4,
+      "losses": 2,
+      "avg_projected_position": 13.32,
+      "promotion_probability": 0.0023,
+      "champion_probability": 0.0005,
       "elo_rating": 1480.7,
       "attack_rating": 0.874,
       "defense_rating": 0.967
@@ -173,9 +233,13 @@
       "team": "Karlsruher SC",
       "current_points": 5,
       "current_gd": -6,
-      "avg_projected_position": 14.32,
-      "promotion_probability": 0.0008,
-      "champion_probability": 0.0001,
+      "matches_played": 6,
+      "wins": 1,
+      "draws": 2,
+      "losses": 3,
+      "avg_projected_position": 14.34,
+      "promotion_probability": 0.0014,
+      "champion_probability": 0.0002,
       "elo_rating": 1475.5,
       "attack_rating": 0.98,
       "defense_rating": 1.205
@@ -184,9 +248,13 @@
       "team": "SpVgg Greuther Fürth",
       "current_points": 6,
       "current_gd": -2,
-      "avg_projected_position": 14.46,
-      "promotion_probability": 0.0006,
-      "champion_probability": 0.0002,
+      "matches_played": 6,
+      "wins": 1,
+      "draws": 3,
+      "losses": 2,
+      "avg_projected_position": 14.47,
+      "promotion_probability": 0.0008,
+      "champion_probability": 0.0003,
       "elo_rating": 1464.8,
       "attack_rating": 0.967,
       "defense_rating": 1.244
@@ -195,9 +263,13 @@
       "team": "Eintracht Braunschweig",
       "current_points": 4,
       "current_gd": -1,
-      "avg_projected_position": 15.3,
-      "promotion_probability": 0.0001,
-      "champion_probability": 0.0001,
+      "matches_played": 6,
+      "wins": 1,
+      "draws": 1,
+      "losses": 4,
+      "avg_projected_position": 15.33,
+      "promotion_probability": 0.0002,
+      "champion_probability": 0.0,
       "elo_rating": 1440.0,
       "attack_rating": 0.835,
       "defense_rating": 1.086
@@ -8132,6 +8204,4426 @@
         }
       ]
     }
+  },
+  "promotion_benchmarks": {
+    "2023/24": {
+      "champion": {
+        "team": "FC St. Pauli",
+        "trajectory": [
+          {
+            "matchday": 1,
+            "points": 3
+          },
+          {
+            "matchday": 2,
+            "points": 4
+          },
+          {
+            "matchday": 3,
+            "points": 5
+          },
+          {
+            "matchday": 4,
+            "points": 6
+          },
+          {
+            "matchday": 5,
+            "points": 7
+          },
+          {
+            "matchday": 6,
+            "points": 10
+          },
+          {
+            "matchday": 7,
+            "points": 13
+          },
+          {
+            "matchday": 8,
+            "points": 16
+          },
+          {
+            "matchday": 9,
+            "points": 19
+          },
+          {
+            "matchday": 10,
+            "points": 20
+          },
+          {
+            "matchday": 11,
+            "points": 23
+          },
+          {
+            "matchday": 12,
+            "points": 26
+          },
+          {
+            "matchday": 13,
+            "points": 27
+          },
+          {
+            "matchday": 14,
+            "points": 30
+          },
+          {
+            "matchday": 15,
+            "points": 31
+          },
+          {
+            "matchday": 16,
+            "points": 32
+          },
+          {
+            "matchday": 17,
+            "points": 33
+          },
+          {
+            "matchday": 18,
+            "points": 36
+          },
+          {
+            "matchday": 19,
+            "points": 39
+          },
+          {
+            "matchday": 20,
+            "points": 42
+          },
+          {
+            "matchday": 21,
+            "points": 42
+          },
+          {
+            "matchday": 22,
+            "points": 45
+          },
+          {
+            "matchday": 23,
+            "points": 48
+          },
+          {
+            "matchday": 24,
+            "points": 48
+          },
+          {
+            "matchday": 25,
+            "points": 51
+          },
+          {
+            "matchday": 26,
+            "points": 54
+          },
+          {
+            "matchday": 27,
+            "points": 57
+          },
+          {
+            "matchday": 28,
+            "points": 57
+          },
+          {
+            "matchday": 29,
+            "points": 57
+          },
+          {
+            "matchday": 30,
+            "points": 60
+          },
+          {
+            "matchday": 31,
+            "points": 63
+          },
+          {
+            "matchday": 32,
+            "points": 63
+          },
+          {
+            "matchday": 33,
+            "points": 66
+          },
+          {
+            "matchday": 34,
+            "points": 69
+          }
+        ]
+      },
+      "promoted_2nd": {
+        "team": "Holstein Kiel",
+        "trajectory": [
+          {
+            "matchday": 1,
+            "points": 3
+          },
+          {
+            "matchday": 2,
+            "points": 6
+          },
+          {
+            "matchday": 3,
+            "points": 6
+          },
+          {
+            "matchday": 4,
+            "points": 9
+          },
+          {
+            "matchday": 5,
+            "points": 12
+          },
+          {
+            "matchday": 6,
+            "points": 12
+          },
+          {
+            "matchday": 7,
+            "points": 12
+          },
+          {
+            "matchday": 8,
+            "points": 15
+          },
+          {
+            "matchday": 9,
+            "points": 16
+          },
+          {
+            "matchday": 10,
+            "points": 19
+          },
+          {
+            "matchday": 11,
+            "points": 19
+          },
+          {
+            "matchday": 12,
+            "points": 20
+          },
+          {
+            "matchday": 13,
+            "points": 23
+          },
+          {
+            "matchday": 14,
+            "points": 26
+          },
+          {
+            "matchday": 15,
+            "points": 29
+          },
+          {
+            "matchday": 16,
+            "points": 32
+          },
+          {
+            "matchday": 17,
+            "points": 35
+          },
+          {
+            "matchday": 18,
+            "points": 35
+          },
+          {
+            "matchday": 19,
+            "points": 35
+          },
+          {
+            "matchday": 20,
+            "points": 36
+          },
+          {
+            "matchday": 21,
+            "points": 39
+          },
+          {
+            "matchday": 22,
+            "points": 42
+          },
+          {
+            "matchday": 23,
+            "points": 42
+          },
+          {
+            "matchday": 24,
+            "points": 43
+          },
+          {
+            "matchday": 25,
+            "points": 46
+          },
+          {
+            "matchday": 26,
+            "points": 49
+          },
+          {
+            "matchday": 27,
+            "points": 52
+          },
+          {
+            "matchday": 28,
+            "points": 55
+          },
+          {
+            "matchday": 29,
+            "points": 58
+          },
+          {
+            "matchday": 30,
+            "points": 61
+          },
+          {
+            "matchday": 31,
+            "points": 61
+          },
+          {
+            "matchday": 32,
+            "points": 64
+          },
+          {
+            "matchday": 33,
+            "points": 65
+          },
+          {
+            "matchday": 34,
+            "points": 68
+          }
+        ]
+      }
+    },
+    "2024/25": {
+      "champion": {
+        "team": "1. FC Köln",
+        "trajectory": [
+          {
+            "matchday": 1,
+            "points": 0
+          },
+          {
+            "matchday": 2,
+            "points": 1
+          },
+          {
+            "matchday": 3,
+            "points": 4
+          },
+          {
+            "matchday": 4,
+            "points": 7
+          },
+          {
+            "matchday": 5,
+            "points": 7
+          },
+          {
+            "matchday": 6,
+            "points": 8
+          },
+          {
+            "matchday": 7,
+            "points": 9
+          },
+          {
+            "matchday": 8,
+            "points": 12
+          },
+          {
+            "matchday": 9,
+            "points": 12
+          },
+          {
+            "matchday": 10,
+            "points": 12
+          },
+          {
+            "matchday": 11,
+            "points": 15
+          },
+          {
+            "matchday": 12,
+            "points": 18
+          },
+          {
+            "matchday": 13,
+            "points": 21
+          },
+          {
+            "matchday": 14,
+            "points": 22
+          },
+          {
+            "matchday": 15,
+            "points": 25
+          },
+          {
+            "matchday": 16,
+            "points": 28
+          },
+          {
+            "matchday": 17,
+            "points": 31
+          },
+          {
+            "matchday": 18,
+            "points": 31
+          },
+          {
+            "matchday": 19,
+            "points": 34
+          },
+          {
+            "matchday": 20,
+            "points": 37
+          },
+          {
+            "matchday": 21,
+            "points": 40
+          },
+          {
+            "matchday": 22,
+            "points": 40
+          },
+          {
+            "matchday": 23,
+            "points": 41
+          },
+          {
+            "matchday": 24,
+            "points": 41
+          },
+          {
+            "matchday": 25,
+            "points": 44
+          },
+          {
+            "matchday": 26,
+            "points": 47
+          },
+          {
+            "matchday": 27,
+            "points": 50
+          },
+          {
+            "matchday": 28,
+            "points": 50
+          },
+          {
+            "matchday": 29,
+            "points": 51
+          },
+          {
+            "matchday": 30,
+            "points": 54
+          },
+          {
+            "matchday": 31,
+            "points": 54
+          },
+          {
+            "matchday": 32,
+            "points": 55
+          },
+          {
+            "matchday": 33,
+            "points": 58
+          },
+          {
+            "matchday": 34,
+            "points": 61
+          }
+        ]
+      },
+      "promoted_2nd": {
+        "team": "Hamburger SV",
+        "trajectory": [
+          {
+            "matchday": 1,
+            "points": 3
+          },
+          {
+            "matchday": 2,
+            "points": 4
+          },
+          {
+            "matchday": 3,
+            "points": 4
+          },
+          {
+            "matchday": 4,
+            "points": 7
+          },
+          {
+            "matchday": 5,
+            "points": 10
+          },
+          {
+            "matchday": 6,
+            "points": 11
+          },
+          {
+            "matchday": 7,
+            "points": 12
+          },
+          {
+            "matchday": 8,
+            "points": 15
+          },
+          {
+            "matchday": 9,
+            "points": 18
+          },
+          {
+            "matchday": 10,
+            "points": 18
+          },
+          {
+            "matchday": 11,
+            "points": 19
+          },
+          {
+            "matchday": 12,
+            "points": 19
+          },
+          {
+            "matchday": 13,
+            "points": 20
+          },
+          {
+            "matchday": 14,
+            "points": 23
+          },
+          {
+            "matchday": 15,
+            "points": 24
+          },
+          {
+            "matchday": 16,
+            "points": 25
+          },
+          {
+            "matchday": 17,
+            "points": 28
+          },
+          {
+            "matchday": 18,
+            "points": 31
+          },
+          {
+            "matchday": 19,
+            "points": 34
+          },
+          {
+            "matchday": 20,
+            "points": 35
+          },
+          {
+            "matchday": 21,
+            "points": 38
+          },
+          {
+            "matchday": 22,
+            "points": 39
+          },
+          {
+            "matchday": 23,
+            "points": 42
+          },
+          {
+            "matchday": 24,
+            "points": 42
+          },
+          {
+            "matchday": 25,
+            "points": 45
+          },
+          {
+            "matchday": 26,
+            "points": 48
+          },
+          {
+            "matchday": 27,
+            "points": 49
+          },
+          {
+            "matchday": 28,
+            "points": 52
+          },
+          {
+            "matchday": 29,
+            "points": 52
+          },
+          {
+            "matchday": 30,
+            "points": 53
+          },
+          {
+            "matchday": 31,
+            "points": 53
+          },
+          {
+            "matchday": 32,
+            "points": 56
+          },
+          {
+            "matchday": 33,
+            "points": 59
+          },
+          {
+            "matchday": 34,
+            "points": 59
+          }
+        ]
+      }
+    },
+    "2025/26": {
+      "champion": {
+        "team": "FC Schalke 04",
+        "trajectory": [
+          {
+            "matchday": 1,
+            "points": 3
+          },
+          {
+            "matchday": 2,
+            "points": 3
+          },
+          {
+            "matchday": 3,
+            "points": 6
+          },
+          {
+            "matchday": 4,
+            "points": 9
+          },
+          {
+            "matchday": 5,
+            "points": 9
+          },
+          {
+            "matchday": 6,
+            "points": 12
+          },
+          {
+            "matchday": 7,
+            "points": 15
+          },
+          {
+            "matchday": 8,
+            "points": 18
+          },
+          {
+            "matchday": 9,
+            "points": 21
+          },
+          {
+            "matchday": 10,
+            "points": 24
+          },
+          {
+            "matchday": 11,
+            "points": 24
+          },
+          {
+            "matchday": 12,
+            "points": 27
+          },
+          {
+            "matchday": 13,
+            "points": 28
+          },
+          {
+            "matchday": 14,
+            "points": 31
+          },
+          {
+            "matchday": 15,
+            "points": 34
+          },
+          {
+            "matchday": 16,
+            "points": 37
+          },
+          {
+            "matchday": 17,
+            "points": 37
+          },
+          {
+            "matchday": 18,
+            "points": 38
+          },
+          {
+            "matchday": 19,
+            "points": 39
+          },
+          {
+            "matchday": 20,
+            "points": 39
+          },
+          {
+            "matchday": 21,
+            "points": 40
+          },
+          {
+            "matchday": 22,
+            "points": 43
+          },
+          {
+            "matchday": 23,
+            "points": 46
+          },
+          {
+            "matchday": 24,
+            "points": 47
+          },
+          {
+            "matchday": 25,
+            "points": 50
+          },
+          {
+            "matchday": 26,
+            "points": 51
+          },
+          {
+            "matchday": 27,
+            "points": 52
+          },
+          {
+            "matchday": 28,
+            "points": 55
+          },
+          {
+            "matchday": 29,
+            "points": 58
+          },
+          {
+            "matchday": 30,
+            "points": 61
+          },
+          {
+            "matchday": 31,
+            "points": 64
+          },
+          {
+            "matchday": 32,
+            "points": 67
+          },
+          {
+            "matchday": 33,
+            "points": 67
+          },
+          {
+            "matchday": 34,
+            "points": 70
+          }
+        ]
+      },
+      "promoted_2nd": {
+        "team": "SV 07 Elversberg",
+        "trajectory": [
+          {
+            "matchday": 1,
+            "points": 3
+          },
+          {
+            "matchday": 2,
+            "points": 3
+          },
+          {
+            "matchday": 3,
+            "points": 6
+          },
+          {
+            "matchday": 4,
+            "points": 9
+          },
+          {
+            "matchday": 5,
+            "points": 10
+          },
+          {
+            "matchday": 6,
+            "points": 13
+          },
+          {
+            "matchday": 7,
+            "points": 16
+          },
+          {
+            "matchday": 8,
+            "points": 19
+          },
+          {
+            "matchday": 9,
+            "points": 22
+          },
+          {
+            "matchday": 10,
+            "points": 22
+          },
+          {
+            "matchday": 11,
+            "points": 23
+          },
+          {
+            "matchday": 12,
+            "points": 23
+          },
+          {
+            "matchday": 13,
+            "points": 26
+          },
+          {
+            "matchday": 14,
+            "points": 27
+          },
+          {
+            "matchday": 15,
+            "points": 30
+          },
+          {
+            "matchday": 16,
+            "points": 33
+          },
+          {
+            "matchday": 17,
+            "points": 34
+          },
+          {
+            "matchday": 18,
+            "points": 34
+          },
+          {
+            "matchday": 19,
+            "points": 35
+          },
+          {
+            "matchday": 20,
+            "points": 38
+          },
+          {
+            "matchday": 21,
+            "points": 38
+          },
+          {
+            "matchday": 22,
+            "points": 41
+          },
+          {
+            "matchday": 23,
+            "points": 44
+          },
+          {
+            "matchday": 24,
+            "points": 45
+          },
+          {
+            "matchday": 25,
+            "points": 48
+          },
+          {
+            "matchday": 26,
+            "points": 48
+          },
+          {
+            "matchday": 27,
+            "points": 51
+          },
+          {
+            "matchday": 28,
+            "points": 52
+          },
+          {
+            "matchday": 29,
+            "points": 52
+          },
+          {
+            "matchday": 30,
+            "points": 55
+          },
+          {
+            "matchday": 31,
+            "points": 56
+          },
+          {
+            "matchday": 32,
+            "points": 59
+          },
+          {
+            "matchday": 33,
+            "points": 59
+          },
+          {
+            "matchday": 34,
+            "points": 62
+          }
+        ]
+      }
+    }
+  },
+  "fixture_difficulty": {
+    "1. FC Heidenheim 1846": [
+      {
+        "matchday": 7,
+        "opponent": "1. FC Kaiserslautern",
+        "is_home": true,
+        "win_probability": 0.417,
+        "difficulty": 3
+      },
+      {
+        "matchday": 8,
+        "opponent": "VfL Wolfsburg",
+        "is_home": false,
+        "win_probability": 0.284,
+        "difficulty": 4
+      },
+      {
+        "matchday": 9,
+        "opponent": "Energie Cottbus",
+        "is_home": true,
+        "win_probability": 0.463,
+        "difficulty": 2
+      },
+      {
+        "matchday": 10,
+        "opponent": "Karlsruher SC",
+        "is_home": false,
+        "win_probability": 0.461,
+        "difficulty": 2
+      },
+      {
+        "matchday": 11,
+        "opponent": "Hannover 96",
+        "is_home": true,
+        "win_probability": 0.391,
+        "difficulty": 3
+      },
+      {
+        "matchday": 12,
+        "opponent": "SV Darmstadt 98",
+        "is_home": false,
+        "win_probability": 0.357,
+        "difficulty": 3
+      },
+      {
+        "matchday": 13,
+        "opponent": "1. FC Nürnberg",
+        "is_home": true,
+        "win_probability": 0.395,
+        "difficulty": 3
+      },
+      {
+        "matchday": 14,
+        "opponent": "FC St. Pauli",
+        "is_home": false,
+        "win_probability": 0.374,
+        "difficulty": 3
+      },
+      {
+        "matchday": 15,
+        "opponent": "VfL Bochum",
+        "is_home": false,
+        "win_probability": 0.366,
+        "difficulty": 3
+      },
+      {
+        "matchday": 16,
+        "opponent": "Eintracht Braunschweig",
+        "is_home": true,
+        "win_probability": 0.556,
+        "difficulty": 1
+      },
+      {
+        "matchday": 17,
+        "opponent": "1. FC Magdeburg",
+        "is_home": false,
+        "win_probability": 0.398,
+        "difficulty": 3
+      },
+      {
+        "matchday": 18,
+        "opponent": "VfL Osnabrück",
+        "is_home": false,
+        "win_probability": 0.424,
+        "difficulty": 2
+      },
+      {
+        "matchday": 19,
+        "opponent": "Hertha BSC",
+        "is_home": true,
+        "win_probability": 0.391,
+        "difficulty": 3
+      },
+      {
+        "matchday": 20,
+        "opponent": "Dynamo Dresden",
+        "is_home": false,
+        "win_probability": 0.403,
+        "difficulty": 3
+      },
+      {
+        "matchday": 21,
+        "opponent": "SpVgg Greuther Fürth",
+        "is_home": true,
+        "win_probability": 0.571,
+        "difficulty": 1
+      },
+      {
+        "matchday": 22,
+        "opponent": "Holstein Kiel",
+        "is_home": false,
+        "win_probability": 0.408,
+        "difficulty": 3
+      },
+      {
+        "matchday": 23,
+        "opponent": "DSC Arminia Bielefeld",
+        "is_home": true,
+        "win_probability": 0.465,
+        "difficulty": 2
+      },
+      {
+        "matchday": 24,
+        "opponent": "1. FC Kaiserslautern",
+        "is_home": false,
+        "win_probability": 0.338,
+        "difficulty": 3
+      },
+      {
+        "matchday": 25,
+        "opponent": "VfL Wolfsburg",
+        "is_home": true,
+        "win_probability": 0.366,
+        "difficulty": 3
+      },
+      {
+        "matchday": 26,
+        "opponent": "Energie Cottbus",
+        "is_home": false,
+        "win_probability": 0.37,
+        "difficulty": 3
+      },
+      {
+        "matchday": 27,
+        "opponent": "Karlsruher SC",
+        "is_home": true,
+        "win_probability": 0.552,
+        "difficulty": 1
+      },
+      {
+        "matchday": 28,
+        "opponent": "Hannover 96",
+        "is_home": false,
+        "win_probability": 0.31,
+        "difficulty": 3
+      },
+      {
+        "matchday": 29,
+        "opponent": "SV Darmstadt 98",
+        "is_home": true,
+        "win_probability": 0.441,
+        "difficulty": 2
+      },
+      {
+        "matchday": 30,
+        "opponent": "1. FC Nürnberg",
+        "is_home": false,
+        "win_probability": 0.316,
+        "difficulty": 3
+      },
+      {
+        "matchday": 31,
+        "opponent": "FC St. Pauli",
+        "is_home": true,
+        "win_probability": 0.457,
+        "difficulty": 2
+      },
+      {
+        "matchday": 32,
+        "opponent": "VfL Bochum",
+        "is_home": true,
+        "win_probability": 0.447,
+        "difficulty": 2
+      },
+      {
+        "matchday": 33,
+        "opponent": "Eintracht Braunschweig",
+        "is_home": false,
+        "win_probability": 0.471,
+        "difficulty": 2
+      },
+      {
+        "matchday": 34,
+        "opponent": "1. FC Magdeburg",
+        "is_home": true,
+        "win_probability": 0.487,
+        "difficulty": 2
+      }
+    ],
+    "1. FC Kaiserslautern": [
+      {
+        "matchday": 7,
+        "opponent": "1. FC Heidenheim 1846",
+        "is_home": false,
+        "win_probability": 0.358,
+        "difficulty": 3
+      },
+      {
+        "matchday": 8,
+        "opponent": "VfL Bochum",
+        "is_home": true,
+        "win_probability": 0.433,
+        "difficulty": 2
+      },
+      {
+        "matchday": 9,
+        "opponent": "1. FC Nürnberg",
+        "is_home": false,
+        "win_probability": 0.318,
+        "difficulty": 3
+      },
+      {
+        "matchday": 10,
+        "opponent": "Hertha BSC",
+        "is_home": true,
+        "win_probability": 0.385,
+        "difficulty": 3
+      },
+      {
+        "matchday": 11,
+        "opponent": "VfL Osnabrück",
+        "is_home": false,
+        "win_probability": 0.417,
+        "difficulty": 3
+      },
+      {
+        "matchday": 12,
+        "opponent": "Dynamo Dresden",
+        "is_home": true,
+        "win_probability": 0.476,
+        "difficulty": 2
+      },
+      {
+        "matchday": 13,
+        "opponent": "Holstein Kiel",
+        "is_home": false,
+        "win_probability": 0.399,
+        "difficulty": 3
+      },
+      {
+        "matchday": 14,
+        "opponent": "SpVgg Greuther Fürth",
+        "is_home": true,
+        "win_probability": 0.549,
+        "difficulty": 2
+      },
+      {
+        "matchday": 15,
+        "opponent": "DSC Arminia Bielefeld",
+        "is_home": false,
+        "win_probability": 0.375,
+        "difficulty": 3
+      },
+      {
+        "matchday": 16,
+        "opponent": "Hannover 96",
+        "is_home": false,
+        "win_probability": 0.314,
+        "difficulty": 3
+      },
+      {
+        "matchday": 17,
+        "opponent": "Energie Cottbus",
+        "is_home": true,
+        "win_probability": 0.453,
+        "difficulty": 2
+      },
+      {
+        "matchday": 18,
+        "opponent": "VfL Wolfsburg",
+        "is_home": true,
+        "win_probability": 0.366,
+        "difficulty": 3
+      },
+      {
+        "matchday": 19,
+        "opponent": "Karlsruher SC",
+        "is_home": false,
+        "win_probability": 0.45,
+        "difficulty": 2
+      },
+      {
+        "matchday": 20,
+        "opponent": "FC St. Pauli",
+        "is_home": true,
+        "win_probability": 0.444,
+        "difficulty": 2
+      },
+      {
+        "matchday": 21,
+        "opponent": "SV Darmstadt 98",
+        "is_home": false,
+        "win_probability": 0.355,
+        "difficulty": 3
+      },
+      {
+        "matchday": 22,
+        "opponent": "1. FC Magdeburg",
+        "is_home": true,
+        "win_probability": 0.472,
+        "difficulty": 2
+      },
+      {
+        "matchday": 23,
+        "opponent": "Eintracht Braunschweig",
+        "is_home": false,
+        "win_probability": 0.455,
+        "difficulty": 2
+      },
+      {
+        "matchday": 24,
+        "opponent": "1. FC Heidenheim 1846",
+        "is_home": true,
+        "win_probability": 0.438,
+        "difficulty": 2
+      },
+      {
+        "matchday": 25,
+        "opponent": "VfL Bochum",
+        "is_home": false,
+        "win_probability": 0.362,
+        "difficulty": 3
+      },
+      {
+        "matchday": 26,
+        "opponent": "1. FC Nürnberg",
+        "is_home": true,
+        "win_probability": 0.389,
+        "difficulty": 3
+      },
+      {
+        "matchday": 27,
+        "opponent": "Hertha BSC",
+        "is_home": false,
+        "win_probability": 0.315,
+        "difficulty": 3
+      },
+      {
+        "matchday": 28,
+        "opponent": "VfL Osnabrück",
+        "is_home": true,
+        "win_probability": 0.496,
+        "difficulty": 2
+      },
+      {
+        "matchday": 29,
+        "opponent": "Dynamo Dresden",
+        "is_home": false,
+        "win_probability": 0.398,
+        "difficulty": 3
+      },
+      {
+        "matchday": 30,
+        "opponent": "Holstein Kiel",
+        "is_home": true,
+        "win_probability": 0.472,
+        "difficulty": 2
+      },
+      {
+        "matchday": 31,
+        "opponent": "SpVgg Greuther Fürth",
+        "is_home": false,
+        "win_probability": 0.468,
+        "difficulty": 2
+      },
+      {
+        "matchday": 32,
+        "opponent": "DSC Arminia Bielefeld",
+        "is_home": true,
+        "win_probability": 0.452,
+        "difficulty": 2
+      },
+      {
+        "matchday": 33,
+        "opponent": "Hannover 96",
+        "is_home": true,
+        "win_probability": 0.385,
+        "difficulty": 3
+      },
+      {
+        "matchday": 34,
+        "opponent": "Energie Cottbus",
+        "is_home": false,
+        "win_probability": 0.371,
+        "difficulty": 3
+      }
+    ],
+    "Eintracht Braunschweig": [
+      {
+        "matchday": 7,
+        "opponent": "Holstein Kiel",
+        "is_home": true,
+        "win_probability": 0.358,
+        "difficulty": 3
+      },
+      {
+        "matchday": 8,
+        "opponent": "SpVgg Greuther Fürth",
+        "is_home": false,
+        "win_probability": 0.343,
+        "difficulty": 3
+      },
+      {
+        "matchday": 9,
+        "opponent": "Hannover 96",
+        "is_home": true,
+        "win_probability": 0.274,
+        "difficulty": 4
+      },
+      {
+        "matchday": 10,
+        "opponent": "DSC Arminia Bielefeld",
+        "is_home": false,
+        "win_probability": 0.263,
+        "difficulty": 4
+      },
+      {
+        "matchday": 11,
+        "opponent": "Energie Cottbus",
+        "is_home": true,
+        "win_probability": 0.325,
+        "difficulty": 3
+      },
+      {
+        "matchday": 12,
+        "opponent": "1. FC Nürnberg",
+        "is_home": false,
+        "win_probability": 0.218,
+        "difficulty": 4
+      },
+      {
+        "matchday": 13,
+        "opponent": "VfL Wolfsburg",
+        "is_home": true,
+        "win_probability": 0.252,
+        "difficulty": 4
+      },
+      {
+        "matchday": 14,
+        "opponent": "SV Darmstadt 98",
+        "is_home": false,
+        "win_probability": 0.248,
+        "difficulty": 4
+      },
+      {
+        "matchday": 15,
+        "opponent": "Karlsruher SC",
+        "is_home": true,
+        "win_probability": 0.405,
+        "difficulty": 3
+      },
+      {
+        "matchday": 16,
+        "opponent": "1. FC Heidenheim 1846",
+        "is_home": false,
+        "win_probability": 0.241,
+        "difficulty": 4
+      },
+      {
+        "matchday": 17,
+        "opponent": "FC St. Pauli",
+        "is_home": true,
+        "win_probability": 0.329,
+        "difficulty": 3
+      },
+      {
+        "matchday": 18,
+        "opponent": "1. FC Magdeburg",
+        "is_home": true,
+        "win_probability": 0.35,
+        "difficulty": 3
+      },
+      {
+        "matchday": 19,
+        "opponent": "VfL Bochum",
+        "is_home": false,
+        "win_probability": 0.258,
+        "difficulty": 4
+      },
+      {
+        "matchday": 20,
+        "opponent": "Hertha BSC",
+        "is_home": false,
+        "win_probability": 0.215,
+        "difficulty": 4
+      },
+      {
+        "matchday": 21,
+        "opponent": "VfL Osnabrück",
+        "is_home": true,
+        "win_probability": 0.372,
+        "difficulty": 3
+      },
+      {
+        "matchday": 22,
+        "opponent": "Dynamo Dresden",
+        "is_home": false,
+        "win_probability": 0.281,
+        "difficulty": 4
+      },
+      {
+        "matchday": 23,
+        "opponent": "1. FC Kaiserslautern",
+        "is_home": true,
+        "win_probability": 0.297,
+        "difficulty": 4
+      },
+      {
+        "matchday": 24,
+        "opponent": "Holstein Kiel",
+        "is_home": false,
+        "win_probability": 0.29,
+        "difficulty": 4
+      },
+      {
+        "matchday": 25,
+        "opponent": "SpVgg Greuther Fürth",
+        "is_home": true,
+        "win_probability": 0.422,
+        "difficulty": 2
+      },
+      {
+        "matchday": 26,
+        "opponent": "Hannover 96",
+        "is_home": false,
+        "win_probability": 0.212,
+        "difficulty": 4
+      },
+      {
+        "matchday": 27,
+        "opponent": "DSC Arminia Bielefeld",
+        "is_home": true,
+        "win_probability": 0.332,
+        "difficulty": 3
+      },
+      {
+        "matchday": 28,
+        "opponent": "Energie Cottbus",
+        "is_home": false,
+        "win_probability": 0.252,
+        "difficulty": 4
+      },
+      {
+        "matchday": 29,
+        "opponent": "1. FC Nürnberg",
+        "is_home": true,
+        "win_probability": 0.279,
+        "difficulty": 4
+      },
+      {
+        "matchday": 30,
+        "opponent": "VfL Wolfsburg",
+        "is_home": false,
+        "win_probability": 0.19,
+        "difficulty": 5
+      },
+      {
+        "matchday": 31,
+        "opponent": "SV Darmstadt 98",
+        "is_home": true,
+        "win_probability": 0.314,
+        "difficulty": 3
+      },
+      {
+        "matchday": 32,
+        "opponent": "Karlsruher SC",
+        "is_home": false,
+        "win_probability": 0.327,
+        "difficulty": 3
+      },
+      {
+        "matchday": 33,
+        "opponent": "1. FC Heidenheim 1846",
+        "is_home": true,
+        "win_probability": 0.312,
+        "difficulty": 3
+      },
+      {
+        "matchday": 34,
+        "opponent": "FC St. Pauli",
+        "is_home": false,
+        "win_probability": 0.262,
+        "difficulty": 4
+      }
+    ],
+    "Holstein Kiel": [
+      {
+        "matchday": 7,
+        "opponent": "Eintracht Braunschweig",
+        "is_home": false,
+        "win_probability": 0.389,
+        "difficulty": 3
+      },
+      {
+        "matchday": 8,
+        "opponent": "Hertha BSC",
+        "is_home": true,
+        "win_probability": 0.322,
+        "difficulty": 3
+      },
+      {
+        "matchday": 9,
+        "opponent": "Dynamo Dresden",
+        "is_home": true,
+        "win_probability": 0.406,
+        "difficulty": 3
+      },
+      {
+        "matchday": 10,
+        "opponent": "SpVgg Greuther Fürth",
+        "is_home": false,
+        "win_probability": 0.397,
+        "difficulty": 3
+      },
+      {
+        "matchday": 11,
+        "opponent": "DSC Arminia Bielefeld",
+        "is_home": true,
+        "win_probability": 0.384,
+        "difficulty": 3
+      },
+      {
+        "matchday": 12,
+        "opponent": "VfL Wolfsburg",
+        "is_home": false,
+        "win_probability": 0.234,
+        "difficulty": 4
+      },
+      {
+        "matchday": 13,
+        "opponent": "1. FC Kaiserslautern",
+        "is_home": true,
+        "win_probability": 0.344,
+        "difficulty": 3
+      },
+      {
+        "matchday": 14,
+        "opponent": "Karlsruher SC",
+        "is_home": false,
+        "win_probability": 0.38,
+        "difficulty": 3
+      },
+      {
+        "matchday": 15,
+        "opponent": "Hannover 96",
+        "is_home": true,
+        "win_probability": 0.321,
+        "difficulty": 3
+      },
+      {
+        "matchday": 16,
+        "opponent": "Energie Cottbus",
+        "is_home": false,
+        "win_probability": 0.303,
+        "difficulty": 3
+      },
+      {
+        "matchday": 17,
+        "opponent": "VfL Bochum",
+        "is_home": true,
+        "win_probability": 0.37,
+        "difficulty": 3
+      },
+      {
+        "matchday": 18,
+        "opponent": "SV Darmstadt 98",
+        "is_home": true,
+        "win_probability": 0.364,
+        "difficulty": 3
+      },
+      {
+        "matchday": 19,
+        "opponent": "FC St. Pauli",
+        "is_home": false,
+        "win_probability": 0.308,
+        "difficulty": 3
+      },
+      {
+        "matchday": 20,
+        "opponent": "1. FC Magdeburg",
+        "is_home": true,
+        "win_probability": 0.402,
+        "difficulty": 3
+      },
+      {
+        "matchday": 21,
+        "opponent": "1. FC Nürnberg",
+        "is_home": false,
+        "win_probability": 0.261,
+        "difficulty": 4
+      },
+      {
+        "matchday": 22,
+        "opponent": "1. FC Heidenheim 1846",
+        "is_home": true,
+        "win_probability": 0.367,
+        "difficulty": 3
+      },
+      {
+        "matchday": 23,
+        "opponent": "VfL Osnabrück",
+        "is_home": false,
+        "win_probability": 0.349,
+        "difficulty": 3
+      },
+      {
+        "matchday": 24,
+        "opponent": "Eintracht Braunschweig",
+        "is_home": true,
+        "win_probability": 0.464,
+        "difficulty": 2
+      },
+      {
+        "matchday": 25,
+        "opponent": "Hertha BSC",
+        "is_home": false,
+        "win_probability": 0.257,
+        "difficulty": 4
+      },
+      {
+        "matchday": 26,
+        "opponent": "Dynamo Dresden",
+        "is_home": false,
+        "win_probability": 0.331,
+        "difficulty": 3
+      },
+      {
+        "matchday": 27,
+        "opponent": "SpVgg Greuther Fürth",
+        "is_home": true,
+        "win_probability": 0.477,
+        "difficulty": 2
+      },
+      {
+        "matchday": 28,
+        "opponent": "DSC Arminia Bielefeld",
+        "is_home": false,
+        "win_probability": 0.311,
+        "difficulty": 3
+      },
+      {
+        "matchday": 29,
+        "opponent": "VfL Wolfsburg",
+        "is_home": true,
+        "win_probability": 0.3,
+        "difficulty": 3
+      },
+      {
+        "matchday": 30,
+        "opponent": "1. FC Kaiserslautern",
+        "is_home": false,
+        "win_probability": 0.278,
+        "difficulty": 4
+      },
+      {
+        "matchday": 31,
+        "opponent": "Karlsruher SC",
+        "is_home": true,
+        "win_probability": 0.459,
+        "difficulty": 2
+      },
+      {
+        "matchday": 32,
+        "opponent": "Hannover 96",
+        "is_home": false,
+        "win_probability": 0.255,
+        "difficulty": 4
+      },
+      {
+        "matchday": 33,
+        "opponent": "Energie Cottbus",
+        "is_home": true,
+        "win_probability": 0.38,
+        "difficulty": 3
+      },
+      {
+        "matchday": 34,
+        "opponent": "VfL Bochum",
+        "is_home": false,
+        "win_probability": 0.302,
+        "difficulty": 3
+      }
+    ],
+    "SV Darmstadt 98": [
+      {
+        "matchday": 7,
+        "opponent": "Energie Cottbus",
+        "is_home": true,
+        "win_probability": 0.443,
+        "difficulty": 2
+      },
+      {
+        "matchday": 8,
+        "opponent": "Karlsruher SC",
+        "is_home": false,
+        "win_probability": 0.441,
+        "difficulty": 2
+      },
+      {
+        "matchday": 9,
+        "opponent": "FC St. Pauli",
+        "is_home": true,
+        "win_probability": 0.436,
+        "difficulty": 2
+      },
+      {
+        "matchday": 10,
+        "opponent": "1. FC Magdeburg",
+        "is_home": true,
+        "win_probability": 0.464,
+        "difficulty": 2
+      },
+      {
+        "matchday": 11,
+        "opponent": "1. FC Nürnberg",
+        "is_home": false,
+        "win_probability": 0.307,
+        "difficulty": 3
+      },
+      {
+        "matchday": 12,
+        "opponent": "1. FC Heidenheim 1846",
+        "is_home": true,
+        "win_probability": 0.427,
+        "difficulty": 2
+      },
+      {
+        "matchday": 13,
+        "opponent": "VfL Bochum",
+        "is_home": false,
+        "win_probability": 0.352,
+        "difficulty": 3
+      },
+      {
+        "matchday": 14,
+        "opponent": "Eintracht Braunschweig",
+        "is_home": true,
+        "win_probability": 0.527,
+        "difficulty": 2
+      },
+      {
+        "matchday": 15,
+        "opponent": "Hertha BSC",
+        "is_home": false,
+        "win_probability": 0.303,
+        "difficulty": 3
+      },
+      {
+        "matchday": 16,
+        "opponent": "SpVgg Greuther Fürth",
+        "is_home": true,
+        "win_probability": 0.543,
+        "difficulty": 2
+      },
+      {
+        "matchday": 17,
+        "opponent": "VfL Osnabrück",
+        "is_home": false,
+        "win_probability": 0.406,
+        "difficulty": 3
+      },
+      {
+        "matchday": 18,
+        "opponent": "Holstein Kiel",
+        "is_home": false,
+        "win_probability": 0.39,
+        "difficulty": 3
+      },
+      {
+        "matchday": 19,
+        "opponent": "Dynamo Dresden",
+        "is_home": true,
+        "win_probability": 0.468,
+        "difficulty": 2
+      },
+      {
+        "matchday": 20,
+        "opponent": "Hannover 96",
+        "is_home": false,
+        "win_probability": 0.301,
+        "difficulty": 3
+      },
+      {
+        "matchday": 21,
+        "opponent": "1. FC Kaiserslautern",
+        "is_home": true,
+        "win_probability": 0.398,
+        "difficulty": 3
+      },
+      {
+        "matchday": 22,
+        "opponent": "DSC Arminia Bielefeld",
+        "is_home": false,
+        "win_probability": 0.364,
+        "difficulty": 3
+      },
+      {
+        "matchday": 23,
+        "opponent": "VfL Wolfsburg",
+        "is_home": true,
+        "win_probability": 0.354,
+        "difficulty": 3
+      },
+      {
+        "matchday": 24,
+        "opponent": "Energie Cottbus",
+        "is_home": false,
+        "win_probability": 0.358,
+        "difficulty": 3
+      },
+      {
+        "matchday": 25,
+        "opponent": "Karlsruher SC",
+        "is_home": true,
+        "win_probability": 0.525,
+        "difficulty": 2
+      },
+      {
+        "matchday": 26,
+        "opponent": "FC St. Pauli",
+        "is_home": false,
+        "win_probability": 0.36,
+        "difficulty": 3
+      },
+      {
+        "matchday": 27,
+        "opponent": "1. FC Magdeburg",
+        "is_home": false,
+        "win_probability": 0.383,
+        "difficulty": 3
+      },
+      {
+        "matchday": 28,
+        "opponent": "1. FC Nürnberg",
+        "is_home": true,
+        "win_probability": 0.379,
+        "difficulty": 3
+      },
+      {
+        "matchday": 29,
+        "opponent": "1. FC Heidenheim 1846",
+        "is_home": false,
+        "win_probability": 0.344,
+        "difficulty": 3
+      },
+      {
+        "matchday": 30,
+        "opponent": "VfL Bochum",
+        "is_home": true,
+        "win_probability": 0.426,
+        "difficulty": 2
+      },
+      {
+        "matchday": 31,
+        "opponent": "Eintracht Braunschweig",
+        "is_home": false,
+        "win_probability": 0.448,
+        "difficulty": 2
+      },
+      {
+        "matchday": 32,
+        "opponent": "Hertha BSC",
+        "is_home": true,
+        "win_probability": 0.375,
+        "difficulty": 3
+      },
+      {
+        "matchday": 33,
+        "opponent": "SpVgg Greuther Fürth",
+        "is_home": false,
+        "win_probability": 0.459,
+        "difficulty": 2
+      },
+      {
+        "matchday": 34,
+        "opponent": "VfL Osnabrück",
+        "is_home": true,
+        "win_probability": 0.488,
+        "difficulty": 2
+      }
+    ],
+    "Energie Cottbus": [
+      {
+        "matchday": 7,
+        "opponent": "SV Darmstadt 98",
+        "is_home": false,
+        "win_probability": 0.345,
+        "difficulty": 3
+      },
+      {
+        "matchday": 8,
+        "opponent": "1. FC Nürnberg",
+        "is_home": true,
+        "win_probability": 0.383,
+        "difficulty": 3
+      },
+      {
+        "matchday": 9,
+        "opponent": "1. FC Heidenheim 1846",
+        "is_home": false,
+        "win_probability": 0.342,
+        "difficulty": 3
+      },
+      {
+        "matchday": 10,
+        "opponent": "VfL Bochum",
+        "is_home": true,
+        "win_probability": 0.436,
+        "difficulty": 2
+      },
+      {
+        "matchday": 11,
+        "opponent": "Eintracht Braunschweig",
+        "is_home": false,
+        "win_probability": 0.459,
+        "difficulty": 2
+      },
+      {
+        "matchday": 12,
+        "opponent": "Hertha BSC",
+        "is_home": true,
+        "win_probability": 0.379,
+        "difficulty": 3
+      },
+      {
+        "matchday": 13,
+        "opponent": "1. FC Magdeburg",
+        "is_home": false,
+        "win_probability": 0.385,
+        "difficulty": 3
+      },
+      {
+        "matchday": 14,
+        "opponent": "VfL Osnabrück",
+        "is_home": true,
+        "win_probability": 0.501,
+        "difficulty": 2
+      },
+      {
+        "matchday": 15,
+        "opponent": "Dynamo Dresden",
+        "is_home": false,
+        "win_probability": 0.39,
+        "difficulty": 3
+      },
+      {
+        "matchday": 16,
+        "opponent": "Holstein Kiel",
+        "is_home": true,
+        "win_probability": 0.479,
+        "difficulty": 2
+      },
+      {
+        "matchday": 17,
+        "opponent": "1. FC Kaiserslautern",
+        "is_home": false,
+        "win_probability": 0.326,
+        "difficulty": 3
+      },
+      {
+        "matchday": 18,
+        "opponent": "Hannover 96",
+        "is_home": false,
+        "win_probability": 0.298,
+        "difficulty": 4
+      },
+      {
+        "matchday": 19,
+        "opponent": "DSC Arminia Bielefeld",
+        "is_home": true,
+        "win_probability": 0.452,
+        "difficulty": 2
+      },
+      {
+        "matchday": 20,
+        "opponent": "SpVgg Greuther Fürth",
+        "is_home": false,
+        "win_probability": 0.468,
+        "difficulty": 2
+      },
+      {
+        "matchday": 21,
+        "opponent": "VfL Wolfsburg",
+        "is_home": true,
+        "win_probability": 0.353,
+        "difficulty": 3
+      },
+      {
+        "matchday": 22,
+        "opponent": "Karlsruher SC",
+        "is_home": true,
+        "win_probability": 0.54,
+        "difficulty": 2
+      },
+      {
+        "matchday": 23,
+        "opponent": "FC St. Pauli",
+        "is_home": false,
+        "win_probability": 0.362,
+        "difficulty": 3
+      },
+      {
+        "matchday": 24,
+        "opponent": "SV Darmstadt 98",
+        "is_home": true,
+        "win_probability": 0.429,
+        "difficulty": 2
+      },
+      {
+        "matchday": 25,
+        "opponent": "1. FC Nürnberg",
+        "is_home": false,
+        "win_probability": 0.305,
+        "difficulty": 3
+      },
+      {
+        "matchday": 26,
+        "opponent": "1. FC Heidenheim 1846",
+        "is_home": true,
+        "win_probability": 0.433,
+        "difficulty": 2
+      },
+      {
+        "matchday": 27,
+        "opponent": "VfL Bochum",
+        "is_home": false,
+        "win_probability": 0.355,
+        "difficulty": 3
+      },
+      {
+        "matchday": 28,
+        "opponent": "Eintracht Braunschweig",
+        "is_home": true,
+        "win_probability": 0.545,
+        "difficulty": 2
+      },
+      {
+        "matchday": 29,
+        "opponent": "Hertha BSC",
+        "is_home": false,
+        "win_probability": 0.3,
+        "difficulty": 3
+      },
+      {
+        "matchday": 30,
+        "opponent": "1. FC Magdeburg",
+        "is_home": true,
+        "win_probability": 0.474,
+        "difficulty": 2
+      },
+      {
+        "matchday": 31,
+        "opponent": "VfL Osnabrück",
+        "is_home": false,
+        "win_probability": 0.411,
+        "difficulty": 3
+      },
+      {
+        "matchday": 32,
+        "opponent": "Dynamo Dresden",
+        "is_home": true,
+        "win_probability": 0.479,
+        "difficulty": 2
+      },
+      {
+        "matchday": 33,
+        "opponent": "Holstein Kiel",
+        "is_home": false,
+        "win_probability": 0.396,
+        "difficulty": 3
+      },
+      {
+        "matchday": 34,
+        "opponent": "1. FC Kaiserslautern",
+        "is_home": true,
+        "win_probability": 0.405,
+        "difficulty": 3
+      }
+    ],
+    "1. FC Magdeburg": [
+      {
+        "matchday": 7,
+        "opponent": "Hannover 96",
+        "is_home": true,
+        "win_probability": 0.343,
+        "difficulty": 3
+      },
+      {
+        "matchday": 8,
+        "opponent": "Dynamo Dresden",
+        "is_home": false,
+        "win_probability": 0.354,
+        "difficulty": 3
+      },
+      {
+        "matchday": 9,
+        "opponent": "Karlsruher SC",
+        "is_home": true,
+        "win_probability": 0.494,
+        "difficulty": 2
+      },
+      {
+        "matchday": 10,
+        "opponent": "SV Darmstadt 98",
+        "is_home": false,
+        "win_probability": 0.313,
+        "difficulty": 3
+      },
+      {
+        "matchday": 11,
+        "opponent": "FC St. Pauli",
+        "is_home": true,
+        "win_probability": 0.406,
+        "difficulty": 3
+      },
+      {
+        "matchday": 12,
+        "opponent": "DSC Arminia Bielefeld",
+        "is_home": false,
+        "win_probability": 0.331,
+        "difficulty": 3
+      },
+      {
+        "matchday": 13,
+        "opponent": "Energie Cottbus",
+        "is_home": true,
+        "win_probability": 0.407,
+        "difficulty": 3
+      },
+      {
+        "matchday": 14,
+        "opponent": "VfL Wolfsburg",
+        "is_home": false,
+        "win_probability": 0.246,
+        "difficulty": 4
+      },
+      {
+        "matchday": 15,
+        "opponent": "1. FC Nürnberg",
+        "is_home": true,
+        "win_probability": 0.348,
+        "difficulty": 3
+      },
+      {
+        "matchday": 16,
+        "opponent": "VfL Bochum",
+        "is_home": false,
+        "win_probability": 0.322,
+        "difficulty": 3
+      },
+      {
+        "matchday": 17,
+        "opponent": "1. FC Heidenheim 1846",
+        "is_home": true,
+        "win_probability": 0.392,
+        "difficulty": 3
+      },
+      {
+        "matchday": 18,
+        "opponent": "Eintracht Braunschweig",
+        "is_home": false,
+        "win_probability": 0.418,
+        "difficulty": 3
+      },
+      {
+        "matchday": 19,
+        "opponent": "VfL Osnabrück",
+        "is_home": true,
+        "win_probability": 0.457,
+        "difficulty": 2
+      },
+      {
+        "matchday": 20,
+        "opponent": "Holstein Kiel",
+        "is_home": false,
+        "win_probability": 0.36,
+        "difficulty": 3
+      },
+      {
+        "matchday": 21,
+        "opponent": "Hertha BSC",
+        "is_home": true,
+        "win_probability": 0.344,
+        "difficulty": 3
+      },
+      {
+        "matchday": 22,
+        "opponent": "1. FC Kaiserslautern",
+        "is_home": false,
+        "win_probability": 0.296,
+        "difficulty": 4
+      },
+      {
+        "matchday": 23,
+        "opponent": "SpVgg Greuther Fürth",
+        "is_home": true,
+        "win_probability": 0.512,
+        "difficulty": 2
+      },
+      {
+        "matchday": 24,
+        "opponent": "Hannover 96",
+        "is_home": false,
+        "win_probability": 0.271,
+        "difficulty": 4
+      },
+      {
+        "matchday": 25,
+        "opponent": "Dynamo Dresden",
+        "is_home": true,
+        "win_probability": 0.436,
+        "difficulty": 2
+      },
+      {
+        "matchday": 26,
+        "opponent": "Karlsruher SC",
+        "is_home": false,
+        "win_probability": 0.408,
+        "difficulty": 3
+      },
+      {
+        "matchday": 27,
+        "opponent": "SV Darmstadt 98",
+        "is_home": true,
+        "win_probability": 0.39,
+        "difficulty": 3
+      },
+      {
+        "matchday": 28,
+        "opponent": "FC St. Pauli",
+        "is_home": false,
+        "win_probability": 0.329,
+        "difficulty": 3
+      },
+      {
+        "matchday": 29,
+        "opponent": "DSC Arminia Bielefeld",
+        "is_home": true,
+        "win_probability": 0.411,
+        "difficulty": 3
+      },
+      {
+        "matchday": 30,
+        "opponent": "Energie Cottbus",
+        "is_home": false,
+        "win_probability": 0.322,
+        "difficulty": 3
+      },
+      {
+        "matchday": 31,
+        "opponent": "VfL Wolfsburg",
+        "is_home": true,
+        "win_probability": 0.32,
+        "difficulty": 3
+      },
+      {
+        "matchday": 32,
+        "opponent": "1. FC Nürnberg",
+        "is_home": false,
+        "win_probability": 0.276,
+        "difficulty": 4
+      },
+      {
+        "matchday": 33,
+        "opponent": "VfL Bochum",
+        "is_home": true,
+        "win_probability": 0.397,
+        "difficulty": 3
+      },
+      {
+        "matchday": 34,
+        "opponent": "1. FC Heidenheim 1846",
+        "is_home": false,
+        "win_probability": 0.309,
+        "difficulty": 3
+      }
+    ],
+    "Hannover 96": [
+      {
+        "matchday": 7,
+        "opponent": "1. FC Magdeburg",
+        "is_home": false,
+        "win_probability": 0.43,
+        "difficulty": 2
+      },
+      {
+        "matchday": 8,
+        "opponent": "FC St. Pauli",
+        "is_home": true,
+        "win_probability": 0.482,
+        "difficulty": 2
+      },
+      {
+        "matchday": 9,
+        "opponent": "Eintracht Braunschweig",
+        "is_home": false,
+        "win_probability": 0.494,
+        "difficulty": 2
+      },
+      {
+        "matchday": 10,
+        "opponent": "Dynamo Dresden",
+        "is_home": true,
+        "win_probability": 0.516,
+        "difficulty": 2
+      },
+      {
+        "matchday": 11,
+        "opponent": "1. FC Heidenheim 1846",
+        "is_home": false,
+        "win_probability": 0.392,
+        "difficulty": 3
+      },
+      {
+        "matchday": 12,
+        "opponent": "SpVgg Greuther Fürth",
+        "is_home": true,
+        "win_probability": 0.592,
+        "difficulty": 1
+      },
+      {
+        "matchday": 13,
+        "opponent": "VfL Osnabrück",
+        "is_home": false,
+        "win_probability": 0.454,
+        "difficulty": 2
+      },
+      {
+        "matchday": 14,
+        "opponent": "Hertha BSC",
+        "is_home": true,
+        "win_probability": 0.42,
+        "difficulty": 3
+      },
+      {
+        "matchday": 15,
+        "opponent": "Holstein Kiel",
+        "is_home": false,
+        "win_probability": 0.434,
+        "difficulty": 2
+      },
+      {
+        "matchday": 16,
+        "opponent": "1. FC Kaiserslautern",
+        "is_home": true,
+        "win_probability": 0.443,
+        "difficulty": 2
+      },
+      {
+        "matchday": 17,
+        "opponent": "DSC Arminia Bielefeld",
+        "is_home": false,
+        "win_probability": 0.41,
+        "difficulty": 3
+      },
+      {
+        "matchday": 18,
+        "opponent": "Energie Cottbus",
+        "is_home": true,
+        "win_probability": 0.494,
+        "difficulty": 2
+      },
+      {
+        "matchday": 19,
+        "opponent": "VfL Wolfsburg",
+        "is_home": false,
+        "win_probability": 0.322,
+        "difficulty": 3
+      },
+      {
+        "matchday": 20,
+        "opponent": "SV Darmstadt 98",
+        "is_home": true,
+        "win_probability": 0.467,
+        "difficulty": 2
+      },
+      {
+        "matchday": 21,
+        "opponent": "Karlsruher SC",
+        "is_home": false,
+        "win_probability": 0.49,
+        "difficulty": 2
+      },
+      {
+        "matchday": 22,
+        "opponent": "1. FC Nürnberg",
+        "is_home": true,
+        "win_probability": 0.423,
+        "difficulty": 2
+      },
+      {
+        "matchday": 23,
+        "opponent": "VfL Bochum",
+        "is_home": false,
+        "win_probability": 0.395,
+        "difficulty": 3
+      },
+      {
+        "matchday": 24,
+        "opponent": "1. FC Magdeburg",
+        "is_home": true,
+        "win_probability": 0.512,
+        "difficulty": 2
+      },
+      {
+        "matchday": 25,
+        "opponent": "FC St. Pauli",
+        "is_home": false,
+        "win_probability": 0.404,
+        "difficulty": 3
+      },
+      {
+        "matchday": 26,
+        "opponent": "Eintracht Braunschweig",
+        "is_home": true,
+        "win_probability": 0.573,
+        "difficulty": 1
+      },
+      {
+        "matchday": 27,
+        "opponent": "Dynamo Dresden",
+        "is_home": false,
+        "win_probability": 0.434,
+        "difficulty": 2
+      },
+      {
+        "matchday": 28,
+        "opponent": "1. FC Heidenheim 1846",
+        "is_home": true,
+        "win_probability": 0.478,
+        "difficulty": 2
+      },
+      {
+        "matchday": 29,
+        "opponent": "SpVgg Greuther Fürth",
+        "is_home": false,
+        "win_probability": 0.508,
+        "difficulty": 2
+      },
+      {
+        "matchday": 30,
+        "opponent": "VfL Osnabrück",
+        "is_home": true,
+        "win_probability": 0.537,
+        "difficulty": 2
+      },
+      {
+        "matchday": 31,
+        "opponent": "Hertha BSC",
+        "is_home": false,
+        "win_probability": 0.345,
+        "difficulty": 3
+      },
+      {
+        "matchday": 32,
+        "opponent": "Holstein Kiel",
+        "is_home": true,
+        "win_probability": 0.511,
+        "difficulty": 2
+      },
+      {
+        "matchday": 33,
+        "opponent": "1. FC Kaiserslautern",
+        "is_home": false,
+        "win_probability": 0.368,
+        "difficulty": 3
+      },
+      {
+        "matchday": 34,
+        "opponent": "DSC Arminia Bielefeld",
+        "is_home": true,
+        "win_probability": 0.491,
+        "difficulty": 2
+      }
+    ],
+    "VfL Osnabrück": [
+      {
+        "matchday": 7,
+        "opponent": "Dynamo Dresden",
+        "is_home": true,
+        "win_probability": 0.411,
+        "difficulty": 3
+      },
+      {
+        "matchday": 8,
+        "opponent": "DSC Arminia Bielefeld",
+        "is_home": false,
+        "win_probability": 0.309,
+        "difficulty": 3
+      },
+      {
+        "matchday": 9,
+        "opponent": "SpVgg Greuther Fürth",
+        "is_home": true,
+        "win_probability": 0.486,
+        "difficulty": 2
+      },
+      {
+        "matchday": 10,
+        "opponent": "VfL Wolfsburg",
+        "is_home": false,
+        "win_probability": 0.226,
+        "difficulty": 4
+      },
+      {
+        "matchday": 11,
+        "opponent": "1. FC Kaiserslautern",
+        "is_home": true,
+        "win_probability": 0.346,
+        "difficulty": 3
+      },
+      {
+        "matchday": 12,
+        "opponent": "Karlsruher SC",
+        "is_home": false,
+        "win_probability": 0.383,
+        "difficulty": 3
+      },
+      {
+        "matchday": 13,
+        "opponent": "Hannover 96",
+        "is_home": true,
+        "win_probability": 0.321,
+        "difficulty": 3
+      },
+      {
+        "matchday": 14,
+        "opponent": "Energie Cottbus",
+        "is_home": false,
+        "win_probability": 0.299,
+        "difficulty": 4
+      },
+      {
+        "matchday": 15,
+        "opponent": "FC St. Pauli",
+        "is_home": true,
+        "win_probability": 0.382,
+        "difficulty": 3
+      },
+      {
+        "matchday": 16,
+        "opponent": "1. FC Nürnberg",
+        "is_home": false,
+        "win_probability": 0.257,
+        "difficulty": 4
+      },
+      {
+        "matchday": 17,
+        "opponent": "SV Darmstadt 98",
+        "is_home": true,
+        "win_probability": 0.366,
+        "difficulty": 3
+      },
+      {
+        "matchday": 18,
+        "opponent": "1. FC Heidenheim 1846",
+        "is_home": true,
+        "win_probability": 0.367,
+        "difficulty": 3
+      },
+      {
+        "matchday": 19,
+        "opponent": "1. FC Magdeburg",
+        "is_home": false,
+        "win_probability": 0.326,
+        "difficulty": 3
+      },
+      {
+        "matchday": 20,
+        "opponent": "VfL Bochum",
+        "is_home": true,
+        "win_probability": 0.374,
+        "difficulty": 3
+      },
+      {
+        "matchday": 21,
+        "opponent": "Eintracht Braunschweig",
+        "is_home": false,
+        "win_probability": 0.394,
+        "difficulty": 3
+      },
+      {
+        "matchday": 22,
+        "opponent": "Hertha BSC",
+        "is_home": false,
+        "win_probability": 0.253,
+        "difficulty": 4
+      },
+      {
+        "matchday": 23,
+        "opponent": "Holstein Kiel",
+        "is_home": true,
+        "win_probability": 0.414,
+        "difficulty": 3
+      },
+      {
+        "matchday": 24,
+        "opponent": "Dynamo Dresden",
+        "is_home": false,
+        "win_probability": 0.33,
+        "difficulty": 3
+      },
+      {
+        "matchday": 25,
+        "opponent": "DSC Arminia Bielefeld",
+        "is_home": true,
+        "win_probability": 0.387,
+        "difficulty": 3
+      },
+      {
+        "matchday": 26,
+        "opponent": "SpVgg Greuther Fürth",
+        "is_home": false,
+        "win_probability": 0.4,
+        "difficulty": 3
+      },
+      {
+        "matchday": 27,
+        "opponent": "VfL Wolfsburg",
+        "is_home": true,
+        "win_probability": 0.297,
+        "difficulty": 4
+      },
+      {
+        "matchday": 28,
+        "opponent": "1. FC Kaiserslautern",
+        "is_home": false,
+        "win_probability": 0.276,
+        "difficulty": 4
+      },
+      {
+        "matchday": 29,
+        "opponent": "Karlsruher SC",
+        "is_home": true,
+        "win_probability": 0.468,
+        "difficulty": 2
+      },
+      {
+        "matchday": 30,
+        "opponent": "Hannover 96",
+        "is_home": false,
+        "win_probability": 0.251,
+        "difficulty": 4
+      },
+      {
+        "matchday": 31,
+        "opponent": "Energie Cottbus",
+        "is_home": true,
+        "win_probability": 0.381,
+        "difficulty": 3
+      },
+      {
+        "matchday": 32,
+        "opponent": "FC St. Pauli",
+        "is_home": false,
+        "win_probability": 0.307,
+        "difficulty": 3
+      },
+      {
+        "matchday": 33,
+        "opponent": "1. FC Nürnberg",
+        "is_home": true,
+        "win_probability": 0.326,
+        "difficulty": 3
+      },
+      {
+        "matchday": 34,
+        "opponent": "SV Darmstadt 98",
+        "is_home": false,
+        "win_probability": 0.291,
+        "difficulty": 4
+      }
+    ],
+    "Dynamo Dresden": [
+      {
+        "matchday": 7,
+        "opponent": "VfL Osnabrück",
+        "is_home": false,
+        "win_probability": 0.368,
+        "difficulty": 3
+      },
+      {
+        "matchday": 8,
+        "opponent": "1. FC Magdeburg",
+        "is_home": true,
+        "win_probability": 0.427,
+        "difficulty": 2
+      },
+      {
+        "matchday": 9,
+        "opponent": "Holstein Kiel",
+        "is_home": false,
+        "win_probability": 0.356,
+        "difficulty": 3
+      },
+      {
+        "matchday": 10,
+        "opponent": "Hannover 96",
+        "is_home": false,
+        "win_probability": 0.267,
+        "difficulty": 4
+      },
+      {
+        "matchday": 11,
+        "opponent": "SpVgg Greuther Fürth",
+        "is_home": true,
+        "win_probability": 0.507,
+        "difficulty": 2
+      },
+      {
+        "matchday": 12,
+        "opponent": "1. FC Kaiserslautern",
+        "is_home": false,
+        "win_probability": 0.292,
+        "difficulty": 4
+      },
+      {
+        "matchday": 13,
+        "opponent": "FC St. Pauli",
+        "is_home": true,
+        "win_probability": 0.401,
+        "difficulty": 3
+      },
+      {
+        "matchday": 14,
+        "opponent": "DSC Arminia Bielefeld",
+        "is_home": false,
+        "win_probability": 0.327,
+        "difficulty": 3
+      },
+      {
+        "matchday": 15,
+        "opponent": "Energie Cottbus",
+        "is_home": true,
+        "win_probability": 0.402,
+        "difficulty": 3
+      },
+      {
+        "matchday": 16,
+        "opponent": "Karlsruher SC",
+        "is_home": false,
+        "win_probability": 0.402,
+        "difficulty": 3
+      },
+      {
+        "matchday": 17,
+        "opponent": "VfL Wolfsburg",
+        "is_home": true,
+        "win_probability": 0.315,
+        "difficulty": 3
+      },
+      {
+        "matchday": 18,
+        "opponent": "1. FC Nürnberg",
+        "is_home": true,
+        "win_probability": 0.344,
+        "difficulty": 3
+      },
+      {
+        "matchday": 19,
+        "opponent": "SV Darmstadt 98",
+        "is_home": false,
+        "win_probability": 0.308,
+        "difficulty": 3
+      },
+      {
+        "matchday": 20,
+        "opponent": "1. FC Heidenheim 1846",
+        "is_home": true,
+        "win_probability": 0.387,
+        "difficulty": 3
+      },
+      {
+        "matchday": 21,
+        "opponent": "VfL Bochum",
+        "is_home": false,
+        "win_probability": 0.318,
+        "difficulty": 3
+      },
+      {
+        "matchday": 22,
+        "opponent": "Eintracht Braunschweig",
+        "is_home": true,
+        "win_probability": 0.494,
+        "difficulty": 2
+      },
+      {
+        "matchday": 23,
+        "opponent": "Hertha BSC",
+        "is_home": false,
+        "win_probability": 0.269,
+        "difficulty": 4
+      },
+      {
+        "matchday": 24,
+        "opponent": "VfL Osnabrück",
+        "is_home": true,
+        "win_probability": 0.451,
+        "difficulty": 2
+      },
+      {
+        "matchday": 25,
+        "opponent": "1. FC Magdeburg",
+        "is_home": false,
+        "win_probability": 0.345,
+        "difficulty": 3
+      },
+      {
+        "matchday": 26,
+        "opponent": "Holstein Kiel",
+        "is_home": true,
+        "win_probability": 0.432,
+        "difficulty": 2
+      },
+      {
+        "matchday": 27,
+        "opponent": "Hannover 96",
+        "is_home": true,
+        "win_probability": 0.339,
+        "difficulty": 3
+      },
+      {
+        "matchday": 28,
+        "opponent": "SpVgg Greuther Fürth",
+        "is_home": false,
+        "win_probability": 0.42,
+        "difficulty": 2
+      },
+      {
+        "matchday": 29,
+        "opponent": "1. FC Kaiserslautern",
+        "is_home": true,
+        "win_probability": 0.364,
+        "difficulty": 3
+      },
+      {
+        "matchday": 30,
+        "opponent": "FC St. Pauli",
+        "is_home": false,
+        "win_probability": 0.324,
+        "difficulty": 3
+      },
+      {
+        "matchday": 31,
+        "opponent": "DSC Arminia Bielefeld",
+        "is_home": true,
+        "win_probability": 0.406,
+        "difficulty": 3
+      },
+      {
+        "matchday": 32,
+        "opponent": "Energie Cottbus",
+        "is_home": false,
+        "win_probability": 0.318,
+        "difficulty": 3
+      },
+      {
+        "matchday": 33,
+        "opponent": "Karlsruher SC",
+        "is_home": true,
+        "win_probability": 0.488,
+        "difficulty": 2
+      },
+      {
+        "matchday": 34,
+        "opponent": "VfL Wolfsburg",
+        "is_home": false,
+        "win_probability": 0.243,
+        "difficulty": 4
+      }
+    ],
+    "1. FC Nürnberg": [
+      {
+        "matchday": 7,
+        "opponent": "VfL Wolfsburg",
+        "is_home": true,
+        "win_probability": 0.391,
+        "difficulty": 3
+      },
+      {
+        "matchday": 8,
+        "opponent": "Energie Cottbus",
+        "is_home": false,
+        "win_probability": 0.397,
+        "difficulty": 3
+      },
+      {
+        "matchday": 9,
+        "opponent": "1. FC Kaiserslautern",
+        "is_home": true,
+        "win_probability": 0.432,
+        "difficulty": 2
+      },
+      {
+        "matchday": 10,
+        "opponent": "FC St. Pauli",
+        "is_home": false,
+        "win_probability": 0.394,
+        "difficulty": 3
+      },
+      {
+        "matchday": 11,
+        "opponent": "SV Darmstadt 98",
+        "is_home": true,
+        "win_probability": 0.456,
+        "difficulty": 2
+      },
+      {
+        "matchday": 12,
+        "opponent": "Eintracht Braunschweig",
+        "is_home": true,
+        "win_probability": 0.559,
+        "difficulty": 1
+      },
+      {
+        "matchday": 13,
+        "opponent": "1. FC Heidenheim 1846",
+        "is_home": false,
+        "win_probability": 0.383,
+        "difficulty": 3
+      },
+      {
+        "matchday": 14,
+        "opponent": "VfL Bochum",
+        "is_home": true,
+        "win_probability": 0.459,
+        "difficulty": 2
+      },
+      {
+        "matchday": 15,
+        "opponent": "1. FC Magdeburg",
+        "is_home": false,
+        "win_probability": 0.419,
+        "difficulty": 3
+      },
+      {
+        "matchday": 16,
+        "opponent": "VfL Osnabrück",
+        "is_home": true,
+        "win_probability": 0.524,
+        "difficulty": 2
+      },
+      {
+        "matchday": 17,
+        "opponent": "Hertha BSC",
+        "is_home": false,
+        "win_probability": 0.336,
+        "difficulty": 3
+      },
+      {
+        "matchday": 18,
+        "opponent": "Dynamo Dresden",
+        "is_home": false,
+        "win_probability": 0.423,
+        "difficulty": 2
+      },
+      {
+        "matchday": 19,
+        "opponent": "SpVgg Greuther Fürth",
+        "is_home": true,
+        "win_probability": 0.578,
+        "difficulty": 1
+      },
+      {
+        "matchday": 20,
+        "opponent": "DSC Arminia Bielefeld",
+        "is_home": false,
+        "win_probability": 0.4,
+        "difficulty": 3
+      },
+      {
+        "matchday": 21,
+        "opponent": "Holstein Kiel",
+        "is_home": true,
+        "win_probability": 0.499,
+        "difficulty": 2
+      },
+      {
+        "matchday": 22,
+        "opponent": "Hannover 96",
+        "is_home": false,
+        "win_probability": 0.335,
+        "difficulty": 3
+      },
+      {
+        "matchday": 23,
+        "opponent": "Karlsruher SC",
+        "is_home": true,
+        "win_probability": 0.56,
+        "difficulty": 1
+      },
+      {
+        "matchday": 24,
+        "opponent": "VfL Wolfsburg",
+        "is_home": false,
+        "win_probability": 0.314,
+        "difficulty": 3
+      },
+      {
+        "matchday": 25,
+        "opponent": "Energie Cottbus",
+        "is_home": true,
+        "win_probability": 0.482,
+        "difficulty": 2
+      },
+      {
+        "matchday": 26,
+        "opponent": "1. FC Kaiserslautern",
+        "is_home": false,
+        "win_probability": 0.359,
+        "difficulty": 3
+      },
+      {
+        "matchday": 27,
+        "opponent": "FC St. Pauli",
+        "is_home": true,
+        "win_probability": 0.47,
+        "difficulty": 2
+      },
+      {
+        "matchday": 28,
+        "opponent": "SV Darmstadt 98",
+        "is_home": false,
+        "win_probability": 0.379,
+        "difficulty": 3
+      },
+      {
+        "matchday": 29,
+        "opponent": "Eintracht Braunschweig",
+        "is_home": false,
+        "win_probability": 0.482,
+        "difficulty": 2
+      },
+      {
+        "matchday": 30,
+        "opponent": "1. FC Heidenheim 1846",
+        "is_home": true,
+        "win_probability": 0.466,
+        "difficulty": 2
+      },
+      {
+        "matchday": 31,
+        "opponent": "VfL Bochum",
+        "is_home": false,
+        "win_probability": 0.385,
+        "difficulty": 3
+      },
+      {
+        "matchday": 32,
+        "opponent": "1. FC Magdeburg",
+        "is_home": true,
+        "win_probability": 0.5,
+        "difficulty": 2
+      },
+      {
+        "matchday": 33,
+        "opponent": "VfL Osnabrück",
+        "is_home": false,
+        "win_probability": 0.443,
+        "difficulty": 2
+      },
+      {
+        "matchday": 34,
+        "opponent": "Hertha BSC",
+        "is_home": true,
+        "win_probability": 0.409,
+        "difficulty": 3
+      }
+    ],
+    "VfL Wolfsburg": [
+      {
+        "matchday": 7,
+        "opponent": "1. FC Nürnberg",
+        "is_home": false,
+        "win_probability": 0.38,
+        "difficulty": 3
+      },
+      {
+        "matchday": 8,
+        "opponent": "1. FC Heidenheim 1846",
+        "is_home": true,
+        "win_probability": 0.519,
+        "difficulty": 2
+      },
+      {
+        "matchday": 9,
+        "opponent": "VfL Bochum",
+        "is_home": false,
+        "win_probability": 0.429,
+        "difficulty": 2
+      },
+      {
+        "matchday": 10,
+        "opponent": "VfL Osnabrück",
+        "is_home": true,
+        "win_probability": 0.58,
+        "difficulty": 1
+      },
+      {
+        "matchday": 11,
+        "opponent": "Hertha BSC",
+        "is_home": false,
+        "win_probability": 0.376,
+        "difficulty": 3
+      },
+      {
+        "matchday": 12,
+        "opponent": "Holstein Kiel",
+        "is_home": true,
+        "win_probability": 0.553,
+        "difficulty": 1
+      },
+      {
+        "matchday": 13,
+        "opponent": "Eintracht Braunschweig",
+        "is_home": false,
+        "win_probability": 0.535,
+        "difficulty": 2
+      },
+      {
+        "matchday": 14,
+        "opponent": "1. FC Magdeburg",
+        "is_home": true,
+        "win_probability": 0.555,
+        "difficulty": 1
+      },
+      {
+        "matchday": 15,
+        "opponent": "SpVgg Greuther Fürth",
+        "is_home": false,
+        "win_probability": 0.55,
+        "difficulty": 2
+      },
+      {
+        "matchday": 16,
+        "opponent": "DSC Arminia Bielefeld",
+        "is_home": true,
+        "win_probability": 0.532,
+        "difficulty": 2
+      },
+      {
+        "matchday": 17,
+        "opponent": "Dynamo Dresden",
+        "is_home": false,
+        "win_probability": 0.472,
+        "difficulty": 2
+      },
+      {
+        "matchday": 18,
+        "opponent": "1. FC Kaiserslautern",
+        "is_home": false,
+        "win_probability": 0.4,
+        "difficulty": 3
+      },
+      {
+        "matchday": 19,
+        "opponent": "Hannover 96",
+        "is_home": true,
+        "win_probability": 0.457,
+        "difficulty": 2
+      },
+      {
+        "matchday": 20,
+        "opponent": "Karlsruher SC",
+        "is_home": true,
+        "win_probability": 0.617,
+        "difficulty": 1
+      },
+      {
+        "matchday": 21,
+        "opponent": "Energie Cottbus",
+        "is_home": false,
+        "win_probability": 0.444,
+        "difficulty": 2
+      },
+      {
+        "matchday": 22,
+        "opponent": "FC St. Pauli",
+        "is_home": true,
+        "win_probability": 0.522,
+        "difficulty": 2
+      },
+      {
+        "matchday": 23,
+        "opponent": "SV Darmstadt 98",
+        "is_home": false,
+        "win_probability": 0.423,
+        "difficulty": 2
+      },
+      {
+        "matchday": 24,
+        "opponent": "1. FC Nürnberg",
+        "is_home": true,
+        "win_probability": 0.46,
+        "difficulty": 2
+      },
+      {
+        "matchday": 25,
+        "opponent": "1. FC Heidenheim 1846",
+        "is_home": false,
+        "win_probability": 0.428,
+        "difficulty": 2
+      },
+      {
+        "matchday": 26,
+        "opponent": "VfL Bochum",
+        "is_home": true,
+        "win_probability": 0.51,
+        "difficulty": 2
+      },
+      {
+        "matchday": 27,
+        "opponent": "VfL Osnabrück",
+        "is_home": false,
+        "win_probability": 0.493,
+        "difficulty": 2
+      },
+      {
+        "matchday": 28,
+        "opponent": "Hertha BSC",
+        "is_home": true,
+        "win_probability": 0.456,
+        "difficulty": 2
+      },
+      {
+        "matchday": 29,
+        "opponent": "Holstein Kiel",
+        "is_home": false,
+        "win_probability": 0.471,
+        "difficulty": 2
+      },
+      {
+        "matchday": 30,
+        "opponent": "Eintracht Braunschweig",
+        "is_home": true,
+        "win_probability": 0.616,
+        "difficulty": 1
+      },
+      {
+        "matchday": 31,
+        "opponent": "1. FC Magdeburg",
+        "is_home": false,
+        "win_probability": 0.468,
+        "difficulty": 2
+      },
+      {
+        "matchday": 32,
+        "opponent": "SpVgg Greuther Fürth",
+        "is_home": true,
+        "win_probability": 0.636,
+        "difficulty": 1
+      },
+      {
+        "matchday": 33,
+        "opponent": "DSC Arminia Bielefeld",
+        "is_home": false,
+        "win_probability": 0.446,
+        "difficulty": 2
+      },
+      {
+        "matchday": 34,
+        "opponent": "Dynamo Dresden",
+        "is_home": true,
+        "win_probability": 0.559,
+        "difficulty": 1
+      }
+    ],
+    "FC St. Pauli": [
+      {
+        "matchday": 7,
+        "opponent": "Karlsruher SC",
+        "is_home": true,
+        "win_probability": 0.5,
+        "difficulty": 2
+      },
+      {
+        "matchday": 8,
+        "opponent": "Hannover 96",
+        "is_home": false,
+        "win_probability": 0.285,
+        "difficulty": 4
+      },
+      {
+        "matchday": 9,
+        "opponent": "SV Darmstadt 98",
+        "is_home": false,
+        "win_probability": 0.325,
+        "difficulty": 3
+      },
+      {
+        "matchday": 10,
+        "opponent": "1. FC Nürnberg",
+        "is_home": true,
+        "win_probability": 0.359,
+        "difficulty": 3
+      },
+      {
+        "matchday": 11,
+        "opponent": "1. FC Magdeburg",
+        "is_home": false,
+        "win_probability": 0.362,
+        "difficulty": 3
+      },
+      {
+        "matchday": 12,
+        "opponent": "VfL Bochum",
+        "is_home": true,
+        "win_probability": 0.405,
+        "difficulty": 3
+      },
+      {
+        "matchday": 13,
+        "opponent": "Dynamo Dresden",
+        "is_home": false,
+        "win_probability": 0.366,
+        "difficulty": 3
+      },
+      {
+        "matchday": 14,
+        "opponent": "1. FC Heidenheim 1846",
+        "is_home": true,
+        "win_probability": 0.405,
+        "difficulty": 3
+      },
+      {
+        "matchday": 15,
+        "opponent": "VfL Osnabrück",
+        "is_home": false,
+        "win_probability": 0.385,
+        "difficulty": 3
+      },
+      {
+        "matchday": 16,
+        "opponent": "Hertha BSC",
+        "is_home": true,
+        "win_probability": 0.355,
+        "difficulty": 3
+      },
+      {
+        "matchday": 17,
+        "opponent": "Eintracht Braunschweig",
+        "is_home": false,
+        "win_probability": 0.426,
+        "difficulty": 2
+      },
+      {
+        "matchday": 18,
+        "opponent": "SpVgg Greuther Fürth",
+        "is_home": false,
+        "win_probability": 0.435,
+        "difficulty": 2
+      },
+      {
+        "matchday": 19,
+        "opponent": "Holstein Kiel",
+        "is_home": true,
+        "win_probability": 0.444,
+        "difficulty": 2
+      },
+      {
+        "matchday": 20,
+        "opponent": "1. FC Kaiserslautern",
+        "is_home": false,
+        "win_probability": 0.308,
+        "difficulty": 3
+      },
+      {
+        "matchday": 21,
+        "opponent": "DSC Arminia Bielefeld",
+        "is_home": true,
+        "win_probability": 0.421,
+        "difficulty": 2
+      },
+      {
+        "matchday": 22,
+        "opponent": "VfL Wolfsburg",
+        "is_home": false,
+        "win_probability": 0.262,
+        "difficulty": 4
+      },
+      {
+        "matchday": 23,
+        "opponent": "Energie Cottbus",
+        "is_home": true,
+        "win_probability": 0.419,
+        "difficulty": 3
+      },
+      {
+        "matchday": 24,
+        "opponent": "Karlsruher SC",
+        "is_home": false,
+        "win_probability": 0.418,
+        "difficulty": 3
+      },
+      {
+        "matchday": 25,
+        "opponent": "Hannover 96",
+        "is_home": true,
+        "win_probability": 0.355,
+        "difficulty": 3
+      },
+      {
+        "matchday": 26,
+        "opponent": "SV Darmstadt 98",
+        "is_home": true,
+        "win_probability": 0.399,
+        "difficulty": 3
+      },
+      {
+        "matchday": 27,
+        "opponent": "1. FC Nürnberg",
+        "is_home": false,
+        "win_probability": 0.29,
+        "difficulty": 4
+      },
+      {
+        "matchday": 28,
+        "opponent": "1. FC Magdeburg",
+        "is_home": true,
+        "win_probability": 0.441,
+        "difficulty": 2
+      },
+      {
+        "matchday": 29,
+        "opponent": "VfL Bochum",
+        "is_home": false,
+        "win_probability": 0.333,
+        "difficulty": 3
+      },
+      {
+        "matchday": 30,
+        "opponent": "Dynamo Dresden",
+        "is_home": true,
+        "win_probability": 0.445,
+        "difficulty": 2
+      },
+      {
+        "matchday": 31,
+        "opponent": "1. FC Heidenheim 1846",
+        "is_home": false,
+        "win_probability": 0.325,
+        "difficulty": 3
+      },
+      {
+        "matchday": 32,
+        "opponent": "VfL Osnabrück",
+        "is_home": true,
+        "win_probability": 0.465,
+        "difficulty": 2
+      },
+      {
+        "matchday": 33,
+        "opponent": "Hertha BSC",
+        "is_home": false,
+        "win_probability": 0.286,
+        "difficulty": 4
+      },
+      {
+        "matchday": 34,
+        "opponent": "Eintracht Braunschweig",
+        "is_home": true,
+        "win_probability": 0.503,
+        "difficulty": 2
+      }
+    ],
+    "Karlsruher SC": [
+      {
+        "matchday": 7,
+        "opponent": "FC St. Pauli",
+        "is_home": false,
+        "win_probability": 0.28,
+        "difficulty": 4
+      },
+      {
+        "matchday": 8,
+        "opponent": "SV Darmstadt 98",
+        "is_home": true,
+        "win_probability": 0.337,
+        "difficulty": 3
+      },
+      {
+        "matchday": 9,
+        "opponent": "1. FC Magdeburg",
+        "is_home": false,
+        "win_probability": 0.297,
+        "difficulty": 4
+      },
+      {
+        "matchday": 10,
+        "opponent": "1. FC Heidenheim 1846",
+        "is_home": true,
+        "win_probability": 0.335,
+        "difficulty": 3
+      },
+      {
+        "matchday": 11,
+        "opponent": "VfL Bochum",
+        "is_home": false,
+        "win_probability": 0.275,
+        "difficulty": 4
+      },
+      {
+        "matchday": 12,
+        "opponent": "VfL Osnabrück",
+        "is_home": true,
+        "win_probability": 0.4,
+        "difficulty": 3
+      },
+      {
+        "matchday": 13,
+        "opponent": "Hertha BSC",
+        "is_home": false,
+        "win_probability": 0.227,
+        "difficulty": 4
+      },
+      {
+        "matchday": 14,
+        "opponent": "Holstein Kiel",
+        "is_home": true,
+        "win_probability": 0.385,
+        "difficulty": 3
+      },
+      {
+        "matchday": 15,
+        "opponent": "Eintracht Braunschweig",
+        "is_home": false,
+        "win_probability": 0.365,
+        "difficulty": 3
+      },
+      {
+        "matchday": 16,
+        "opponent": "Dynamo Dresden",
+        "is_home": true,
+        "win_probability": 0.38,
+        "difficulty": 3
+      },
+      {
+        "matchday": 17,
+        "opponent": "SpVgg Greuther Fürth",
+        "is_home": false,
+        "win_probability": 0.369,
+        "difficulty": 3
+      },
+      {
+        "matchday": 18,
+        "opponent": "DSC Arminia Bielefeld",
+        "is_home": false,
+        "win_probability": 0.28,
+        "difficulty": 4
+      },
+      {
+        "matchday": 19,
+        "opponent": "1. FC Kaiserslautern",
+        "is_home": true,
+        "win_probability": 0.319,
+        "difficulty": 3
+      },
+      {
+        "matchday": 20,
+        "opponent": "VfL Wolfsburg",
+        "is_home": false,
+        "win_probability": 0.2,
+        "difficulty": 4
+      },
+      {
+        "matchday": 21,
+        "opponent": "Hannover 96",
+        "is_home": true,
+        "win_probability": 0.293,
+        "difficulty": 4
+      },
+      {
+        "matchday": 22,
+        "opponent": "Energie Cottbus",
+        "is_home": false,
+        "win_probability": 0.268,
+        "difficulty": 4
+      },
+      {
+        "matchday": 23,
+        "opponent": "1. FC Nürnberg",
+        "is_home": false,
+        "win_probability": 0.231,
+        "difficulty": 4
+      },
+      {
+        "matchday": 24,
+        "opponent": "FC St. Pauli",
+        "is_home": true,
+        "win_probability": 0.353,
+        "difficulty": 3
+      },
+      {
+        "matchday": 25,
+        "opponent": "SV Darmstadt 98",
+        "is_home": false,
+        "win_probability": 0.264,
+        "difficulty": 4
+      },
+      {
+        "matchday": 26,
+        "opponent": "1. FC Magdeburg",
+        "is_home": true,
+        "win_probability": 0.376,
+        "difficulty": 3
+      },
+      {
+        "matchday": 27,
+        "opponent": "1. FC Heidenheim 1846",
+        "is_home": false,
+        "win_probability": 0.256,
+        "difficulty": 4
+      },
+      {
+        "matchday": 28,
+        "opponent": "VfL Bochum",
+        "is_home": true,
+        "win_probability": 0.346,
+        "difficulty": 3
+      },
+      {
+        "matchday": 29,
+        "opponent": "VfL Osnabrück",
+        "is_home": false,
+        "win_probability": 0.319,
+        "difficulty": 3
+      },
+      {
+        "matchday": 30,
+        "opponent": "Hertha BSC",
+        "is_home": true,
+        "win_probability": 0.295,
+        "difficulty": 4
+      },
+      {
+        "matchday": 31,
+        "opponent": "Holstein Kiel",
+        "is_home": false,
+        "win_probability": 0.311,
+        "difficulty": 3
+      },
+      {
+        "matchday": 32,
+        "opponent": "Eintracht Braunschweig",
+        "is_home": true,
+        "win_probability": 0.445,
+        "difficulty": 2
+      },
+      {
+        "matchday": 33,
+        "opponent": "Dynamo Dresden",
+        "is_home": false,
+        "win_probability": 0.301,
+        "difficulty": 3
+      },
+      {
+        "matchday": 34,
+        "opponent": "SpVgg Greuther Fürth",
+        "is_home": true,
+        "win_probability": 0.454,
+        "difficulty": 2
+      }
+    ],
+    "Hertha BSC": [
+      {
+        "matchday": 7,
+        "opponent": "SpVgg Greuther Fürth",
+        "is_home": true,
+        "win_probability": 0.584,
+        "difficulty": 1
+      },
+      {
+        "matchday": 8,
+        "opponent": "Holstein Kiel",
+        "is_home": false,
+        "win_probability": 0.428,
+        "difficulty": 2
+      },
+      {
+        "matchday": 9,
+        "opponent": "DSC Arminia Bielefeld",
+        "is_home": true,
+        "win_probability": 0.484,
+        "difficulty": 2
+      },
+      {
+        "matchday": 10,
+        "opponent": "1. FC Kaiserslautern",
+        "is_home": false,
+        "win_probability": 0.363,
+        "difficulty": 3
+      },
+      {
+        "matchday": 11,
+        "opponent": "VfL Wolfsburg",
+        "is_home": true,
+        "win_probability": 0.396,
+        "difficulty": 3
+      },
+      {
+        "matchday": 12,
+        "opponent": "Energie Cottbus",
+        "is_home": false,
+        "win_probability": 0.402,
+        "difficulty": 3
+      },
+      {
+        "matchday": 13,
+        "opponent": "Karlsruher SC",
+        "is_home": true,
+        "win_probability": 0.566,
+        "difficulty": 1
+      },
+      {
+        "matchday": 14,
+        "opponent": "Hannover 96",
+        "is_home": false,
+        "win_probability": 0.34,
+        "difficulty": 3
+      },
+      {
+        "matchday": 15,
+        "opponent": "SV Darmstadt 98",
+        "is_home": true,
+        "win_probability": 0.461,
+        "difficulty": 2
+      },
+      {
+        "matchday": 16,
+        "opponent": "FC St. Pauli",
+        "is_home": false,
+        "win_probability": 0.398,
+        "difficulty": 3
+      },
+      {
+        "matchday": 17,
+        "opponent": "1. FC Nürnberg",
+        "is_home": true,
+        "win_probability": 0.418,
+        "difficulty": 3
+      },
+      {
+        "matchday": 18,
+        "opponent": "VfL Bochum",
+        "is_home": true,
+        "win_probability": 0.464,
+        "difficulty": 2
+      },
+      {
+        "matchday": 19,
+        "opponent": "1. FC Heidenheim 1846",
+        "is_home": false,
+        "win_probability": 0.388,
+        "difficulty": 3
+      },
+      {
+        "matchday": 20,
+        "opponent": "Eintracht Braunschweig",
+        "is_home": true,
+        "win_probability": 0.565,
+        "difficulty": 1
+      },
+      {
+        "matchday": 21,
+        "opponent": "1. FC Magdeburg",
+        "is_home": false,
+        "win_probability": 0.424,
+        "difficulty": 2
+      },
+      {
+        "matchday": 22,
+        "opponent": "VfL Osnabrück",
+        "is_home": true,
+        "win_probability": 0.529,
+        "difficulty": 2
+      },
+      {
+        "matchday": 23,
+        "opponent": "Dynamo Dresden",
+        "is_home": true,
+        "win_probability": 0.509,
+        "difficulty": 2
+      },
+      {
+        "matchday": 24,
+        "opponent": "SpVgg Greuther Fürth",
+        "is_home": false,
+        "win_probability": 0.501,
+        "difficulty": 2
+      },
+      {
+        "matchday": 25,
+        "opponent": "Holstein Kiel",
+        "is_home": true,
+        "win_probability": 0.504,
+        "difficulty": 2
+      },
+      {
+        "matchday": 26,
+        "opponent": "DSC Arminia Bielefeld",
+        "is_home": false,
+        "win_probability": 0.405,
+        "difficulty": 3
+      },
+      {
+        "matchday": 27,
+        "opponent": "1. FC Kaiserslautern",
+        "is_home": true,
+        "win_probability": 0.437,
+        "difficulty": 2
+      },
+      {
+        "matchday": 28,
+        "opponent": "VfL Wolfsburg",
+        "is_home": false,
+        "win_probability": 0.318,
+        "difficulty": 3
+      },
+      {
+        "matchday": 29,
+        "opponent": "Energie Cottbus",
+        "is_home": true,
+        "win_probability": 0.487,
+        "difficulty": 2
+      },
+      {
+        "matchday": 30,
+        "opponent": "Karlsruher SC",
+        "is_home": false,
+        "win_probability": 0.483,
+        "difficulty": 2
+      },
+      {
+        "matchday": 31,
+        "opponent": "Hannover 96",
+        "is_home": true,
+        "win_probability": 0.415,
+        "difficulty": 3
+      },
+      {
+        "matchday": 32,
+        "opponent": "SV Darmstadt 98",
+        "is_home": false,
+        "win_probability": 0.384,
+        "difficulty": 3
+      },
+      {
+        "matchday": 33,
+        "opponent": "FC St. Pauli",
+        "is_home": true,
+        "win_probability": 0.475,
+        "difficulty": 2
+      },
+      {
+        "matchday": 34,
+        "opponent": "1. FC Nürnberg",
+        "is_home": false,
+        "win_probability": 0.344,
+        "difficulty": 3
+      }
+    ],
+    "SpVgg Greuther Fürth": [
+      {
+        "matchday": 7,
+        "opponent": "Hertha BSC",
+        "is_home": false,
+        "win_probability": 0.215,
+        "difficulty": 4
+      },
+      {
+        "matchday": 8,
+        "opponent": "Eintracht Braunschweig",
+        "is_home": true,
+        "win_probability": 0.43,
+        "difficulty": 2
+      },
+      {
+        "matchday": 9,
+        "opponent": "VfL Osnabrück",
+        "is_home": false,
+        "win_probability": 0.304,
+        "difficulty": 3
+      },
+      {
+        "matchday": 10,
+        "opponent": "Holstein Kiel",
+        "is_home": true,
+        "win_probability": 0.37,
+        "difficulty": 3
+      },
+      {
+        "matchday": 11,
+        "opponent": "Dynamo Dresden",
+        "is_home": false,
+        "win_probability": 0.286,
+        "difficulty": 4
+      },
+      {
+        "matchday": 12,
+        "opponent": "Hannover 96",
+        "is_home": false,
+        "win_probability": 0.212,
+        "difficulty": 4
+      },
+      {
+        "matchday": 13,
+        "opponent": "DSC Arminia Bielefeld",
+        "is_home": true,
+        "win_probability": 0.341,
+        "difficulty": 3
+      },
+      {
+        "matchday": 14,
+        "opponent": "1. FC Kaiserslautern",
+        "is_home": false,
+        "win_probability": 0.237,
+        "difficulty": 4
+      },
+      {
+        "matchday": 15,
+        "opponent": "VfL Wolfsburg",
+        "is_home": true,
+        "win_probability": 0.253,
+        "difficulty": 4
+      },
+      {
+        "matchday": 16,
+        "opponent": "SV Darmstadt 98",
+        "is_home": false,
+        "win_probability": 0.25,
+        "difficulty": 4
+      },
+      {
+        "matchday": 17,
+        "opponent": "Karlsruher SC",
+        "is_home": true,
+        "win_probability": 0.419,
+        "difficulty": 3
+      },
+      {
+        "matchday": 18,
+        "opponent": "FC St. Pauli",
+        "is_home": true,
+        "win_probability": 0.338,
+        "difficulty": 3
+      },
+      {
+        "matchday": 19,
+        "opponent": "1. FC Nürnberg",
+        "is_home": false,
+        "win_probability": 0.218,
+        "difficulty": 4
+      },
+      {
+        "matchday": 20,
+        "opponent": "Energie Cottbus",
+        "is_home": true,
+        "win_probability": 0.332,
+        "difficulty": 3
+      },
+      {
+        "matchday": 21,
+        "opponent": "1. FC Heidenheim 1846",
+        "is_home": false,
+        "win_probability": 0.241,
+        "difficulty": 4
+      },
+      {
+        "matchday": 22,
+        "opponent": "VfL Bochum",
+        "is_home": true,
+        "win_probability": 0.331,
+        "difficulty": 3
+      },
+      {
+        "matchday": 23,
+        "opponent": "1. FC Magdeburg",
+        "is_home": false,
+        "win_probability": 0.282,
+        "difficulty": 4
+      },
+      {
+        "matchday": 24,
+        "opponent": "Hertha BSC",
+        "is_home": true,
+        "win_probability": 0.28,
+        "difficulty": 4
+      },
+      {
+        "matchday": 25,
+        "opponent": "Eintracht Braunschweig",
+        "is_home": false,
+        "win_probability": 0.35,
+        "difficulty": 3
+      },
+      {
+        "matchday": 26,
+        "opponent": "VfL Osnabrück",
+        "is_home": true,
+        "win_probability": 0.384,
+        "difficulty": 3
+      },
+      {
+        "matchday": 27,
+        "opponent": "Holstein Kiel",
+        "is_home": false,
+        "win_probability": 0.296,
+        "difficulty": 4
+      },
+      {
+        "matchday": 28,
+        "opponent": "Dynamo Dresden",
+        "is_home": true,
+        "win_probability": 0.364,
+        "difficulty": 3
+      },
+      {
+        "matchday": 29,
+        "opponent": "Hannover 96",
+        "is_home": true,
+        "win_probability": 0.278,
+        "difficulty": 4
+      },
+      {
+        "matchday": 30,
+        "opponent": "DSC Arminia Bielefeld",
+        "is_home": false,
+        "win_probability": 0.266,
+        "difficulty": 4
+      },
+      {
+        "matchday": 31,
+        "opponent": "1. FC Kaiserslautern",
+        "is_home": true,
+        "win_probability": 0.304,
+        "difficulty": 3
+      },
+      {
+        "matchday": 32,
+        "opponent": "VfL Wolfsburg",
+        "is_home": false,
+        "win_probability": 0.187,
+        "difficulty": 5
+      },
+      {
+        "matchday": 33,
+        "opponent": "SV Darmstadt 98",
+        "is_home": true,
+        "win_probability": 0.322,
+        "difficulty": 3
+      },
+      {
+        "matchday": 34,
+        "opponent": "Karlsruher SC",
+        "is_home": false,
+        "win_probability": 0.335,
+        "difficulty": 3
+      }
+    ],
+    "VfL Bochum": [
+      {
+        "matchday": 7,
+        "opponent": "DSC Arminia Bielefeld",
+        "is_home": true,
+        "win_probability": 0.421,
+        "difficulty": 2
+      },
+      {
+        "matchday": 8,
+        "opponent": "1. FC Kaiserslautern",
+        "is_home": false,
+        "win_probability": 0.31,
+        "difficulty": 3
+      },
+      {
+        "matchday": 9,
+        "opponent": "VfL Wolfsburg",
+        "is_home": true,
+        "win_probability": 0.337,
+        "difficulty": 3
+      },
+      {
+        "matchday": 10,
+        "opponent": "Energie Cottbus",
+        "is_home": false,
+        "win_probability": 0.341,
+        "difficulty": 3
+      },
+      {
+        "matchday": 11,
+        "opponent": "Karlsruher SC",
+        "is_home": true,
+        "win_probability": 0.499,
+        "difficulty": 2
+      },
+      {
+        "matchday": 12,
+        "opponent": "FC St. Pauli",
+        "is_home": false,
+        "win_probability": 0.342,
+        "difficulty": 3
+      },
+      {
+        "matchday": 13,
+        "opponent": "SV Darmstadt 98",
+        "is_home": true,
+        "win_probability": 0.4,
+        "difficulty": 3
+      },
+      {
+        "matchday": 14,
+        "opponent": "1. FC Nürnberg",
+        "is_home": false,
+        "win_probability": 0.293,
+        "difficulty": 4
+      },
+      {
+        "matchday": 15,
+        "opponent": "1. FC Heidenheim 1846",
+        "is_home": true,
+        "win_probability": 0.406,
+        "difficulty": 3
+      },
+      {
+        "matchday": 16,
+        "opponent": "1. FC Magdeburg",
+        "is_home": true,
+        "win_probability": 0.441,
+        "difficulty": 2
+      },
+      {
+        "matchday": 17,
+        "opponent": "Holstein Kiel",
+        "is_home": false,
+        "win_probability": 0.371,
+        "difficulty": 3
+      },
+      {
+        "matchday": 18,
+        "opponent": "Hertha BSC",
+        "is_home": false,
+        "win_probability": 0.289,
+        "difficulty": 4
+      },
+      {
+        "matchday": 19,
+        "opponent": "Eintracht Braunschweig",
+        "is_home": true,
+        "win_probability": 0.501,
+        "difficulty": 2
+      },
+      {
+        "matchday": 20,
+        "opponent": "VfL Osnabrück",
+        "is_home": false,
+        "win_probability": 0.386,
+        "difficulty": 3
+      },
+      {
+        "matchday": 21,
+        "opponent": "Dynamo Dresden",
+        "is_home": true,
+        "win_probability": 0.445,
+        "difficulty": 2
+      },
+      {
+        "matchday": 22,
+        "opponent": "SpVgg Greuther Fürth",
+        "is_home": false,
+        "win_probability": 0.436,
+        "difficulty": 2
+      },
+      {
+        "matchday": 23,
+        "opponent": "Hannover 96",
+        "is_home": true,
+        "win_probability": 0.357,
+        "difficulty": 3
+      },
+      {
+        "matchday": 24,
+        "opponent": "DSC Arminia Bielefeld",
+        "is_home": false,
+        "win_probability": 0.346,
+        "difficulty": 3
+      },
+      {
+        "matchday": 25,
+        "opponent": "1. FC Kaiserslautern",
+        "is_home": true,
+        "win_probability": 0.379,
+        "difficulty": 3
+      },
+      {
+        "matchday": 26,
+        "opponent": "VfL Wolfsburg",
+        "is_home": false,
+        "win_probability": 0.267,
+        "difficulty": 4
+      },
+      {
+        "matchday": 27,
+        "opponent": "Energie Cottbus",
+        "is_home": true,
+        "win_probability": 0.421,
+        "difficulty": 2
+      },
+      {
+        "matchday": 28,
+        "opponent": "Karlsruher SC",
+        "is_home": false,
+        "win_probability": 0.419,
+        "difficulty": 3
+      },
+      {
+        "matchday": 29,
+        "opponent": "FC St. Pauli",
+        "is_home": true,
+        "win_probability": 0.414,
+        "difficulty": 3
+      },
+      {
+        "matchday": 30,
+        "opponent": "SV Darmstadt 98",
+        "is_home": false,
+        "win_probability": 0.328,
+        "difficulty": 3
+      },
+      {
+        "matchday": 31,
+        "opponent": "1. FC Nürnberg",
+        "is_home": true,
+        "win_probability": 0.36,
+        "difficulty": 3
+      },
+      {
+        "matchday": 32,
+        "opponent": "1. FC Heidenheim 1846",
+        "is_home": false,
+        "win_probability": 0.328,
+        "difficulty": 3
+      },
+      {
+        "matchday": 33,
+        "opponent": "1. FC Magdeburg",
+        "is_home": false,
+        "win_probability": 0.364,
+        "difficulty": 3
+      },
+      {
+        "matchday": 34,
+        "opponent": "Holstein Kiel",
+        "is_home": true,
+        "win_probability": 0.443,
+        "difficulty": 2
+      }
+    ],
+    "DSC Arminia Bielefeld": [
+      {
+        "matchday": 7,
+        "opponent": "VfL Bochum",
+        "is_home": false,
+        "win_probability": 0.337,
+        "difficulty": 3
+      },
+      {
+        "matchday": 8,
+        "opponent": "VfL Osnabrück",
+        "is_home": true,
+        "win_probability": 0.473,
+        "difficulty": 2
+      },
+      {
+        "matchday": 9,
+        "opponent": "Hertha BSC",
+        "is_home": false,
+        "win_probability": 0.287,
+        "difficulty": 4
+      },
+      {
+        "matchday": 10,
+        "opponent": "Eintracht Braunschweig",
+        "is_home": true,
+        "win_probability": 0.514,
+        "difficulty": 2
+      },
+      {
+        "matchday": 11,
+        "opponent": "Holstein Kiel",
+        "is_home": false,
+        "win_probability": 0.375,
+        "difficulty": 3
+      },
+      {
+        "matchday": 12,
+        "opponent": "1. FC Magdeburg",
+        "is_home": true,
+        "win_probability": 0.448,
+        "difficulty": 2
+      },
+      {
+        "matchday": 13,
+        "opponent": "SpVgg Greuther Fürth",
+        "is_home": false,
+        "win_probability": 0.442,
+        "difficulty": 2
+      },
+      {
+        "matchday": 14,
+        "opponent": "Dynamo Dresden",
+        "is_home": true,
+        "win_probability": 0.452,
+        "difficulty": 2
+      },
+      {
+        "matchday": 15,
+        "opponent": "1. FC Kaiserslautern",
+        "is_home": true,
+        "win_probability": 0.384,
+        "difficulty": 3
+      },
+      {
+        "matchday": 16,
+        "opponent": "VfL Wolfsburg",
+        "is_home": false,
+        "win_probability": 0.262,
+        "difficulty": 4
+      },
+      {
+        "matchday": 17,
+        "opponent": "Hannover 96",
+        "is_home": true,
+        "win_probability": 0.359,
+        "difficulty": 3
+      },
+      {
+        "matchday": 18,
+        "opponent": "Karlsruher SC",
+        "is_home": true,
+        "win_probability": 0.51,
+        "difficulty": 2
+      },
+      {
+        "matchday": 19,
+        "opponent": "Energie Cottbus",
+        "is_home": false,
+        "win_probability": 0.34,
+        "difficulty": 3
+      },
+      {
+        "matchday": 20,
+        "opponent": "1. FC Nürnberg",
+        "is_home": true,
+        "win_probability": 0.364,
+        "difficulty": 3
+      },
+      {
+        "matchday": 21,
+        "opponent": "FC St. Pauli",
+        "is_home": false,
+        "win_probability": 0.344,
+        "difficulty": 3
+      },
+      {
+        "matchday": 22,
+        "opponent": "SV Darmstadt 98",
+        "is_home": true,
+        "win_probability": 0.405,
+        "difficulty": 3
+      },
+      {
+        "matchday": 23,
+        "opponent": "1. FC Heidenheim 1846",
+        "is_home": false,
+        "win_probability": 0.327,
+        "difficulty": 3
+      },
+      {
+        "matchday": 24,
+        "opponent": "VfL Bochum",
+        "is_home": true,
+        "win_probability": 0.411,
+        "difficulty": 3
+      },
+      {
+        "matchday": 25,
+        "opponent": "VfL Osnabrück",
+        "is_home": false,
+        "win_probability": 0.39,
+        "difficulty": 3
+      },
+      {
+        "matchday": 26,
+        "opponent": "Hertha BSC",
+        "is_home": true,
+        "win_probability": 0.36,
+        "difficulty": 3
+      },
+      {
+        "matchday": 27,
+        "opponent": "Eintracht Braunschweig",
+        "is_home": false,
+        "win_probability": 0.433,
+        "difficulty": 2
+      },
+      {
+        "matchday": 28,
+        "opponent": "Holstein Kiel",
+        "is_home": true,
+        "win_probability": 0.452,
+        "difficulty": 2
+      },
+      {
+        "matchday": 29,
+        "opponent": "1. FC Magdeburg",
+        "is_home": false,
+        "win_probability": 0.366,
+        "difficulty": 3
+      },
+      {
+        "matchday": 30,
+        "opponent": "SpVgg Greuther Fürth",
+        "is_home": true,
+        "win_probability": 0.528,
+        "difficulty": 2
+      },
+      {
+        "matchday": 31,
+        "opponent": "Dynamo Dresden",
+        "is_home": false,
+        "win_probability": 0.37,
+        "difficulty": 3
+      },
+      {
+        "matchday": 32,
+        "opponent": "1. FC Kaiserslautern",
+        "is_home": false,
+        "win_probability": 0.311,
+        "difficulty": 3
+      },
+      {
+        "matchday": 33,
+        "opponent": "VfL Wolfsburg",
+        "is_home": true,
+        "win_probability": 0.337,
+        "difficulty": 3
+      },
+      {
+        "matchday": 34,
+        "opponent": "Hannover 96",
+        "is_home": false,
+        "win_probability": 0.286,
+        "difficulty": 4
+      }
+    ]
   },
   "team_colors": {
     "1. FC Heidenheim 1846": {
