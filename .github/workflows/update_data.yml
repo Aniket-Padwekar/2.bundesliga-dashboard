@@ -1,0 +1,46 @@
+name: Update Dashboard Data
+
+# This is what makes everything automatic. GitHub runs this file on its own
+# servers, on the schedule below, with no one needing to click anything.
+
+on:
+  schedule:
+    # Runs every day at 04:00 UTC (06:00 Berlin time in winter, 06:00 summer too
+    # roughly — close enough that results from the previous evening's matches
+    # are always captured well before anyone checks the dashboard).
+    # Cron format: minute hour day month day-of-week
+    - cron: "0 4 * * *"
+
+  # This lets you also trigger it manually from the GitHub website whenever
+  # you want to force a refresh, without waiting for the schedule.
+  workflow_dispatch:
+
+permissions:
+  contents: write   # needed so the workflow can save the updated data file back to the repo
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install required packages
+        run: pip install requests numpy scipy
+
+      - name: Run the data + predictions pipeline
+        run: python update_data.py
+
+      - name: Commit and push the updated data file
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/dashboard_data.json
+          git diff --quiet --cached || git commit -m "Automated data refresh"
+          git push
