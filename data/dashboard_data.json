@@ -1,0 +1,8137 @@
+{
+  "generated_at": "2026-09-21T12:33:26.684765+00:00",
+  "current_season": "2026/27",
+  "n_simulations": 10000,
+  "league_avg_goals": 1.513,
+  "predicted_table": [
+    {
+      "team": "Hertha BSC",
+      "current_points": 18,
+      "current_gd": 10.0,
+      "avg_projected_position": 2.68,
+      "promotion_probability": 0.6078,
+      "champion_probability": 0.385,
+      "elo_rating": 1563.6,
+      "attack_rating": 1.046,
+      "defense_rating": 0.874
+    },
+    {
+      "team": "1. FC Nürnberg",
+      "current_points": 16,
+      "current_gd": 10.0,
+      "avg_projected_position": 3.47,
+      "promotion_probability": 0.4553,
+      "champion_probability": 0.2396,
+      "elo_rating": 1552.5,
+      "attack_rating": 1.033,
+      "defense_rating": 0.874
+    },
+    {
+      "team": "VfL Wolfsburg",
+      "current_points": 11,
+      "current_gd": 7.0,
+      "avg_projected_position": 3.76,
+      "promotion_probability": 0.3981,
+      "champion_probability": 0.1928,
+      "elo_rating": 1519.8,
+      "attack_rating": 1.245,
+      "defense_rating": 0.956
+    },
+    {
+      "team": "1. FC Heidenheim 1846",
+      "current_points": 13,
+      "current_gd": 2.0,
+      "avg_projected_position": 5.7,
+      "promotion_probability": 0.1704,
+      "champion_probability": 0.0628,
+      "elo_rating": 1526.0,
+      "attack_rating": 1.203,
+      "defense_rating": 1.121
+    },
+    {
+      "team": "1. FC Kaiserslautern",
+      "current_points": 11,
+      "current_gd": 2.0,
+      "avg_projected_position": 6.36,
+      "promotion_probability": 0.1226,
+      "champion_probability": 0.0434,
+      "elo_rating": 1525.7,
+      "attack_rating": 0.967,
+      "defense_rating": 0.874
+    },
+    {
+      "team": "Hannover 96",
+      "current_points": 7,
+      "current_gd": -2.0,
+      "avg_projected_position": 6.89,
+      "promotion_probability": 0.0991,
+      "champion_probability": 0.0352,
+      "elo_rating": 1540.9,
+      "attack_rating": 1.086,
+      "defense_rating": 0.901
+    },
+    {
+      "team": "Energie Cottbus",
+      "current_points": 8,
+      "current_gd": 1.0,
+      "avg_projected_position": 8.65,
+      "promotion_probability": 0.0448,
+      "champion_probability": 0.0133,
+      "elo_rating": 1501.5,
+      "attack_rating": 1.203,
+      "defense_rating": 1.162
+    },
+    {
+      "team": "1. FC Magdeburg",
+      "current_points": 10,
+      "current_gd": 2.0,
+      "avg_projected_position": 9.28,
+      "promotion_probability": 0.0262,
+      "champion_probability": 0.0073,
+      "elo_rating": 1493.4,
+      "attack_rating": 1.033,
+      "defense_rating": 1.086
+    },
+    {
+      "team": "FC St. Pauli",
+      "current_points": 7,
+      "current_gd": 0.0,
+      "avg_projected_position": 9.95,
+      "promotion_probability": 0.0196,
+      "champion_probability": 0.0064,
+      "elo_rating": 1533.1,
+      "attack_rating": 0.956,
+      "defense_rating": 0.956
+    },
+    {
+      "team": "VfL Bochum",
+      "current_points": 7,
+      "current_gd": -1.0,
+      "avg_projected_position": 10.05,
+      "promotion_probability": 0.0183,
+      "champion_probability": 0.0049,
+      "elo_rating": 1491.1,
+      "attack_rating": 0.914,
+      "defense_rating": 0.901
+    },
+    {
+      "team": "SV Darmstadt 98",
+      "current_points": 4,
+      "current_gd": -8.0,
+      "avg_projected_position": 10.75,
+      "promotion_probability": 0.0148,
+      "champion_probability": 0.0034,
+      "elo_rating": 1477.5,
+      "attack_rating": 1.02,
+      "defense_rating": 0.967
+    },
+    {
+      "team": "DSC Arminia Bielefeld",
+      "current_points": 5,
+      "current_gd": -2.0,
+      "avg_projected_position": 11.15,
+      "promotion_probability": 0.0097,
+      "champion_probability": 0.0029,
+      "elo_rating": 1466.8,
+      "attack_rating": 1.033,
+      "defense_rating": 1.033
+    },
+    {
+      "team": "VfL Osnabrück",
+      "current_points": 7,
+      "current_gd": -3.0,
+      "avg_projected_position": 12.16,
+      "promotion_probability": 0.0045,
+      "champion_probability": 0.0016,
+      "elo_rating": 1466.2,
+      "attack_rating": 0.997,
+      "defense_rating": 1.121
+    },
+    {
+      "team": "Dynamo Dresden",
+      "current_points": 4,
+      "current_gd": -6.0,
+      "avg_projected_position": 12.74,
+      "promotion_probability": 0.004,
+      "champion_probability": 0.0007,
+      "elo_rating": 1465.6,
+      "attack_rating": 1.02,
+      "defense_rating": 1.086
+    },
+    {
+      "team": "Holstein Kiel",
+      "current_points": 4,
+      "current_gd": -3.0,
+      "avg_projected_position": 13.35,
+      "promotion_probability": 0.0026,
+      "champion_probability": 0.0004,
+      "elo_rating": 1480.7,
+      "attack_rating": 0.874,
+      "defense_rating": 0.967
+    },
+    {
+      "team": "Karlsruher SC",
+      "current_points": 5,
+      "current_gd": -6.0,
+      "avg_projected_position": 14.35,
+      "promotion_probability": 0.0009,
+      "champion_probability": 0.0002,
+      "elo_rating": 1475.5,
+      "attack_rating": 0.98,
+      "defense_rating": 1.205
+    },
+    {
+      "team": "SpVgg Greuther Fürth",
+      "current_points": 6,
+      "current_gd": -2.0,
+      "avg_projected_position": 14.42,
+      "promotion_probability": 0.001,
+      "champion_probability": 0.0001,
+      "elo_rating": 1464.8,
+      "attack_rating": 0.967,
+      "defense_rating": 1.244
+    },
+    {
+      "team": "Eintracht Braunschweig",
+      "current_points": 4,
+      "current_gd": -1.0,
+      "avg_projected_position": 15.3,
+      "promotion_probability": 0.0003,
+      "champion_probability": 0.0,
+      "elo_rating": 1440.0,
+      "attack_rating": 0.835,
+      "defense_rating": 1.086
+    }
+  ],
+  "trajectories": {
+    "2023/24": {
+      "Hannover 96": [
+        {
+          "matchday": 1,
+          "points": 1
+        },
+        {
+          "matchday": 2,
+          "points": 2
+        },
+        {
+          "matchday": 3,
+          "points": 5
+        },
+        {
+          "matchday": 4,
+          "points": 5
+        },
+        {
+          "matchday": 5,
+          "points": 8
+        },
+        {
+          "matchday": 6,
+          "points": 11
+        },
+        {
+          "matchday": 7,
+          "points": 12
+        },
+        {
+          "matchday": 8,
+          "points": 15
+        },
+        {
+          "matchday": 9,
+          "points": 15
+        },
+        {
+          "matchday": 10,
+          "points": 18
+        },
+        {
+          "matchday": 11,
+          "points": 18
+        },
+        {
+          "matchday": 12,
+          "points": 21
+        },
+        {
+          "matchday": 13,
+          "points": 22
+        },
+        {
+          "matchday": 14,
+          "points": 23
+        },
+        {
+          "matchday": 15,
+          "points": 23
+        },
+        {
+          "matchday": 16,
+          "points": 24
+        },
+        {
+          "matchday": 17,
+          "points": 24
+        },
+        {
+          "matchday": 18,
+          "points": 25
+        },
+        {
+          "matchday": 19,
+          "points": 28
+        },
+        {
+          "matchday": 20,
+          "points": 31
+        },
+        {
+          "matchday": 21,
+          "points": 34
+        },
+        {
+          "matchday": 22,
+          "points": 37
+        },
+        {
+          "matchday": 23,
+          "points": 37
+        },
+        {
+          "matchday": 24,
+          "points": 38
+        },
+        {
+          "matchday": 25,
+          "points": 39
+        },
+        {
+          "matchday": 26,
+          "points": 40
+        },
+        {
+          "matchday": 27,
+          "points": 43
+        },
+        {
+          "matchday": 28,
+          "points": 44
+        },
+        {
+          "matchday": 29,
+          "points": 45
+        },
+        {
+          "matchday": 30,
+          "points": 45
+        },
+        {
+          "matchday": 31,
+          "points": 46
+        },
+        {
+          "matchday": 32,
+          "points": 49
+        },
+        {
+          "matchday": 33,
+          "points": 52
+        },
+        {
+          "matchday": 34,
+          "points": 52
+        }
+      ],
+      "SV 07 Elversberg": [
+        {
+          "matchday": 1,
+          "points": 1
+        },
+        {
+          "matchday": 2,
+          "points": 1
+        },
+        {
+          "matchday": 3,
+          "points": 1
+        },
+        {
+          "matchday": 4,
+          "points": 1
+        },
+        {
+          "matchday": 5,
+          "points": 4
+        },
+        {
+          "matchday": 6,
+          "points": 7
+        },
+        {
+          "matchday": 7,
+          "points": 10
+        },
+        {
+          "matchday": 8,
+          "points": 11
+        },
+        {
+          "matchday": 9,
+          "points": 12
+        },
+        {
+          "matchday": 10,
+          "points": 15
+        },
+        {
+          "matchday": 11,
+          "points": 18
+        },
+        {
+          "matchday": 12,
+          "points": 18
+        },
+        {
+          "matchday": 13,
+          "points": 21
+        },
+        {
+          "matchday": 14,
+          "points": 24
+        },
+        {
+          "matchday": 15,
+          "points": 24
+        },
+        {
+          "matchday": 16,
+          "points": 24
+        },
+        {
+          "matchday": 17,
+          "points": 24
+        },
+        {
+          "matchday": 18,
+          "points": 25
+        },
+        {
+          "matchday": 19,
+          "points": 25
+        },
+        {
+          "matchday": 20,
+          "points": 28
+        },
+        {
+          "matchday": 21,
+          "points": 29
+        },
+        {
+          "matchday": 22,
+          "points": 32
+        },
+        {
+          "matchday": 23,
+          "points": 32
+        },
+        {
+          "matchday": 24,
+          "points": 32
+        },
+        {
+          "matchday": 25,
+          "points": 35
+        },
+        {
+          "matchday": 26,
+          "points": 35
+        },
+        {
+          "matchday": 27,
+          "points": 35
+        },
+        {
+          "matchday": 28,
+          "points": 36
+        },
+        {
+          "matchday": 29,
+          "points": 39
+        },
+        {
+          "matchday": 30,
+          "points": 40
+        },
+        {
+          "matchday": 31,
+          "points": 40
+        },
+        {
+          "matchday": 32,
+          "points": 43
+        },
+        {
+          "matchday": 33,
+          "points": 43
+        },
+        {
+          "matchday": 34,
+          "points": 43
+        }
+      ],
+      "Hamburger SV": [
+        {
+          "matchday": 1,
+          "points": 3
+        },
+        {
+          "matchday": 2,
+          "points": 4
+        },
+        {
+          "matchday": 3,
+          "points": 7
+        },
+        {
+          "matchday": 4,
+          "points": 10
+        },
+        {
+          "matchday": 5,
+          "points": 13
+        },
+        {
+          "matchday": 6,
+          "points": 13
+        },
+        {
+          "matchday": 7,
+          "points": 13
+        },
+        {
+          "matchday": 8,
+          "points": 16
+        },
+        {
+          "matchday": 9,
+          "points": 17
+        },
+        {
+          "matchday": 10,
+          "points": 20
+        },
+        {
+          "matchday": 11,
+          "points": 21
+        },
+        {
+          "matchday": 12,
+          "points": 24
+        },
+        {
+          "matchday": 13,
+          "points": 24
+        },
+        {
+          "matchday": 14,
+          "points": 27
+        },
+        {
+          "matchday": 15,
+          "points": 28
+        },
+        {
+          "matchday": 16,
+          "points": 28
+        },
+        {
+          "matchday": 17,
+          "points": 31
+        },
+        {
+          "matchday": 18,
+          "points": 34
+        },
+        {
+          "matchday": 19,
+          "points": 34
+        },
+        {
+          "matchday": 20,
+          "points": 37
+        },
+        {
+          "matchday": 21,
+          "points": 37
+        },
+        {
+          "matchday": 22,
+          "points": 38
+        },
+        {
+          "matchday": 23,
+          "points": 41
+        },
+        {
+          "matchday": 24,
+          "points": 41
+        },
+        {
+          "matchday": 25,
+          "points": 41
+        },
+        {
+          "matchday": 26,
+          "points": 44
+        },
+        {
+          "matchday": 27,
+          "points": 45
+        },
+        {
+          "matchday": 28,
+          "points": 48
+        },
+        {
+          "matchday": 29,
+          "points": 49
+        },
+        {
+          "matchday": 30,
+          "points": 49
+        },
+        {
+          "matchday": 31,
+          "points": 52
+        },
+        {
+          "matchday": 32,
+          "points": 55
+        },
+        {
+          "matchday": 33,
+          "points": 55
+        },
+        {
+          "matchday": 34,
+          "points": 58
+        }
+      ],
+      "FC Schalke 04": [
+        {
+          "matchday": 1,
+          "points": 0
+        },
+        {
+          "matchday": 2,
+          "points": 3
+        },
+        {
+          "matchday": 3,
+          "points": 3
+        },
+        {
+          "matchday": 4,
+          "points": 3
+        },
+        {
+          "matchday": 5,
+          "points": 4
+        },
+        {
+          "matchday": 6,
+          "points": 7
+        },
+        {
+          "matchday": 7,
+          "points": 7
+        },
+        {
+          "matchday": 8,
+          "points": 7
+        },
+        {
+          "matchday": 9,
+          "points": 7
+        },
+        {
+          "matchday": 10,
+          "points": 7
+        },
+        {
+          "matchday": 11,
+          "points": 10
+        },
+        {
+          "matchday": 12,
+          "points": 13
+        },
+        {
+          "matchday": 13,
+          "points": 13
+        },
+        {
+          "matchday": 14,
+          "points": 13
+        },
+        {
+          "matchday": 15,
+          "points": 16
+        },
+        {
+          "matchday": 16,
+          "points": 19
+        },
+        {
+          "matchday": 17,
+          "points": 20
+        },
+        {
+          "matchday": 18,
+          "points": 20
+        },
+        {
+          "matchday": 19,
+          "points": 20
+        },
+        {
+          "matchday": 20,
+          "points": 23
+        },
+        {
+          "matchday": 21,
+          "points": 23
+        },
+        {
+          "matchday": 22,
+          "points": 26
+        },
+        {
+          "matchday": 23,
+          "points": 26
+        },
+        {
+          "matchday": 24,
+          "points": 29
+        },
+        {
+          "matchday": 25,
+          "points": 30
+        },
+        {
+          "matchday": 26,
+          "points": 30
+        },
+        {
+          "matchday": 27,
+          "points": 31
+        },
+        {
+          "matchday": 28,
+          "points": 32
+        },
+        {
+          "matchday": 29,
+          "points": 35
+        },
+        {
+          "matchday": 30,
+          "points": 36
+        },
+        {
+          "matchday": 31,
+          "points": 37
+        },
+        {
+          "matchday": 32,
+          "points": 40
+        },
+        {
+          "matchday": 33,
+          "points": 43
+        },
+        {
+          "matchday": 34,
+          "points": 43
+        }
+      ],
+      "1. FC Kaiserslautern": [
+        {
+          "matchday": 1,
+          "points": 0
+        },
+        {
+          "matchday": 2,
+          "points": 0
+        },
+        {
+          "matchday": 3,
+          "points": 3
+        },
+        {
+          "matchday": 4,
+          "points": 6
+        },
+        {
+          "matchday": 5,
+          "points": 9
+        },
+        {
+          "matchday": 6,
+          "points": 10
+        },
+        {
+          "matchday": 7,
+          "points": 13
+        },
+        {
+          "matchday": 8,
+          "points": 14
+        },
+        {
+          "matchday": 9,
+          "points": 17
+        },
+        {
+          "matchday": 10,
+          "points": 17
+        },
+        {
+          "matchday": 11,
+          "points": 18
+        },
+        {
+          "matchday": 12,
+          "points": 18
+        },
+        {
+          "matchday": 13,
+          "points": 18
+        },
+        {
+          "matchday": 14,
+          "points": 18
+        },
+        {
+          "matchday": 15,
+          "points": 18
+        },
+        {
+          "matchday": 16,
+          "points": 18
+        },
+        {
+          "matchday": 17,
+          "points": 18
+        },
+        {
+          "matchday": 18,
+          "points": 18
+        },
+        {
+          "matchday": 19,
+          "points": 21
+        },
+        {
+          "matchday": 20,
+          "points": 21
+        },
+        {
+          "matchday": 21,
+          "points": 21
+        },
+        {
+          "matchday": 22,
+          "points": 22
+        },
+        {
+          "matchday": 23,
+          "points": 22
+        },
+        {
+          "matchday": 24,
+          "points": 25
+        },
+        {
+          "matchday": 25,
+          "points": 28
+        },
+        {
+          "matchday": 26,
+          "points": 29
+        },
+        {
+          "matchday": 27,
+          "points": 29
+        },
+        {
+          "matchday": 28,
+          "points": 29
+        },
+        {
+          "matchday": 29,
+          "points": 29
+        },
+        {
+          "matchday": 30,
+          "points": 30
+        },
+        {
+          "matchday": 31,
+          "points": 33
+        },
+        {
+          "matchday": 32,
+          "points": 36
+        },
+        {
+          "matchday": 33,
+          "points": 36
+        },
+        {
+          "matchday": 34,
+          "points": 39
+        }
+      ],
+      "FC St. Pauli": [
+        {
+          "matchday": 1,
+          "points": 3
+        },
+        {
+          "matchday": 2,
+          "points": 4
+        },
+        {
+          "matchday": 3,
+          "points": 5
+        },
+        {
+          "matchday": 4,
+          "points": 6
+        },
+        {
+          "matchday": 5,
+          "points": 7
+        },
+        {
+          "matchday": 6,
+          "points": 10
+        },
+        {
+          "matchday": 7,
+          "points": 13
+        },
+        {
+          "matchday": 8,
+          "points": 16
+        },
+        {
+          "matchday": 9,
+          "points": 19
+        },
+        {
+          "matchday": 10,
+          "points": 20
+        },
+        {
+          "matchday": 11,
+          "points": 23
+        },
+        {
+          "matchday": 12,
+          "points": 26
+        },
+        {
+          "matchday": 13,
+          "points": 27
+        },
+        {
+          "matchday": 14,
+          "points": 30
+        },
+        {
+          "matchday": 15,
+          "points": 31
+        },
+        {
+          "matchday": 16,
+          "points": 32
+        },
+        {
+          "matchday": 17,
+          "points": 33
+        },
+        {
+          "matchday": 18,
+          "points": 36
+        },
+        {
+          "matchday": 19,
+          "points": 39
+        },
+        {
+          "matchday": 20,
+          "points": 42
+        },
+        {
+          "matchday": 21,
+          "points": 42
+        },
+        {
+          "matchday": 22,
+          "points": 45
+        },
+        {
+          "matchday": 23,
+          "points": 48
+        },
+        {
+          "matchday": 24,
+          "points": 48
+        },
+        {
+          "matchday": 25,
+          "points": 51
+        },
+        {
+          "matchday": 26,
+          "points": 54
+        },
+        {
+          "matchday": 27,
+          "points": 57
+        },
+        {
+          "matchday": 28,
+          "points": 57
+        },
+        {
+          "matchday": 29,
+          "points": 57
+        },
+        {
+          "matchday": 30,
+          "points": 60
+        },
+        {
+          "matchday": 31,
+          "points": 63
+        },
+        {
+          "matchday": 32,
+          "points": 63
+        },
+        {
+          "matchday": 33,
+          "points": 66
+        },
+        {
+          "matchday": 34,
+          "points": 69
+        }
+      ],
+      "VfL Osnabrück": [
+        {
+          "matchday": 1,
+          "points": 0
+        },
+        {
+          "matchday": 2,
+          "points": 1
+        },
+        {
+          "matchday": 3,
+          "points": 1
+        },
+        {
+          "matchday": 4,
+          "points": 1
+        },
+        {
+          "matchday": 5,
+          "points": 1
+        },
+        {
+          "matchday": 6,
+          "points": 1
+        },
+        {
+          "matchday": 7,
+          "points": 4
+        },
+        {
+          "matchday": 8,
+          "points": 5
+        },
+        {
+          "matchday": 9,
+          "points": 6
+        },
+        {
+          "matchday": 10,
+          "points": 6
+        },
+        {
+          "matchday": 11,
+          "points": 6
+        },
+        {
+          "matchday": 12,
+          "points": 7
+        },
+        {
+          "matchday": 13,
+          "points": 7
+        },
+        {
+          "matchday": 14,
+          "points": 7
+        },
+        {
+          "matchday": 15,
+          "points": 7
+        },
+        {
+          "matchday": 16,
+          "points": 8
+        },
+        {
+          "matchday": 17,
+          "points": 9
+        },
+        {
+          "matchday": 18,
+          "points": 9
+        },
+        {
+          "matchday": 19,
+          "points": 10
+        },
+        {
+          "matchday": 20,
+          "points": 11
+        },
+        {
+          "matchday": 21,
+          "points": 12
+        },
+        {
+          "matchday": 22,
+          "points": 12
+        },
+        {
+          "matchday": 23,
+          "points": 15
+        },
+        {
+          "matchday": 24,
+          "points": 18
+        },
+        {
+          "matchday": 25,
+          "points": 18
+        },
+        {
+          "matchday": 26,
+          "points": 18
+        },
+        {
+          "matchday": 27,
+          "points": 21
+        },
+        {
+          "matchday": 28,
+          "points": 24
+        },
+        {
+          "matchday": 29,
+          "points": 24
+        },
+        {
+          "matchday": 30,
+          "points": 24
+        },
+        {
+          "matchday": 31,
+          "points": 25
+        },
+        {
+          "matchday": 32,
+          "points": 25
+        },
+        {
+          "matchday": 33,
+          "points": 25
+        },
+        {
+          "matchday": 34,
+          "points": 28
+        }
+      ],
+      "Karlsruher SC": [
+        {
+          "matchday": 1,
+          "points": 3
+        },
+        {
+          "matchday": 2,
+          "points": 4
+        },
+        {
+          "matchday": 3,
+          "points": 4
+        },
+        {
+          "matchday": 4,
+          "points": 7
+        },
+        {
+          "matchday": 5,
+          "points": 7
+        },
+        {
+          "matchday": 6,
+          "points": 8
+        },
+        {
+          "matchday": 7,
+          "points": 8
+        },
+        {
+          "matchday": 8,
+          "points": 8
+        },
+        {
+          "matchday": 9,
+          "points": 9
+        },
+        {
+          "matchday": 10,
+          "points": 12
+        },
+        {
+          "matchday": 11,
+          "points": 12
+        },
+        {
+          "matchday": 12,
+          "points": 12
+        },
+        {
+          "matchday": 13,
+          "points": 13
+        },
+        {
+          "matchday": 14,
+          "points": 16
+        },
+        {
+          "matchday": 15,
+          "points": 17
+        },
+        {
+          "matchday": 16,
+          "points": 18
+        },
+        {
+          "matchday": 17,
+          "points": 21
+        },
+        {
+          "matchday": 18,
+          "points": 24
+        },
+        {
+          "matchday": 19,
+          "points": 27
+        },
+        {
+          "matchday": 20,
+          "points": 28
+        },
+        {
+          "matchday": 21,
+          "points": 28
+        },
+        {
+          "matchday": 22,
+          "points": 29
+        },
+        {
+          "matchday": 23,
+          "points": 32
+        },
+        {
+          "matchday": 24,
+          "points": 35
+        },
+        {
+          "matchday": 25,
+          "points": 35
+        },
+        {
+          "matchday": 26,
+          "points": 38
+        },
+        {
+          "matchday": 27,
+          "points": 39
+        },
+        {
+          "matchday": 28,
+          "points": 42
+        },
+        {
+          "matchday": 29,
+          "points": 43
+        },
+        {
+          "matchday": 30,
+          "points": 46
+        },
+        {
+          "matchday": 31,
+          "points": 49
+        },
+        {
+          "matchday": 32,
+          "points": 52
+        },
+        {
+          "matchday": 33,
+          "points": 52
+        },
+        {
+          "matchday": 34,
+          "points": 55
+        }
+      ],
+      "SV Wehen Wiesbaden": [
+        {
+          "matchday": 1,
+          "points": 1
+        },
+        {
+          "matchday": 2,
+          "points": 4
+        },
+        {
+          "matchday": 3,
+          "points": 7
+        },
+        {
+          "matchday": 4,
+          "points": 7
+        },
+        {
+          "matchday": 5,
+          "points": 8
+        },
+        {
+          "matchday": 6,
+          "points": 8
+        },
+        {
+          "matchday": 7,
+          "points": 8
+        },
+        {
+          "matchday": 8,
+          "points": 8
+        },
+        {
+          "matchday": 9,
+          "points": 9
+        },
+        {
+          "matchday": 10,
+          "points": 12
+        },
+        {
+          "matchday": 11,
+          "points": 15
+        },
+        {
+          "matchday": 12,
+          "points": 18
+        },
+        {
+          "matchday": 13,
+          "points": 21
+        },
+        {
+          "matchday": 14,
+          "points": 21
+        },
+        {
+          "matchday": 15,
+          "points": 21
+        },
+        {
+          "matchday": 16,
+          "points": 21
+        },
+        {
+          "matchday": 17,
+          "points": 22
+        },
+        {
+          "matchday": 18,
+          "points": 22
+        },
+        {
+          "matchday": 19,
+          "points": 25
+        },
+        {
+          "matchday": 20,
+          "points": 26
+        },
+        {
+          "matchday": 21,
+          "points": 27
+        },
+        {
+          "matchday": 22,
+          "points": 27
+        },
+        {
+          "matchday": 23,
+          "points": 27
+        },
+        {
+          "matchday": 24,
+          "points": 30
+        },
+        {
+          "matchday": 25,
+          "points": 31
+        },
+        {
+          "matchday": 26,
+          "points": 31
+        },
+        {
+          "matchday": 27,
+          "points": 31
+        },
+        {
+          "matchday": 28,
+          "points": 31
+        },
+        {
+          "matchday": 29,
+          "points": 31
+        },
+        {
+          "matchday": 30,
+          "points": 32
+        },
+        {
+          "matchday": 31,
+          "points": 32
+        },
+        {
+          "matchday": 32,
+          "points": 32
+        },
+        {
+          "matchday": 33,
+          "points": 32
+        },
+        {
+          "matchday": 34,
+          "points": 32
+        }
+      ],
+      "1. FC Magdeburg": [
+        {
+          "matchday": 1,
+          "points": 1
+        },
+        {
+          "matchday": 2,
+          "points": 4
+        },
+        {
+          "matchday": 3,
+          "points": 7
+        },
+        {
+          "matchday": 4,
+          "points": 8
+        },
+        {
+          "matchday": 5,
+          "points": 11
+        },
+        {
+          "matchday": 6,
+          "points": 11
+        },
+        {
+          "matchday": 7,
+          "points": 12
+        },
+        {
+          "matchday": 8,
+          "points": 12
+        },
+        {
+          "matchday": 9,
+          "points": 13
+        },
+        {
+          "matchday": 10,
+          "points": 13
+        },
+        {
+          "matchday": 11,
+          "points": 13
+        },
+        {
+          "matchday": 12,
+          "points": 13
+        },
+        {
+          "matchday": 13,
+          "points": 13
+        },
+        {
+          "matchday": 14,
+          "points": 16
+        },
+        {
+          "matchday": 15,
+          "points": 19
+        },
+        {
+          "matchday": 16,
+          "points": 20
+        },
+        {
+          "matchday": 17,
+          "points": 20
+        },
+        {
+          "matchday": 18,
+          "points": 23
+        },
+        {
+          "matchday": 19,
+          "points": 23
+        },
+        {
+          "matchday": 20,
+          "points": 24
+        },
+        {
+          "matchday": 21,
+          "points": 27
+        },
+        {
+          "matchday": 22,
+          "points": 27
+        },
+        {
+          "matchday": 23,
+          "points": 30
+        },
+        {
+          "matchday": 24,
+          "points": 31
+        },
+        {
+          "matchday": 25,
+          "points": 31
+        },
+        {
+          "matchday": 26,
+          "points": 31
+        },
+        {
+          "matchday": 27,
+          "points": 31
+        },
+        {
+          "matchday": 28,
+          "points": 32
+        },
+        {
+          "matchday": 29,
+          "points": 33
+        },
+        {
+          "matchday": 30,
+          "points": 36
+        },
+        {
+          "matchday": 31,
+          "points": 37
+        },
+        {
+          "matchday": 32,
+          "points": 37
+        },
+        {
+          "matchday": 33,
+          "points": 38
+        },
+        {
+          "matchday": 34,
+          "points": 38
+        }
+      ],
+      "Fortuna Düsseldorf": [
+        {
+          "matchday": 1,
+          "points": 3
+        },
+        {
+          "matchday": 2,
+          "points": 4
+        },
+        {
+          "matchday": 3,
+          "points": 4
+        },
+        {
+          "matchday": 4,
+          "points": 7
+        },
+        {
+          "matchday": 5,
+          "points": 10
+        },
+        {
+          "matchday": 6,
+          "points": 13
+        },
+        {
+          "matchday": 7,
+          "points": 14
+        },
+        {
+          "matchday": 8,
+          "points": 14
+        },
+        {
+          "matchday": 9,
+          "points": 15
+        },
+        {
+          "matchday": 10,
+          "points": 18
+        },
+        {
+          "matchday": 11,
+          "points": 21
+        },
+        {
+          "matchday": 12,
+          "points": 21
+        },
+        {
+          "matchday": 13,
+          "points": 21
+        },
+        {
+          "matchday": 14,
+          "points": 24
+        },
+        {
+          "matchday": 15,
+          "points": 27
+        },
+        {
+          "matchday": 16,
+          "points": 27
+        },
+        {
+          "matchday": 17,
+          "points": 30
+        },
+        {
+          "matchday": 18,
+          "points": 31
+        },
+        {
+          "matchday": 19,
+          "points": 31
+        },
+        {
+          "matchday": 20,
+          "points": 31
+        },
+        {
+          "matchday": 21,
+          "points": 32
+        },
+        {
+          "matchday": 22,
+          "points": 33
+        },
+        {
+          "matchday": 23,
+          "points": 36
+        },
+        {
+          "matchday": 24,
+          "points": 37
+        },
+        {
+          "matchday": 25,
+          "points": 40
+        },
+        {
+          "matchday": 26,
+          "points": 43
+        },
+        {
+          "matchday": 27,
+          "points": 46
+        },
+        {
+          "matchday": 28,
+          "points": 49
+        },
+        {
+          "matchday": 29,
+          "points": 52
+        },
+        {
+          "matchday": 30,
+          "points": 55
+        },
+        {
+          "matchday": 31,
+          "points": 56
+        },
+        {
+          "matchday": 32,
+          "points": 59
+        },
+        {
+          "matchday": 33,
+          "points": 60
+        },
+        {
+          "matchday": 34,
+          "points": 63
+        }
+      ],
+      "Hertha BSC": [
+        {
+          "matchday": 1,
+          "points": 0
+        },
+        {
+          "matchday": 2,
+          "points": 0
+        },
+        {
+          "matchday": 3,
+          "points": 0
+        },
+        {
+          "matchday": 4,
+          "points": 3
+        },
+        {
+          "matchday": 5,
+          "points": 3
+        },
+        {
+          "matchday": 6,
+          "points": 6
+        },
+        {
+          "matchday": 7,
+          "points": 9
+        },
+        {
+          "matchday": 8,
+          "points": 9
+        },
+        {
+          "matchday": 9,
+          "points": 12
+        },
+        {
+          "matchday": 10,
+          "points": 12
+        },
+        {
+          "matchday": 11,
+          "points": 15
+        },
+        {
+          "matchday": 12,
+          "points": 16
+        },
+        {
+          "matchday": 13,
+          "points": 17
+        },
+        {
+          "matchday": 14,
+          "points": 18
+        },
+        {
+          "matchday": 15,
+          "points": 21
+        },
+        {
+          "matchday": 16,
+          "points": 24
+        },
+        {
+          "matchday": 17,
+          "points": 25
+        },
+        {
+          "matchday": 18,
+          "points": 26
+        },
+        {
+          "matchday": 19,
+          "points": 26
+        },
+        {
+          "matchday": 20,
+          "points": 26
+        },
+        {
+          "matchday": 21,
+          "points": 29
+        },
+        {
+          "matchday": 22,
+          "points": 32
+        },
+        {
+          "matchday": 23,
+          "points": 33
+        },
+        {
+          "matchday": 24,
+          "points": 34
+        },
+        {
+          "matchday": 25,
+          "points": 34
+        },
+        {
+          "matchday": 26,
+          "points": 37
+        },
+        {
+          "matchday": 27,
+          "points": 38
+        },
+        {
+          "matchday": 28,
+          "points": 41
+        },
+        {
+          "matchday": 29,
+          "points": 44
+        },
+        {
+          "matchday": 30,
+          "points": 44
+        },
+        {
+          "matchday": 31,
+          "points": 45
+        },
+        {
+          "matchday": 32,
+          "points": 45
+        },
+        {
+          "matchday": 33,
+          "points": 48
+        },
+        {
+          "matchday": 34,
+          "points": 48
+        }
+      ],
+      "SpVgg Greuther Fürth": [
+        {
+          "matchday": 1,
+          "points": 3
+        },
+        {
+          "matchday": 2,
+          "points": 3
+        },
+        {
+          "matchday": 3,
+          "points": 4
+        },
+        {
+          "matchday": 4,
+          "points": 4
+        },
+        {
+          "matchday": 5,
+          "points": 4
+        },
+        {
+          "matchday": 6,
+          "points": 5
+        },
+        {
+          "matchday": 7,
+          "points": 8
+        },
+        {
+          "matchday": 8,
+          "points": 9
+        },
+        {
+          "matchday": 9,
+          "points": 12
+        },
+        {
+          "matchday": 10,
+          "points": 12
+        },
+        {
+          "matchday": 11,
+          "points": 15
+        },
+        {
+          "matchday": 12,
+          "points": 18
+        },
+        {
+          "matchday": 13,
+          "points": 21
+        },
+        {
+          "matchday": 14,
+          "points": 24
+        },
+        {
+          "matchday": 15,
+          "points": 27
+        },
+        {
+          "matchday": 16,
+          "points": 28
+        },
+        {
+          "matchday": 17,
+          "points": 29
+        },
+        {
+          "matchday": 18,
+          "points": 32
+        },
+        {
+          "matchday": 19,
+          "points": 35
+        },
+        {
+          "matchday": 20,
+          "points": 35
+        },
+        {
+          "matchday": 21,
+          "points": 35
+        },
+        {
+          "matchday": 22,
+          "points": 35
+        },
+        {
+          "matchday": 23,
+          "points": 38
+        },
+        {
+          "matchday": 24,
+          "points": 38
+        },
+        {
+          "matchday": 25,
+          "points": 38
+        },
+        {
+          "matchday": 26,
+          "points": 38
+        },
+        {
+          "matchday": 27,
+          "points": 39
+        },
+        {
+          "matchday": 28,
+          "points": 39
+        },
+        {
+          "matchday": 29,
+          "points": 42
+        },
+        {
+          "matchday": 30,
+          "points": 42
+        },
+        {
+          "matchday": 31,
+          "points": 45
+        },
+        {
+          "matchday": 32,
+          "points": 46
+        },
+        {
+          "matchday": 33,
+          "points": 47
+        },
+        {
+          "matchday": 34,
+          "points": 50
+        }
+      ],
+      "SC Paderborn 07": [
+        {
+          "matchday": 1,
+          "points": 0
+        },
+        {
+          "matchday": 2,
+          "points": 1
+        },
+        {
+          "matchday": 3,
+          "points": 4
+        },
+        {
+          "matchday": 4,
+          "points": 4
+        },
+        {
+          "matchday": 5,
+          "points": 4
+        },
+        {
+          "matchday": 6,
+          "points": 7
+        },
+        {
+          "matchday": 7,
+          "points": 8
+        },
+        {
+          "matchday": 8,
+          "points": 11
+        },
+        {
+          "matchday": 9,
+          "points": 14
+        },
+        {
+          "matchday": 10,
+          "points": 15
+        },
+        {
+          "matchday": 11,
+          "points": 15
+        },
+        {
+          "matchday": 12,
+          "points": 18
+        },
+        {
+          "matchday": 13,
+          "points": 18
+        },
+        {
+          "matchday": 14,
+          "points": 18
+        },
+        {
+          "matchday": 15,
+          "points": 21
+        },
+        {
+          "matchday": 16,
+          "points": 24
+        },
+        {
+          "matchday": 17,
+          "points": 27
+        },
+        {
+          "matchday": 18,
+          "points": 27
+        },
+        {
+          "matchday": 19,
+          "points": 28
+        },
+        {
+          "matchday": 20,
+          "points": 31
+        },
+        {
+          "matchday": 21,
+          "points": 34
+        },
+        {
+          "matchday": 22,
+          "points": 34
+        },
+        {
+          "matchday": 23,
+          "points": 37
+        },
+        {
+          "matchday": 24,
+          "points": 38
+        },
+        {
+          "matchday": 25,
+          "points": 39
+        },
+        {
+          "matchday": 26,
+          "points": 39
+        },
+        {
+          "matchday": 27,
+          "points": 39
+        },
+        {
+          "matchday": 28,
+          "points": 39
+        },
+        {
+          "matchday": 29,
+          "points": 40
+        },
+        {
+          "matchday": 30,
+          "points": 43
+        },
+        {
+          "matchday": 31,
+          "points": 46
+        },
+        {
+          "matchday": 32,
+          "points": 46
+        },
+        {
+          "matchday": 33,
+          "points": 49
+        },
+        {
+          "matchday": 34,
+          "points": 52
+        }
+      ],
+      "Hansa Rostock": [
+        {
+          "matchday": 1,
+          "points": 3
+        },
+        {
+          "matchday": 2,
+          "points": 6
+        },
+        {
+          "matchday": 3,
+          "points": 6
+        },
+        {
+          "matchday": 4,
+          "points": 9
+        },
+        {
+          "matchday": 5,
+          "points": 9
+        },
+        {
+          "matchday": 6,
+          "points": 9
+        },
+        {
+          "matchday": 7,
+          "points": 9
+        },
+        {
+          "matchday": 8,
+          "points": 12
+        },
+        {
+          "matchday": 9,
+          "points": 12
+        },
+        {
+          "matchday": 10,
+          "points": 12
+        },
+        {
+          "matchday": 11,
+          "points": 12
+        },
+        {
+          "matchday": 12,
+          "points": 13
+        },
+        {
+          "matchday": 13,
+          "points": 16
+        },
+        {
+          "matchday": 14,
+          "points": 16
+        },
+        {
+          "matchday": 15,
+          "points": 17
+        },
+        {
+          "matchday": 16,
+          "points": 17
+        },
+        {
+          "matchday": 17,
+          "points": 17
+        },
+        {
+          "matchday": 18,
+          "points": 17
+        },
+        {
+          "matchday": 19,
+          "points": 20
+        },
+        {
+          "matchday": 20,
+          "points": 20
+        },
+        {
+          "matchday": 21,
+          "points": 21
+        },
+        {
+          "matchday": 22,
+          "points": 22
+        },
+        {
+          "matchday": 23,
+          "points": 22
+        },
+        {
+          "matchday": 24,
+          "points": 22
+        },
+        {
+          "matchday": 25,
+          "points": 25
+        },
+        {
+          "matchday": 26,
+          "points": 28
+        },
+        {
+          "matchday": 27,
+          "points": 28
+        },
+        {
+          "matchday": 28,
+          "points": 31
+        },
+        {
+          "matchday": 29,
+          "points": 31
+        },
+        {
+          "matchday": 30,
+          "points": 31
+        },
+        {
+          "matchday": 31,
+          "points": 31
+        },
+        {
+          "matchday": 32,
+          "points": 31
+        },
+        {
+          "matchday": 33,
+          "points": 31
+        },
+        {
+          "matchday": 34,
+          "points": 31
+        }
+      ],
+      "1. FC Nürnberg": [
+        {
+          "matchday": 1,
+          "points": 0
+        },
+        {
+          "matchday": 2,
+          "points": 1
+        },
+        {
+          "matchday": 3,
+          "points": 4
+        },
+        {
+          "matchday": 4,
+          "points": 7
+        },
+        {
+          "matchday": 5,
+          "points": 7
+        },
+        {
+          "matchday": 6,
+          "points": 8
+        },
+        {
+          "matchday": 7,
+          "points": 9
+        },
+        {
+          "matchday": 8,
+          "points": 12
+        },
+        {
+          "matchday": 9,
+          "points": 12
+        },
+        {
+          "matchday": 10,
+          "points": 15
+        },
+        {
+          "matchday": 11,
+          "points": 18
+        },
+        {
+          "matchday": 12,
+          "points": 18
+        },
+        {
+          "matchday": 13,
+          "points": 21
+        },
+        {
+          "matchday": 14,
+          "points": 21
+        },
+        {
+          "matchday": 15,
+          "points": 21
+        },
+        {
+          "matchday": 16,
+          "points": 24
+        },
+        {
+          "matchday": 17,
+          "points": 24
+        },
+        {
+          "matchday": 18,
+          "points": 27
+        },
+        {
+          "matchday": 19,
+          "points": 27
+        },
+        {
+          "matchday": 20,
+          "points": 28
+        },
+        {
+          "matchday": 21,
+          "points": 29
+        },
+        {
+          "matchday": 22,
+          "points": 30
+        },
+        {
+          "matchday": 23,
+          "points": 30
+        },
+        {
+          "matchday": 24,
+          "points": 33
+        },
+        {
+          "matchday": 25,
+          "points": 36
+        },
+        {
+          "matchday": 26,
+          "points": 36
+        },
+        {
+          "matchday": 27,
+          "points": 37
+        },
+        {
+          "matchday": 28,
+          "points": 37
+        },
+        {
+          "matchday": 29,
+          "points": 37
+        },
+        {
+          "matchday": 30,
+          "points": 37
+        },
+        {
+          "matchday": 31,
+          "points": 37
+        },
+        {
+          "matchday": 32,
+          "points": 37
+        },
+        {
+          "matchday": 33,
+          "points": 40
+        },
+        {
+          "matchday": 34,
+          "points": 40
+        }
+      ],
+      "Eintracht Braunschweig": [
+        {
+          "matchday": 1,
+          "points": 0
+        },
+        {
+          "matchday": 2,
+          "points": 0
+        },
+        {
+          "matchday": 3,
+          "points": 3
+        },
+        {
+          "matchday": 4,
+          "points": 3
+        },
+        {
+          "matchday": 5,
+          "points": 4
+        },
+        {
+          "matchday": 6,
+          "points": 4
+        },
+        {
+          "matchday": 7,
+          "points": 5
+        },
+        {
+          "matchday": 8,
+          "points": 5
+        },
+        {
+          "matchday": 9,
+          "points": 5
+        },
+        {
+          "matchday": 10,
+          "points": 5
+        },
+        {
+          "matchday": 11,
+          "points": 5
+        },
+        {
+          "matchday": 12,
+          "points": 5
+        },
+        {
+          "matchday": 13,
+          "points": 8
+        },
+        {
+          "matchday": 14,
+          "points": 8
+        },
+        {
+          "matchday": 15,
+          "points": 8
+        },
+        {
+          "matchday": 16,
+          "points": 11
+        },
+        {
+          "matchday": 17,
+          "points": 14
+        },
+        {
+          "matchday": 18,
+          "points": 17
+        },
+        {
+          "matchday": 19,
+          "points": 20
+        },
+        {
+          "matchday": 20,
+          "points": 20
+        },
+        {
+          "matchday": 21,
+          "points": 23
+        },
+        {
+          "matchday": 22,
+          "points": 23
+        },
+        {
+          "matchday": 23,
+          "points": 24
+        },
+        {
+          "matchday": 24,
+          "points": 24
+        },
+        {
+          "matchday": 25,
+          "points": 24
+        },
+        {
+          "matchday": 26,
+          "points": 27
+        },
+        {
+          "matchday": 27,
+          "points": 30
+        },
+        {
+          "matchday": 28,
+          "points": 30
+        },
+        {
+          "matchday": 29,
+          "points": 31
+        },
+        {
+          "matchday": 30,
+          "points": 34
+        },
+        {
+          "matchday": 31,
+          "points": 34
+        },
+        {
+          "matchday": 32,
+          "points": 35
+        },
+        {
+          "matchday": 33,
+          "points": 38
+        },
+        {
+          "matchday": 34,
+          "points": 38
+        }
+      ],
+      "Holstein Kiel": [
+        {
+          "matchday": 1,
+          "points": 3
+        },
+        {
+          "matchday": 2,
+          "points": 6
+        },
+        {
+          "matchday": 3,
+          "points": 6
+        },
+        {
+          "matchday": 4,
+          "points": 9
+        },
+        {
+          "matchday": 5,
+          "points": 12
+        },
+        {
+          "matchday": 6,
+          "points": 12
+        },
+        {
+          "matchday": 7,
+          "points": 12
+        },
+        {
+          "matchday": 8,
+          "points": 15
+        },
+        {
+          "matchday": 9,
+          "points": 16
+        },
+        {
+          "matchday": 10,
+          "points": 19
+        },
+        {
+          "matchday": 11,
+          "points": 19
+        },
+        {
+          "matchday": 12,
+          "points": 20
+        },
+        {
+          "matchday": 13,
+          "points": 23
+        },
+        {
+          "matchday": 14,
+          "points": 26
+        },
+        {
+          "matchday": 15,
+          "points": 29
+        },
+        {
+          "matchday": 16,
+          "points": 32
+        },
+        {
+          "matchday": 17,
+          "points": 35
+        },
+        {
+          "matchday": 18,
+          "points": 35
+        },
+        {
+          "matchday": 19,
+          "points": 35
+        },
+        {
+          "matchday": 20,
+          "points": 36
+        },
+        {
+          "matchday": 21,
+          "points": 39
+        },
+        {
+          "matchday": 22,
+          "points": 42
+        },
+        {
+          "matchday": 23,
+          "points": 42
+        },
+        {
+          "matchday": 24,
+          "points": 43
+        },
+        {
+          "matchday": 25,
+          "points": 46
+        },
+        {
+          "matchday": 26,
+          "points": 49
+        },
+        {
+          "matchday": 27,
+          "points": 52
+        },
+        {
+          "matchday": 28,
+          "points": 55
+        },
+        {
+          "matchday": 29,
+          "points": 58
+        },
+        {
+          "matchday": 30,
+          "points": 61
+        },
+        {
+          "matchday": 31,
+          "points": 61
+        },
+        {
+          "matchday": 32,
+          "points": 64
+        },
+        {
+          "matchday": 33,
+          "points": 65
+        },
+        {
+          "matchday": 34,
+          "points": 68
+        }
+      ]
+    },
+    "2024/25": {
+      "1. FC Köln": [
+        {
+          "matchday": 1,
+          "points": 0
+        },
+        {
+          "matchday": 2,
+          "points": 1
+        },
+        {
+          "matchday": 3,
+          "points": 4
+        },
+        {
+          "matchday": 4,
+          "points": 7
+        },
+        {
+          "matchday": 5,
+          "points": 7
+        },
+        {
+          "matchday": 6,
+          "points": 8
+        },
+        {
+          "matchday": 7,
+          "points": 9
+        },
+        {
+          "matchday": 8,
+          "points": 12
+        },
+        {
+          "matchday": 9,
+          "points": 12
+        },
+        {
+          "matchday": 10,
+          "points": 12
+        },
+        {
+          "matchday": 11,
+          "points": 15
+        },
+        {
+          "matchday": 12,
+          "points": 18
+        },
+        {
+          "matchday": 13,
+          "points": 21
+        },
+        {
+          "matchday": 14,
+          "points": 22
+        },
+        {
+          "matchday": 15,
+          "points": 25
+        },
+        {
+          "matchday": 16,
+          "points": 28
+        },
+        {
+          "matchday": 17,
+          "points": 31
+        },
+        {
+          "matchday": 18,
+          "points": 31
+        },
+        {
+          "matchday": 19,
+          "points": 34
+        },
+        {
+          "matchday": 20,
+          "points": 37
+        },
+        {
+          "matchday": 21,
+          "points": 40
+        },
+        {
+          "matchday": 22,
+          "points": 40
+        },
+        {
+          "matchday": 23,
+          "points": 41
+        },
+        {
+          "matchday": 24,
+          "points": 41
+        },
+        {
+          "matchday": 25,
+          "points": 44
+        },
+        {
+          "matchday": 26,
+          "points": 47
+        },
+        {
+          "matchday": 27,
+          "points": 50
+        },
+        {
+          "matchday": 28,
+          "points": 50
+        },
+        {
+          "matchday": 29,
+          "points": 51
+        },
+        {
+          "matchday": 30,
+          "points": 54
+        },
+        {
+          "matchday": 31,
+          "points": 54
+        },
+        {
+          "matchday": 32,
+          "points": 55
+        },
+        {
+          "matchday": 33,
+          "points": 58
+        },
+        {
+          "matchday": 34,
+          "points": 61
+        }
+      ],
+      "Hamburger SV": [
+        {
+          "matchday": 1,
+          "points": 3
+        },
+        {
+          "matchday": 2,
+          "points": 4
+        },
+        {
+          "matchday": 3,
+          "points": 4
+        },
+        {
+          "matchday": 4,
+          "points": 7
+        },
+        {
+          "matchday": 5,
+          "points": 10
+        },
+        {
+          "matchday": 6,
+          "points": 11
+        },
+        {
+          "matchday": 7,
+          "points": 12
+        },
+        {
+          "matchday": 8,
+          "points": 15
+        },
+        {
+          "matchday": 9,
+          "points": 18
+        },
+        {
+          "matchday": 10,
+          "points": 18
+        },
+        {
+          "matchday": 11,
+          "points": 19
+        },
+        {
+          "matchday": 12,
+          "points": 19
+        },
+        {
+          "matchday": 13,
+          "points": 20
+        },
+        {
+          "matchday": 14,
+          "points": 23
+        },
+        {
+          "matchday": 15,
+          "points": 24
+        },
+        {
+          "matchday": 16,
+          "points": 25
+        },
+        {
+          "matchday": 17,
+          "points": 28
+        },
+        {
+          "matchday": 18,
+          "points": 31
+        },
+        {
+          "matchday": 19,
+          "points": 34
+        },
+        {
+          "matchday": 20,
+          "points": 35
+        },
+        {
+          "matchday": 21,
+          "points": 38
+        },
+        {
+          "matchday": 22,
+          "points": 39
+        },
+        {
+          "matchday": 23,
+          "points": 42
+        },
+        {
+          "matchday": 24,
+          "points": 42
+        },
+        {
+          "matchday": 25,
+          "points": 45
+        },
+        {
+          "matchday": 26,
+          "points": 48
+        },
+        {
+          "matchday": 27,
+          "points": 49
+        },
+        {
+          "matchday": 28,
+          "points": 52
+        },
+        {
+          "matchday": 29,
+          "points": 52
+        },
+        {
+          "matchday": 30,
+          "points": 53
+        },
+        {
+          "matchday": 31,
+          "points": 53
+        },
+        {
+          "matchday": 32,
+          "points": 56
+        },
+        {
+          "matchday": 33,
+          "points": 59
+        },
+        {
+          "matchday": 34,
+          "points": 59
+        }
+      ],
+      "Karlsruher SC": [
+        {
+          "matchday": 1,
+          "points": 3
+        },
+        {
+          "matchday": 2,
+          "points": 4
+        },
+        {
+          "matchday": 3,
+          "points": 7
+        },
+        {
+          "matchday": 4,
+          "points": 10
+        },
+        {
+          "matchday": 5,
+          "points": 13
+        },
+        {
+          "matchday": 6,
+          "points": 14
+        },
+        {
+          "matchday": 7,
+          "points": 15
+        },
+        {
+          "matchday": 8,
+          "points": 16
+        },
+        {
+          "matchday": 9,
+          "points": 19
+        },
+        {
+          "matchday": 10,
+          "points": 19
+        },
+        {
+          "matchday": 11,
+          "points": 19
+        },
+        {
+          "matchday": 12,
+          "points": 20
+        },
+        {
+          "matchday": 13,
+          "points": 23
+        },
+        {
+          "matchday": 14,
+          "points": 23
+        },
+        {
+          "matchday": 15,
+          "points": 23
+        },
+        {
+          "matchday": 16,
+          "points": 26
+        },
+        {
+          "matchday": 17,
+          "points": 29
+        },
+        {
+          "matchday": 18,
+          "points": 29
+        },
+        {
+          "matchday": 19,
+          "points": 29
+        },
+        {
+          "matchday": 20,
+          "points": 30
+        },
+        {
+          "matchday": 21,
+          "points": 30
+        },
+        {
+          "matchday": 22,
+          "points": 30
+        },
+        {
+          "matchday": 23,
+          "points": 33
+        },
+        {
+          "matchday": 24,
+          "points": 36
+        },
+        {
+          "matchday": 25,
+          "points": 36
+        },
+        {
+          "matchday": 26,
+          "points": 37
+        },
+        {
+          "matchday": 27,
+          "points": 37
+        },
+        {
+          "matchday": 28,
+          "points": 40
+        },
+        {
+          "matchday": 29,
+          "points": 41
+        },
+        {
+          "matchday": 30,
+          "points": 44
+        },
+        {
+          "matchday": 31,
+          "points": 47
+        },
+        {
+          "matchday": 32,
+          "points": 48
+        },
+        {
+          "matchday": 33,
+          "points": 49
+        },
+        {
+          "matchday": 34,
+          "points": 52
+        }
+      ],
+      "1. FC Nürnberg": [
+        {
+          "matchday": 1,
+          "points": 0
+        },
+        {
+          "matchday": 2,
+          "points": 3
+        },
+        {
+          "matchday": 3,
+          "points": 4
+        },
+        {
+          "matchday": 4,
+          "points": 4
+        },
+        {
+          "matchday": 5,
+          "points": 7
+        },
+        {
+          "matchday": 6,
+          "points": 7
+        },
+        {
+          "matchday": 7,
+          "points": 7
+        },
+        {
+          "matchday": 8,
+          "points": 10
+        },
+        {
+          "matchday": 9,
+          "points": 13
+        },
+        {
+          "matchday": 10,
+          "points": 16
+        },
+        {
+          "matchday": 11,
+          "points": 17
+        },
+        {
+          "matchday": 12,
+          "points": 18
+        },
+        {
+          "matchday": 13,
+          "points": 18
+        },
+        {
+          "matchday": 14,
+          "points": 19
+        },
+        {
+          "matchday": 15,
+          "points": 19
+        },
+        {
+          "matchday": 16,
+          "points": 19
+        },
+        {
+          "matchday": 17,
+          "points": 22
+        },
+        {
+          "matchday": 18,
+          "points": 25
+        },
+        {
+          "matchday": 19,
+          "points": 25
+        },
+        {
+          "matchday": 20,
+          "points": 28
+        },
+        {
+          "matchday": 21,
+          "points": 31
+        },
+        {
+          "matchday": 22,
+          "points": 34
+        },
+        {
+          "matchday": 23,
+          "points": 35
+        },
+        {
+          "matchday": 24,
+          "points": 35
+        },
+        {
+          "matchday": 25,
+          "points": 38
+        },
+        {
+          "matchday": 26,
+          "points": 41
+        },
+        {
+          "matchday": 27,
+          "points": 41
+        },
+        {
+          "matchday": 28,
+          "points": 41
+        },
+        {
+          "matchday": 29,
+          "points": 44
+        },
+        {
+          "matchday": 30,
+          "points": 44
+        },
+        {
+          "matchday": 31,
+          "points": 45
+        },
+        {
+          "matchday": 32,
+          "points": 45
+        },
+        {
+          "matchday": 33,
+          "points": 45
+        },
+        {
+          "matchday": 34,
+          "points": 48
+        }
+      ],
+      "Hannover 96": [
+        {
+          "matchday": 1,
+          "points": 3
+        },
+        {
+          "matchday": 2,
+          "points": 4
+        },
+        {
+          "matchday": 3,
+          "points": 7
+        },
+        {
+          "matchday": 4,
+          "points": 7
+        },
+        {
+          "matchday": 5,
+          "points": 10
+        },
+        {
+          "matchday": 6,
+          "points": 10
+        },
+        {
+          "matchday": 7,
+          "points": 13
+        },
+        {
+          "matchday": 8,
+          "points": 13
+        },
+        {
+          "matchday": 9,
+          "points": 16
+        },
+        {
+          "matchday": 10,
+          "points": 19
+        },
+        {
+          "matchday": 11,
+          "points": 22
+        },
+        {
+          "matchday": 12,
+          "points": 22
+        },
+        {
+          "matchday": 13,
+          "points": 22
+        },
+        {
+          "matchday": 14,
+          "points": 23
+        },
+        {
+          "matchday": 15,
+          "points": 26
+        },
+        {
+          "matchday": 16,
+          "points": 26
+        },
+        {
+          "matchday": 17,
+          "points": 27
+        },
+        {
+          "matchday": 18,
+          "points": 30
+        },
+        {
+          "matchday": 19,
+          "points": 31
+        },
+        {
+          "matchday": 20,
+          "points": 32
+        },
+        {
+          "matchday": 21,
+          "points": 33
+        },
+        {
+          "matchday": 22,
+          "points": 34
+        },
+        {
+          "matchday": 23,
+          "points": 35
+        },
+        {
+          "matchday": 24,
+          "points": 38
+        },
+        {
+          "matchday": 25,
+          "points": 39
+        },
+        {
+          "matchday": 26,
+          "points": 42
+        },
+        {
+          "matchday": 27,
+          "points": 43
+        },
+        {
+          "matchday": 28,
+          "points": 43
+        },
+        {
+          "matchday": 29,
+          "points": 43
+        },
+        {
+          "matchday": 30,
+          "points": 43
+        },
+        {
+          "matchday": 31,
+          "points": 46
+        },
+        {
+          "matchday": 32,
+          "points": 49
+        },
+        {
+          "matchday": 33,
+          "points": 50
+        },
+        {
+          "matchday": 34,
+          "points": 51
+        }
+      ],
+      "Jahn Regensburg": [
+        {
+          "matchday": 1,
+          "points": 0
+        },
+        {
+          "matchday": 2,
+          "points": 3
+        },
+        {
+          "matchday": 3,
+          "points": 3
+        },
+        {
+          "matchday": 4,
+          "points": 3
+        },
+        {
+          "matchday": 5,
+          "points": 3
+        },
+        {
+          "matchday": 6,
+          "points": 3
+        },
+        {
+          "matchday": 7,
+          "points": 4
+        },
+        {
+          "matchday": 8,
+          "points": 4
+        },
+        {
+          "matchday": 9,
+          "points": 4
+        },
+        {
+          "matchday": 10,
+          "points": 4
+        },
+        {
+          "matchday": 11,
+          "points": 7
+        },
+        {
+          "matchday": 12,
+          "points": 7
+        },
+        {
+          "matchday": 13,
+          "points": 7
+        },
+        {
+          "matchday": 14,
+          "points": 8
+        },
+        {
+          "matchday": 15,
+          "points": 8
+        },
+        {
+          "matchday": 16,
+          "points": 8
+        },
+        {
+          "matchday": 17,
+          "points": 11
+        },
+        {
+          "matchday": 18,
+          "points": 11
+        },
+        {
+          "matchday": 19,
+          "points": 11
+        },
+        {
+          "matchday": 20,
+          "points": 14
+        },
+        {
+          "matchday": 21,
+          "points": 14
+        },
+        {
+          "matchday": 22,
+          "points": 15
+        },
+        {
+          "matchday": 23,
+          "points": 15
+        },
+        {
+          "matchday": 24,
+          "points": 15
+        },
+        {
+          "matchday": 25,
+          "points": 16
+        },
+        {
+          "matchday": 26,
+          "points": 16
+        },
+        {
+          "matchday": 27,
+          "points": 19
+        },
+        {
+          "matchday": 28,
+          "points": 19
+        },
+        {
+          "matchday": 29,
+          "points": 22
+        },
+        {
+          "matchday": 30,
+          "points": 22
+        },
+        {
+          "matchday": 31,
+          "points": 23
+        },
+        {
+          "matchday": 32,
+          "points": 24
+        },
+        {
+          "matchday": 33,
+          "points": 25
+        },
+        {
+          "matchday": 34,
+          "points": 25
+        }
+      ],
+      "Hertha BSC": [
+        {
+          "matchday": 1,
+          "points": 0
+        },
+        {
+          "matchday": 2,
+          "points": 1
+        },
+        {
+          "matchday": 3,
+          "points": 4
+        },
+        {
+          "matchday": 4,
+          "points": 7
+        },
+        {
+          "matchday": 5,
+          "points": 7
+        },
+        {
+          "matchday": 6,
+          "points": 10
+        },
+        {
+          "matchday": 7,
+          "points": 10
+        },
+        {
+          "matchday": 8,
+          "points": 11
+        },
+        {
+          "matchday": 9,
+          "points": 14
+        },
+        {
+          "matchday": 10,
+          "points": 17
+        },
+        {
+          "matchday": 11,
+          "points": 17
+        },
+        {
+          "matchday": 12,
+          "points": 17
+        },
+        {
+          "matchday": 13,
+          "points": 18
+        },
+        {
+          "matchday": 14,
+          "points": 21
+        },
+        {
+          "matchday": 15,
+          "points": 21
+        },
+        {
+          "matchday": 16,
+          "points": 21
+        },
+        {
+          "matchday": 17,
+          "points": 22
+        },
+        {
+          "matchday": 18,
+          "points": 25
+        },
+        {
+          "matchday": 19,
+          "points": 25
+        },
+        {
+          "matchday": 20,
+          "points": 25
+        },
+        {
+          "matchday": 21,
+          "points": 25
+        },
+        {
+          "matchday": 22,
+          "points": 25
+        },
+        {
+          "matchday": 23,
+          "points": 26
+        },
+        {
+          "matchday": 24,
+          "points": 26
+        },
+        {
+          "matchday": 25,
+          "points": 26
+        },
+        {
+          "matchday": 26,
+          "points": 29
+        },
+        {
+          "matchday": 27,
+          "points": 32
+        },
+        {
+          "matchday": 28,
+          "points": 35
+        },
+        {
+          "matchday": 29,
+          "points": 36
+        },
+        {
+          "matchday": 30,
+          "points": 39
+        },
+        {
+          "matchday": 31,
+          "points": 40
+        },
+        {
+          "matchday": 32,
+          "points": 43
+        },
+        {
+          "matchday": 33,
+          "points": 43
+        },
+        {
+          "matchday": 34,
+          "points": 44
+        }
+      ],
+      "SC Paderborn 07": [
+        {
+          "matchday": 1,
+          "points": 3
+        },
+        {
+          "matchday": 2,
+          "points": 6
+        },
+        {
+          "matchday": 3,
+          "points": 7
+        },
+        {
+          "matchday": 4,
+          "points": 8
+        },
+        {
+          "matchday": 5,
+          "points": 9
+        },
+        {
+          "matchday": 6,
+          "points": 12
+        },
+        {
+          "matchday": 7,
+          "points": 13
+        },
+        {
+          "matchday": 8,
+          "points": 16
+        },
+        {
+          "matchday": 9,
+          "points": 16
+        },
+        {
+          "matchday": 10,
+          "points": 19
+        },
+        {
+          "matchday": 11,
+          "points": 20
+        },
+        {
+          "matchday": 12,
+          "points": 21
+        },
+        {
+          "matchday": 13,
+          "points": 24
+        },
+        {
+          "matchday": 14,
+          "points": 27
+        },
+        {
+          "matchday": 15,
+          "points": 27
+        },
+        {
+          "matchday": 16,
+          "points": 28
+        },
+        {
+          "matchday": 17,
+          "points": 28
+        },
+        {
+          "matchday": 18,
+          "points": 28
+        },
+        {
+          "matchday": 19,
+          "points": 31
+        },
+        {
+          "matchday": 20,
+          "points": 31
+        },
+        {
+          "matchday": 21,
+          "points": 34
+        },
+        {
+          "matchday": 22,
+          "points": 37
+        },
+        {
+          "matchday": 23,
+          "points": 38
+        },
+        {
+          "matchday": 24,
+          "points": 41
+        },
+        {
+          "matchday": 25,
+          "points": 42
+        },
+        {
+          "matchday": 26,
+          "points": 45
+        },
+        {
+          "matchday": 27,
+          "points": 45
+        },
+        {
+          "matchday": 28,
+          "points": 45
+        },
+        {
+          "matchday": 29,
+          "points": 45
+        },
+        {
+          "matchday": 30,
+          "points": 48
+        },
+        {
+          "matchday": 31,
+          "points": 49
+        },
+        {
+          "matchday": 32,
+          "points": 52
+        },
+        {
+          "matchday": 33,
+          "points": 55
+        },
+        {
+          "matchday": 34,
+          "points": 55
+        }
+      ],
+      "1. FC Magdeburg": [
+        {
+          "matchday": 1,
+          "points": 1
+        },
+        {
+          "matchday": 2,
+          "points": 4
+        },
+        {
+          "matchday": 3,
+          "points": 5
+        },
+        {
+          "matchday": 4,
+          "points": 8
+        },
+        {
+          "matchday": 5,
+          "points": 11
+        },
+        {
+          "matchday": 6,
+          "points": 12
+        },
+        {
+          "matchday": 7,
+          "points": 15
+        },
+        {
+          "matchday": 8,
+          "points": 16
+        },
+        {
+          "matchday": 9,
+          "points": 16
+        },
+        {
+          "matchday": 10,
+          "points": 16
+        },
+        {
+          "matchday": 11,
+          "points": 17
+        },
+        {
+          "matchday": 12,
+          "points": 18
+        },
+        {
+          "matchday": 13,
+          "points": 21
+        },
+        {
+          "matchday": 14,
+          "points": 21
+        },
+        {
+          "matchday": 15,
+          "points": 24
+        },
+        {
+          "matchday": 16,
+          "points": 25
+        },
+        {
+          "matchday": 17,
+          "points": 28
+        },
+        {
+          "matchday": 18,
+          "points": 31
+        },
+        {
+          "matchday": 19,
+          "points": 32
+        },
+        {
+          "matchday": 20,
+          "points": 35
+        },
+        {
+          "matchday": 21,
+          "points": 35
+        },
+        {
+          "matchday": 22,
+          "points": 38
+        },
+        {
+          "matchday": 23,
+          "points": 38
+        },
+        {
+          "matchday": 24,
+          "points": 41
+        },
+        {
+          "matchday": 25,
+          "points": 42
+        },
+        {
+          "matchday": 26,
+          "points": 42
+        },
+        {
+          "matchday": 27,
+          "points": 43
+        },
+        {
+          "matchday": 28,
+          "points": 46
+        },
+        {
+          "matchday": 29,
+          "points": 46
+        },
+        {
+          "matchday": 30,
+          "points": 49
+        },
+        {
+          "matchday": 31,
+          "points": 50
+        },
+        {
+          "matchday": 32,
+          "points": 50
+        },
+        {
+          "matchday": 33,
+          "points": 50
+        },
+        {
+          "matchday": 34,
+          "points": 53
+        }
+      ],
+      "SV 07 Elversberg": [
+        {
+          "matchday": 1,
+          "points": 1
+        },
+        {
+          "matchday": 2,
+          "points": 2
+        },
+        {
+          "matchday": 3,
+          "points": 2
+        },
+        {
+          "matchday": 4,
+          "points": 5
+        },
+        {
+          "matchday": 5,
+          "points": 6
+        },
+        {
+          "matchday": 6,
+          "points": 6
+        },
+        {
+          "matchday": 7,
+          "points": 9
+        },
+        {
+          "matchday": 8,
+          "points": 12
+        },
+        {
+          "matchday": 9,
+          "points": 13
+        },
+        {
+          "matchday": 10,
+          "points": 16
+        },
+        {
+          "matchday": 11,
+          "points": 16
+        },
+        {
+          "matchday": 12,
+          "points": 19
+        },
+        {
+          "matchday": 13,
+          "points": 22
+        },
+        {
+          "matchday": 14,
+          "points": 22
+        },
+        {
+          "matchday": 15,
+          "points": 25
+        },
+        {
+          "matchday": 16,
+          "points": 28
+        },
+        {
+          "matchday": 17,
+          "points": 28
+        },
+        {
+          "matchday": 18,
+          "points": 28
+        },
+        {
+          "matchday": 19,
+          "points": 28
+        },
+        {
+          "matchday": 20,
+          "points": 29
+        },
+        {
+          "matchday": 21,
+          "points": 32
+        },
+        {
+          "matchday": 22,
+          "points": 35
+        },
+        {
+          "matchday": 23,
+          "points": 36
+        },
+        {
+          "matchday": 24,
+          "points": 39
+        },
+        {
+          "matchday": 25,
+          "points": 40
+        },
+        {
+          "matchday": 26,
+          "points": 40
+        },
+        {
+          "matchday": 27,
+          "points": 41
+        },
+        {
+          "matchday": 28,
+          "points": 44
+        },
+        {
+          "matchday": 29,
+          "points": 47
+        },
+        {
+          "matchday": 30,
+          "points": 48
+        },
+        {
+          "matchday": 31,
+          "points": 49
+        },
+        {
+          "matchday": 32,
+          "points": 52
+        },
+        {
+          "matchday": 33,
+          "points": 55
+        },
+        {
+          "matchday": 34,
+          "points": 58
+        }
+      ],
+      "FC Schalke 04": [
+        {
+          "matchday": 1,
+          "points": 3
+        },
+        {
+          "matchday": 2,
+          "points": 3
+        },
+        {
+          "matchday": 3,
+          "points": 4
+        },
+        {
+          "matchday": 4,
+          "points": 4
+        },
+        {
+          "matchday": 5,
+          "points": 4
+        },
+        {
+          "matchday": 6,
+          "points": 4
+        },
+        {
+          "matchday": 7,
+          "points": 7
+        },
+        {
+          "matchday": 8,
+          "points": 8
+        },
+        {
+          "matchday": 9,
+          "points": 8
+        },
+        {
+          "matchday": 10,
+          "points": 8
+        },
+        {
+          "matchday": 11,
+          "points": 9
+        },
+        {
+          "matchday": 12,
+          "points": 12
+        },
+        {
+          "matchday": 13,
+          "points": 13
+        },
+        {
+          "matchday": 14,
+          "points": 13
+        },
+        {
+          "matchday": 15,
+          "points": 16
+        },
+        {
+          "matchday": 16,
+          "points": 17
+        },
+        {
+          "matchday": 17,
+          "points": 20
+        },
+        {
+          "matchday": 18,
+          "points": 21
+        },
+        {
+          "matchday": 19,
+          "points": 24
+        },
+        {
+          "matchday": 20,
+          "points": 24
+        },
+        {
+          "matchday": 21,
+          "points": 24
+        },
+        {
+          "matchday": 22,
+          "points": 27
+        },
+        {
+          "matchday": 23,
+          "points": 27
+        },
+        {
+          "matchday": 24,
+          "points": 30
+        },
+        {
+          "matchday": 25,
+          "points": 33
+        },
+        {
+          "matchday": 26,
+          "points": 33
+        },
+        {
+          "matchday": 27,
+          "points": 34
+        },
+        {
+          "matchday": 28,
+          "points": 37
+        },
+        {
+          "matchday": 29,
+          "points": 37
+        },
+        {
+          "matchday": 30,
+          "points": 38
+        },
+        {
+          "matchday": 31,
+          "points": 38
+        },
+        {
+          "matchday": 32,
+          "points": 38
+        },
+        {
+          "matchday": 33,
+          "points": 38
+        },
+        {
+          "matchday": 34,
+          "points": 38
+        }
+      ],
+      "Eintracht Braunschweig": [
+        {
+          "matchday": 1,
+          "points": 0
+        },
+        {
+          "matchday": 2,
+          "points": 0
+        },
+        {
+          "matchday": 3,
+          "points": 0
+        },
+        {
+          "matchday": 4,
+          "points": 0
+        },
+        {
+          "matchday": 5,
+          "points": 1
+        },
+        {
+          "matchday": 6,
+          "points": 4
+        },
+        {
+          "matchday": 7,
+          "points": 4
+        },
+        {
+          "matchday": 8,
+          "points": 7
+        },
+        {
+          "matchday": 9,
+          "points": 7
+        },
+        {
+          "matchday": 10,
+          "points": 8
+        },
+        {
+          "matchday": 11,
+          "points": 9
+        },
+        {
+          "matchday": 12,
+          "points": 12
+        },
+        {
+          "matchday": 13,
+          "points": 12
+        },
+        {
+          "matchday": 14,
+          "points": 13
+        },
+        {
+          "matchday": 15,
+          "points": 13
+        },
+        {
+          "matchday": 16,
+          "points": 13
+        },
+        {
+          "matchday": 17,
+          "points": 13
+        },
+        {
+          "matchday": 18,
+          "points": 14
+        },
+        {
+          "matchday": 19,
+          "points": 15
+        },
+        {
+          "matchday": 20,
+          "points": 15
+        },
+        {
+          "matchday": 21,
+          "points": 18
+        },
+        {
+          "matchday": 22,
+          "points": 21
+        },
+        {
+          "matchday": 23,
+          "points": 21
+        },
+        {
+          "matchday": 24,
+          "points": 22
+        },
+        {
+          "matchday": 25,
+          "points": 23
+        },
+        {
+          "matchday": 26,
+          "points": 23
+        },
+        {
+          "matchday": 27,
+          "points": 24
+        },
+        {
+          "matchday": 28,
+          "points": 27
+        },
+        {
+          "matchday": 29,
+          "points": 30
+        },
+        {
+          "matchday": 30,
+          "points": 33
+        },
+        {
+          "matchday": 31,
+          "points": 34
+        },
+        {
+          "matchday": 32,
+          "points": 35
+        },
+        {
+          "matchday": 33,
+          "points": 35
+        },
+        {
+          "matchday": 34,
+          "points": 35
+        }
+      ],
+      "SV Darmstadt 98": [
+        {
+          "matchday": 1,
+          "points": 0
+        },
+        {
+          "matchday": 2,
+          "points": 0
+        },
+        {
+          "matchday": 3,
+          "points": 1
+        },
+        {
+          "matchday": 4,
+          "points": 1
+        },
+        {
+          "matchday": 5,
+          "points": 2
+        },
+        {
+          "matchday": 6,
+          "points": 5
+        },
+        {
+          "matchday": 7,
+          "points": 5
+        },
+        {
+          "matchday": 8,
+          "points": 6
+        },
+        {
+          "matchday": 9,
+          "points": 9
+        },
+        {
+          "matchday": 10,
+          "points": 10
+        },
+        {
+          "matchday": 11,
+          "points": 13
+        },
+        {
+          "matchday": 12,
+          "points": 16
+        },
+        {
+          "matchday": 13,
+          "points": 19
+        },
+        {
+          "matchday": 14,
+          "points": 20
+        },
+        {
+          "matchday": 15,
+          "points": 21
+        },
+        {
+          "matchday": 16,
+          "points": 24
+        },
+        {
+          "matchday": 17,
+          "points": 24
+        },
+        {
+          "matchday": 18,
+          "points": 25
+        },
+        {
+          "matchday": 19,
+          "points": 25
+        },
+        {
+          "matchday": 20,
+          "points": 25
+        },
+        {
+          "matchday": 21,
+          "points": 25
+        },
+        {
+          "matchday": 22,
+          "points": 25
+        },
+        {
+          "matchday": 23,
+          "points": 28
+        },
+        {
+          "matchday": 24,
+          "points": 28
+        },
+        {
+          "matchday": 25,
+          "points": 31
+        },
+        {
+          "matchday": 26,
+          "points": 31
+        },
+        {
+          "matchday": 27,
+          "points": 31
+        },
+        {
+          "matchday": 28,
+          "points": 34
+        },
+        {
+          "matchday": 29,
+          "points": 35
+        },
+        {
+          "matchday": 30,
+          "points": 38
+        },
+        {
+          "matchday": 31,
+          "points": 39
+        },
+        {
+          "matchday": 32,
+          "points": 39
+        },
+        {
+          "matchday": 33,
+          "points": 39
+        },
+        {
+          "matchday": 34,
+          "points": 42
+        }
+      ],
+      "Fortuna Düsseldorf": [
+        {
+          "matchday": 1,
+          "points": 3
+        },
+        {
+          "matchday": 2,
+          "points": 4
+        },
+        {
+          "matchday": 3,
+          "points": 7
+        },
+        {
+          "matchday": 4,
+          "points": 10
+        },
+        {
+          "matchday": 5,
+          "points": 13
+        },
+        {
+          "matchday": 6,
+          "points": 14
+        },
+        {
+          "matchday": 7,
+          "points": 17
+        },
+        {
+          "matchday": 8,
+          "points": 17
+        },
+        {
+          "matchday": 9,
+          "points": 20
+        },
+        {
+          "matchday": 10,
+          "points": 20
+        },
+        {
+          "matchday": 11,
+          "points": 20
+        },
+        {
+          "matchday": 12,
+          "points": 21
+        },
+        {
+          "matchday": 13,
+          "points": 21
+        },
+        {
+          "matchday": 14,
+          "points": 22
+        },
+        {
+          "matchday": 15,
+          "points": 25
+        },
+        {
+          "matchday": 16,
+          "points": 26
+        },
+        {
+          "matchday": 17,
+          "points": 26
+        },
+        {
+          "matchday": 18,
+          "points": 27
+        },
+        {
+          "matchday": 19,
+          "points": 30
+        },
+        {
+          "matchday": 20,
+          "points": 33
+        },
+        {
+          "matchday": 21,
+          "points": 34
+        },
+        {
+          "matchday": 22,
+          "points": 37
+        },
+        {
+          "matchday": 23,
+          "points": 38
+        },
+        {
+          "matchday": 24,
+          "points": 38
+        },
+        {
+          "matchday": 25,
+          "points": 38
+        },
+        {
+          "matchday": 26,
+          "points": 41
+        },
+        {
+          "matchday": 27,
+          "points": 41
+        },
+        {
+          "matchday": 28,
+          "points": 44
+        },
+        {
+          "matchday": 29,
+          "points": 47
+        },
+        {
+          "matchday": 30,
+          "points": 48
+        },
+        {
+          "matchday": 31,
+          "points": 49
+        },
+        {
+          "matchday": 32,
+          "points": 50
+        },
+        {
+          "matchday": 33,
+          "points": 53
+        },
+        {
+          "matchday": 34,
+          "points": 53
+        }
+      ],
+      "SpVgg Greuther Fürth": [
+        {
+          "matchday": 1,
+          "points": 3
+        },
+        {
+          "matchday": 2,
+          "points": 4
+        },
+        {
+          "matchday": 3,
+          "points": 5
+        },
+        {
+          "matchday": 4,
+          "points": 8
+        },
+        {
+          "matchday": 5,
+          "points": 9
+        },
+        {
+          "matchday": 6,
+          "points": 9
+        },
+        {
+          "matchday": 7,
+          "points": 9
+        },
+        {
+          "matchday": 8,
+          "points": 10
+        },
+        {
+          "matchday": 9,
+          "points": 10
+        },
+        {
+          "matchday": 10,
+          "points": 13
+        },
+        {
+          "matchday": 11,
+          "points": 13
+        },
+        {
+          "matchday": 12,
+          "points": 13
+        },
+        {
+          "matchday": 13,
+          "points": 13
+        },
+        {
+          "matchday": 14,
+          "points": 14
+        },
+        {
+          "matchday": 15,
+          "points": 17
+        },
+        {
+          "matchday": 16,
+          "points": 20
+        },
+        {
+          "matchday": 17,
+          "points": 20
+        },
+        {
+          "matchday": 18,
+          "points": 20
+        },
+        {
+          "matchday": 19,
+          "points": 20
+        },
+        {
+          "matchday": 20,
+          "points": 23
+        },
+        {
+          "matchday": 21,
+          "points": 26
+        },
+        {
+          "matchday": 22,
+          "points": 26
+        },
+        {
+          "matchday": 23,
+          "points": 29
+        },
+        {
+          "matchday": 24,
+          "points": 32
+        },
+        {
+          "matchday": 25,
+          "points": 33
+        },
+        {
+          "matchday": 26,
+          "points": 33
+        },
+        {
+          "matchday": 27,
+          "points": 34
+        },
+        {
+          "matchday": 28,
+          "points": 34
+        },
+        {
+          "matchday": 29,
+          "points": 35
+        },
+        {
+          "matchday": 30,
+          "points": 35
+        },
+        {
+          "matchday": 31,
+          "points": 35
+        },
+        {
+          "matchday": 32,
+          "points": 35
+        },
+        {
+          "matchday": 33,
+          "points": 36
+        },
+        {
+          "matchday": 34,
+          "points": 39
+        }
+      ],
+      "Preußen Münster": [
+        {
+          "matchday": 1,
+          "points": 0
+        },
+        {
+          "matchday": 2,
+          "points": 1
+        },
+        {
+          "matchday": 3,
+          "points": 1
+        },
+        {
+          "matchday": 4,
+          "points": 1
+        },
+        {
+          "matchday": 5,
+          "points": 2
+        },
+        {
+          "matchday": 6,
+          "points": 5
+        },
+        {
+          "matchday": 7,
+          "points": 5
+        },
+        {
+          "matchday": 8,
+          "points": 5
+        },
+        {
+          "matchday": 9,
+          "points": 6
+        },
+        {
+          "matchday": 10,
+          "points": 7
+        },
+        {
+          "matchday": 11,
+          "points": 10
+        },
+        {
+          "matchday": 12,
+          "points": 11
+        },
+        {
+          "matchday": 13,
+          "points": 11
+        },
+        {
+          "matchday": 14,
+          "points": 12
+        },
+        {
+          "matchday": 15,
+          "points": 12
+        },
+        {
+          "matchday": 16,
+          "points": 15
+        },
+        {
+          "matchday": 17,
+          "points": 16
+        },
+        {
+          "matchday": 18,
+          "points": 19
+        },
+        {
+          "matchday": 19,
+          "points": 20
+        },
+        {
+          "matchday": 20,
+          "points": 20
+        },
+        {
+          "matchday": 21,
+          "points": 20
+        },
+        {
+          "matchday": 22,
+          "points": 20
+        },
+        {
+          "matchday": 23,
+          "points": 23
+        },
+        {
+          "matchday": 24,
+          "points": 23
+        },
+        {
+          "matchday": 25,
+          "points": 23
+        },
+        {
+          "matchday": 26,
+          "points": 26
+        },
+        {
+          "matchday": 27,
+          "points": 27
+        },
+        {
+          "matchday": 28,
+          "points": 27
+        },
+        {
+          "matchday": 29,
+          "points": 28
+        },
+        {
+          "matchday": 30,
+          "points": 28
+        },
+        {
+          "matchday": 31,
+          "points": 29
+        },
+        {
+          "matchday": 32,
+          "points": 32
+        },
+        {
+          "matchday": 33,
+          "points": 35
+        },
+        {
+          "matchday": 34,
+          "points": 36
+        }
+      ],
+      "SSV Ulm 1846": [
+        {
+          "matchday": 1,
+          "points": 0
+        },
+        {
+          "matchday": 2,
+          "points": 0
+        },
+        {
+          "matchday": 3,
+          "points": 0
+        },
+        {
+          "matchday": 4,
+          "points": 1
+        },
+        {
+          "matchday": 5,
+          "points": 1
+        },
+        {
+          "matchday": 6,
+          "points": 4
+        },
+        {
+          "matchday": 7,
+          "points": 7
+        },
+        {
+          "matchday": 8,
+          "points": 7
+        },
+        {
+          "matchday": 9,
+          "points": 7
+        },
+        {
+          "matchday": 10,
+          "points": 8
+        },
+        {
+          "matchday": 11,
+          "points": 9
+        },
+        {
+          "matchday": 12,
+          "points": 10
+        },
+        {
+          "matchday": 13,
+          "points": 11
+        },
+        {
+          "matchday": 14,
+          "points": 12
+        },
+        {
+          "matchday": 15,
+          "points": 12
+        },
+        {
+          "matchday": 16,
+          "points": 13
+        },
+        {
+          "matchday": 17,
+          "points": 14
+        },
+        {
+          "matchday": 18,
+          "points": 14
+        },
+        {
+          "matchday": 19,
+          "points": 17
+        },
+        {
+          "matchday": 20,
+          "points": 17
+        },
+        {
+          "matchday": 21,
+          "points": 17
+        },
+        {
+          "matchday": 22,
+          "points": 17
+        },
+        {
+          "matchday": 23,
+          "points": 18
+        },
+        {
+          "matchday": 24,
+          "points": 19
+        },
+        {
+          "matchday": 25,
+          "points": 19
+        },
+        {
+          "matchday": 26,
+          "points": 20
+        },
+        {
+          "matchday": 27,
+          "points": 23
+        },
+        {
+          "matchday": 28,
+          "points": 23
+        },
+        {
+          "matchday": 29,
+          "points": 26
+        },
+        {
+          "matchday": 30,
+          "points": 26
+        },
+        {
+          "matchday": 31,
+          "points": 29
+        },
+        {
+          "matchday": 32,
+          "points": 29
+        },
+        {
+          "matchday": 33,
+          "points": 29
+        },
+        {
+          "matchday": 34,
+          "points": 30
+        }
+      ],
+      "1. FC Kaiserslautern": [
+        {
+          "matchday": 1,
+          "points": 3
+        },
+        {
+          "matchday": 2,
+          "points": 4
+        },
+        {
+          "matchday": 3,
+          "points": 7
+        },
+        {
+          "matchday": 4,
+          "points": 7
+        },
+        {
+          "matchday": 5,
+          "points": 7
+        },
+        {
+          "matchday": 6,
+          "points": 8
+        },
+        {
+          "matchday": 7,
+          "points": 9
+        },
+        {
+          "matchday": 8,
+          "points": 9
+        },
+        {
+          "matchday": 9,
+          "points": 12
+        },
+        {
+          "matchday": 10,
+          "points": 15
+        },
+        {
+          "matchday": 11,
+          "points": 16
+        },
+        {
+          "matchday": 12,
+          "points": 17
+        },
+        {
+          "matchday": 13,
+          "points": 20
+        },
+        {
+          "matchday": 14,
+          "points": 23
+        },
+        {
+          "matchday": 15,
+          "points": 26
+        },
+        {
+          "matchday": 16,
+          "points": 26
+        },
+        {
+          "matchday": 17,
+          "points": 26
+        },
+        {
+          "matchday": 18,
+          "points": 29
+        },
+        {
+          "matchday": 19,
+          "points": 32
+        },
+        {
+          "matchday": 20,
+          "points": 35
+        },
+        {
+          "matchday": 21,
+          "points": 38
+        },
+        {
+          "matchday": 22,
+          "points": 39
+        },
+        {
+          "matchday": 23,
+          "points": 39
+        },
+        {
+          "matchday": 24,
+          "points": 42
+        },
+        {
+          "matchday": 25,
+          "points": 43
+        },
+        {
+          "matchday": 26,
+          "points": 43
+        },
+        {
+          "matchday": 27,
+          "points": 46
+        },
+        {
+          "matchday": 28,
+          "points": 46
+        },
+        {
+          "matchday": 29,
+          "points": 46
+        },
+        {
+          "matchday": 30,
+          "points": 46
+        },
+        {
+          "matchday": 31,
+          "points": 49
+        },
+        {
+          "matchday": 32,
+          "points": 50
+        },
+        {
+          "matchday": 33,
+          "points": 53
+        },
+        {
+          "matchday": 34,
+          "points": 53
+        }
+      ]
+    },
+    "2025/26": {
+      "FC Schalke 04": [
+        {
+          "matchday": 1,
+          "points": 3
+        },
+        {
+          "matchday": 2,
+          "points": 3
+        },
+        {
+          "matchday": 3,
+          "points": 6
+        },
+        {
+          "matchday": 4,
+          "points": 9
+        },
+        {
+          "matchday": 5,
+          "points": 9
+        },
+        {
+          "matchday": 6,
+          "points": 12
+        },
+        {
+          "matchday": 7,
+          "points": 15
+        },
+        {
+          "matchday": 8,
+          "points": 18
+        },
+        {
+          "matchday": 9,
+          "points": 21
+        },
+        {
+          "matchday": 10,
+          "points": 24
+        },
+        {
+          "matchday": 11,
+          "points": 24
+        },
+        {
+          "matchday": 12,
+          "points": 27
+        },
+        {
+          "matchday": 13,
+          "points": 28
+        },
+        {
+          "matchday": 14,
+          "points": 31
+        },
+        {
+          "matchday": 15,
+          "points": 34
+        },
+        {
+          "matchday": 16,
+          "points": 37
+        },
+        {
+          "matchday": 17,
+          "points": 37
+        },
+        {
+          "matchday": 18,
+          "points": 38
+        },
+        {
+          "matchday": 19,
+          "points": 39
+        },
+        {
+          "matchday": 20,
+          "points": 39
+        },
+        {
+          "matchday": 21,
+          "points": 40
+        },
+        {
+          "matchday": 22,
+          "points": 43
+        },
+        {
+          "matchday": 23,
+          "points": 46
+        },
+        {
+          "matchday": 24,
+          "points": 47
+        },
+        {
+          "matchday": 25,
+          "points": 50
+        },
+        {
+          "matchday": 26,
+          "points": 51
+        },
+        {
+          "matchday": 27,
+          "points": 52
+        },
+        {
+          "matchday": 28,
+          "points": 55
+        },
+        {
+          "matchday": 29,
+          "points": 58
+        },
+        {
+          "matchday": 30,
+          "points": 61
+        },
+        {
+          "matchday": 31,
+          "points": 64
+        },
+        {
+          "matchday": 32,
+          "points": 67
+        },
+        {
+          "matchday": 33,
+          "points": 67
+        },
+        {
+          "matchday": 34,
+          "points": 70
+        }
+      ],
+      "Hertha BSC": [
+        {
+          "matchday": 1,
+          "points": 0
+        },
+        {
+          "matchday": 2,
+          "points": 1
+        },
+        {
+          "matchday": 3,
+          "points": 2
+        },
+        {
+          "matchday": 4,
+          "points": 2
+        },
+        {
+          "matchday": 5,
+          "points": 5
+        },
+        {
+          "matchday": 6,
+          "points": 5
+        },
+        {
+          "matchday": 7,
+          "points": 8
+        },
+        {
+          "matchday": 8,
+          "points": 11
+        },
+        {
+          "matchday": 9,
+          "points": 11
+        },
+        {
+          "matchday": 10,
+          "points": 14
+        },
+        {
+          "matchday": 11,
+          "points": 17
+        },
+        {
+          "matchday": 12,
+          "points": 20
+        },
+        {
+          "matchday": 13,
+          "points": 23
+        },
+        {
+          "matchday": 14,
+          "points": 26
+        },
+        {
+          "matchday": 15,
+          "points": 26
+        },
+        {
+          "matchday": 16,
+          "points": 27
+        },
+        {
+          "matchday": 17,
+          "points": 28
+        },
+        {
+          "matchday": 18,
+          "points": 29
+        },
+        {
+          "matchday": 19,
+          "points": 30
+        },
+        {
+          "matchday": 20,
+          "points": 31
+        },
+        {
+          "matchday": 21,
+          "points": 34
+        },
+        {
+          "matchday": 22,
+          "points": 34
+        },
+        {
+          "matchday": 23,
+          "points": 34
+        },
+        {
+          "matchday": 24,
+          "points": 37
+        },
+        {
+          "matchday": 25,
+          "points": 40
+        },
+        {
+          "matchday": 26,
+          "points": 41
+        },
+        {
+          "matchday": 27,
+          "points": 44
+        },
+        {
+          "matchday": 28,
+          "points": 47
+        },
+        {
+          "matchday": 29,
+          "points": 47
+        },
+        {
+          "matchday": 30,
+          "points": 48
+        },
+        {
+          "matchday": 31,
+          "points": 48
+        },
+        {
+          "matchday": 32,
+          "points": 48
+        },
+        {
+          "matchday": 33,
+          "points": 51
+        },
+        {
+          "matchday": 34,
+          "points": 51
+        }
+      ],
+      "SV 07 Elversberg": [
+        {
+          "matchday": 1,
+          "points": 3
+        },
+        {
+          "matchday": 2,
+          "points": 3
+        },
+        {
+          "matchday": 3,
+          "points": 6
+        },
+        {
+          "matchday": 4,
+          "points": 9
+        },
+        {
+          "matchday": 5,
+          "points": 10
+        },
+        {
+          "matchday": 6,
+          "points": 13
+        },
+        {
+          "matchday": 7,
+          "points": 16
+        },
+        {
+          "matchday": 8,
+          "points": 19
+        },
+        {
+          "matchday": 9,
+          "points": 22
+        },
+        {
+          "matchday": 10,
+          "points": 22
+        },
+        {
+          "matchday": 11,
+          "points": 23
+        },
+        {
+          "matchday": 12,
+          "points": 23
+        },
+        {
+          "matchday": 13,
+          "points": 26
+        },
+        {
+          "matchday": 14,
+          "points": 27
+        },
+        {
+          "matchday": 15,
+          "points": 30
+        },
+        {
+          "matchday": 16,
+          "points": 33
+        },
+        {
+          "matchday": 17,
+          "points": 34
+        },
+        {
+          "matchday": 18,
+          "points": 34
+        },
+        {
+          "matchday": 19,
+          "points": 35
+        },
+        {
+          "matchday": 20,
+          "points": 38
+        },
+        {
+          "matchday": 21,
+          "points": 38
+        },
+        {
+          "matchday": 22,
+          "points": 41
+        },
+        {
+          "matchday": 23,
+          "points": 44
+        },
+        {
+          "matchday": 24,
+          "points": 45
+        },
+        {
+          "matchday": 25,
+          "points": 48
+        },
+        {
+          "matchday": 26,
+          "points": 48
+        },
+        {
+          "matchday": 27,
+          "points": 51
+        },
+        {
+          "matchday": 28,
+          "points": 52
+        },
+        {
+          "matchday": 29,
+          "points": 52
+        },
+        {
+          "matchday": 30,
+          "points": 55
+        },
+        {
+          "matchday": 31,
+          "points": 56
+        },
+        {
+          "matchday": 32,
+          "points": 59
+        },
+        {
+          "matchday": 33,
+          "points": 59
+        },
+        {
+          "matchday": 34,
+          "points": 62
+        }
+      ],
+      "1. FC Nürnberg": [
+        {
+          "matchday": 1,
+          "points": 0
+        },
+        {
+          "matchday": 2,
+          "points": 0
+        },
+        {
+          "matchday": 3,
+          "points": 0
+        },
+        {
+          "matchday": 4,
+          "points": 1
+        },
+        {
+          "matchday": 5,
+          "points": 1
+        },
+        {
+          "matchday": 6,
+          "points": 4
+        },
+        {
+          "matchday": 7,
+          "points": 4
+        },
+        {
+          "matchday": 8,
+          "points": 7
+        },
+        {
+          "matchday": 9,
+          "points": 8
+        },
+        {
+          "matchday": 10,
+          "points": 9
+        },
+        {
+          "matchday": 11,
+          "points": 12
+        },
+        {
+          "matchday": 12,
+          "points": 15
+        },
+        {
+          "matchday": 13,
+          "points": 18
+        },
+        {
+          "matchday": 14,
+          "points": 18
+        },
+        {
+          "matchday": 15,
+          "points": 19
+        },
+        {
+          "matchday": 16,
+          "points": 19
+        },
+        {
+          "matchday": 17,
+          "points": 22
+        },
+        {
+          "matchday": 18,
+          "points": 25
+        },
+        {
+          "matchday": 19,
+          "points": 25
+        },
+        {
+          "matchday": 20,
+          "points": 26
+        },
+        {
+          "matchday": 21,
+          "points": 26
+        },
+        {
+          "matchday": 22,
+          "points": 29
+        },
+        {
+          "matchday": 23,
+          "points": 30
+        },
+        {
+          "matchday": 24,
+          "points": 30
+        },
+        {
+          "matchday": 25,
+          "points": 30
+        },
+        {
+          "matchday": 26,
+          "points": 33
+        },
+        {
+          "matchday": 27,
+          "points": 36
+        },
+        {
+          "matchday": 28,
+          "points": 37
+        },
+        {
+          "matchday": 29,
+          "points": 37
+        },
+        {
+          "matchday": 30,
+          "points": 38
+        },
+        {
+          "matchday": 31,
+          "points": 41
+        },
+        {
+          "matchday": 32,
+          "points": 42
+        },
+        {
+          "matchday": 33,
+          "points": 45
+        },
+        {
+          "matchday": 34,
+          "points": 46
+        }
+      ],
+      "SC Paderborn 07": [
+        {
+          "matchday": 1,
+          "points": 3
+        },
+        {
+          "matchday": 2,
+          "points": 4
+        },
+        {
+          "matchday": 3,
+          "points": 4
+        },
+        {
+          "matchday": 4,
+          "points": 5
+        },
+        {
+          "matchday": 5,
+          "points": 8
+        },
+        {
+          "matchday": 6,
+          "points": 11
+        },
+        {
+          "matchday": 7,
+          "points": 14
+        },
+        {
+          "matchday": 8,
+          "points": 17
+        },
+        {
+          "matchday": 9,
+          "points": 20
+        },
+        {
+          "matchday": 10,
+          "points": 23
+        },
+        {
+          "matchday": 11,
+          "points": 26
+        },
+        {
+          "matchday": 12,
+          "points": 29
+        },
+        {
+          "matchday": 13,
+          "points": 29
+        },
+        {
+          "matchday": 14,
+          "points": 29
+        },
+        {
+          "matchday": 15,
+          "points": 29
+        },
+        {
+          "matchday": 16,
+          "points": 32
+        },
+        {
+          "matchday": 17,
+          "points": 33
+        },
+        {
+          "matchday": 18,
+          "points": 33
+        },
+        {
+          "matchday": 19,
+          "points": 36
+        },
+        {
+          "matchday": 20,
+          "points": 36
+        },
+        {
+          "matchday": 21,
+          "points": 39
+        },
+        {
+          "matchday": 22,
+          "points": 40
+        },
+        {
+          "matchday": 23,
+          "points": 43
+        },
+        {
+          "matchday": 24,
+          "points": 46
+        },
+        {
+          "matchday": 25,
+          "points": 47
+        },
+        {
+          "matchday": 26,
+          "points": 48
+        },
+        {
+          "matchday": 27,
+          "points": 51
+        },
+        {
+          "matchday": 28,
+          "points": 54
+        },
+        {
+          "matchday": 29,
+          "points": 57
+        },
+        {
+          "matchday": 30,
+          "points": 58
+        },
+        {
+          "matchday": 31,
+          "points": 58
+        },
+        {
+          "matchday": 32,
+          "points": 58
+        },
+        {
+          "matchday": 33,
+          "points": 59
+        },
+        {
+          "matchday": 34,
+          "points": 62
+        }
+      ],
+      "Holstein Kiel": [
+        {
+          "matchday": 1,
+          "points": 0
+        },
+        {
+          "matchday": 2,
+          "points": 0
+        },
+        {
+          "matchday": 3,
+          "points": 3
+        },
+        {
+          "matchday": 4,
+          "points": 3
+        },
+        {
+          "matchday": 5,
+          "points": 6
+        },
+        {
+          "matchday": 6,
+          "points": 9
+        },
+        {
+          "matchday": 7,
+          "points": 9
+        },
+        {
+          "matchday": 8,
+          "points": 10
+        },
+        {
+          "matchday": 9,
+          "points": 11
+        },
+        {
+          "matchday": 10,
+          "points": 12
+        },
+        {
+          "matchday": 11,
+          "points": 12
+        },
+        {
+          "matchday": 12,
+          "points": 15
+        },
+        {
+          "matchday": 13,
+          "points": 15
+        },
+        {
+          "matchday": 14,
+          "points": 15
+        },
+        {
+          "matchday": 15,
+          "points": 16
+        },
+        {
+          "matchday": 16,
+          "points": 17
+        },
+        {
+          "matchday": 17,
+          "points": 20
+        },
+        {
+          "matchday": 18,
+          "points": 23
+        },
+        {
+          "matchday": 19,
+          "points": 24
+        },
+        {
+          "matchday": 20,
+          "points": 24
+        },
+        {
+          "matchday": 21,
+          "points": 24
+        },
+        {
+          "matchday": 22,
+          "points": 24
+        },
+        {
+          "matchday": 23,
+          "points": 24
+        },
+        {
+          "matchday": 24,
+          "points": 25
+        },
+        {
+          "matchday": 25,
+          "points": 25
+        },
+        {
+          "matchday": 26,
+          "points": 25
+        },
+        {
+          "matchday": 27,
+          "points": 28
+        },
+        {
+          "matchday": 28,
+          "points": 29
+        },
+        {
+          "matchday": 29,
+          "points": 32
+        },
+        {
+          "matchday": 30,
+          "points": 35
+        },
+        {
+          "matchday": 31,
+          "points": 38
+        },
+        {
+          "matchday": 32,
+          "points": 41
+        },
+        {
+          "matchday": 33,
+          "points": 41
+        },
+        {
+          "matchday": 34,
+          "points": 41
+        }
+      ],
+      "Karlsruher SC": [
+        {
+          "matchday": 1,
+          "points": 3
+        },
+        {
+          "matchday": 2,
+          "points": 4
+        },
+        {
+          "matchday": 3,
+          "points": 7
+        },
+        {
+          "matchday": 4,
+          "points": 8
+        },
+        {
+          "matchday": 5,
+          "points": 11
+        },
+        {
+          "matchday": 6,
+          "points": 11
+        },
+        {
+          "matchday": 7,
+          "points": 14
+        },
+        {
+          "matchday": 8,
+          "points": 15
+        },
+        {
+          "matchday": 9,
+          "points": 15
+        },
+        {
+          "matchday": 10,
+          "points": 18
+        },
+        {
+          "matchday": 11,
+          "points": 21
+        },
+        {
+          "matchday": 12,
+          "points": 21
+        },
+        {
+          "matchday": 13,
+          "points": 21
+        },
+        {
+          "matchday": 14,
+          "points": 21
+        },
+        {
+          "matchday": 15,
+          "points": 21
+        },
+        {
+          "matchday": 16,
+          "points": 21
+        },
+        {
+          "matchday": 17,
+          "points": 22
+        },
+        {
+          "matchday": 18,
+          "points": 25
+        },
+        {
+          "matchday": 19,
+          "points": 26
+        },
+        {
+          "matchday": 20,
+          "points": 26
+        },
+        {
+          "matchday": 21,
+          "points": 27
+        },
+        {
+          "matchday": 22,
+          "points": 27
+        },
+        {
+          "matchday": 23,
+          "points": 30
+        },
+        {
+          "matchday": 24,
+          "points": 33
+        },
+        {
+          "matchday": 25,
+          "points": 34
+        },
+        {
+          "matchday": 26,
+          "points": 34
+        },
+        {
+          "matchday": 27,
+          "points": 37
+        },
+        {
+          "matchday": 28,
+          "points": 37
+        },
+        {
+          "matchday": 29,
+          "points": 40
+        },
+        {
+          "matchday": 30,
+          "points": 40
+        },
+        {
+          "matchday": 31,
+          "points": 40
+        },
+        {
+          "matchday": 32,
+          "points": 43
+        },
+        {
+          "matchday": 33,
+          "points": 44
+        },
+        {
+          "matchday": 34,
+          "points": 44
+        }
+      ],
+      "Preußen Münster": [
+        {
+          "matchday": 1,
+          "points": 0
+        },
+        {
+          "matchday": 2,
+          "points": 1
+        },
+        {
+          "matchday": 3,
+          "points": 4
+        },
+        {
+          "matchday": 4,
+          "points": 7
+        },
+        {
+          "matchday": 5,
+          "points": 7
+        },
+        {
+          "matchday": 6,
+          "points": 7
+        },
+        {
+          "matchday": 7,
+          "points": 10
+        },
+        {
+          "matchday": 8,
+          "points": 10
+        },
+        {
+          "matchday": 9,
+          "points": 11
+        },
+        {
+          "matchday": 10,
+          "points": 11
+        },
+        {
+          "matchday": 11,
+          "points": 14
+        },
+        {
+          "matchday": 12,
+          "points": 14
+        },
+        {
+          "matchday": 13,
+          "points": 15
+        },
+        {
+          "matchday": 14,
+          "points": 18
+        },
+        {
+          "matchday": 15,
+          "points": 19
+        },
+        {
+          "matchday": 16,
+          "points": 19
+        },
+        {
+          "matchday": 17,
+          "points": 20
+        },
+        {
+          "matchday": 18,
+          "points": 20
+        },
+        {
+          "matchday": 19,
+          "points": 20
+        },
+        {
+          "matchday": 20,
+          "points": 21
+        },
+        {
+          "matchday": 21,
+          "points": 22
+        },
+        {
+          "matchday": 22,
+          "points": 23
+        },
+        {
+          "matchday": 23,
+          "points": 23
+        },
+        {
+          "matchday": 24,
+          "points": 26
+        },
+        {
+          "matchday": 25,
+          "points": 26
+        },
+        {
+          "matchday": 26,
+          "points": 26
+        },
+        {
+          "matchday": 27,
+          "points": 26
+        },
+        {
+          "matchday": 28,
+          "points": 27
+        },
+        {
+          "matchday": 29,
+          "points": 28
+        },
+        {
+          "matchday": 30,
+          "points": 28
+        },
+        {
+          "matchday": 31,
+          "points": 28
+        },
+        {
+          "matchday": 32,
+          "points": 29
+        },
+        {
+          "matchday": 33,
+          "points": 30
+        },
+        {
+          "matchday": 34,
+          "points": 30
+        }
+      ],
+      "SV Darmstadt 98": [
+        {
+          "matchday": 1,
+          "points": 3
+        },
+        {
+          "matchday": 2,
+          "points": 6
+        },
+        {
+          "matchday": 3,
+          "points": 7
+        },
+        {
+          "matchday": 4,
+          "points": 7
+        },
+        {
+          "matchday": 5,
+          "points": 10
+        },
+        {
+          "matchday": 6,
+          "points": 13
+        },
+        {
+          "matchday": 7,
+          "points": 16
+        },
+        {
+          "matchday": 8,
+          "points": 17
+        },
+        {
+          "matchday": 9,
+          "points": 18
+        },
+        {
+          "matchday": 10,
+          "points": 18
+        },
+        {
+          "matchday": 11,
+          "points": 19
+        },
+        {
+          "matchday": 12,
+          "points": 22
+        },
+        {
+          "matchday": 13,
+          "points": 25
+        },
+        {
+          "matchday": 14,
+          "points": 26
+        },
+        {
+          "matchday": 15,
+          "points": 29
+        },
+        {
+          "matchday": 16,
+          "points": 32
+        },
+        {
+          "matchday": 17,
+          "points": 33
+        },
+        {
+          "matchday": 18,
+          "points": 34
+        },
+        {
+          "matchday": 19,
+          "points": 37
+        },
+        {
+          "matchday": 20,
+          "points": 38
+        },
+        {
+          "matchday": 21,
+          "points": 41
+        },
+        {
+          "matchday": 22,
+          "points": 42
+        },
+        {
+          "matchday": 23,
+          "points": 45
+        },
+        {
+          "matchday": 24,
+          "points": 45
+        },
+        {
+          "matchday": 25,
+          "points": 48
+        },
+        {
+          "matchday": 26,
+          "points": 49
+        },
+        {
+          "matchday": 27,
+          "points": 50
+        },
+        {
+          "matchday": 28,
+          "points": 50
+        },
+        {
+          "matchday": 29,
+          "points": 50
+        },
+        {
+          "matchday": 30,
+          "points": 50
+        },
+        {
+          "matchday": 31,
+          "points": 51
+        },
+        {
+          "matchday": 32,
+          "points": 51
+        },
+        {
+          "matchday": 33,
+          "points": 52
+        },
+        {
+          "matchday": 34,
+          "points": 52
+        }
+      ],
+      "VfL Bochum": [
+        {
+          "matchday": 1,
+          "points": 0
+        },
+        {
+          "matchday": 2,
+          "points": 3
+        },
+        {
+          "matchday": 3,
+          "points": 3
+        },
+        {
+          "matchday": 4,
+          "points": 3
+        },
+        {
+          "matchday": 5,
+          "points": 3
+        },
+        {
+          "matchday": 6,
+          "points": 3
+        },
+        {
+          "matchday": 7,
+          "points": 3
+        },
+        {
+          "matchday": 8,
+          "points": 3
+        },
+        {
+          "matchday": 9,
+          "points": 6
+        },
+        {
+          "matchday": 10,
+          "points": 7
+        },
+        {
+          "matchday": 11,
+          "points": 10
+        },
+        {
+          "matchday": 12,
+          "points": 13
+        },
+        {
+          "matchday": 13,
+          "points": 13
+        },
+        {
+          "matchday": 14,
+          "points": 16
+        },
+        {
+          "matchday": 15,
+          "points": 19
+        },
+        {
+          "matchday": 16,
+          "points": 20
+        },
+        {
+          "matchday": 17,
+          "points": 21
+        },
+        {
+          "matchday": 18,
+          "points": 22
+        },
+        {
+          "matchday": 19,
+          "points": 23
+        },
+        {
+          "matchday": 20,
+          "points": 26
+        },
+        {
+          "matchday": 21,
+          "points": 27
+        },
+        {
+          "matchday": 22,
+          "points": 28
+        },
+        {
+          "matchday": 23,
+          "points": 29
+        },
+        {
+          "matchday": 24,
+          "points": 29
+        },
+        {
+          "matchday": 25,
+          "points": 32
+        },
+        {
+          "matchday": 26,
+          "points": 33
+        },
+        {
+          "matchday": 27,
+          "points": 33
+        },
+        {
+          "matchday": 28,
+          "points": 33
+        },
+        {
+          "matchday": 29,
+          "points": 36
+        },
+        {
+          "matchday": 30,
+          "points": 36
+        },
+        {
+          "matchday": 31,
+          "points": 39
+        },
+        {
+          "matchday": 32,
+          "points": 40
+        },
+        {
+          "matchday": 33,
+          "points": 41
+        },
+        {
+          "matchday": 34,
+          "points": 44
+        }
+      ],
+      "DSC Arminia Bielefeld": [
+        {
+          "matchday": 1,
+          "points": 3
+        },
+        {
+          "matchday": 2,
+          "points": 6
+        },
+        {
+          "matchday": 3,
+          "points": 6
+        },
+        {
+          "matchday": 4,
+          "points": 7
+        },
+        {
+          "matchday": 5,
+          "points": 10
+        },
+        {
+          "matchday": 6,
+          "points": 10
+        },
+        {
+          "matchday": 7,
+          "points": 10
+        },
+        {
+          "matchday": 8,
+          "points": 10
+        },
+        {
+          "matchday": 9,
+          "points": 10
+        },
+        {
+          "matchday": 10,
+          "points": 13
+        },
+        {
+          "matchday": 11,
+          "points": 14
+        },
+        {
+          "matchday": 12,
+          "points": 17
+        },
+        {
+          "matchday": 13,
+          "points": 17
+        },
+        {
+          "matchday": 14,
+          "points": 17
+        },
+        {
+          "matchday": 15,
+          "points": 17
+        },
+        {
+          "matchday": 16,
+          "points": 18
+        },
+        {
+          "matchday": 17,
+          "points": 19
+        },
+        {
+          "matchday": 18,
+          "points": 19
+        },
+        {
+          "matchday": 19,
+          "points": 20
+        },
+        {
+          "matchday": 20,
+          "points": 21
+        },
+        {
+          "matchday": 21,
+          "points": 24
+        },
+        {
+          "matchday": 22,
+          "points": 27
+        },
+        {
+          "matchday": 23,
+          "points": 27
+        },
+        {
+          "matchday": 24,
+          "points": 27
+        },
+        {
+          "matchday": 25,
+          "points": 27
+        },
+        {
+          "matchday": 26,
+          "points": 28
+        },
+        {
+          "matchday": 27,
+          "points": 28
+        },
+        {
+          "matchday": 28,
+          "points": 31
+        },
+        {
+          "matchday": 29,
+          "points": 31
+        },
+        {
+          "matchday": 30,
+          "points": 32
+        },
+        {
+          "matchday": 31,
+          "points": 35
+        },
+        {
+          "matchday": 32,
+          "points": 36
+        },
+        {
+          "matchday": 33,
+          "points": 36
+        },
+        {
+          "matchday": 34,
+          "points": 39
+        }
+      ],
+      "Fortuna Düsseldorf": [
+        {
+          "matchday": 1,
+          "points": 0
+        },
+        {
+          "matchday": 2,
+          "points": 0
+        },
+        {
+          "matchday": 3,
+          "points": 3
+        },
+        {
+          "matchday": 4,
+          "points": 4
+        },
+        {
+          "matchday": 5,
+          "points": 7
+        },
+        {
+          "matchday": 6,
+          "points": 7
+        },
+        {
+          "matchday": 7,
+          "points": 10
+        },
+        {
+          "matchday": 8,
+          "points": 10
+        },
+        {
+          "matchday": 9,
+          "points": 10
+        },
+        {
+          "matchday": 10,
+          "points": 10
+        },
+        {
+          "matchday": 11,
+          "points": 11
+        },
+        {
+          "matchday": 12,
+          "points": 11
+        },
+        {
+          "matchday": 13,
+          "points": 14
+        },
+        {
+          "matchday": 14,
+          "points": 14
+        },
+        {
+          "matchday": 15,
+          "points": 14
+        },
+        {
+          "matchday": 16,
+          "points": 14
+        },
+        {
+          "matchday": 17,
+          "points": 17
+        },
+        {
+          "matchday": 18,
+          "points": 20
+        },
+        {
+          "matchday": 19,
+          "points": 20
+        },
+        {
+          "matchday": 20,
+          "points": 23
+        },
+        {
+          "matchday": 21,
+          "points": 24
+        },
+        {
+          "matchday": 22,
+          "points": 25
+        },
+        {
+          "matchday": 23,
+          "points": 25
+        },
+        {
+          "matchday": 24,
+          "points": 28
+        },
+        {
+          "matchday": 25,
+          "points": 31
+        },
+        {
+          "matchday": 26,
+          "points": 31
+        },
+        {
+          "matchday": 27,
+          "points": 31
+        },
+        {
+          "matchday": 28,
+          "points": 31
+        },
+        {
+          "matchday": 29,
+          "points": 31
+        },
+        {
+          "matchday": 30,
+          "points": 31
+        },
+        {
+          "matchday": 31,
+          "points": 34
+        },
+        {
+          "matchday": 32,
+          "points": 34
+        },
+        {
+          "matchday": 33,
+          "points": 37
+        },
+        {
+          "matchday": 34,
+          "points": 37
+        }
+      ],
+      "1. FC Magdeburg": [
+        {
+          "matchday": 1,
+          "points": 0
+        },
+        {
+          "matchday": 2,
+          "points": 3
+        },
+        {
+          "matchday": 3,
+          "points": 3
+        },
+        {
+          "matchday": 4,
+          "points": 3
+        },
+        {
+          "matchday": 5,
+          "points": 3
+        },
+        {
+          "matchday": 6,
+          "points": 3
+        },
+        {
+          "matchday": 7,
+          "points": 3
+        },
+        {
+          "matchday": 8,
+          "points": 3
+        },
+        {
+          "matchday": 9,
+          "points": 4
+        },
+        {
+          "matchday": 10,
+          "points": 7
+        },
+        {
+          "matchday": 11,
+          "points": 7
+        },
+        {
+          "matchday": 12,
+          "points": 7
+        },
+        {
+          "matchday": 13,
+          "points": 7
+        },
+        {
+          "matchday": 14,
+          "points": 10
+        },
+        {
+          "matchday": 15,
+          "points": 13
+        },
+        {
+          "matchday": 16,
+          "points": 14
+        },
+        {
+          "matchday": 17,
+          "points": 17
+        },
+        {
+          "matchday": 18,
+          "points": 20
+        },
+        {
+          "matchday": 19,
+          "points": 20
+        },
+        {
+          "matchday": 20,
+          "points": 20
+        },
+        {
+          "matchday": 21,
+          "points": 23
+        },
+        {
+          "matchday": 22,
+          "points": 23
+        },
+        {
+          "matchday": 23,
+          "points": 23
+        },
+        {
+          "matchday": 24,
+          "points": 23
+        },
+        {
+          "matchday": 25,
+          "points": 23
+        },
+        {
+          "matchday": 26,
+          "points": 24
+        },
+        {
+          "matchday": 27,
+          "points": 27
+        },
+        {
+          "matchday": 28,
+          "points": 30
+        },
+        {
+          "matchday": 29,
+          "points": 30
+        },
+        {
+          "matchday": 30,
+          "points": 33
+        },
+        {
+          "matchday": 31,
+          "points": 33
+        },
+        {
+          "matchday": 32,
+          "points": 36
+        },
+        {
+          "matchday": 33,
+          "points": 39
+        },
+        {
+          "matchday": 34,
+          "points": 39
+        }
+      ],
+      "Eintracht Braunschweig": [
+        {
+          "matchday": 1,
+          "points": 3
+        },
+        {
+          "matchday": 2,
+          "points": 6
+        },
+        {
+          "matchday": 3,
+          "points": 6
+        },
+        {
+          "matchday": 4,
+          "points": 7
+        },
+        {
+          "matchday": 5,
+          "points": 7
+        },
+        {
+          "matchday": 6,
+          "points": 7
+        },
+        {
+          "matchday": 7,
+          "points": 7
+        },
+        {
+          "matchday": 8,
+          "points": 7
+        },
+        {
+          "matchday": 9,
+          "points": 10
+        },
+        {
+          "matchday": 10,
+          "points": 10
+        },
+        {
+          "matchday": 11,
+          "points": 10
+        },
+        {
+          "matchday": 12,
+          "points": 10
+        },
+        {
+          "matchday": 13,
+          "points": 10
+        },
+        {
+          "matchday": 14,
+          "points": 13
+        },
+        {
+          "matchday": 15,
+          "points": 14
+        },
+        {
+          "matchday": 16,
+          "points": 17
+        },
+        {
+          "matchday": 17,
+          "points": 20
+        },
+        {
+          "matchday": 18,
+          "points": 20
+        },
+        {
+          "matchday": 19,
+          "points": 21
+        },
+        {
+          "matchday": 20,
+          "points": 24
+        },
+        {
+          "matchday": 21,
+          "points": 24
+        },
+        {
+          "matchday": 22,
+          "points": 25
+        },
+        {
+          "matchday": 23,
+          "points": 25
+        },
+        {
+          "matchday": 24,
+          "points": 25
+        },
+        {
+          "matchday": 25,
+          "points": 26
+        },
+        {
+          "matchday": 26,
+          "points": 29
+        },
+        {
+          "matchday": 27,
+          "points": 29
+        },
+        {
+          "matchday": 28,
+          "points": 30
+        },
+        {
+          "matchday": 29,
+          "points": 30
+        },
+        {
+          "matchday": 30,
+          "points": 31
+        },
+        {
+          "matchday": 31,
+          "points": 34
+        },
+        {
+          "matchday": 32,
+          "points": 34
+        },
+        {
+          "matchday": 33,
+          "points": 37
+        },
+        {
+          "matchday": 34,
+          "points": 37
+        }
+      ],
+      "Hannover 96": [
+        {
+          "matchday": 1,
+          "points": 3
+        },
+        {
+          "matchday": 2,
+          "points": 6
+        },
+        {
+          "matchday": 3,
+          "points": 9
+        },
+        {
+          "matchday": 4,
+          "points": 12
+        },
+        {
+          "matchday": 5,
+          "points": 12
+        },
+        {
+          "matchday": 6,
+          "points": 13
+        },
+        {
+          "matchday": 7,
+          "points": 16
+        },
+        {
+          "matchday": 8,
+          "points": 17
+        },
+        {
+          "matchday": 9,
+          "points": 17
+        },
+        {
+          "matchday": 10,
+          "points": 20
+        },
+        {
+          "matchday": 11,
+          "points": 21
+        },
+        {
+          "matchday": 12,
+          "points": 21
+        },
+        {
+          "matchday": 13,
+          "points": 24
+        },
+        {
+          "matchday": 14,
+          "points": 27
+        },
+        {
+          "matchday": 15,
+          "points": 28
+        },
+        {
+          "matchday": 16,
+          "points": 29
+        },
+        {
+          "matchday": 17,
+          "points": 29
+        },
+        {
+          "matchday": 18,
+          "points": 29
+        },
+        {
+          "matchday": 19,
+          "points": 32
+        },
+        {
+          "matchday": 20,
+          "points": 35
+        },
+        {
+          "matchday": 21,
+          "points": 38
+        },
+        {
+          "matchday": 22,
+          "points": 41
+        },
+        {
+          "matchday": 23,
+          "points": 42
+        },
+        {
+          "matchday": 24,
+          "points": 45
+        },
+        {
+          "matchday": 25,
+          "points": 45
+        },
+        {
+          "matchday": 26,
+          "points": 46
+        },
+        {
+          "matchday": 27,
+          "points": 49
+        },
+        {
+          "matchday": 28,
+          "points": 50
+        },
+        {
+          "matchday": 29,
+          "points": 53
+        },
+        {
+          "matchday": 30,
+          "points": 54
+        },
+        {
+          "matchday": 31,
+          "points": 57
+        },
+        {
+          "matchday": 32,
+          "points": 58
+        },
+        {
+          "matchday": 33,
+          "points": 59
+        },
+        {
+          "matchday": 34,
+          "points": 60
+        }
+      ],
+      "1. FC Kaiserslautern": [
+        {
+          "matchday": 1,
+          "points": 0
+        },
+        {
+          "matchday": 2,
+          "points": 3
+        },
+        {
+          "matchday": 3,
+          "points": 3
+        },
+        {
+          "matchday": 4,
+          "points": 6
+        },
+        {
+          "matchday": 5,
+          "points": 9
+        },
+        {
+          "matchday": 6,
+          "points": 12
+        },
+        {
+          "matchday": 7,
+          "points": 12
+        },
+        {
+          "matchday": 8,
+          "points": 15
+        },
+        {
+          "matchday": 9,
+          "points": 18
+        },
+        {
+          "matchday": 10,
+          "points": 19
+        },
+        {
+          "matchday": 11,
+          "points": 20
+        },
+        {
+          "matchday": 12,
+          "points": 20
+        },
+        {
+          "matchday": 13,
+          "points": 23
+        },
+        {
+          "matchday": 14,
+          "points": 23
+        },
+        {
+          "matchday": 15,
+          "points": 26
+        },
+        {
+          "matchday": 16,
+          "points": 27
+        },
+        {
+          "matchday": 17,
+          "points": 27
+        },
+        {
+          "matchday": 18,
+          "points": 30
+        },
+        {
+          "matchday": 19,
+          "points": 31
+        },
+        {
+          "matchday": 20,
+          "points": 31
+        },
+        {
+          "matchday": 21,
+          "points": 31
+        },
+        {
+          "matchday": 22,
+          "points": 34
+        },
+        {
+          "matchday": 23,
+          "points": 37
+        },
+        {
+          "matchday": 24,
+          "points": 37
+        },
+        {
+          "matchday": 25,
+          "points": 37
+        },
+        {
+          "matchday": 26,
+          "points": 40
+        },
+        {
+          "matchday": 27,
+          "points": 40
+        },
+        {
+          "matchday": 28,
+          "points": 43
+        },
+        {
+          "matchday": 29,
+          "points": 46
+        },
+        {
+          "matchday": 30,
+          "points": 46
+        },
+        {
+          "matchday": 31,
+          "points": 46
+        },
+        {
+          "matchday": 32,
+          "points": 46
+        },
+        {
+          "matchday": 33,
+          "points": 49
+        },
+        {
+          "matchday": 34,
+          "points": 52
+        }
+      ],
+      "SpVgg Greuther Fürth": [
+        {
+          "matchday": 1,
+          "points": 3
+        },
+        {
+          "matchday": 2,
+          "points": 3
+        },
+        {
+          "matchday": 3,
+          "points": 3
+        },
+        {
+          "matchday": 4,
+          "points": 6
+        },
+        {
+          "matchday": 5,
+          "points": 6
+        },
+        {
+          "matchday": 6,
+          "points": 9
+        },
+        {
+          "matchday": 7,
+          "points": 9
+        },
+        {
+          "matchday": 8,
+          "points": 10
+        },
+        {
+          "matchday": 9,
+          "points": 10
+        },
+        {
+          "matchday": 10,
+          "points": 10
+        },
+        {
+          "matchday": 11,
+          "points": 10
+        },
+        {
+          "matchday": 12,
+          "points": 13
+        },
+        {
+          "matchday": 13,
+          "points": 13
+        },
+        {
+          "matchday": 14,
+          "points": 13
+        },
+        {
+          "matchday": 15,
+          "points": 14
+        },
+        {
+          "matchday": 16,
+          "points": 15
+        },
+        {
+          "matchday": 17,
+          "points": 15
+        },
+        {
+          "matchday": 18,
+          "points": 15
+        },
+        {
+          "matchday": 19,
+          "points": 16
+        },
+        {
+          "matchday": 20,
+          "points": 19
+        },
+        {
+          "matchday": 21,
+          "points": 19
+        },
+        {
+          "matchday": 22,
+          "points": 19
+        },
+        {
+          "matchday": 23,
+          "points": 22
+        },
+        {
+          "matchday": 24,
+          "points": 23
+        },
+        {
+          "matchday": 25,
+          "points": 26
+        },
+        {
+          "matchday": 26,
+          "points": 29
+        },
+        {
+          "matchday": 27,
+          "points": 29
+        },
+        {
+          "matchday": 28,
+          "points": 29
+        },
+        {
+          "matchday": 29,
+          "points": 30
+        },
+        {
+          "matchday": 30,
+          "points": 33
+        },
+        {
+          "matchday": 31,
+          "points": 33
+        },
+        {
+          "matchday": 32,
+          "points": 34
+        },
+        {
+          "matchday": 33,
+          "points": 34
+        },
+        {
+          "matchday": 34,
+          "points": 37
+        }
+      ],
+      "Dynamo Dresden": [
+        {
+          "matchday": 1,
+          "points": 0
+        },
+        {
+          "matchday": 2,
+          "points": 0
+        },
+        {
+          "matchday": 3,
+          "points": 3
+        },
+        {
+          "matchday": 4,
+          "points": 3
+        },
+        {
+          "matchday": 5,
+          "points": 4
+        },
+        {
+          "matchday": 6,
+          "points": 5
+        },
+        {
+          "matchday": 7,
+          "points": 5
+        },
+        {
+          "matchday": 8,
+          "points": 6
+        },
+        {
+          "matchday": 9,
+          "points": 7
+        },
+        {
+          "matchday": 10,
+          "points": 7
+        },
+        {
+          "matchday": 11,
+          "points": 7
+        },
+        {
+          "matchday": 12,
+          "points": 7
+        },
+        {
+          "matchday": 13,
+          "points": 10
+        },
+        {
+          "matchday": 14,
+          "points": 13
+        },
+        {
+          "matchday": 15,
+          "points": 13
+        },
+        {
+          "matchday": 16,
+          "points": 13
+        },
+        {
+          "matchday": 17,
+          "points": 13
+        },
+        {
+          "matchday": 18,
+          "points": 16
+        },
+        {
+          "matchday": 19,
+          "points": 19
+        },
+        {
+          "matchday": 20,
+          "points": 20
+        },
+        {
+          "matchday": 21,
+          "points": 21
+        },
+        {
+          "matchday": 22,
+          "points": 21
+        },
+        {
+          "matchday": 23,
+          "points": 22
+        },
+        {
+          "matchday": 24,
+          "points": 25
+        },
+        {
+          "matchday": 25,
+          "points": 26
+        },
+        {
+          "matchday": 26,
+          "points": 29
+        },
+        {
+          "matchday": 27,
+          "points": 29
+        },
+        {
+          "matchday": 28,
+          "points": 29
+        },
+        {
+          "matchday": 29,
+          "points": 32
+        },
+        {
+          "matchday": 30,
+          "points": 35
+        },
+        {
+          "matchday": 31,
+          "points": 35
+        },
+        {
+          "matchday": 32,
+          "points": 38
+        },
+        {
+          "matchday": 33,
+          "points": 38
+        },
+        {
+          "matchday": 34,
+          "points": 41
+        }
+      ]
+    },
+    "2026/27": {
+      "Energie Cottbus": [
+        {
+          "matchday": 1,
+          "points": 3
+        },
+        {
+          "matchday": 2,
+          "points": 3
+        },
+        {
+          "matchday": 3,
+          "points": 3
+        },
+        {
+          "matchday": 4,
+          "points": 4
+        },
+        {
+          "matchday": 5,
+          "points": 7
+        },
+        {
+          "matchday": 6,
+          "points": 8
+        }
+      ],
+      "Hannover 96": [
+        {
+          "matchday": 1,
+          "points": 0
+        },
+        {
+          "matchday": 2,
+          "points": 0
+        },
+        {
+          "matchday": 3,
+          "points": 3
+        },
+        {
+          "matchday": 4,
+          "points": 4
+        },
+        {
+          "matchday": 5,
+          "points": 4
+        },
+        {
+          "matchday": 6,
+          "points": 7
+        }
+      ],
+      "VfL Bochum": [
+        {
+          "matchday": 1,
+          "points": 0
+        },
+        {
+          "matchday": 2,
+          "points": 3
+        },
+        {
+          "matchday": 3,
+          "points": 3
+        },
+        {
+          "matchday": 4,
+          "points": 6
+        },
+        {
+          "matchday": 5,
+          "points": 7
+        },
+        {
+          "matchday": 6,
+          "points": 7
+        }
+      ],
+      "Hertha BSC": [
+        {
+          "matchday": 1,
+          "points": 3
+        },
+        {
+          "matchday": 2,
+          "points": 6
+        },
+        {
+          "matchday": 3,
+          "points": 9
+        },
+        {
+          "matchday": 4,
+          "points": 12
+        },
+        {
+          "matchday": 5,
+          "points": 15
+        },
+        {
+          "matchday": 6,
+          "points": 18
+        }
+      ],
+      "1. FC Heidenheim 1846": [
+        {
+          "matchday": 1,
+          "points": 3
+        },
+        {
+          "matchday": 2,
+          "points": 3
+        },
+        {
+          "matchday": 3,
+          "points": 6
+        },
+        {
+          "matchday": 4,
+          "points": 9
+        },
+        {
+          "matchday": 5,
+          "points": 12
+        },
+        {
+          "matchday": 6,
+          "points": 13
+        }
+      ],
+      "VfL Osnabrück": [
+        {
+          "matchday": 1,
+          "points": 0
+        },
+        {
+          "matchday": 2,
+          "points": 0
+        },
+        {
+          "matchday": 3,
+          "points": 3
+        },
+        {
+          "matchday": 4,
+          "points": 6
+        },
+        {
+          "matchday": 5,
+          "points": 6
+        },
+        {
+          "matchday": 6,
+          "points": 7
+        }
+      ],
+      "SV Darmstadt 98": [
+        {
+          "matchday": 1,
+          "points": 1
+        },
+        {
+          "matchday": 2,
+          "points": 1
+        },
+        {
+          "matchday": 3,
+          "points": 1
+        },
+        {
+          "matchday": 4,
+          "points": 1
+        },
+        {
+          "matchday": 5,
+          "points": 4
+        },
+        {
+          "matchday": 6,
+          "points": 4
+        }
+      ],
+      "Holstein Kiel": [
+        {
+          "matchday": 1,
+          "points": 1
+        },
+        {
+          "matchday": 2,
+          "points": 2
+        },
+        {
+          "matchday": 3,
+          "points": 2
+        },
+        {
+          "matchday": 4,
+          "points": 3
+        },
+        {
+          "matchday": 5,
+          "points": 3
+        },
+        {
+          "matchday": 6,
+          "points": 4
+        }
+      ],
+      "Karlsruher SC": [
+        {
+          "matchday": 1,
+          "points": 3
+        },
+        {
+          "matchday": 2,
+          "points": 4
+        },
+        {
+          "matchday": 3,
+          "points": 4
+        },
+        {
+          "matchday": 4,
+          "points": 5
+        },
+        {
+          "matchday": 5,
+          "points": 5
+        },
+        {
+          "matchday": 6,
+          "points": 5
+        }
+      ],
+      "DSC Arminia Bielefeld": [
+        {
+          "matchday": 1,
+          "points": 0
+        },
+        {
+          "matchday": 2,
+          "points": 3
+        },
+        {
+          "matchday": 3,
+          "points": 3
+        },
+        {
+          "matchday": 4,
+          "points": 4
+        },
+        {
+          "matchday": 5,
+          "points": 4
+        },
+        {
+          "matchday": 6,
+          "points": 5
+        }
+      ],
+      "1. FC Magdeburg": [
+        {
+          "matchday": 1,
+          "points": 0
+        },
+        {
+          "matchday": 2,
+          "points": 3
+        },
+        {
+          "matchday": 3,
+          "points": 6
+        },
+        {
+          "matchday": 4,
+          "points": 6
+        },
+        {
+          "matchday": 5,
+          "points": 9
+        },
+        {
+          "matchday": 6,
+          "points": 10
+        }
+      ],
+      "Eintracht Braunschweig": [
+        {
+          "matchday": 1,
+          "points": 3
+        },
+        {
+          "matchday": 2,
+          "points": 3
+        },
+        {
+          "matchday": 3,
+          "points": 3
+        },
+        {
+          "matchday": 4,
+          "points": 3
+        },
+        {
+          "matchday": 5,
+          "points": 4
+        },
+        {
+          "matchday": 6,
+          "points": 4
+        }
+      ],
+      "VfL Wolfsburg": [
+        {
+          "matchday": 1,
+          "points": 1
+        },
+        {
+          "matchday": 2,
+          "points": 4
+        },
+        {
+          "matchday": 3,
+          "points": 7
+        },
+        {
+          "matchday": 4,
+          "points": 8
+        },
+        {
+          "matchday": 5,
+          "points": 8
+        },
+        {
+          "matchday": 6,
+          "points": 11
+        }
+      ],
+      "1. FC Kaiserslautern": [
+        {
+          "matchday": 1,
+          "points": 1
+        },
+        {
+          "matchday": 2,
+          "points": 2
+        },
+        {
+          "matchday": 3,
+          "points": 5
+        },
+        {
+          "matchday": 4,
+          "points": 8
+        },
+        {
+          "matchday": 5,
+          "points": 8
+        },
+        {
+          "matchday": 6,
+          "points": 11
+        }
+      ],
+      "FC St. Pauli": [
+        {
+          "matchday": 1,
+          "points": 1
+        },
+        {
+          "matchday": 2,
+          "points": 2
+        },
+        {
+          "matchday": 3,
+          "points": 2
+        },
+        {
+          "matchday": 4,
+          "points": 3
+        },
+        {
+          "matchday": 5,
+          "points": 6
+        },
+        {
+          "matchday": 6,
+          "points": 7
+        }
+      ],
+      "SpVgg Greuther Fürth": [
+        {
+          "matchday": 1,
+          "points": 1
+        },
+        {
+          "matchday": 2,
+          "points": 1
+        },
+        {
+          "matchday": 3,
+          "points": 4
+        },
+        {
+          "matchday": 4,
+          "points": 4
+        },
+        {
+          "matchday": 5,
+          "points": 5
+        },
+        {
+          "matchday": 6,
+          "points": 6
+        }
+      ],
+      "1. FC Nürnberg": [
+        {
+          "matchday": 1,
+          "points": 3
+        },
+        {
+          "matchday": 2,
+          "points": 6
+        },
+        {
+          "matchday": 3,
+          "points": 9
+        },
+        {
+          "matchday": 4,
+          "points": 10
+        },
+        {
+          "matchday": 5,
+          "points": 13
+        },
+        {
+          "matchday": 6,
+          "points": 16
+        }
+      ],
+      "Dynamo Dresden": [
+        {
+          "matchday": 1,
+          "points": 0
+        },
+        {
+          "matchday": 2,
+          "points": 3
+        },
+        {
+          "matchday": 3,
+          "points": 3
+        },
+        {
+          "matchday": 4,
+          "points": 3
+        },
+        {
+          "matchday": 5,
+          "points": 4
+        },
+        {
+          "matchday": 6,
+          "points": 4
+        }
+      ]
+    }
+  },
+  "methodology_note": "Predictions from Elo ratings + Poisson attack/defense model (shrinkage-adjusted for teams with limited current-season data) + Monte Carlo simulation of all remaining fixtures."
+}
