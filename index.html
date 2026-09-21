@@ -425,7 +425,6 @@ function renderChart() {
     datasets = benchmarkSeasons.map((s, i) => {
       const traj = data.promotion_benchmarks[s].promoted_2nd.trajectory.map(p => p.points).slice(0, maxMd);
       const teamName = data.promotion_benchmarks[s].promoted_2nd.team;
-      legendEl.dataset[s] = teamName;
       return {
         label: `${s} promotion pace (${teamName})`,
         data: traj, borderColor: benchmarkColors[i % benchmarkColors.length],
