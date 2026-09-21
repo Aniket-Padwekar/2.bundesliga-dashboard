@@ -16,6 +16,7 @@ No manual steps are needed once that's set up.
 
 import requests
 import json
+import time
 import numpy as np
 from scipy.stats import poisson
 from datetime import datetime, timezone
@@ -41,21 +42,37 @@ def season_label(year):
 # ── STEP 1: PULL ALL MATCH DATA ──────────────────────────────────────────────
 def fetch_all_matches():
     """Pulls every matchday of every season, keeping both played results
-    and future fixtures (which have no score yet)."""
+    and future fixtures (which have no score yet).
+
+    IMPORTANT: a small delay between requests is required. Without it,
+    OpenLigaDB silently drops or rejects requests when they arrive too
+    fast (as they do from GitHub's servers), which previously caused
+    entire seasons of data to go missing with no visible error."""
     all_matches = []
 
     for season in SEASONS:
         label = season_label(season)
+        failed_matchdays = []
+
         for md in range(1, 35):
             url = f"https://api.openligadb.de/getmatchdata/{LEAGUE}/{season}/{md}"
-            try:
-                resp = requests.get(url, timeout=15)
-            except requests.RequestException:
-                continue
-            if resp.status_code != 200:
-                continue
 
-            matches = resp.json()
+            matches = None
+            for attempt in range(2):  # try once, retry once on failure
+                try:
+                    resp = requests.get(url, timeout=15)
+                    if resp.status_code == 200:
+                        matches = resp.json()
+                        break
+                except requests.RequestException:
+                    pass
+                time.sleep(0.5)  # wait longer before a retry
+
+            time.sleep(0.2)  # always pause between requests, success or not
+
+            if matches is None:
+                failed_matchdays.append(md)
+                continue
             if not matches:
                 continue
 
@@ -82,6 +99,10 @@ def fetch_all_matches():
                     "away_goals": away_goals,
                     "finished": is_finished
                 })
+
+        if failed_matchdays:
+            print(f"  WARNING: season {label} — {len(failed_matchdays)} matchday(s) "
+                  f"failed to fetch after retry: {failed_matchdays}")
 
     return all_matches
 
@@ -172,7 +193,57 @@ def build_attack_defense(played_matches, current_teams):
     return attack, defense, league_avg
 
 
-# ── STEP 4: MATCH & SEASON SIMULATION ────────────────────────────────────────
+# ── STEP 3b: TEAM COLORS (for the dynamic dashboard theme) ─────────────────
+DEFAULT_COLORS = {"primary": "#1a1a2e", "secondary": "#e0e0e0", "text": "#ffffff"}
+
+
+def fetch_team_colors(team_names):
+    """Looks up each club's official brand colors from Sofascore.
+    If a lookup fails for any team, that team just gets a safe neutral
+    fallback color rather than breaking the whole pipeline."""
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                      "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "Accept": "application/json"
+    }
+
+    colors = {}
+    failed = []
+
+    for name in team_names:
+        try:
+            url = f"https://api.sofascore.com/api/v1/search/all?q={requests.utils.quote(name)}"
+            resp = requests.get(url, headers=headers, timeout=10)
+            if resp.status_code != 200:
+                failed.append(name)
+                colors[name] = DEFAULT_COLORS
+                time.sleep(0.3)
+                continue
+
+            data = resp.json()
+            team_colors = None
+
+            for result in data.get("results", []):
+                entity = result.get("entity", {})
+                if entity.get("sport", {}).get("slug") == "football" and "teamColors" in entity:
+                    team_colors = entity["teamColors"]
+                    break
+
+            colors[name] = team_colors if team_colors else DEFAULT_COLORS
+            if not team_colors:
+                failed.append(name)
+
+        except (requests.RequestException, ValueError, KeyError):
+            colors[name] = DEFAULT_COLORS
+            failed.append(name)
+
+        time.sleep(0.3)  # be polite, and avoid the same rate-limit issue as before
+
+    if failed:
+        print(f"  NOTE: used fallback color for {len(failed)} team(s) — lookup didn't "
+              f"return a match: {failed}")
+
+    return colors
 def expected_goals(home, away, attack, defense, league_avg):
     eg_home = league_avg * attack[home] * defense[away] * HOME_GOAL_BOOST
     eg_away = league_avg * attack[away] * defense[home]
@@ -259,6 +330,17 @@ def main():
     upcoming = [m for m in all_matches if not m["finished"] and m["season"] == CURRENT_SEASON]
     print(f"  {len(played)} finished matches, {len(upcoming)} upcoming fixtures this season")
 
+    # Sanity check: 3 full historical seasons alone should be ~918 finished matches
+    # (306 each). If we're well below that, something failed silently upstream —
+    # better to stop loudly here than publish wrong predictions.
+    EXPECTED_MINIMUM = 900
+    if len(played) < EXPECTED_MINIMUM:
+        raise RuntimeError(
+            f"Only {len(played)} finished matches fetched, expected at least "
+            f"{EXPECTED_MINIMUM}. Likely a fetch failure (see warnings above) — "
+            f"stopping rather than publishing incomplete/wrong data."
+        )
+
     print("Building Elo ratings from full history...")
     elo_ratings = build_elo_ratings(played)
 
@@ -267,6 +349,9 @@ def main():
 
     print("Fitting attack/defense strength (with shrinkage)...")
     attack, defense, league_avg = build_attack_defense(played, current_teams)
+
+    print("Fetching official team colors...")
+    team_colors = fetch_team_colors(current_teams)
 
     print("Computing current league table...")
     current_points = {t: 0 for t in current_teams}
@@ -323,6 +408,7 @@ def main():
         "league_avg_goals": round(league_avg, 3),
         "predicted_table": predicted_table,
         "trajectories": trajectories,
+        "team_colors": team_colors,
         "methodology_note": "Predictions from Elo ratings + Poisson attack/defense model "
                              "(shrinkage-adjusted for teams with limited current-season data) "
                              "+ Monte Carlo simulation of all remaining fixtures."
