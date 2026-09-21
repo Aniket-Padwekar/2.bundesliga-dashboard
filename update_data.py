@@ -191,65 +191,64 @@ def build_attack_defense(played_matches, current_teams):
 
 
 # ── STEP 3b: TEAM COLORS (for the dynamic dashboard theme) ─────────────────
+# Sofascore's API actively blocks requests from GitHub Actions' shared IP
+# ranges (confirmed: returns HTTP 403 Forbidden) — the same category of
+# block we hit with ESPN and FotMob earlier in this project. Rather than
+# depend on a live call that structurally cannot work from this environment,
+# official club colors are hard-coded here instead. This is actually more
+# reliable long-term: these colors are stable, public information that
+# essentially never changes, verified against official club branding sources.
 DEFAULT_COLORS = {"primary": "#1a1a2e", "secondary": "#e0e0e0", "text": "#ffffff"}
+
+TEAM_COLORS = {
+    "Hertha BSC":              {"primary": "#005CA9", "secondary": "#FFFFFF", "text": "#FFFFFF"},
+    "1. FC Nürnberg":          {"primary": "#C8102E", "secondary": "#000000", "text": "#FFFFFF"},
+    "VfL Wolfsburg":           {"primary": "#65B32E", "secondary": "#FFFFFF", "text": "#FFFFFF"},
+    "1. FC Heidenheim 1846":   {"primary": "#E2001A", "secondary": "#003B79", "text": "#FFFFFF"},
+    "1. FC Kaiserslautern":    {"primary": "#E2001A", "secondary": "#FFFFFF", "text": "#FFFFFF"},
+    "Hannover 96":             {"primary": "#006633", "secondary": "#000000", "text": "#FFFFFF"},
+    "Energie Cottbus":         {"primary": "#E2001A", "secondary": "#FFFFFF", "text": "#FFFFFF"},
+    "1. FC Magdeburg":         {"primary": "#0068B2", "secondary": "#FFFFFF", "text": "#FFFFFF"},
+    "FC St. Pauli":            {"primary": "#EC1B24", "secondary": "#000000", "text": "#FFFFFF"},
+    "VfL Bochum":              {"primary": "#004B9B", "secondary": "#FFFFFF", "text": "#FFFFFF"},
+    "VfL Osnabrück":           {"primary": "#6A0DAD", "secondary": "#FFFFFF", "text": "#FFFFFF"},
+    "DSC Arminia Bielefeld":   {"primary": "#003C7D", "secondary": "#000000", "text": "#FFFFFF"},
+    "SV Darmstadt 98":         {"primary": "#003C7D", "secondary": "#FFFFFF", "text": "#FFFFFF"},
+    "Dynamo Dresden":          {"primary": "#FFD500", "secondary": "#000000", "text": "#000000"},
+    "SpVgg Greuther Fürth":    {"primary": "#00873E", "secondary": "#FFFFFF", "text": "#FFFFFF"},
+    "Holstein Kiel":           {"primary": "#E2001A", "secondary": "#003087", "text": "#FFFFFF"},
+    "Karlsruher SC":           {"primary": "#002E62", "secondary": "#FFFFFF", "text": "#FFFFFF"},
+    "Eintracht Braunschweig":  {"primary": "#FFA000", "secondary": "#003C7D", "text": "#000000"},
+    # A few extra historical clubs (2023/24–2025/26) for trajectory charts covering past seasons
+    "FC Schalke 04":           {"primary": "#004B9B", "secondary": "#FFFFFF", "text": "#FFFFFF"},
+    "SV 07 Elversberg":        {"primary": "#000000", "secondary": "#FFFFFF", "text": "#FFFFFF"},
+    "SC Paderborn 07":         {"primary": "#003C7D", "secondary": "#FFFFFF", "text": "#FFFFFF"},
+    "Hamburger SV":            {"primary": "#005CA9", "secondary": "#000000", "text": "#FFFFFF"},
+    "1. FC Köln":              {"primary": "#E2001A", "secondary": "#FFFFFF", "text": "#FFFFFF"},
+    "Hansa Rostock":           {"primary": "#003C7D", "secondary": "#FFFFFF", "text": "#FFFFFF"},
+    "SV Wehen Wiesbaden":       {"primary": "#E2001A", "secondary": "#000000", "text": "#FFFFFF"},
+    "Jahn Regensburg":         {"primary": "#003C7D", "secondary": "#FFFFFF", "text": "#FFFFFF"},
+    "Fortuna Düsseldorf":      {"primary": "#E2001A", "secondary": "#FFFFFF", "text": "#FFFFFF"},
+    "Preußen Münster":         {"primary": "#000000", "secondary": "#FFFFFF", "text": "#FFFFFF"},
+    "SSV Ulm 1846":            {"primary": "#003C7D", "secondary": "#FFFFFF", "text": "#FFFFFF"},
+}
 
 
 def fetch_team_colors(team_names):
-    """Looks up each club's official brand colors from Sofascore.
-    If a lookup fails for any team, that team just gets a safe neutral
-    fallback color rather than breaking the whole pipeline."""
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-                      "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-        "Accept": "application/json"
-    }
-
+    """Returns each club's official colors from the hard-coded table above.
+    Any team not in the table (should not normally happen) gets a safe
+    neutral fallback rather than breaking the pipeline."""
     colors = {}
-    failed = []
-    debug_printed = False  # only print full diagnostic detail for the first team, to avoid a huge log
-
+    missing = []
     for name in team_names:
-        try:
-            url = f"https://api.sofascore.com/api/v1/search/all?q={requests.utils.quote(name)}"
-            resp = requests.get(url, headers=headers, timeout=10)
-
-            if not debug_printed:
-                print(f"  DEBUG (first lookup only) — team: {name}")
-                print(f"  DEBUG — status code: {resp.status_code}")
-                print(f"  DEBUG — response body (first 500 chars): {resp.text[:500]}")
-                debug_printed = True
-
-            if resp.status_code != 200:
-                failed.append(name)
-                colors[name] = DEFAULT_COLORS
-                time.sleep(0.3)
-                continue
-
-            data = resp.json()
-            team_colors = None
-
-            for result in data.get("results", []):
-                entity = result.get("entity", {})
-                if entity.get("sport", {}).get("slug") == "football" and "teamColors" in entity:
-                    team_colors = entity["teamColors"]
-                    break
-
-            colors[name] = team_colors if team_colors else DEFAULT_COLORS
-            if not team_colors:
-                failed.append(name)
-
-        except (requests.RequestException, ValueError, KeyError) as e:
+        if name in TEAM_COLORS:
+            colors[name] = TEAM_COLORS[name]
+        else:
             colors[name] = DEFAULT_COLORS
-            failed.append(name)
-            if not debug_printed:
-                print(f"  DEBUG (first lookup only) — team: {name}, exception: {repr(e)}")
-                debug_printed = True
+            missing.append(name)
 
-        time.sleep(0.3)  # be polite, and avoid the same rate-limit issue as before
-
-    if failed:
-        print(f"  NOTE: used fallback color for {len(failed)} team(s) — lookup didn't "
-              f"return a match: {failed}")
+    if missing:
+        print(f"  NOTE: no color entry for {len(missing)} team(s) — used fallback: {missing}")
 
     return colors
 
