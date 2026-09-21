@@ -331,6 +331,96 @@ def build_trajectories(all_matches, seasons_wanted):
     return trajectories
 
 
+# ── STEP 6: PROMOTION BENCHMARKS (top-2 finish per historical season) ────────
+def build_promotion_benchmarks(all_matches, historical_season_labels):
+    """For each completed historical season, finds the team that finished
+    2nd (the promotion cut-off line) and returns their full points
+    trajectory — this is what 'the pace needed to get promoted' actually
+    looked like that year."""
+    benchmarks = {}
+
+    for label in historical_season_labels:
+        season_matches = [m for m in all_matches if m["season"] == label and m["finished"]]
+        if not season_matches:
+            continue
+
+        final_points = {}
+        for m in season_matches:
+            h, a, hg, ag = m["home"], m["away"], m["home_goals"], m["away_goals"]
+            for t in (h, a):
+                if t not in final_points:
+                    final_points[t] = 0
+            if hg > ag: final_points[h] += 3
+            elif hg < ag: final_points[a] += 3
+            else: final_points[h] += 1; final_points[a] += 1
+
+        ranked_teams = sorted(final_points.keys(), key=lambda t: -final_points[t])
+        if len(ranked_teams) < 2:
+            continue
+
+        champion, runner_up = ranked_teams[0], ranked_teams[1]
+
+        # Build both teams' trajectories for this season
+        for label_key, team_name in [("champion", champion), ("promoted_2nd", runner_up)]:
+            season_matches.sort(key=lambda m: m["matchday"])
+            pts = 0
+            traj = []
+            for m in season_matches:
+                h, a, hg, ag = m["home"], m["away"], m["home_goals"], m["away_goals"]
+                if team_name not in (h, a):
+                    continue
+                if (h == team_name and hg > ag) or (a == team_name and ag > hg):
+                    pts += 3
+                elif hg == ag:
+                    pts += 1
+                traj.append({"matchday": m["matchday"], "points": pts})
+
+            benchmarks.setdefault(label, {})[label_key] = {
+                "team": team_name,
+                "trajectory": traj
+            }
+
+    return benchmarks
+
+
+# ── STEP 7: FIXTURE DIFFICULTY GRID (per team, per upcoming match) ──────────
+def build_fixture_difficulty(upcoming_matches, attack, defense, league_avg):
+    """For every current team, lists their upcoming fixtures with a 1-5
+    difficulty rating derived from their own win probability in that
+    specific match (using the same Poisson model as the predictions,
+    not a separate arbitrary scale)."""
+
+    def difficulty_from_win_prob(p):
+        if p >= 0.55: return 1
+        if p >= 0.42: return 2
+        if p >= 0.30: return 3
+        if p >= 0.20: return 4
+        return 5
+
+    fixture_grid = {}
+
+    for m in upcoming_matches:
+        home, away, md = m["home"], m["away"], m["matchday"]
+        eg_home, eg_away = expected_goals(home, away, attack, defense, league_avg)
+        hw, dr, aw = match_outcome_probs(eg_home, eg_away)
+
+        fixture_grid.setdefault(home, []).append({
+            "matchday": md, "opponent": away, "is_home": True,
+            "win_probability": round(hw, 3),
+            "difficulty": difficulty_from_win_prob(hw)
+        })
+        fixture_grid.setdefault(away, []).append({
+            "matchday": md, "opponent": home, "is_home": False,
+            "win_probability": round(aw, 3),
+            "difficulty": difficulty_from_win_prob(aw)
+        })
+
+    for team in fixture_grid:
+        fixture_grid[team].sort(key=lambda f: f["matchday"])
+
+    return fixture_grid
+
+
 # ── MAIN PIPELINE ────────────────────────────────────────────────────────────
 def main():
     print("Fetching all match data from OpenLigaDB...")
@@ -365,13 +455,29 @@ def main():
     print("Computing current league table...")
     current_points = {t: 0 for t in current_teams}
     current_gd = {t: 0 for t in current_teams}
+    current_played = {t: 0 for t in current_teams}
+    current_wins = {t: 0 for t in current_teams}
+    current_draws = {t: 0 for t in current_teams}
+    current_losses = {t: 0 for t in current_teams}
     played_this_season = [m for m in played if m["season"] == CURRENT_SEASON]
 
     for m in played_this_season:
         h, a, hg, ag = m["home"], m["away"], m["home_goals"], m["away_goals"]
-        if hg > ag: current_points[h] += 3
-        elif hg < ag: current_points[a] += 3
-        else: current_points[h] += 1; current_points[a] += 1
+        current_played[h] += 1
+        current_played[a] += 1
+        if hg > ag:
+            current_points[h] += 3
+            current_wins[h] += 1
+            current_losses[a] += 1
+        elif hg < ag:
+            current_points[a] += 3
+            current_wins[a] += 1
+            current_losses[h] += 1
+        else:
+            current_points[h] += 1
+            current_points[a] += 1
+            current_draws[h] += 1
+            current_draws[a] += 1
         current_gd[h] += (hg - ag)
         current_gd[a] += (ag - hg)
 
@@ -389,6 +495,13 @@ def main():
     all_season_labels = [season_label(s) for s in SEASONS]
     trajectories = build_trajectories(all_matches, all_season_labels)
 
+    print("Building promotion benchmarks from historical seasons...")
+    historical_labels = all_season_labels[:-1]  # everything except the current season
+    promotion_benchmarks = build_promotion_benchmarks(all_matches, historical_labels)
+
+    print("Building fixture difficulty grid...")
+    fixture_difficulty = build_fixture_difficulty(upcoming, attack, defense, league_avg)
+
     # ── ASSEMBLE OUTPUT ──────────────────────────────────────────────────────
     predicted_table = []
     for t in current_teams:
@@ -400,6 +513,10 @@ def main():
             "team": t,
             "current_points": current_points[t],
             "current_gd": current_gd[t],
+            "matches_played": current_played[t],
+            "wins": current_wins[t],
+            "draws": current_draws[t],
+            "losses": current_losses[t],
             "avg_projected_position": round(avg_pos, 2),
             "promotion_probability": round(p_top2, 4),
             "champion_probability": round(p_first, 4),
@@ -417,6 +534,8 @@ def main():
         "league_avg_goals": round(league_avg, 3),
         "predicted_table": predicted_table,
         "trajectories": trajectories,
+        "promotion_benchmarks": promotion_benchmarks,
+        "fixture_difficulty": fixture_difficulty,
         "team_colors": team_colors,
         "methodology_note": "Predictions from Elo ratings + Poisson attack/defense model "
                              "(shrinkage-adjusted for teams with limited current-season data) "
