@@ -206,11 +206,19 @@ def fetch_team_colors(team_names):
 
     colors = {}
     failed = []
+    debug_printed = False  # only print full diagnostic detail for the first team, to avoid a huge log
 
     for name in team_names:
         try:
             url = f"https://api.sofascore.com/api/v1/search/all?q={requests.utils.quote(name)}"
             resp = requests.get(url, headers=headers, timeout=10)
+
+            if not debug_printed:
+                print(f"  DEBUG (first lookup only) — team: {name}")
+                print(f"  DEBUG — status code: {resp.status_code}")
+                print(f"  DEBUG — response body (first 500 chars): {resp.text[:500]}")
+                debug_printed = True
+
             if resp.status_code != 200:
                 failed.append(name)
                 colors[name] = DEFAULT_COLORS
@@ -230,9 +238,12 @@ def fetch_team_colors(team_names):
             if not team_colors:
                 failed.append(name)
 
-        except (requests.RequestException, ValueError, KeyError):
+        except (requests.RequestException, ValueError, KeyError) as e:
             colors[name] = DEFAULT_COLORS
             failed.append(name)
+            if not debug_printed:
+                print(f"  DEBUG (first lookup only) — team: {name}, exception: {repr(e)}")
+                debug_printed = True
 
         time.sleep(0.3)  # be polite, and avoid the same rate-limit issue as before
 
