@@ -41,68 +41,65 @@ def season_label(year):
 
 # ── STEP 1: PULL ALL MATCH DATA ──────────────────────────────────────────────
 def fetch_all_matches():
-    """Pulls every matchday of every season, keeping both played results
-    and future fixtures (which have no score yet).
-
-    IMPORTANT: a small delay between requests is required. Without it,
-    OpenLigaDB silently drops or rejects requests when they arrive too
-    fast (as they do from GitHub's servers), which previously caused
-    entire seasons of data to go missing with no visible error."""
+    """Pulls each season's ENTIRE match list in a single request, rather than
+    looping through 34 individual matchday requests. This matters because
+    OpenLigaDB enforces a shared rate limit (1000 requests/hour per IP), and
+    GitHub Actions runners share IP pools with many other unrelated users'
+    workflows — 136 requests per run was hitting that shared ceiling. 4
+    requests total (one per season) is dramatically safer."""
     all_matches = []
 
     for season in SEASONS:
         label = season_label(season)
-        failed_matchdays = []
 
-        for md in range(1, 35):
-            url = f"https://api.openligadb.de/getmatchdata/{LEAGUE}/{season}/{md}"
+        url = f"https://api.openligadb.de/getmatchdata/{LEAGUE}/{season}"
+        matches = None
 
-            matches = None
-            for attempt in range(2):  # try once, retry once on failure
-                try:
-                    resp = requests.get(url, timeout=15)
-                    if resp.status_code == 200:
-                        matches = resp.json()
-                        break
-                except requests.RequestException:
-                    pass
-                time.sleep(0.5)  # wait longer before a retry
+        for attempt in range(3):  # a little more resilient since this one request matters a lot
+            try:
+                resp = requests.get(url, timeout=20)
+                if resp.status_code == 200:
+                    matches = resp.json()
+                    break
+                else:
+                    print(f"  WARNING: season {label} returned HTTP {resp.status_code} (attempt {attempt+1})")
+            except requests.RequestException as e:
+                print(f"  WARNING: season {label} request failed: {e} (attempt {attempt+1})")
+            time.sleep(2)  # a real pause before retrying, not just a courtesy delay
 
-            time.sleep(0.2)  # always pause between requests, success or not
+        time.sleep(1)  # be polite between seasons too
 
-            if matches is None:
-                failed_matchdays.append(md)
-                continue
-            if not matches:
-                continue
+        if not matches:
+            print(f"  ERROR: season {label} — could not fetch after 3 attempts. Skipping this season entirely.")
+            continue
 
-            for m in matches:
-                is_finished = m.get("matchIsFinished", False)
-                home = m.get("team1", {}).get("teamName", "")
-                away = m.get("team2", {}).get("teamName", "")
+        for m in matches:
+            is_finished = m.get("matchIsFinished", False)
+            home = m.get("team1", {}).get("teamName", "")
+            away = m.get("team2", {}).get("teamName", "")
+            matchday = m.get("group", {}).get("groupOrderID", 0)
 
-                results = m.get("matchResults", [])
-                final = next((r for r in results if r.get("resultTypeID") == 2), None) or (results[-1] if results else None)
+            results = m.get("matchResults", [])
+            final = next((r for r in results if r.get("resultTypeID") == 2), None) or (results[-1] if results else None)
 
-                home_goals = final.get("pointsTeam1") if (is_finished and final) else None
-                away_goals = final.get("pointsTeam2") if (is_finished and final) else None
+            home_goals = final.get("pointsTeam1") if (is_finished and final) else None
+            away_goals = final.get("pointsTeam2") if (is_finished and final) else None
 
-                date_str = m.get("matchDateTime", "")[:10] if m.get("matchDateTime") else ""
+            date_str = m.get("matchDateTime", "")[:10] if m.get("matchDateTime") else ""
 
-                all_matches.append({
-                    "season": label,
-                    "matchday": md,
-                    "date": date_str,
-                    "home": home,
-                    "away": away,
-                    "home_goals": home_goals,
-                    "away_goals": away_goals,
-                    "finished": is_finished
-                })
+            all_matches.append({
+                "season": label,
+                "matchday": matchday,
+                "date": date_str,
+                "home": home,
+                "away": away,
+                "home_goals": home_goals,
+                "away_goals": away_goals,
+                "finished": is_finished
+            })
 
-        if failed_matchdays:
-            print(f"  WARNING: season {label} — {len(failed_matchdays)} matchday(s) "
-                  f"failed to fetch after retry: {failed_matchdays}")
+        finished_count = sum(1 for m in matches if m.get("matchIsFinished"))
+        print(f"  {label}: {len(matches)} total matches fetched, {finished_count} finished")
 
     return all_matches
 
@@ -244,6 +241,8 @@ def fetch_team_colors(team_names):
               f"return a match: {failed}")
 
     return colors
+
+
 def expected_goals(home, away, attack, defense, league_avg):
     eg_home = league_avg * attack[home] * defense[away] * HOME_GOAL_BOOST
     eg_away = league_avg * attack[away] * defense[home]
