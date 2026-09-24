@@ -318,6 +318,7 @@ function logoImgHtml(name, colorsMap, size) {
   if (!url) return `<span class="team-dot" style="background:${color}; width:${size}px; height:${size}px;"></span>`;
   return `<span class="logo-badge" style="width:${boxSize}px; height:${boxSize}px;">
             <img src="${url}" alt="" width="${size}" height="${size}" class="team-logo-img"
+              referrerpolicy="no-referrer" loading="lazy"
               style="width:${size}px; height:${size}px; object-fit:contain; display:block;"
               onerror="this.parentElement.outerHTML='<span class=&quot;team-dot&quot; style=&quot;background:${color}; width:${boxSize}px; height:${boxSize}px;&quot;></span>'">
           </span>`;
