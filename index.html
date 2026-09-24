@@ -132,11 +132,6 @@
   .pos-cell { color: var(--text-muted); width: 24px; }
   .team-cell { display: flex; align-items: center; gap: 8px; cursor: pointer; }
   .team-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
-  .logo-badge {
-    display: inline-flex; align-items: center; justify-content: center;
-    background: #FFFFFF; border-radius: 6px; border: 1px solid rgba(255,255,255,0.08);
-    flex-shrink: 0; box-shadow: 0 1px 2px rgba(0,0,0,0.25);
-  }
   .promo-bar-wrap { display: flex; align-items: center; gap: 8px; justify-content: flex-end; }
   .promo-bar-track { width: 40px; height: 5px; border-radius: 3px; background: var(--surface-2); overflow: hidden; }
   .promo-bar-fill { height: 100%; border-radius: 3px; }
@@ -307,21 +302,79 @@ function teamLogoUrl(name) {
   const id = TEAM_LOGO_IDS[name];
   return id ? `https://img.sofascore.com/api/v1/team/${id}/image` : null;
 }
-/* Every logo <img> uses this same onerror fallback: if the real logo fails
-   to load for any reason, quietly swap in the colored monogram dot instead
-   so the layout never breaks or shows a broken-image icon. */
-function logoImgHtml(name, colorsMap, size) {
+/* ── Background-removal pipeline ────────────────────────────────────────
+   The source crest images have a solid white background baked into the
+   pixels (not real transparency), so no CSS trick can hide it — the only
+   way to genuinely remove it is to read the actual pixel data and make
+   near-white pixels transparent. This requires the image host to allow
+   cross-origin pixel reading; if it doesn't, this fails gracefully and
+   falls back to a plain colored dot rather than breaking anything. */
+const logoDataUrlCache = {};
+const logoProcessingPromises = {};
+
+function processLogoToTransparent(name) {
+  if (logoProcessingPromises[name]) return logoProcessingPromises[name];
   const url = teamLogoUrl(name);
+  if (!url) return Promise.resolve(null);
+
+  logoProcessingPromises[name] = new Promise((resolve) => {
+    const img = new Image();
+    img.crossOrigin = "anonymous";
+    img.referrerPolicy = "no-referrer";
+
+    img.onload = () => {
+      try {
+        const canvas = document.createElement('canvas');
+        canvas.width = img.naturalWidth;
+        canvas.height = img.naturalHeight;
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(img, 0, 0);
+        const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height); // throws if CORS-blocked
+        const d = imageData.data;
+        const threshold = 235;
+        for (let i = 0; i < d.length; i += 4) {
+          if (d[i] >= threshold && d[i+1] >= threshold && d[i+2] >= threshold) {
+            d[i+3] = 0;
+          }
+        }
+        ctx.putImageData(imageData, 0, 0);
+        logoDataUrlCache[name] = canvas.toDataURL('image/png');
+      } catch (e) {
+        logoDataUrlCache[name] = null; // CORS blocked pixel access — fall back to dot, not the white-bg original
+      }
+      resolve(logoDataUrlCache[name]);
+    };
+    img.onerror = () => { logoDataUrlCache[name] = null; resolve(null); };
+    img.src = url;
+  });
+
+  return logoProcessingPromises[name];
+}
+
+function logoSlotHtml(name, colorsMap, size) {
   const color = (colorsMap[name] && colorsMap[name].primary) || '#888';
-  const pad = Math.max(2, Math.round(size * 0.12));
-  const boxSize = size + pad * 2;
-  if (!url) return `<span class="team-dot" style="background:${color}; width:${size}px; height:${size}px;"></span>`;
-  return `<span class="logo-badge" style="width:${boxSize}px; height:${boxSize}px;">
-            <img src="${url}" alt="" width="${size}" height="${size}" class="team-logo-img"
-              referrerpolicy="no-referrer" loading="lazy"
-              style="width:${size}px; height:${size}px; object-fit:contain; display:block;"
-              onerror="this.parentElement.outerHTML='<span class=&quot;team-dot&quot; style=&quot;background:${color}; width:${boxSize}px; height:${boxSize}px;&quot;></span>'">
-          </span>`;
+  return `<span class="logo-slot" data-team-logo="${name.replace(/"/g,'&quot;')}" data-fallback-color="${color}" data-size="${size}"
+            style="display:inline-block; width:${size}px; height:${size}px; border-radius:4px; background:${hexToRgba(color,0.2)}; flex-shrink:0;"></span>`;
+}
+
+function hydrateLogoSlots() {
+  const slots = document.querySelectorAll('.logo-slot');
+  const uniqueTeams = [...new Set([...slots].map(s => s.dataset.teamLogo))];
+
+  uniqueTeams.forEach(name => {
+    processLogoToTransparent(name).then(dataUrl => {
+      document.querySelectorAll(`.logo-slot[data-team-logo="${CSS.escape(name)}"]`).forEach(slot => {
+        const size = slot.dataset.size;
+        const color = slot.dataset.fallbackColor;
+        if (dataUrl) {
+          slot.outerHTML = `<img src="${dataUrl}" alt="" width="${size}" height="${size}"
+            style="width:${size}px; height:${size}px; object-fit:contain; display:block; flex-shrink:0;">`;
+        } else {
+          slot.outerHTML = `<span class="team-dot" style="background:${color}; width:${size}px; height:${size}px;"></span>`;
+        }
+      });
+    });
+  });
 }
 
 const DIFF_COLORS = { 1: '#2E7D46', 2: '#6FA85C', 3: '#6B7280', 4: '#C2564B', 5: '#A32E2E' };
@@ -407,10 +460,9 @@ function renderHero() {
   applyTheme(colors);
 
   document.getElementById('brandMark').style.background = colors.primary || '#4C8DFF';
-  document.getElementById('brandMark').innerHTML = logoImgHtml(club, data.team_colors, 30);
   document.getElementById('heroSeasonLabel').textContent = data.current_season + ' season';
   document.getElementById('heroClubName').innerHTML =
-    `<span style="display:inline-flex; align-items:center; gap:14px;">${logoImgHtml(club, data.team_colors, 44)}<span>${club}</span></span>`;
+    `<span style="display:inline-flex; align-items:center; gap:14px;">${logoSlotHtml(club, data.team_colors, 44)}<span>${club}</span></span>`;
 
   const currentSorted = [...data.predicted_table].sort((a,b) => (b.current_points - a.current_points) || (b.current_gd - a.current_gd));
   const posIdx = currentSorted.findIndex(t => t.team === club) + 1;
@@ -527,7 +579,7 @@ function renderTables() {
   document.getElementById('currentTableBody').innerHTML = currentSorted.map((t, i) => {
     return `<tr class="${t.team === club ? 'is-selected' : ''}" data-team="${t.team}">
       <td class="pos-cell">${i+1}</td>
-      <td><div class="team-cell">${logoImgHtml(t.team, data.team_colors, 20)}${t.team}</div></td>
+      <td><div class="team-cell">${logoSlotHtml(t.team, data.team_colors, 20)}${t.team}</div></td>
       <td class="num">${t.matches_played}</td>
       <td class="num">${t.wins}</td>
       <td class="num">${t.draws}</td>
@@ -543,7 +595,7 @@ function renderTables() {
     const pct = Math.round(t.promotion_probability * 100);
     return `<tr class="${t.team === club ? 'is-selected' : ''}" data-team="${t.team}">
       <td class="pos-cell">${i+1}</td>
-      <td><div class="team-cell">${logoImgHtml(t.team, data.team_colors, 20)}${t.team}</div></td>
+      <td><div class="team-cell">${logoSlotHtml(t.team, data.team_colors, 20)}${t.team}</div></td>
       <td class="num">${t.avg_projected_position.toFixed(1)}</td>
       <td class="num"><div class="promo-bar-wrap">${pct}%<div class="promo-bar-track"><div class="promo-bar-fill" style="width:${pct}%; background:${c.primary || '#888'}"></div></div></div></td>
     </tr>`;
@@ -581,7 +633,7 @@ function renderFixturesPage() {
 
   teams.forEach(team => {
     const c = data.team_colors[team] || {};
-    html += `<tr><td class="team-col"><div class="team-cell">${logoImgHtml(team, data.team_colors, 20)}${team}</div></td>`;
+    html += `<tr><td class="team-col"><div class="team-cell">${logoSlotHtml(team, data.team_colors, 20)}${team}</div></td>`;
     const fixtures = data.fixture_difficulty[team] || [];
     for (let i = 0; i < maxGw; i++) {
       const f = fixtures[i];
@@ -595,6 +647,7 @@ function renderFixturesPage() {
   });
   html += '</tbody>';
   table.innerHTML = html;
+  hydrateLogoSlots();
 }
 
 function renderFooter() {
@@ -610,6 +663,7 @@ function renderAll() {
   renderStatsTiles();
   renderChart();
   renderTables();
+  hydrateLogoSlots();
 }
 
 (async function init() {
