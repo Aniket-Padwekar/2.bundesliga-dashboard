@@ -60,7 +60,22 @@
     background: rgba(13,17,23,0.92); backdrop-filter: blur(8px);
   }
   .brand { display: flex; align-items: center; gap: 10px; }
-  .brand-mark { width: 30px; height: 30px; border-radius: 6px; background: var(--accent); transition: background 0.4s ease; }
+  .brand-mark {
+    width: 32px; height: 32px; border-radius: 8px;
+    background: var(--accent); transition: background 0.4s ease;
+    display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
+  }
+  .brand-mark::before {
+    content: "";
+    position: absolute; width: 60%; height: 60%;
+    border: 2.5px solid rgba(255,255,255,0.9); border-radius: 50%;
+  }
+  .brand-mark::after {
+    content: "";
+    position: absolute; width: 2.5px; height: 130%;
+    background: rgba(255,255,255,0.9); transform: rotate(25deg);
+  }
   .brand-text { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 19px; }
   .brand-text span { color: var(--text-muted); font-weight: 500; }
 
@@ -325,22 +340,60 @@ function processLogoToTransparent(name) {
     img.onload = () => {
       try {
         const canvas = document.createElement('canvas');
-        canvas.width = img.naturalWidth;
-        canvas.height = img.naturalHeight;
+        const w = img.naturalWidth, h = img.naturalHeight;
+        canvas.width = w; canvas.height = h;
         const ctx = canvas.getContext('2d');
         ctx.drawImage(img, 0, 0);
-        const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height); // throws if CORS-blocked
+        const imageData = ctx.getImageData(0, 0, w, h); // throws if CORS-blocked
         const d = imageData.data;
         const threshold = 235;
-        for (let i = 0; i < d.length; i += 4) {
-          if (d[i] >= threshold && d[i+1] >= threshold && d[i+2] >= threshold) {
-            d[i+3] = 0;
+        const isNearWhite = (idx) => d[idx] >= threshold && d[idx+1] >= threshold && d[idx+2] >= threshold;
+
+        // Flood-fill from every edge pixel that's near-white. Only pixels
+        // reached by this fill (i.e. actually CONNECTED to the outer
+        // border) get removed — a white detail sealed inside the crest,
+        // like lettering, is never touched because the flood can't reach it.
+        const background = new Uint8Array(w * h);
+        const queue = [];
+
+        for (let x = 0; x < w; x++) {
+          [0, h - 1].forEach(y => {
+            const p = y * w + x;
+            if (isNearWhite(p * 4) && !background[p]) { background[p] = 1; queue.push(p); }
+          });
+        }
+        for (let y = 0; y < h; y++) {
+          [0, w - 1].forEach(x => {
+            const p = y * w + x;
+            if (isNearWhite(p * 4) && !background[p]) { background[p] = 1; queue.push(p); }
+          });
+        }
+
+        let qi = 0;
+        while (qi < queue.length) {
+          const p = queue[qi++];
+          const x = p % w, y = (p / w) | 0;
+          const neighbors = [];
+          if (x > 0) neighbors.push(p - 1);
+          if (x < w - 1) neighbors.push(p + 1);
+          if (y > 0) neighbors.push(p - w);
+          if (y < h - 1) neighbors.push(p + w);
+          for (const np of neighbors) {
+            if (!background[np] && isNearWhite(np * 4)) {
+              background[np] = 1;
+              queue.push(np);
+            }
           }
         }
+
+        for (let p = 0; p < w * h; p++) {
+          if (background[p]) d[p * 4 + 3] = 0;
+        }
+
         ctx.putImageData(imageData, 0, 0);
         logoDataUrlCache[name] = canvas.toDataURL('image/png');
       } catch (e) {
-        logoDataUrlCache[name] = null; // CORS blocked pixel access — fall back to dot, not the white-bg original
+        logoDataUrlCache[name] = null;
       }
       resolve(logoDataUrlCache[name]);
     };
@@ -580,7 +633,7 @@ function renderTables() {
     const c = data.team_colors[t.team] || {};
     return `<tr class="${t.team === club ? 'is-selected' : ''}" data-team="${t.team}">
       <td class="pos-cell">${i+1}</td>
-      <td><div class="team-cell"><span class="team-dot" style="background:${c.primary || '#888'}"></span>${t.team}</div></td>
+      <td><div class="team-cell">${logoSlotHtml(t.team, data.team_colors, 26)}${t.team}</div></td>
       <td class="num">${t.matches_played}</td>
       <td class="num">${t.wins}</td>
       <td class="num">${t.draws}</td>
@@ -596,7 +649,7 @@ function renderTables() {
     const pct = Math.round(t.promotion_probability * 100);
     return `<tr class="${t.team === club ? 'is-selected' : ''}" data-team="${t.team}">
       <td class="pos-cell">${i+1}</td>
-      <td><div class="team-cell"><span class="team-dot" style="background:${c.primary || '#888'}"></span>${t.team}</div></td>
+      <td><div class="team-cell">${logoSlotHtml(t.team, data.team_colors, 26)}${t.team}</div></td>
       <td class="num">${t.avg_projected_position.toFixed(1)}</td>
       <td class="num"><div class="promo-bar-wrap">${pct}%<div class="promo-bar-track"><div class="promo-bar-fill" style="width:${pct}%; background:${c.primary || '#888'}"></div></div></div></td>
     </tr>`;
@@ -634,7 +687,7 @@ function renderFixturesPage() {
 
   teams.forEach(team => {
     const c = data.team_colors[team] || {};
-    html += `<tr><td class="team-col"><div class="team-cell"><span class="team-dot" style="background:${c.primary || '#888'}"></span>${team}</div></td>`;
+    html += `<tr><td class="team-col"><div class="team-cell">${logoSlotHtml(team, data.team_colors, 26)}${team}</div></td>`;
     const fixtures = data.fixture_difficulty[team] || [];
     for (let i = 0; i < maxGw; i++) {
       const f = fixtures[i];
