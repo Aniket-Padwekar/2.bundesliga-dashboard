@@ -462,7 +462,7 @@ function renderHero() {
   document.getElementById('brandMark').style.background = colors.primary || '#4C8DFF';
   document.getElementById('heroSeasonLabel').textContent = data.current_season + ' season';
   document.getElementById('heroClubName').innerHTML =
-    `<span style="display:inline-flex; align-items:center; gap:14px;">${logoSlotHtml(club, data.team_colors, 44)}<span>${club}</span></span>`;
+    `<span style="display:inline-flex; align-items:center; gap:16px;">${logoSlotHtml(club, data.team_colors, 60)}<span>${club}</span></span>`;
 
   const currentSorted = [...data.predicted_table].sort((a,b) => (b.current_points - a.current_points) || (b.current_gd - a.current_gd));
   const posIdx = currentSorted.findIndex(t => t.team === club) + 1;
@@ -577,9 +577,10 @@ function renderTables() {
 
   const currentSorted = [...data.predicted_table].sort((a,b) => (b.current_points - a.current_points) || (b.current_gd - a.current_gd));
   document.getElementById('currentTableBody').innerHTML = currentSorted.map((t, i) => {
+    const c = data.team_colors[t.team] || {};
     return `<tr class="${t.team === club ? 'is-selected' : ''}" data-team="${t.team}">
       <td class="pos-cell">${i+1}</td>
-      <td><div class="team-cell">${logoSlotHtml(t.team, data.team_colors, 20)}${t.team}</div></td>
+      <td><div class="team-cell"><span class="team-dot" style="background:${c.primary || '#888'}"></span>${t.team}</div></td>
       <td class="num">${t.matches_played}</td>
       <td class="num">${t.wins}</td>
       <td class="num">${t.draws}</td>
@@ -595,7 +596,7 @@ function renderTables() {
     const pct = Math.round(t.promotion_probability * 100);
     return `<tr class="${t.team === club ? 'is-selected' : ''}" data-team="${t.team}">
       <td class="pos-cell">${i+1}</td>
-      <td><div class="team-cell">${logoSlotHtml(t.team, data.team_colors, 20)}${t.team}</div></td>
+      <td><div class="team-cell"><span class="team-dot" style="background:${c.primary || '#888'}"></span>${t.team}</div></td>
       <td class="num">${t.avg_projected_position.toFixed(1)}</td>
       <td class="num"><div class="promo-bar-wrap">${pct}%<div class="promo-bar-track"><div class="promo-bar-fill" style="width:${pct}%; background:${c.primary || '#888'}"></div></div></div></td>
     </tr>`;
@@ -633,7 +634,7 @@ function renderFixturesPage() {
 
   teams.forEach(team => {
     const c = data.team_colors[team] || {};
-    html += `<tr><td class="team-col"><div class="team-cell">${logoSlotHtml(team, data.team_colors, 20)}${team}</div></td>`;
+    html += `<tr><td class="team-col"><div class="team-cell"><span class="team-dot" style="background:${c.primary || '#888'}"></span>${team}</div></td>`;
     const fixtures = data.fixture_difficulty[team] || [];
     for (let i = 0; i < maxGw; i++) {
       const f = fixtures[i];
