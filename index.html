@@ -132,6 +132,11 @@
   .pos-cell { color: var(--text-muted); width: 24px; }
   .team-cell { display: flex; align-items: center; gap: 8px; cursor: pointer; }
   .team-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  .logo-badge {
+    display: inline-flex; align-items: center; justify-content: center;
+    background: #FFFFFF; border-radius: 6px; border: 1px solid rgba(255,255,255,0.08);
+    flex-shrink: 0; box-shadow: 0 1px 2px rgba(0,0,0,0.25);
+  }
   .promo-bar-wrap { display: flex; align-items: center; gap: 8px; justify-content: flex-end; }
   .promo-bar-track { width: 40px; height: 5px; border-radius: 3px; background: var(--surface-2); overflow: hidden; }
   .promo-bar-fill { height: 100%; border-radius: 3px; }
@@ -308,10 +313,14 @@ function teamLogoUrl(name) {
 function logoImgHtml(name, colorsMap, size) {
   const url = teamLogoUrl(name);
   const color = (colorsMap[name] && colorsMap[name].primary) || '#888';
+  const pad = Math.max(2, Math.round(size * 0.12));
+  const boxSize = size + pad * 2;
   if (!url) return `<span class="team-dot" style="background:${color}; width:${size}px; height:${size}px;"></span>`;
-  return `<img src="${url}" alt="" width="${size}" height="${size}" class="team-logo-img"
-            style="width:${size}px; height:${size}px; object-fit:contain; border-radius:4px; background:#fff1; flex-shrink:0;"
-            onerror="this.outerHTML='<span class=&quot;team-dot&quot; style=&quot;background:${color}; width:${size}px; height:${size}px;&quot;></span>'">`;
+  return `<span class="logo-badge" style="width:${boxSize}px; height:${boxSize}px;">
+            <img src="${url}" alt="" width="${size}" height="${size}" class="team-logo-img"
+              style="width:${size}px; height:${size}px; object-fit:contain; display:block;"
+              onerror="this.parentElement.outerHTML='<span class=&quot;team-dot&quot; style=&quot;background:${color}; width:${boxSize}px; height:${boxSize}px;&quot;></span>'">
+          </span>`;
 }
 
 const DIFF_COLORS = { 1: '#2E7D46', 2: '#6FA85C', 3: '#6B7280', 4: '#C2564B', 5: '#A32E2E' };
