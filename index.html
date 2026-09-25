@@ -76,6 +76,7 @@
     position: absolute; width: 2.5px; height: 130%;
     background: rgba(255,255,255,0.9); transform: rotate(25deg);
   }
+  .brand-mark.has-real-logo::before, .brand-mark.has-real-logo::after { display: none; }
   .brand-text { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 19px; }
   .brand-text span { color: var(--text-muted); font-weight: 500; }
 
@@ -418,9 +419,25 @@ function hydrateLeagueLogo() {
     if (dataUrl) {
       mark.innerHTML = `<img src="${dataUrl}" alt="2. Bundesliga" style="width:70%; height:70%; object-fit:contain;">`;
       mark.style.background = 'transparent';
+      mark.classList.add('has-real-logo');
+      addBlurredLeagueBackground(dataUrl);
     }
     // if it fails, the existing abstract CSS icon (::before/::after) stays as the fallback
   });
+}
+
+function addBlurredLeagueBackground(dataUrl) {
+  const watermark = document.querySelector('.watermark');
+  if (!watermark) return;
+  const img = document.createElement('img');
+  img.src = dataUrl;
+  img.alt = '';
+  img.style.cssText = `
+    position: absolute; top: 8vh; right: -8vw;
+    width: 52vw; height: 52vw; object-fit: contain;
+    filter: blur(38px); opacity: 0.09;
+  `;
+  watermark.appendChild(img);
 }
 function logoSlotHtml(name, colorsMap, size) {
   const color = (colorsMap[name] && colorsMap[name].primary) || '#888';
