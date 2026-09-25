@@ -327,12 +327,12 @@ function teamLogoUrl(name) {
 const logoDataUrlCache = {};
 const logoProcessingPromises = {};
 
-function processLogoToTransparent(name) {
-  if (logoProcessingPromises[name]) return logoProcessingPromises[name];
-  const url = teamLogoUrl(name);
-  if (!url) return Promise.resolve(null);
-
-  logoProcessingPromises[name] = new Promise((resolve) => {
+/* Core flood-fill background remover — takes any image URL, returns a
+   Promise resolving to a transparent-background data URL (or null on
+   failure). Both team crests and the league logo use this same,
+   already-verified logic. */
+function processImageToTransparent(url) {
+  return new Promise((resolve) => {
     const img = new Image();
     img.crossOrigin = "anonymous";
     img.referrerPolicy = "no-referrer";
@@ -349,10 +349,6 @@ function processLogoToTransparent(name) {
         const threshold = 235;
         const isNearWhite = (idx) => d[idx] >= threshold && d[idx+1] >= threshold && d[idx+2] >= threshold;
 
-        // Flood-fill from every edge pixel that's near-white. Only pixels
-        // reached by this fill (i.e. actually CONNECTED to the outer
-        // border) get removed — a white detail sealed inside the crest,
-        // like lettering, is never touched because the flood can't reach it.
         const background = new Uint8Array(w * h);
         const queue = [];
 
@@ -391,19 +387,41 @@ function processLogoToTransparent(name) {
         }
 
         ctx.putImageData(imageData, 0, 0);
-        logoDataUrlCache[name] = canvas.toDataURL('image/png');
+        resolve(canvas.toDataURL('image/png'));
       } catch (e) {
-        logoDataUrlCache[name] = null;
+        resolve(null);
       }
-      resolve(logoDataUrlCache[name]);
     };
-    img.onerror = () => { logoDataUrlCache[name] = null; resolve(null); };
+    img.onerror = () => resolve(null);
     img.src = url;
   });
+}
 
+function processLogoToTransparent(name) {
+  if (logoProcessingPromises[name]) return logoProcessingPromises[name];
+  const url = teamLogoUrl(name);
+  if (!url) return Promise.resolve(null);
+
+  logoProcessingPromises[name] = processImageToTransparent(url).then(dataUrl => {
+    logoDataUrlCache[name] = dataUrl;
+    return dataUrl;
+  });
   return logoProcessingPromises[name];
 }
 
+/* ── League logo ── */
+const LEAGUE_LOGO_URL = 'https://img.sofascore.com/api/v1/unique-tournament/44/image';
+
+function hydrateLeagueLogo() {
+  processImageToTransparent(LEAGUE_LOGO_URL).then(dataUrl => {
+    const mark = document.getElementById('brandMark');
+    if (dataUrl) {
+      mark.innerHTML = `<img src="${dataUrl}" alt="2. Bundesliga" style="width:70%; height:70%; object-fit:contain;">`;
+      mark.style.background = 'transparent';
+    }
+    // if it fails, the existing abstract CSS icon (::before/::after) stays as the fallback
+  });
+}
 function logoSlotHtml(name, colorsMap, size) {
   const color = (colorsMap[name] && colorsMap[name].primary) || '#888';
   return `<span class="logo-slot" data-team-logo="${name.replace(/"/g,'&quot;')}" data-fallback-color="${color}" data-size="${size}"
@@ -512,7 +530,6 @@ function renderHero() {
   const colors = data.team_colors[club] || {};
   applyTheme(colors);
 
-  document.getElementById('brandMark').style.background = colors.primary || '#4C8DFF';
   document.getElementById('heroSeasonLabel').textContent = data.current_season + ' season';
   document.getElementById('heroClubName').innerHTML =
     `<span style="display:inline-flex; align-items:center; gap:16px;">${logoSlotHtml(club, data.team_colors, 60)}<span>${club}</span></span>`;
@@ -721,6 +738,7 @@ function renderAll() {
 }
 
 (async function init() {
+  hydrateLeagueLogo(); // independent of dashboard data — starts right away
   try {
     state.data = await loadData();
     populateClubSelect(state.data);
