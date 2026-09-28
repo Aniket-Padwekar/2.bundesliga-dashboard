@@ -225,6 +225,38 @@
     .report-card { break-inside: avoid; }
   }
 
+  /* ── WEAK AREAS + SHOT MAP ── */
+  .shots-layout { display: grid; grid-template-columns: 1.35fr 1fr; gap: 24px; align-items: start; }
+  @media (max-width: 900px) { .shots-layout { grid-template-columns: 1fr; } }
+  .shots-toggle { margin-bottom: 10px; display: inline-flex; }
+
+  /* ── RECRUITMENT ── */
+  .budget-panel { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin: 4px 0 8px; }
+  .budget-slider { flex: 1; min-width: 200px; accent-color: var(--accent); cursor: pointer; }
+  .budget-value { font-size: 30px; color: var(--accent); min-width: 84px; text-align: right; line-height: 1; }
+  .weak-bar-row { display: grid; grid-template-columns: 110px 1fr 40px; gap: 10px; align-items: center; font-size: 13px; padding: 6px 0; }
+  .weak-bar-row strong { text-align: right; font-variant-numeric: tabular-nums; }
+  .weak-bar-row.weakest > span:first-child { color: #E0625A; font-weight: 600; }
+  .weak-bar-track { position: relative; height: 8px; background: var(--surface-2); border-radius: 4px; overflow: hidden; }
+  .weak-bar-fill { height: 100%; border-radius: 4px; background: var(--accent); }
+  .weak-bar-row.weakest .weak-bar-fill { background: #C2564B; }
+  .weak-bar-mid { position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: rgba(240,246,252,0.55); }
+  .player-row { display: grid; grid-template-columns: 1fr auto 46px; gap: 12px; align-items: center; padding: 9px 12px; border-bottom: 1px solid var(--surface-2); cursor: pointer; border-radius: 8px; }
+  .player-row:hover, .player-row.selected { background: var(--accent-soft); }
+  .player-name { font-weight: 600; font-size: 13.5px; }
+  .player-sub { color: var(--text-muted); font-size: 12px; margin-top: 1px; }
+  .player-meta { text-align: right; font-size: 13px; font-variant-numeric: tabular-nums; }
+  .vs-up { color: #3FB950; font-size: 11.5px; }
+  .vs-down { color: #E0625A; font-size: 11.5px; }
+  .fit { text-align: center; }
+  .fit strong { display: block; font-family: 'Barlow Condensed', sans-serif; font-size: 22px; color: var(--accent); line-height: 1; }
+  .fit span { font-size: 10px; color: var(--text-muted); }
+  .radar-holder { position: relative; height: 300px; margin: 6px 0 10px; }
+
+  /* ── SITE DISCLAIMER ── */
+  .site-disclaimer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--border); font-size: 11.5px; color: var(--text-muted); line-height: 1.6; max-width: 760px; }
+
+
   ::-webkit-scrollbar { height: 8px; width: 8px; }
   ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
 </style>
@@ -243,6 +275,7 @@
       <button class="tab-btn active" data-page="overview">Overview</button>
       <button class="tab-btn" data-page="fixtures">Fixtures</button>
       <button class="tab-btn" data-page="report">Promotion report</button>
+      <button class="tab-btn" id="recruitTabBtn" data-page="recruit" style="display:none">Recruitment</button>
     </div>
     <select class="club-select" id="clubSelect" aria-label="Select a club"></select>
   </div>
@@ -342,6 +375,13 @@
   <div class="page" id="page-report">
     <div id="reportRoot"></div>
   </div>
+
+  <!-- ══════════════ RECRUITMENT PAGE (shown only when data/players.json exists) ══════════════ -->
+  <div class="page" id="page-recruit">
+    <div id="recruitRoot"></div>
+  </div>
+
+  <div class="site-disclaimer">Personal analytics project, not affiliated with or endorsed by the DFL or any club. Club and league logos belong to their owners. Results come from OpenLigaDB; shots, lineups and logos from Sofascore. Probabilities come from a simple goals-based model and describe what that model implies, not what will happen.</div>
 
 </div>
 
@@ -555,6 +595,7 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
     document.getElementById('page-' + btn.dataset.page).classList.add('active');
     if (btn.dataset.page === 'fixtures') renderFixturesPage();
     if (btn.dataset.page === 'report') renderReportPage();
+    if (btn.dataset.page === 'recruit') renderRecruitPage();
   });
 });
 
@@ -1011,6 +1052,10 @@ function buildReportModel(data, club) {
     path, rivals, rivalMode: contesting ? 'contest' : 'nearest',
     lastSeason, analogues, history: { series, change }, form, nSim: data.n_simulations
   };
+  const cg = (data.conceded_goals || {})[club] || {};
+  model.units = teamUnitAssessment(data, club);
+  model.conceded = { last: cg[previousSeasonLabel(data.current_season)] || null, now: cg[data.current_season] || null };
+  model.pitch = data.pitch || DEFAULT_PITCH;
   model.narrative = buildNarrative(model);
   return model;
 }
@@ -1224,6 +1269,7 @@ function renderReportHtml(m, data) {
         <table class="mini-table"><thead><tr><th>Club</th><th class="num">Top 2</th><th class="num">Pts</th><th>Games left</th></tr></thead><tbody>${rivalRows}</tbody></table></div>
       <div class="report-card"><h3>Last season vs now</h3>${lastHtml}</div>
       <div class="report-card"><h3>Historical comparison</h3>${analogueHtml}</div>
+      ${shotsCardHtml(m, data)}
       <div class="report-card wide"><h3>How the path has changed</h3>${historyHtml}</div>
       <div class="report-card"><h3>Recent form</h3><p class="sub">Last five results.</p>${formHtml}</div>
       <div class="report-card"><h3>Method and limits</h3><div class="report-method">${method}</div></div>
@@ -1273,6 +1319,385 @@ function renderReportPage() {
   document.getElementById('reportRoot').innerHTML = renderReportHtml(m, data);
   hydrateLogoSlots();
   drawReportChart(m, data);
+  bindShotsHandlers();
+}
+
+/* ══════════════ WEAK AREAS + CONCEDED-GOAL MAP ══════════════
+   Team-level units first (attack vs defence ratings), then where every goal
+   against was shot from. Both feed the Recruitment tab's positional analysis. */
+
+const SET_PIECE_SITUATIONS = ['corner', 'set-piece', 'throw-in-set-piece', 'free-kick'];
+const DEFAULT_PITCH = { x_m_per_unit: 0.9565, y_m_per_unit: 0.68 };
+
+/* Where does the club rank in the league on each unit? Attack: higher rating is
+   better. Defence: lower rating is better. Ratings pool last season and this
+   season so far, so early in a season they mostly reflect last season. */
+function teamUnitAssessment(data, club) {
+  const rows = data.predicted_table;
+  const row = rows.find(t => t.team === club);
+  const attackRank = [...rows].sort((a, b) => b.attack_rating - a.attack_rating).findIndex(t => t.team === club) + 1;
+  const defenseRank = [...rows].sort((a, b) => a.defense_rating - b.defense_rating).findIndex(t => t.team === club) + 1;
+  const diff = attackRank - defenseRank;                       // positive: attack ranks worse
+  const weaker = Math.abs(diff) <= 2 ? 'balanced' : (diff > 0 ? 'attack' : 'defence');
+  return { attackRank, defenseRank, attackRating: row.attack_rating, defenseRating: row.defense_rating,
+           weaker, n: rows.length };
+}
+
+function concededMapSvg(views, pitch, accent) {
+  const S = 10;                                                // pixels per metre; drawn to true proportions
+  const px = g => g.y * pitch.y_m_per_unit * S;                // across the pitch
+  const py = g => 400 - g.x * pitch.x_m_per_unit * S;          // distance from the goal line (bottom)
+  const line = 'stroke="#8B949E" stroke-width="1.5" fill="none" opacity="0.55"';
+  let svg = `<svg viewBox="0 0 680 424" width="100%" role="img" aria-label="Map of goals conceded, by shot location" style="max-width:680px; display:block;">`;
+  svg += '<rect x="0" y="0" width="680" height="400" fill="rgba(46,125,70,0.06)"/>';
+  svg += `<path d="M0 0 V400 H680 V0" ${line}/>`;              // touchlines and goal line (top edge is only the crop)
+  svg += `<rect x="138.4" y="235" width="403.2" height="165" ${line}/>`;   // penalty area 40.32 x 16.5 m
+  svg += `<rect x="248.4" y="345" width="183.2" height="55" ${line}/>`;    // six-yard box 18.32 x 5.5 m
+  svg += '<circle cx="340" cy="290" r="2.5" fill="#8B949E" opacity="0.7"/>';   // penalty spot, 11 m
+  svg += `<path d="M266.9 235 A91.5 91.5 0 0 1 413.1 235" ${line}/>`;      // penalty arc, 9.15 m radius
+  svg += '<rect x="303.4" y="400" width="73.2" height="14" fill="none" stroke="#8B949E" stroke-width="2"/>';   // goal
+
+  views.forEach(v => v.goals.forEach(g => {
+    const cx = Math.round(px(g) * 10) / 10, cy = Math.round(py(g) * 10) / 10;
+    const isSet = SET_PIECE_SITUATIONS.includes(g.situation);
+    const fill = v.key === 'now' ? accent : 'rgba(139,148,158,0.55)';
+    const stroke = v.key === 'now' ? '#FFFFFF' : '#8B949E';
+    const when = g.minute !== null && g.minute !== undefined ? `${g.minute}${g.added ? '+' + g.added : ''}'` : '';
+    const tip = esc(`${v.label} · ${when} ${g.scorer || ''} (${g.opponent || ''}) · ${g.situation} · ${g.body}`.replace(/\s+/g, ' '));
+    svg += isSet
+      ? `<rect x="${cx - 6}" y="${cy - 6}" width="12" height="12" transform="rotate(45 ${cx} ${cy})" fill="${fill}" stroke="${stroke}" stroke-width="1" opacity="0.85"><title>${tip}</title></rect>`
+      : `<circle cx="${cx}" cy="${cy}" r="6.5" fill="${fill}" stroke="${stroke}" stroke-width="1" opacity="0.85"><title>${tip}</title></circle>`;
+  }));
+  return svg + '</svg>';
+}
+
+function shotsSummaryHtml(m) {
+  const cols = [
+    { key: 'last', label: 'Last season', block: m.conceded.last },
+    { key: 'now', label: 'This season so far', block: m.conceded.now }
+  ].filter(c => c.block);
+  const rowsDef = [
+    ['Goals conceded', s => s.goals],
+    ['From set pieces', s => pctH(s.set_piece_share)],
+    ['Headed goals', s => pctH(s.header_share)],
+    ['Inside the six-yard box', s => pctH(s.six_yard_share)],
+    ['Inside the penalty area', s => pctH(s.penalty_area_share)],
+    ['Average shot distance', s => oneDp(s.avg_distance_m) + ' m'],
+    ['Penalties', s => s.penalties]
+  ];
+  const head = cols.map(c => `<th class="num">${esc(c.label)}</th>`).join('');
+  const body = rowsDef.map(([label, fn]) =>
+    `<tr><td>${label}</td>${cols.map(c => `<td class="num">${c.block.summary ? fn(c.block.summary) : '–'}</td>`).join('')}</tr>`).join('');
+  const small = m.conceded.now && m.conceded.now.summary && m.conceded.now.summary.goals < 10
+    ? `<p class="report-note">This season's sample is only ${m.conceded.now.summary.goals} goal${m.conceded.now.summary.goals === 1 ? '' : 's'}, so a single goal moves these shares a lot.</p>` : '';
+  return `<table class="mini-table"><thead><tr><th></th>${head}</tr></thead><tbody>${body}</tbody></table>${small}
+    <p class="report-note">Distances are approximate: the data source does not document its pitch scale, so the distance axis is calibrated to put penalties on the penalty spot.</p>`;
+}
+
+function shotsCardHtml(m, data) {
+  const U = m.units;
+  const unitLine = (label, rank, rating) =>
+    `<div class="kv"><span>${label}</span><strong>${ordinal(rank)} of ${U.n} <span style="color:var(--text-muted); font-weight:400;">(rating ${twoDp(rating)})</span></strong></div>`;
+  const weakerText = {
+    attack: 'Attack ranks lower than defence, so relative to its own profile it is the weaker unit (it can still be a strong attack in the league). That points to forwards and attacking midfielders.',
+    defence: 'Defence ranks lower than attack, so relative to its own profile it is the weaker unit (it can still be a strong defence in the league). That points to the goalkeeper, defenders and defensive midfielders.',
+    balanced: 'Attack and defence rank within two places of each other, so there is no clear weaker unit at team level.'
+  }[U.weaker];
+  const units = unitLine('Attack', U.attackRank, U.attackRating) + unitLine('Defence', U.defenseRank, U.defenseRating) +
+    `<p class="report-note">${weakerText} Ratings pool last season and this season so far, so early in a season they mostly reflect last season.</p>`;
+
+  const have = { last: m.conceded.last && m.conceded.last.goals.length, now: m.conceded.now && m.conceded.now.goals.length };
+  let mapHtml = '<p class="sub">Shot locations are not available for this club yet.</p>', summary = '';
+  if (have.last || have.now) {
+    const opts = [];
+    if (have.last && have.now) opts.push(['both', 'Both']);
+    if (have.now) opts.push(['now', 'This season']);
+    if (have.last) opts.push(['last', 'Last season']);
+    const view = opts.some(o => o[0] === state.shotsView) ? state.shotsView : opts[0][0];
+    const views = [];
+    if ((view === 'last' || view === 'both') && have.last) views.push({ key: 'last', label: previousSeasonLabel(data.current_season), goals: m.conceded.last.goals });
+    if ((view === 'now' || view === 'both') && have.now) views.push({ key: 'now', label: data.current_season, goals: m.conceded.now.goals });
+    const accent = (data.team_colors[m.club] || {}).primary || '#4C8DFF';
+    const toggle = opts.length > 1
+      ? `<div class="season-tabs shots-toggle">${opts.map(o => `<button class="season-tab ${o[0] === view ? 'active' : ''}" data-shots-view="${o[0]}">${o[1]}</button>`).join('')}</div>` : '';
+    const legend = `<div class="chart-legend" style="padding-top:8px;">
+      ${have.now && (view === 'now' || view === 'both') ? `<span><span class="legend-swatch" style="background:${accent}"></span>${esc(data.current_season)}</span>` : ''}
+      ${have.last && (view === 'last' || view === 'both') ? `<span><span class="legend-swatch" style="background:rgba(139,148,158,0.7)"></span>${esc(previousSeasonLabel(data.current_season))}</span>` : ''}
+      <span>Circle = open play or penalty, diamond = set piece. Goal at the bottom.</span></div>`;
+    mapHtml = `${toggle}${concededMapSvg(views, m.pitch, accent)}${legend}`;
+    summary = shotsSummaryHtml(m);
+  }
+  return `<div class="report-card wide"><h3>Weak areas: where the goals against come from</h3>
+    <p class="sub">Team-level ratings first, then the location of every goal conceded.</p>
+    <div class="shots-layout"><div>${units}<div style="margin-top:14px;">${mapHtml}</div></div><div>${summary}</div></div></div>`;
+}
+
+function bindShotsHandlers() {
+  document.querySelectorAll('[data-shots-view]').forEach(b => b.addEventListener('click', () => {
+    state.shotsView = b.dataset.shotsView;
+    renderReportPage();
+  }));
+}
+
+/* ══════════════ RECRUITMENT BRIEF ══════════════
+   Driven entirely by data/players.json (see the data contract in the project notes).
+   The tab stays hidden until that file exists, so the live page never shows an empty
+   feature. Nothing here invents a player: every name, value and score comes from the file. */
+
+const GROUP_LABELS = { G: 'Goalkeepers', D: 'Defenders', M: 'Midfielders', F: 'Forwards' };
+const GROUP_UNIT = { G: 'defence', D: 'defence', M: 'both', F: 'attack' };
+const GROUP_ORDER = ['G', 'D', 'M', 'F'];
+
+/* Budget is a filter on market value, in two scales: fine (steps of €100k) and coarse (steps of €1m). */
+const BUDGET_MODES = {
+  k: { label: '€100k steps', min: 100, max: 2000, step: 100, factor: 1e3 },   // slider value is in €thousand
+  m: { label: '€1m steps',   min: 1,   max: 20,   step: 1,   factor: 1e6 }    // slider value is in €million
+};
+function budgetToEuro(mode, sliderValue) { return sliderValue * BUDGET_MODES[mode].factor; }
+function sliderFromEuro(mode, euro) {
+  const c = BUDGET_MODES[mode];
+  const raw = Math.round(euro / c.factor / c.step) * c.step;
+  return Math.min(c.max, Math.max(c.min, raw));
+}
+function formatEur(v) {
+  if (v === null || v === undefined || isNaN(v)) return 'n/a';
+  if (v >= 1e6) return '€' + String(Math.round(v / 1e5) / 10).replace(/\.0$/, '') + 'm';
+  return '€' + Math.round(v / 1e3) + 'k';
+}
+
+function recruitState() {
+  if (!state.recruit) state.recruit = { mode: 'm', slider: { k: 500, m: 5 }, group: null, playerId: null, club: null };
+  return state.recruit;
+}
+
+async function loadPlayers() {
+  try {
+    const res = await fetch('data/players.json', { cache: 'no-store' });
+    if (!res.ok) return null;
+    const j = await res.json();
+    return (j && Array.isArray(j.players) && j.players.length) ? j : null;
+  } catch (e) { return null; }
+}
+
+/* Position-group strength: the club's minutes-weighted average of each player's 'overall'
+   (a 0-100 percentile within his position group across the league, so 50 is typical). */
+function computePositionalWeakness(players, club, minMinutes) {
+  const groups = {};
+  GROUP_ORDER.forEach(g => {
+    const own = players.filter(p => p.team === club && p.group === g && p.minutes >= minMinutes);
+    const totalMin = own.reduce((a, p) => a + p.minutes, 0);
+    if (!own.length || totalMin === 0) { groups[g] = { group: g, players: own.length, score: null, gap: null, axes: [], weakest: null }; return; }
+    const score = own.reduce((a, p) => a + p.overall * p.minutes, 0) / totalMin;
+    const acc = {};
+    own.forEach(p => (p.axes || []).forEach(ax => {
+      const o = acc[ax.label] || (acc[ax.label] = { sum: 0, w: 0 });
+      o.sum += ax.value * p.minutes; o.w += p.minutes;
+    }));
+    const axes = Object.entries(acc).map(([label, o]) => ({ label, value: o.sum / o.w })).sort((a, b) => a.value - b.value);
+    groups[g] = { group: g, players: own.length, score, gap: 50 - score, axes, weakest: axes[0] || null };
+  });
+  const ranking = Object.values(groups).filter(x => x.score !== null).sort((a, b) => b.gap - a.gap);
+  return { groups, ranking };
+}
+
+/* Targets: other clubs' players in the group, within the market-value budget, ranked by a fit
+   score: half overall quality, half strength on the club's two weakest attributes in that group. */
+function candidateList(players, club, group, budgetEuro, weakLabels, minMinutes, ownScore) {
+  return players
+    .filter(p => p.team !== club && p.group === group && p.minutes >= minMinutes &&
+                 p.value_eur !== null && p.value_eur !== undefined && p.value_eur <= budgetEuro)
+    .map(p => {
+      const vals = weakLabels.map(l => (p.axes || []).find(a => a.label === l)).filter(Boolean).map(a => a.value);
+      const weakFit = vals.length ? vals.reduce((a, b) => a + b, 0) / vals.length : null;
+      const fit = weakFit === null ? p.overall : 0.5 * p.overall + 0.5 * weakFit;
+      return Object.assign({}, p, { weakFit, fit, vsOwn: ownScore === null ? null : p.overall - ownScore });
+    })
+    .sort((a, b) => b.fit - a.fit);
+}
+
+function consistencyLine(weakestGroup, units) {
+  if (!weakestGroup) return '';
+  const gu = GROUP_UNIT[weakestGroup];
+  if (units.weaker === 'balanced') return 'Team-level ratings show no clear weaker unit, so this finding rests on the player comparison alone.';
+  if (gu === 'both') return `Team-level ratings point to ${units.weaker}. Midfield contributes to both units, so this neither confirms nor contradicts that.`;
+  if (gu === units.weaker) return `Consistent with the team-level ratings, which point to ${units.weaker} as the weaker unit.`;
+  return `The team-level ratings point to ${units.weaker}, which does not match this, so treat the position finding with caution.`;
+}
+
+function buildRecruitModel() {
+  const pd = state.playerData, data = state.data, club = state.selectedClub, rs = recruitState();
+  const players = pd.players, minMin = pd.min_minutes || 450;
+  if (rs.club !== club) { rs.club = club; rs.group = null; rs.playerId = null; }
+  const weakness = computePositionalWeakness(players, club, minMin);
+  const units = teamUnitAssessment(data, club);
+  const weakestGroup = weakness.ranking.length ? weakness.ranking[0].group : null;
+  if (!rs.group) rs.group = weakestGroup || 'D';
+  const gInfo = weakness.groups[rs.group];
+  const weakLabels = gInfo && gInfo.axes.length ? gInfo.axes.slice(0, 2).map(a => a.label) : [];
+  const budgetEuro = budgetToEuro(rs.mode, rs.slider[rs.mode]);
+  const pool = players.filter(p => p.team !== club && p.group === rs.group && p.minutes >= minMin);
+  const candidates = candidateList(players, club, rs.group, budgetEuro, weakLabels, minMin, gInfo ? gInfo.score : null);
+  const selected = candidates.find(p => String(p.id) === String(rs.playerId)) || null;
+  if (!selected) rs.playerId = null;
+  return {
+    club, pd, minMin, weakness, weakestGroup, units, group: rs.group, gInfo, weakLabels,
+    budgetEuro, mode: rs.mode, sliderValue: rs.slider[rs.mode], candidates, selected,
+    poolSize: pool.length, noValue: pool.filter(p => p.value_eur === null || p.value_eur === undefined).length,
+    consistency: consistencyLine(weakestGroup, units)
+  };
+}
+
+function recruitListHtml(m) {
+  if (!m.candidates.length) {
+    return `<p class="sub" style="padding:10px;">No ${GROUP_LABELS[m.group].toLowerCase()} in the data fit within ${formatEur(m.budgetEuro)}. Raise the budget.</p>`;
+  }
+  return m.candidates.slice(0, 12).map(p => {
+    const vs = p.vsOwn === null ? '' : `<span class="${p.vsOwn >= 0 ? 'vs-up' : 'vs-down'}">${signed(Math.round(p.vsOwn))} vs current</span>`;
+    return `<div class="player-row ${m.selected && String(m.selected.id) === String(p.id) ? 'selected' : ''}" data-player="${esc(p.id)}">
+      <div><div class="player-name">${esc(p.name)}</div>
+        <div class="player-sub">${esc(p.team)} · ${p.age !== undefined && p.age !== null ? p.age + ' · ' : ''}${esc(p.position || GROUP_LABELS[p.group].slice(0, -1))}</div></div>
+      <div class="player-meta">${formatEur(p.value_eur)}<br>${vs}</div>
+      <div class="fit"><strong>${Math.round(p.fit)}</strong><span>fit</span></div></div>`;
+  }).join('');
+}
+
+function recruitDetailHtml(m) {
+  const p = m.selected;
+  if (!p) return '<p class="sub">Select a player to see his attribute profile.</p>';
+  const top = [...(p.axes || [])].sort((a, b) => b.value - a.value).slice(0, 2).map(a => esc(a.label)).join(' and ');
+  const kv = (l, v) => `<div class="kv"><span>${l}</span><strong>${v}</strong></div>`;
+  return `<h3 style="margin-bottom:2px;">${esc(p.name)}</h3><p class="sub">${esc(p.team)} · ${esc(p.position || GROUP_LABELS[p.group])}</p>
+    <div class="radar-holder"><canvas id="recruitRadar" aria-label="Attribute profile of ${esc(p.name)}"></canvas></div>
+    ${kv('Market value', formatEur(p.value_eur))}
+    ${kv('Age / height', `${p.age !== undefined && p.age !== null ? p.age : 'n/a'} / ${p.height_cm ? p.height_cm + ' cm' : 'n/a'}`)}
+    ${p.contract_until ? kv('Contract until', esc(p.contract_until)) : ''}
+    ${kv('Minutes played', Math.round(p.minutes))}
+    ${kv('Overall / fit', `${Math.round(p.overall)} / ${Math.round(p.fit)}`)}
+    ${top ? kv('Strongest attributes', top) : ''}
+    <p class="report-note">Attributes are percentiles against all ${GROUP_LABELS[p.group].toLowerCase()} in the league with at least ${m.minMin} minutes (50 is typical). Market value is an estimate, not a transfer fee, and whether a player is available or willing to move is unknown.</p>`;
+}
+
+function recruitHtml(m) {
+  const data = state.data;
+  const meta = m.pd;
+  const bars = GROUP_ORDER.map(g => {
+    const x = m.weakness.groups[g];
+    const isWeakest = m.weakestGroup === g;
+    if (x.score === null) return `<div class="weak-bar-row"><span>${GROUP_LABELS[g]}</span><span class="sub" style="margin:0;">not enough minutes in the data</span><strong>–</strong></div>`;
+    return `<div class="weak-bar-row ${isWeakest ? 'weakest' : ''}"><span>${GROUP_LABELS[g]}</span>
+      <div class="weak-bar-track"><div class="weak-bar-fill" style="width:${Math.max(2, Math.min(100, x.score))}%"></div><div class="weak-bar-mid"></div></div>
+      <strong>${Math.round(x.score)}</strong></div>`;
+  }).join('');
+  const w = m.weakness.ranking[0];
+  const weakText = w
+    ? `Weakest group: ${GROUP_LABELS[w.group].toLowerCase()}, ${Math.round(Math.abs(w.gap))} points ${w.gap > 0 ? 'below' : 'above'} the league median` +
+      (w.weakest ? `, with ${esc(w.axes.slice(0, 2).map(a => a.label + ' (' + Math.round(a.value) + ')').join(' and '))} the club's lowest attributes there.` : '.')
+    : 'No group of this club has enough minutes in the data to assess.';
+  const tabs = GROUP_ORDER.map(g => `<button class="season-tab ${g === m.group ? 'active' : ''}" data-group="${g}">${GROUP_LABELS[g]}</button>`).join('');
+  const modeBtns = Object.keys(BUDGET_MODES).map(k => `<button class="season-tab ${k === m.mode ? 'active' : ''}" data-budget-mode="${k}">${BUDGET_MODES[k].label}</button>`).join('');
+  const cfg = BUDGET_MODES[m.mode];
+  const generated = meta.generated_at ? new Date(meta.generated_at).toLocaleString('en-GB', { dateStyle: 'medium', timeStyle: 'short' }) : 'unknown';
+
+  return `
+    <div class="report-head"><div class="report-title">${logoSlotHtml(m.club, data.team_colors, 52)}<span>${esc(m.club)}</span></div></div>
+    <div class="report-meta">Recruitment brief · ${esc(data.current_season)} · players from the 2. Bundesliga only</div>
+    <div class="report-grid">
+      <div class="report-card"><h3>Positional weakness</h3>
+        <p class="sub">Minutes-weighted strength of the club's players in each position group, against the league (50 is typical).</p>
+        ${bars}<p class="report-note">${weakText}</p><p class="report-note">${m.consistency}</p></div>
+      <div class="report-card"><h3>Budget</h3>
+        <p class="sub">A filter on maximum market value, used as a stand-in for a fee. Clubs do not publish transfer budgets, so this is yours to set.</p>
+        <div class="budget-panel"><div class="season-tabs">${modeBtns}</div>
+          <input type="range" id="budgetSlider" class="budget-slider" min="${cfg.min}" max="${cfg.max}" step="${cfg.step}" value="${m.sliderValue}" aria-label="Maximum market value">
+          <div class="budget-value scoreboard-num" id="budgetValue">${formatEur(m.budgetEuro)}</div></div>
+        <p class="report-note" id="recruitSummary">${recruitSummaryText(m)}</p></div>
+    </div>
+    <div class="section-head" style="margin-top:26px;"><div class="section-title">Targets by position</div><div class="season-tabs">${tabs}</div></div>
+    <p class="sub" style="margin-top:0;">Ranked by fit: half overall quality, half strength on ${m.weakLabels.length ? esc(m.weakLabels.join(' and ')) : 'the club\'s weakest attributes'}, the club's lowest attributes in this group.</p>
+    <div class="report-grid">
+      <div class="report-card" style="padding:8px 6px;"><div id="recruitList">${recruitListHtml(m)}</div></div>
+      <div class="report-card" id="recruitDetail">${recruitDetailHtml(m)}</div>
+    </div>
+    <div class="report-method" style="margin-top:22px;"><p>Data: ${esc(meta.source || 'not stated')}, updated ${esc(generated)} UTC. Players need at least ${m.minMin} minutes to be included. This is analysis, not advice: it cannot see injuries, contracts, wages, or whether a move would happen.</p></div>`;
+}
+
+function recruitSummaryText(m) {
+  const base = `${m.candidates.length} of ${m.poolSize} ${GROUP_LABELS[m.group].toLowerCase()} from other clubs fit within ${formatEur(m.budgetEuro)}.`;
+  return m.noValue ? `${base} ${m.noValue} more have no market value in the data and are excluded.` : base;
+}
+
+let recruitChart = null;
+function drawRecruitRadar(m) {
+  if (recruitChart) { recruitChart.destroy(); recruitChart = null; }
+  const canvas = document.getElementById('recruitRadar');
+  const p = m.selected;
+  if (!canvas || !p || !(p.axes || []).length) return;
+  const labels = p.axes.map(a => a.label);
+  const own = m.gInfo ? labels.map(l => { const f = m.gInfo.axes.find(a => a.label === l); return f ? Math.round(f.value) : null; }) : [];
+  const accent = (state.data.team_colors[m.club] || {}).primary || '#4C8DFF';
+  recruitChart = new Chart(canvas, {
+    type: 'radar',
+    data: { labels, datasets: [
+      { label: p.name, data: p.axes.map(a => Math.round(a.value)), borderColor: accent,
+        backgroundColor: hexToRgba(accent, 0.25), borderWidth: 2.5, pointRadius: 3 },
+      { label: `${m.club} current (avg.)`, data: own, borderColor: '#8B949E',
+        backgroundColor: 'rgba(139,148,158,0.12)', borderDash: [5, 3], borderWidth: 1.5, pointRadius: 2 },
+      { label: 'League median', data: labels.map(() => 50), borderColor: 'rgba(139,148,158,0.35)',
+        borderWidth: 1, pointRadius: 0, fill: false }
+    ] },
+    options: { responsive: true, maintainAspectRatio: false,
+      scales: { r: { min: 0, max: 100,
+        ticks: { stepSize: 25, showLabelBackdrop: false, color: '#8B949E', backdropColor: 'transparent' },
+        grid: { color: 'rgba(139,148,158,0.25)' }, angleLines: { color: 'rgba(139,148,158,0.25)' },
+        pointLabels: { color: '#C9D1D9', font: { size: 11 } } } },
+      plugins: { legend: { labels: { color: '#8B949E', boxWidth: 12 } } } }
+  });
+}
+
+function bindPlayerRows() {
+  document.querySelectorAll('.player-row').forEach(r => r.addEventListener('click', () => {
+    recruitState().playerId = r.dataset.player;
+    updateRecruitList();
+  }));
+}
+
+/* Slider and player clicks refresh only the list and detail panel, so the slider keeps focus. */
+function updateRecruitList() {
+  const m = buildRecruitModel();
+  document.getElementById('budgetValue').textContent = formatEur(m.budgetEuro);
+  document.getElementById('recruitSummary').textContent = recruitSummaryText(m);
+  document.getElementById('recruitList').innerHTML = recruitListHtml(m);
+  document.getElementById('recruitDetail').innerHTML = recruitDetailHtml(m);
+  bindPlayerRows();
+  drawRecruitRadar(m);
+}
+
+function bindRecruitHandlers() {
+  document.querySelectorAll('[data-group]').forEach(b => b.addEventListener('click', () => {
+    const rs = recruitState(); rs.group = b.dataset.group; rs.playerId = null; renderRecruitPage();
+  }));
+  document.querySelectorAll('[data-budget-mode]').forEach(b => b.addEventListener('click', () => {
+    const rs = recruitState();
+    const euro = budgetToEuro(rs.mode, rs.slider[rs.mode]);
+    rs.mode = b.dataset.budgetMode;
+    rs.slider[rs.mode] = sliderFromEuro(rs.mode, euro);
+    renderRecruitPage();
+  }));
+  const slider = document.getElementById('budgetSlider');
+  if (slider) slider.addEventListener('input', () => {
+    const rs = recruitState(); rs.slider[rs.mode] = parseInt(slider.value, 10); updateRecruitList();
+  });
+  bindPlayerRows();
+}
+
+function renderRecruitPage() {
+  const root = document.getElementById('recruitRoot');
+  if (!state.data || !state.playerData || !state.selectedClub) return;
+  const m = buildRecruitModel();
+  root.innerHTML = recruitHtml(m);
+  hydrateLogoSlots();
+  bindRecruitHandlers();
+  drawRecruitRadar(m);
 }
 
 function renderAll() {
@@ -1282,12 +1707,15 @@ function renderAll() {
   renderTables();
   hydrateLogoSlots();
   if (document.getElementById('page-report').classList.contains('active')) renderReportPage();
+  if (document.getElementById('page-recruit').classList.contains('active')) renderRecruitPage();
 }
 
 (async function init() {
   hydrateLeagueLogo(); // independent of dashboard data — starts right away
   try {
     state.data = await loadData();
+    state.playerData = await loadPlayers();
+    if (state.playerData) document.getElementById('recruitTabBtn').style.display = '';
     populateClubSelect(state.data);
     populateSeasonTabs(state.data);
     renderAll();
