@@ -179,6 +179,52 @@
   table.fdr tbody tr:hover td { background: var(--surface-2); }
   table.fdr tbody tr:hover td.team-col { background: var(--surface-2); }
 
+  /* ── PROMOTION REPORT ── */
+  .report-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 6px; }
+  .report-title { display: flex; align-items: center; gap: 14px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(28px, 4vw, 42px); line-height: 1; color: var(--accent); }
+  .report-print { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 500; padding: 8px 14px; border-radius: 8px; border: 1px solid var(--border); background: var(--surface); color: var(--text); cursor: pointer; }
+  .report-print:hover { border-color: var(--accent); }
+  .report-meta { font-size: 12.5px; color: var(--text-muted); margin-bottom: 18px; }
+  .tier-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
+  .tier-badge { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 20px; padding: 6px 14px; border-radius: 8px; background: var(--accent-soft); color: var(--accent); border: 1px solid var(--accent); }
+  .tier-badge.tier-mid, .tier-badge.tier-danger { background: var(--surface-2); color: var(--text); border-color: var(--border); }
+  .tier-rule { font-size: 12.5px; color: var(--text-muted); }
+  .report-summary { font-size: 14.5px; line-height: 1.7; max-width: 820px; margin: 0 0 22px; }
+  .report-summary p { margin: 0 0 10px; }
+  .report-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 900px) { .report-grid { grid-template-columns: 1fr; } }
+  .report-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 18px 20px; break-inside: avoid; }
+  .report-card.wide { grid-column: 1 / -1; }
+  .report-card h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 19px; font-weight: 700; margin: 0 0 4px; }
+  .report-card .sub { font-size: 12px; color: var(--text-muted); margin: 0 0 12px; line-height: 1.5; }
+  .kv { display: flex; justify-content: space-between; gap: 12px; padding: 7px 0; border-bottom: 1px solid var(--surface-2); font-size: 13.5px; }
+  .kv:last-of-type { border-bottom: none; }
+  .kv > span { color: var(--text-muted); }
+  .kv > strong { font-weight: 600; text-align: right; }
+  .mini-table { width: 100%; border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; }
+  .mini-table th { text-align: left; font-size: 11px; font-weight: 600; color: var(--text-muted); padding: 6px 6px; border-bottom: 1px solid var(--border); }
+  .mini-table td { padding: 7px 6px; border-bottom: 1px solid var(--surface-2); vertical-align: top; }
+  .mini-table td.num, .mini-table th.num { text-align: right; }
+  .chip { display: inline-block; min-width: 24px; text-align: center; padding: 2px 7px; border-radius: 6px; font-size: 12px; font-weight: 700; color: #fff; }
+  .chip.W { background: #2E7D46; } .chip.D { background: #6B7280; } .chip.L { background: #A32E2E; }
+  .diff-dot { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
+  .report-note { font-size: 12px; color: var(--text-muted); line-height: 1.6; margin: 10px 0 0; }
+  .report-history-holder { position: relative; height: 240px; margin-top: 8px; }
+  .report-method { font-size: 12px; color: var(--text-muted); line-height: 1.7; }
+  .report-method p { margin: 0 0 8px; }
+  .report-method ul { margin: 4px 0 0 18px; padding: 0; }
+
+  @page { margin: 14mm; }
+  @media print {
+    :root { --bg: #fff; --surface: #fff; --surface-2: #f1f3f5; --border: #cfd4da; --text: #111827; --text-muted: #4b5563; }
+    html, body { background: #fff; }
+    .topbar, .watermark, .report-print { display: none !important; }
+    .page { display: none !important; }
+    #page-report { display: block !important; }
+    .wrap { padding: 0; max-width: none; }
+    .report-card { break-inside: avoid; }
+  }
+
   ::-webkit-scrollbar { height: 8px; width: 8px; }
   ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
 </style>
@@ -196,6 +242,7 @@
     <div class="tab-nav">
       <button class="tab-btn active" data-page="overview">Overview</button>
       <button class="tab-btn" data-page="fixtures">Fixtures</button>
+      <button class="tab-btn" data-page="report">Promotion report</button>
     </div>
     <select class="club-select" id="clubSelect" aria-label="Select a club"></select>
   </div>
@@ -289,6 +336,11 @@
     <div class="fdr-table-wrap">
       <table class="fdr" id="fdrTable"></table>
     </div>
+  </div>
+
+  <!-- ══════════════ PROMOTION REPORT PAGE ══════════════ -->
+  <div class="page" id="page-report">
+    <div id="reportRoot"></div>
   </div>
 
 </div>
@@ -502,6 +554,7 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     document.getElementById('page-' + btn.dataset.page).classList.add('active');
     if (btn.dataset.page === 'fixtures') renderFixturesPage();
+    if (btn.dataset.page === 'report') renderReportPage();
   });
 });
 
@@ -746,12 +799,489 @@ function renderFooter() {
   document.getElementById('simCountLabel').textContent = data.n_simulations.toLocaleString() + '-simulation Monte Carlo projection';
 }
 
+/* ══════════════ PROMOTION REPORT ══════════════
+   Assembled from the JSON by fixed templates and thresholds. No text is
+   invented: every sentence traces to a number in dashboard_data.json. */
+
+const TIER_RULES = [
+  { key: 'favourite', label: 'Promotion favourite', rule: 'top-two chance of 50% or more',                     test: p => p.top2 >= 0.50 },
+  { key: 'contender', label: 'Promotion contender', rule: 'top-two chance of 20% or more',                     test: p => p.top2 >= 0.20 },
+  { key: 'playoff',   label: 'Play-off contender',  rule: 'top-three chance of 20% or more',                   test: p => p.top3 >= 0.20 },
+  { key: 'danger',    label: 'Relegation danger',   rule: 'chance of finishing 16th or lower of 30% or more',  test: p => p.bottom3 >= 0.30 },
+  { key: 'mid',       label: 'Mid-table',           rule: 'none of the thresholds above met',                  test: () => true }
+];
+
+const OUTCOME_LABELS = {
+  promoted: 'Promoted', playoff: 'Play-off place', midtable: 'Mid-table',
+  relegation_playoff: 'Relegation play-off', relegated: 'Relegated'
+};
+
+const pct = v => { const r = Math.round(v * 100); if (v > 0 && r === 0) return '<1%'; if (v < 1 && r === 100) return '>99%'; return r + '%'; };
+const pctH = v => esc(pct(v));
+const ppText = d => d === 0 ? 'unchanged' : `${signed(d)} percentage point${Math.abs(d) === 1 ? '' : 's'}`;
+const signed = v => (v > 0 ? '+' : '') + v;
+const oneDp = v => (Math.round(v * 10) / 10).toFixed(1);
+const twoDp = v => (Math.round(v * 100) / 100).toFixed(2);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+function median(arr) {
+  const s = [...arr].sort((a, b) => a - b);
+  const mid = Math.floor(s.length / 2);
+  return s.length % 2 ? s[mid] : (s[mid - 1] + s[mid]) / 2;
+}
+
+function previousSeasonLabel(label) {
+  const y = parseInt(label.slice(0, 4), 10) - 1;
+  return `${y}/${String(y + 1).slice(-2)}`;
+}
+
+/* Position range covering the middle 80% of simulated finishes. */
+function positionRange(dist) {
+  let cum = 0, lo = null, hi = null;
+  dist.forEach((p, i) => {
+    cum += p;
+    if (lo === null && cum >= 0.10) lo = i + 1;
+    if (hi === null && cum >= 0.90) hi = i + 1;
+  });
+  return [lo || 1, hi || dist.length];
+}
+
+function fiveGameWindows(fixtures, k) {
+  if (fixtures.length <= k) return null;
+  let toughest = null, easiest = null;
+  for (let i = 0; i + k <= fixtures.length; i++) {
+    const slice = fixtures.slice(i, i + k);
+    const expected = slice.reduce((a, f) => a + f.expected_points, 0);
+    const w = { from: slice[0].matchday, to: slice[k - 1].matchday, expected };
+    if (!toughest || expected < toughest.expected) toughest = w;
+    if (!easiest || expected > easiest.expected) easiest = w;
+  }
+  return { toughest, easiest, k };
+}
+
+function buildReportModel(data, club) {
+  const rows = data.predicted_table;
+  const n = rows.length;
+  const row = rows.find(t => t.team === club);
+  const table = [...rows].sort((a, b) =>
+    (b.current_points - a.current_points) || (b.current_gd - a.current_gd) || ((b.current_gf || 0) - (a.current_gf || 0)));
+  const position = table.findIndex(t => t.team === club) + 1;
+  const played = row.matches_played;
+  const dist = row.position_distribution;
+  const probs = {
+    top1: dist[0],
+    top2: dist[0] + dist[1],
+    top3: dist[0] + dist[1] + dist[2],
+    bottom3: dist.slice(n - 3).reduce((a, b) => a + b, 0)
+  };
+  const tier = TIER_RULES.find(r => r.test(probs));
+  const posRange = positionRange(dist);
+
+  /* standing */
+  const second = table[1], third = table[2], sixteenth = table[n - 3];
+  const gap = position <= 2
+    ? { label: 'Cushion over 3rd place', value: row.current_points - third.current_points }
+    : { label: 'Behind 2nd place', value: second.current_points - row.current_points };
+  const aboveDrop = row.current_points - sixteenth.current_points;
+  const currentPpg = played > 0 ? row.current_points / played : 0;
+
+  /* target maths: promotion race for contenders, safety line for everyone else */
+  const focus = ['favourite', 'contender', 'playoff'].includes(tier.key) ? 'promotion' : 'safety';
+  const targets = Object.entries(data.promotion_benchmarks || {}).sort().map(([season, b]) => {
+    if (focus === 'promotion') {
+      return { season, team: b.promoted_2nd.team,
+               points: b.promoted_2nd.final_points !== undefined
+                 ? b.promoted_2nd.final_points
+                 : b.promoted_2nd.trajectory[b.promoted_2nd.trajectory.length - 1].points };
+    }
+    const f = b.last_safe_place;
+    return f ? { season, team: f.team, points: f.final_points } : null;
+  }).filter(Boolean);
+  const fixtures = (data.fixture_difficulty || {})[club] || [];
+  const remainingGames = fixtures.length;
+  const targetPoints = targets.length ? Math.round(median(targets.map(t => t.points))) : null;
+  const needed = targetPoints === null ? null : Math.max(0, targetPoints - row.current_points);
+  const requiredPpg = (needed !== null && remainingGames > 0) ? needed / remainingGames : null;
+  const modelledPpg = remainingGames > 0 ? (row.projected_points.mean - row.current_points) / remainingGames : null;
+
+  /* remaining path */
+  const easy = fixtures.filter(f => f.difficulty <= 2).length;
+  const even = fixtures.filter(f => f.difficulty === 3).length;
+  const hard = fixtures.filter(f => f.difficulty >= 4).length;
+  const homeCount = fixtures.filter(f => f.is_home).length;
+  /* Schedule difficulty = what a league-average club would expect from this club's remaining
+     fixtures (computed in the pipeline). Independent of the club's own strength and results. */
+  const meanSched = team => {
+    const fx = ((data.fixture_difficulty || {})[team] || []).filter(f => f.schedule_ep !== undefined);
+    return fx.length ? fx.reduce((a, f) => a + f.schedule_ep, 0) / fx.length : null;
+  };
+  const schedule = rows.map(t => ({ team: t.team, v: meanSched(t.team) })).filter(x => x.v !== null)
+    .sort((a, b) => a.v - b.v);                                  // lowest expected points = toughest
+  const mine = schedule.find(x => x.team === club);
+  const path = {
+    easy, even, hard, homeCount, awayCount: remainingGames - homeCount,
+    schedEp: mine ? mine.v : null,
+    schedTypical: schedule.length ? schedule.reduce((a, x) => a + x.v, 0) / schedule.length : null,
+    scheduleRank: mine ? schedule.indexOf(mine) + 1 : null, scheduleOf: schedule.length,
+    schedDiffPts: null,
+    windows: fiveGameWindows(fixtures, 5),
+    next: fixtures.slice(0, 5)
+  };
+
+  /* rivals */
+  const others = rows.filter(t => t.team !== club);
+  const contesting = ['favourite', 'contender', 'playoff'].includes(tier.key);
+  const ordered = contesting
+    ? [...others].sort((a, b) => b.promotion_probability - a.promotion_probability)
+    : [...others].sort((a, b) =>
+        Math.abs(a.avg_projected_position - row.avg_projected_position) -
+        Math.abs(b.avg_projected_position - row.avg_projected_position));
+  const rivals = ordered.slice(0, 4).map(t => ({
+    team: t.team, promotion_probability: t.promotion_probability, points: t.current_points,
+    avg_pos: t.avg_projected_position, h2h: fixtures.filter(f => f.opponent === t.team)
+  }));
+
+  /* last season vs now */
+  const ls = (data.last_season_comparison || {})[club];
+  let lastSeason = null;
+  if (ls) {
+    if (ls.in_league_last_season === false) {
+      lastSeason = { absent: true };
+    } else {
+      const g = ls.matches || 0;
+      lastSeason = {
+        absent: false, matches: g, label: previousSeasonLabel(data.current_season),
+        pointsThen: ls.points_then, pointsNow: row.current_points,
+        gfThen: g ? ls.gf_then / g : 0, gaThen: g ? ls.ga_then / g : 0,
+        gfNow: played ? row.current_gf / played : 0, gaNow: played ? row.current_ga / played : 0,
+        finalPos: ls.final_position_last_season, finalPts: ls.final_points_last_season,
+        eloDelta: Math.round(row.elo_rating - row.elo_start_of_season)
+      };
+    }
+  }
+
+  /* historical comparison */
+  const an = data.historical_analogues || { matches_played: 0, rows: [] };
+  let sel = an.rows.filter(r => Math.abs(r.points_after_n - row.current_points) <= 1);
+  let band = 1;
+  if (sel.length < 3) { sel = an.rows.filter(r => Math.abs(r.points_after_n - row.current_points) <= 2); band = 2; }
+  let closest = false;
+  if (sel.length === 0 && an.rows.length) {
+    sel = [...an.rows].sort((a, b) =>
+      Math.abs(a.points_after_n - row.current_points) - Math.abs(b.points_after_n - row.current_points) ||
+      b.points_after_n - a.points_after_n).slice(0, 3);
+    closest = true; band = null;
+  }
+  sel = [...sel].sort((a, b) => a.final_position - b.final_position);
+  const counts = {};
+  sel.forEach(r => { counts[r.outcome] = (counts[r.outcome] || 0) + 1; });
+  const analogues = { n: an.matches_played, rows: sel, band, closest, counts };
+
+  /* how the path has changed */
+  const hist = (data.history || []).filter(s => s.teams && s.teams[club]);
+  const series = hist.map(s => ({
+    matchday: s.matchday, promo: s.teams[club].promotion_probability,
+    title: s.teams[club].champion_probability, points: s.teams[club].points
+  }));
+  let change = null;
+  if (hist.length >= 2) {
+    const prev = hist[hist.length - 2], last = hist[hist.length - 1];
+    const movers = Object.keys(last.teams).filter(t => t !== club && prev.teams[t])
+      .map(t => ({ team: t, delta: last.teams[t].promotion_probability - prev.teams[t].promotion_probability }))
+      .sort((a, b) => b.delta - a.delta);
+    const results = (data.recent_results || {})[club] || [];
+    change = {
+      fromMd: prev.matchday, toMd: last.matchday,
+      from: prev.teams[club].promotion_probability, to: last.teams[club].promotion_probability,
+      result: results.find(x => x.matchday === last.matchday) || null,
+      risers: movers.filter(m => m.delta > 0.005).slice(0, 2),
+      fallers: movers.filter(m => m.delta < -0.005).slice(-2).reverse()
+    };
+  }
+
+  const form = (data.recent_results || {})[club] || [];
+
+  if (path.schedEp !== null && path.schedTypical !== null) {
+    path.schedDiffPts = (path.schedEp - path.schedTypical) * remainingGames;   // + = easier than typical
+  }
+
+  const model = {
+    club, row, n, position, played, probs, tier, focus, posRange, gap, aboveDrop, currentPpg,
+    targets, targetPoints, needed, requiredPpg, modelledPpg, remainingGames,
+    path, rivals, rivalMode: contesting ? 'contest' : 'nearest',
+    lastSeason, analogues, history: { series, change }, form, nSim: data.n_simulations
+  };
+  model.narrative = buildNarrative(model);
+  return model;
+}
+
+function buildNarrative(m) {
+  const r = m.row, s = [];
+  s.push(`${m.club} are ${ordinal(m.position)} on ${r.current_points} points after ${m.played} games ` +
+         `(${r.wins}-${r.draws}-${r.losses}, goal difference ${signed(r.current_gd)}).`);
+
+  s.push(`In ${pct(m.probs.top2)} of ${m.nSim.toLocaleString()} simulated seasons they finish in the top two ` +
+         `(${pct(m.probs.top1)} as champions) and in ${pct(m.probs.top3)} the top three. ` +
+         `80% of simulations end between ${ordinal(m.posRange[0])} and ${ordinal(m.posRange[1])}.`);
+
+  if (m.targetPoints !== null) {
+    const ts = m.targets.map(t => t.points);
+    const what = m.focus === 'promotion'
+      ? 'Second place, the automatic-promotion cut-off,'
+      : '15th place, the last position clear of the relegation play-off,';
+    let line = `Projected final total: about ${Math.round(r.projected_points.mean)} points ` +
+               `(80% range ${r.projected_points.p10}–${r.projected_points.p90}). ` +
+               `${what} finished on ${Math.min(...ts)}–${Math.max(...ts)} points ` +
+               `over the last ${m.targets.length} seasons (median ${m.targetPoints}). `;
+    if (m.needed === 0) {
+      line += `${m.club} already have ${r.current_points}, at or above that median.`;
+    } else if (m.remainingGames > 0) {
+      line += `Matching the median means ${m.needed} more points from ${m.remainingGames} games: ` +
+              `${twoDp(m.requiredPpg)} per game against ${twoDp(m.currentPpg)} so far.`;
+    }
+    s.push(line);
+  }
+
+  if (m.remainingGames > 0) {
+    let line = `Remaining schedule: ${m.path.easy} favourable, ${m.path.even} even and ${m.path.hard} difficult fixtures ` +
+               `(${m.path.homeCount} home, ${m.path.awayCount} away).`;
+    if (m.path.scheduleRank && m.path.schedDiffPts !== null) {
+      const d = m.path.schedDiffPts;
+      const desc = Math.abs(d) < 2 ? 'close to typical' : (d < 0 ? 'tougher than typical' : 'easier than typical');
+      line += ` Schedule strength is ${desc}: an average club would take ${twoDp(m.path.schedEp)} points per game ` +
+              `from these fixtures against ${twoDp(m.path.schedTypical)} across the league, a difference of ` +
+              `${oneDp(Math.abs(d))} points over ${m.remainingGames} games.`;
+    }
+    s.push(line);
+  }
+
+  const c = m.history.change;
+  if (c) {
+    const dpp = Math.round((c.to - c.from) * 100);
+    s.push(dpp === 0
+      ? `Since matchday ${c.fromMd}, their promotion chance is essentially unchanged at ${pct(c.to)}.`
+      : `Since matchday ${c.fromMd}, their promotion chance moved from ${pct(c.from)} to ${pct(c.to)} (${ppText(dpp)}).`);
+  }
+  return s;
+}
+
+function renderReportHtml(m, data) {
+  const r = m.row;
+  const kv = (label, value) => `<div class="kv"><span>${label}</span><strong>${value}</strong></div>`;
+  const generated = new Date(data.generated_at).toLocaleString('en-GB', { dateStyle: 'medium', timeStyle: 'short' });
+  const muted = t => `<span style="color:var(--text-muted); font-weight:400;">${t}</span>`;
+
+  /* 1 — standing */
+  const standing = [
+    kv('League position', `${ordinal(m.position)} of ${m.n}`),
+    kv('Points (per game)', `${r.current_points} ${muted('(' + twoDp(m.currentPpg) + ')')}`),
+    kv('Record', `${r.wins}-${r.draws}-${r.losses}`),
+    kv('Goals for / against', `${r.current_gf} / ${r.current_ga} ${muted('(' + signed(r.current_gd) + ')')}`),
+    kv(m.gap.label, `${m.gap.value} pts`),
+    kv('Points above 16th (relegation play-off place)', `${signed(m.aboveDrop)} pts`)
+  ].join('');
+
+  /* 2 — promotion math */
+  const isPromo = m.focus === 'promotion';
+  let math = '<p class="sub">Not enough completed seasons to set a target.</p>';
+  if (m.targetPoints !== null) {
+    const targetRows = m.targets.map(t =>
+      `<tr><td>${esc(t.season)}</td><td>${esc(t.team)}</td><td class="num">${t.points}</td></tr>`).join('');
+    math = [
+      kv('Projected final points', `${Math.round(r.projected_points.mean)} ${muted('(80% range ' + r.projected_points.p10 + '–' + r.projected_points.p90 + ')')}`),
+      kv(`Typical ${isPromo ? '2nd' : '15th'}-place total (median of ${m.targets.length} seasons)`, m.targetPoints),
+      kv('Still needed to match it', m.needed === 0 ? 'Already there' : `${m.needed} pts`),
+      m.remainingGames > 0 ? kv('Required points per game from here', m.needed === 0 ? '–' : twoDp(m.requiredPpg)) : '',
+      kv('Points per game so far', twoDp(m.currentPpg)),
+      m.modelledPpg !== null ? kv('Model expects from remaining games', `${twoDp(m.modelledPpg)} per game`) : '',
+      `<table class="mini-table" style="margin-top:10px;"><thead><tr><th>Season</th><th>${isPromo ? '2nd' : '15th'} place</th><th class="num">Points</th></tr></thead><tbody>${targetRows}</tbody></table>`,
+      isPromo ? '<p class="report-note">2nd place is the cut-off for automatic promotion; 3rd place enters a promotion play-off.</p>'
+              : '<p class="report-note">15th place is the last position clear of the relegation play-off; 16th enters it and 17th and 18th are relegated.</p>'
+    ].join('');
+  }
+
+  /* 3 — remaining path */
+  let pathHtml = '<p class="sub">No fixtures remaining.</p>';
+  if (m.remainingGames > 0) {
+    const p = m.path;
+    const nextRows = p.next.map(f =>
+      `<tr><td>MD ${f.matchday}</td><td>${esc(f.opponent)} (${f.is_home ? 'H' : 'A'})</td>` +
+      `<td class="num">${pctH(f.win_probability)}</td>` +
+      `<td><span class="diff-dot" style="background:${DIFF_COLORS[f.difficulty]}"></span>${DIFF_LABELS[f.difficulty]}</td></tr>`).join('');
+    const win = p.windows;
+    pathHtml = [
+      kv('Games remaining', `${m.remainingGames} ${muted('(' + p.homeCount + ' home, ' + p.awayCount + ' away)')}`),
+      kv('Fixtures by difficulty', `${p.easy} favourable · ${p.even} even · ${p.hard} difficult`),
+      p.scheduleRank && p.schedDiffPts !== null ? kv('Schedule difficulty', `${twoDp(p.schedEp)} vs ${twoDp(p.schedTypical)} typical ${muted('(' + oneDp(Math.abs(p.schedDiffPts)) + ' pts ' + (p.schedDiffPts < 0 ? 'tougher' : 'easier') + ' over the run-in; ' + ordinal(p.scheduleRank) + '-toughest of ' + p.scheduleOf + ')')}`) : '',
+      win ? kv(`Toughest ${win.k}-game stretch`, `MD ${win.toughest.from}–${win.toughest.to} ${muted('(' + oneDp(win.toughest.expected) + ' of ' + win.k * 3 + ' expected pts)')}`) : '',
+      win ? kv(`Easiest ${win.k}-game stretch`, `MD ${win.easiest.from}–${win.easiest.to} ${muted('(' + oneDp(win.easiest.expected) + ' of ' + win.k * 3 + ' expected pts)')}`) : '',
+      `<table class="mini-table" style="margin-top:10px;"><thead><tr><th>Matchday</th><th>Next fixtures</th><th class="num">Win</th><th>Difficulty</th></tr></thead><tbody>${nextRows}</tbody></table>`
+    ].join('');
+  }
+
+  /* 4 — rivals */
+  const rivalRows = m.rivals.map(v => {
+    const h2h = v.h2h.length
+      ? v.h2h.map(f => `MD ${f.matchday} ${f.is_home ? 'home' : 'away'} ${muted('(' + pctH(f.win_probability) + ' win)')}`).join('<br>')
+      : muted('none left');
+    return `<tr><td>${esc(v.team)}</td><td class="num">${pctH(v.promotion_probability)}</td>` +
+           `<td class="num">${v.points}</td><td>${h2h}</td></tr>`;
+  }).join('');
+  const rivalSub = m.rivalMode === 'contest'
+    ? 'The four other clubs most likely to finish in the top two, and the head-to-head games still to play against them.'
+    : 'The four clubs whose projected finish is closest to this club, and the head-to-head games still to play against them.';
+
+  /* 5 — last season vs now */
+  let lastHtml;
+  const L = m.lastSeason;
+  if (!L) {
+    lastHtml = '<p class="sub">No last-season data available.</p>';
+  } else if (L.absent) {
+    lastHtml = '<p class="sub">Not in the 2. Bundesliga last season, so there is no like-for-like comparison.</p>';
+  } else {
+    lastHtml = [
+      `<p class="sub">Same number of games (${L.matches}) in ${esc(L.label)} versus now.</p>`,
+      kv('Points', `${L.pointsThen} → ${L.pointsNow} ${muted('(' + signed(L.pointsNow - L.pointsThen) + ')')}`),
+      kv('Goals scored per game', `${twoDp(L.gfThen)} → ${twoDp(L.gfNow)}`),
+      kv('Goals conceded per game', `${twoDp(L.gaThen)} → ${twoDp(L.gaNow)}`),
+      kv(`Finished ${esc(L.label)}`, `${ordinal(L.finalPos)} with ${L.finalPts} points`),
+      kv('Elo change since season start', `${signed(L.eloDelta)} ${muted('(display only, not a model input)')}`)
+    ].join('');
+  }
+
+  /* 6 — historical comparison */
+  const A = m.analogues;
+  let analogueHtml = '<p class="sub">Not enough history yet.</p>';
+  if (A.rows.length) {
+    const intro = A.closest
+      ? `No club in the completed seasons had a comparable total after ${A.n} games; the closest are shown.`
+      : `Clubs within ${A.band} point${A.band > 1 ? 's' : ''} of ${r.current_points} after ${A.n} games in the completed seasons.`;
+    const summary = Object.keys(A.counts).map(k => `${A.counts[k]} ${OUTCOME_LABELS[k].toLowerCase()}`).join(', ');
+    const aRows = A.rows.slice(0, 8).map(x =>
+      `<tr><td>${esc(x.season)}</td><td>${esc(x.team)}</td><td class="num">${x.points_after_n}</td>` +
+      `<td class="num">${ordinal(x.final_position)}</td><td>${OUTCOME_LABELS[x.outcome]}</td></tr>`).join('');
+    analogueHtml = [
+      `<p class="sub">${intro}</p>`,
+      kv(`Outcomes (${A.rows.length} clubs)`, esc(summary)),
+      `<table class="mini-table" style="margin-top:10px;"><thead><tr><th>Season</th><th>Club</th><th class="num">Pts</th><th class="num">Finish</th><th>Outcome</th></tr></thead><tbody>${aRows}</tbody></table>`,
+      '<p class="report-note">A handful of club-seasons is context, not a forecast.</p>'
+    ].join('');
+  }
+
+  /* 7 — how the path has changed */
+  const H = m.history;
+  let historyHtml;
+  if (H.series.length >= 2) {
+    const c = H.change;
+    const dpp = Math.round((c.to - c.from) * 100);
+    const fmtMovers = list => list.map(x => `${esc(x.club || x.team)} (${signed(Math.round(x.delta * 100))})`).join(', ');
+    const resultText = c.result
+      ? `Result: ${c.result.result} ${c.result.gf}–${c.result.ga} ${c.result.is_home ? 'vs' : 'at'} ${esc(c.result.opponent)}. `
+      : '';
+    historyHtml = [
+      '<p class="sub">Promotion and title probability after each completed matchday, each recomputed from results through that matchday.</p>',
+      '<div class="report-history-holder"><canvas id="reportHistoryChart" aria-label="Promotion probability by matchday"></canvas></div>',
+      `<p class="report-note">${resultText}Matchday ${c.fromMd} to ${c.toMd}: promotion chance ${pctH(c.from)} → ${pctH(c.to)} (${ppText(dpp)}). ` +
+      (c.risers.length ? `Biggest risers among other clubs: ${fmtMovers(c.risers)}. ` : '') +
+      (c.fallers.length ? `Biggest fallers: ${fmtMovers(c.fallers)}.` : '') + '</p>'
+    ].join('');
+  } else {
+    historyHtml = '<p class="sub">History builds up as matchdays are completed; at least two are needed to show a trend.</p>';
+  }
+
+  /* 8 — recent form */
+  const formHtml = m.form.length
+    ? `<div style="margin-bottom:10px;">${m.form.map(f => `<span class="chip ${f.result}">${f.result}</span>`).join(' ')}</div>` +
+      `<table class="mini-table"><tbody>${m.form.slice().reverse().map(f =>
+        `<tr><td>MD ${f.matchday}</td><td>${f.is_home ? 'vs' : 'at'} ${esc(f.opponent)}</td>` +
+        `<td class="num">${f.gf}–${f.ga}</td><td><span class="chip ${f.result}">${f.result}</span></td></tr>`).join('')}</tbody></table>`
+    : '<p class="sub">No results yet this season.</p>';
+
+  /* method */
+  const tierList = TIER_RULES.map(t => `<li><strong>${t.label}</strong>: ${t.rule}</li>`).join('');
+  const method = `
+    <p>${esc(data.methodology_note)}</p>
+    <p>${m.nSim.toLocaleString()} simulated seasons, data updated ${esc(generated)} UTC. This report is assembled from fixed templates and the thresholds below; no sentence is written by an AI.</p>
+    <p>Fixture ratings use the club's own win probability in that match: favourable is 42% or more, even is 30–42%, difficult is below 30%.</p>
+    <p>Verdict thresholds (checked in this order):</p><ul>${tierList}</ul>
+    <p>Probabilities describe what a simple goals-based model implies, not what will happen. They do not know about injuries, transfers or tactics.</p>`;
+
+  const summary = m.narrative.map(s => `<p>${esc(s)}</p>`).join('');
+
+  return `
+    <div class="report-head">
+      <div class="report-title">${logoSlotHtml(m.club, data.team_colors, 52)}<span>${esc(m.club)}</span></div>
+      <button class="report-print" onclick="window.print()">Print / save as PDF</button>
+    </div>
+    <div class="report-meta">Promotion report · ${esc(data.current_season)} · after ${m.played} games</div>
+    <div class="tier-row"><span class="tier-badge tier-${m.tier.key}">${m.tier.label}</span><span class="tier-rule">Rule: ${m.tier.rule}</span></div>
+    <div class="report-summary">${summary}</div>
+    <div class="report-grid">
+      <div class="report-card"><h3>Where they stand</h3><p class="sub">Current table position and gaps.</p>${standing}</div>
+      <div class="report-card"><h3>${isPromo ? 'Promotion maths' : 'Safety maths'}</h3><p class="sub">${isPromo ? 'What the automatic promotion places have needed, and what it takes from here.' : 'What the safe league positions have needed, and what it takes from here.'}</p>${math}</div>
+      <div class="report-card"><h3>Remaining path</h3><p class="sub">Fixtures still to play, rated by the model.</p>${pathHtml}</div>
+      <div class="report-card"><h3>Rivals</h3><p class="sub">${rivalSub}</p>
+        <table class="mini-table"><thead><tr><th>Club</th><th class="num">Top 2</th><th class="num">Pts</th><th>Games left</th></tr></thead><tbody>${rivalRows}</tbody></table></div>
+      <div class="report-card"><h3>Last season vs now</h3>${lastHtml}</div>
+      <div class="report-card"><h3>Historical comparison</h3>${analogueHtml}</div>
+      <div class="report-card wide"><h3>How the path has changed</h3>${historyHtml}</div>
+      <div class="report-card"><h3>Recent form</h3><p class="sub">Last five results.</p>${formHtml}</div>
+      <div class="report-card"><h3>Method and limits</h3><div class="report-method">${method}</div></div>
+    </div>`;
+}
+
+let reportChart = null;
+
+function drawReportChart(m, data) {
+  if (reportChart) { reportChart.destroy(); reportChart = null; }
+  const canvas = document.getElementById('reportHistoryChart');
+  if (!canvas || m.history.series.length < 2) return;
+  const primary = (data.team_colors[m.club] || {}).primary || '#4C8DFF';
+  const s = m.history.series;
+  reportChart = new Chart(canvas, {
+    type: 'line',
+    data: {
+      labels: s.map(x => 'MD ' + x.matchday),
+      datasets: [
+        { label: 'Promotion (top 2)', data: s.map(x => Math.round(x.promo * 1000) / 10), borderColor: primary,
+          backgroundColor: hexToRgba(primary, 0.12), fill: true, borderWidth: 3, pointRadius: 3, tension: 0.25 },
+        { label: 'Title', data: s.map(x => Math.round(x.title * 1000) / 10), borderColor: '#8B949E',
+          borderDash: [5, 3], borderWidth: 1.5, pointRadius: 2, tension: 0.25 }
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: true, labels: { color: '#8B949E', boxWidth: 12 } },
+                 tooltip: { callbacks: { label: c => `${c.dataset.label}: ${c.parsed.y}%` } } },
+      scales: {
+        y: { min: 0, max: 100, ticks: { color: '#8B949E', callback: v => v + '%' }, grid: { color: 'rgba(139,148,158,0.2)' } },
+        x: { ticks: { color: '#8B949E' }, grid: { display: false } }
+      }
+    }
+  });
+}
+
+function renderReportPage() {
+  const data = state.data;
+  if (!data || !state.selectedClub) return;
+  if (!data.predicted_table.every(t => Array.isArray(t.position_distribution))) {
+    document.getElementById('reportRoot').innerHTML =
+      '<div class="report-card"><h3>Report data not available yet</h3><p class="sub">The daily data update has not produced the report fields yet. Run the "Update Dashboard Data" workflow once and reload this page.</p></div>';
+    return;
+  }
+  const m = buildReportModel(data, state.selectedClub);
+  document.getElementById('reportRoot').innerHTML = renderReportHtml(m, data);
+  hydrateLogoSlots();
+  drawReportChart(m, data);
+}
+
 function renderAll() {
   renderHero();
   renderStatsTiles();
   renderChart();
   renderTables();
   hydrateLogoSlots();
+  if (document.getElementById('page-report').classList.contains('active')) renderReportPage();
 }
 
 (async function init() {
