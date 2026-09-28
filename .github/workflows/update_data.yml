@@ -39,6 +39,9 @@ jobs:
           # Optional: link to a published Google Sheet CSV of conceded goals (Repository variable).
           # If unset, the pipeline reads data/conceded_goals.csv from the repository instead.
           CONCEDED_GOALS_CSV_URL: ${{ vars.CONCEDED_GOALS_CSV_URL }}
+          PLAYERS_SQUADS_CSV_URL: ${{ vars.PLAYERS_SQUADS_CSV_URL }}
+          PLAYERS_ATTRIBUTES_CSV_URL: ${{ vars.PLAYERS_ATTRIBUTES_CSV_URL }}
+          PLAYERS_MINUTES_CSV_URL: ${{ vars.PLAYERS_MINUTES_CSV_URL }}
         run: python update_data.py
 
       - name: Commit and push the updated data file
@@ -46,6 +49,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/dashboard_data.json data/history.json
+          if [ -f data/players.json ]; then git add data/players.json; fi
           git diff --quiet --cached || git commit -m "Automated data refresh"
           git pull --rebase origin main
           git push
