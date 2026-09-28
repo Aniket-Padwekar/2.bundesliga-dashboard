@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-28T14:56:05.619983+00:00",
+  "generated_at": "2026-09-28T20:37:35.749842+00:00",
   "current_season": "2026/27",
   "model_version": "v2",
   "n_simulations": 10000,
@@ -26658,6 +26658,270 @@
           "penalty_area_share": 0.75,
           "penalties": 1,
           "avg_distance_m": 13.2
+        }
+      }
+    }
+  },
+  "season_ratings": {
+    "2025/26": {
+      "league_avg": 1.466,
+      "teams": {
+        "FC Schalke 04": {
+          "games": 34,
+          "gf": 50,
+          "ga": 31,
+          "attack": 1.003,
+          "defense": 0.622
+        },
+        "Hertha BSC": {
+          "games": 34,
+          "gf": 47,
+          "ga": 44,
+          "attack": 0.943,
+          "defense": 0.883
+        },
+        "SV 07 Elversberg": {
+          "games": 34,
+          "gf": 64,
+          "ga": 39,
+          "attack": 1.284,
+          "defense": 0.783
+        },
+        "1. FC Nürnberg": {
+          "games": 34,
+          "gf": 47,
+          "ga": 45,
+          "attack": 0.943,
+          "defense": 0.903
+        },
+        "SC Paderborn 07": {
+          "games": 34,
+          "gf": 59,
+          "ga": 45,
+          "attack": 1.184,
+          "defense": 0.903
+        },
+        "Holstein Kiel": {
+          "games": 34,
+          "gf": 44,
+          "ga": 48,
+          "attack": 0.883,
+          "defense": 0.963
+        },
+        "Karlsruher SC": {
+          "games": 34,
+          "gf": 53,
+          "ga": 64,
+          "attack": 1.064,
+          "defense": 1.284
+        },
+        "Preußen Münster": {
+          "games": 34,
+          "gf": 38,
+          "ga": 61,
+          "attack": 0.763,
+          "defense": 1.224
+        },
+        "SV Darmstadt 98": {
+          "games": 34,
+          "gf": 57,
+          "ga": 45,
+          "attack": 1.144,
+          "defense": 0.903
+        },
+        "VfL Bochum": {
+          "games": 34,
+          "gf": 49,
+          "ga": 47,
+          "attack": 0.983,
+          "defense": 0.943
+        },
+        "DSC Arminia Bielefeld": {
+          "games": 34,
+          "gf": 53,
+          "ga": 51,
+          "attack": 1.064,
+          "defense": 1.023
+        },
+        "Fortuna Düsseldorf": {
+          "games": 34,
+          "gf": 33,
+          "ga": 53,
+          "attack": 0.662,
+          "defense": 1.064
+        },
+        "1. FC Magdeburg": {
+          "games": 34,
+          "gf": 52,
+          "ga": 58,
+          "attack": 1.043,
+          "defense": 1.164
+        },
+        "Eintracht Braunschweig": {
+          "games": 34,
+          "gf": 36,
+          "ga": 54,
+          "attack": 0.722,
+          "defense": 1.084
+        },
+        "Hannover 96": {
+          "games": 34,
+          "gf": 60,
+          "ga": 44,
+          "attack": 1.204,
+          "defense": 0.883
+        },
+        "1. FC Kaiserslautern": {
+          "games": 34,
+          "gf": 52,
+          "ga": 47,
+          "attack": 1.043,
+          "defense": 0.943
+        },
+        "SpVgg Greuther Fürth": {
+          "games": 34,
+          "gf": 49,
+          "ga": 68,
+          "attack": 0.983,
+          "defense": 1.365
+        },
+        "Dynamo Dresden": {
+          "games": 34,
+          "gf": 54,
+          "ga": 53,
+          "attack": 1.084,
+          "defense": 1.064
+        }
+      }
+    },
+    "2026/27": {
+      "league_avg": 1.657,
+      "teams": {
+        "VfL Bochum": {
+          "games": 6,
+          "gf": 5,
+          "ga": 6,
+          "attack": 0.503,
+          "defense": 0.603
+        },
+        "Hertha BSC": {
+          "games": 6,
+          "gf": 17,
+          "ga": 7,
+          "attack": 1.709,
+          "defense": 0.704
+        },
+        "1. FC Heidenheim 1846": {
+          "games": 6,
+          "gf": 14,
+          "ga": 12,
+          "attack": 1.408,
+          "defense": 1.207
+        },
+        "VfL Osnabrück": {
+          "games": 6,
+          "gf": 9,
+          "ga": 12,
+          "attack": 0.905,
+          "defense": 1.207
+        },
+        "SV Darmstadt 98": {
+          "games": 6,
+          "gf": 5,
+          "ga": 13,
+          "attack": 0.503,
+          "defense": 1.307
+        },
+        "Holstein Kiel": {
+          "games": 6,
+          "gf": 7,
+          "ga": 10,
+          "attack": 0.704,
+          "defense": 1.006
+        },
+        "Karlsruher SC": {
+          "games": 6,
+          "gf": 6,
+          "ga": 12,
+          "attack": 0.603,
+          "defense": 1.207
+        },
+        "DSC Arminia Bielefeld": {
+          "games": 6,
+          "gf": 10,
+          "ga": 12,
+          "attack": 1.006,
+          "defense": 1.207
+        },
+        "1. FC Magdeburg": {
+          "games": 6,
+          "gf": 11,
+          "ga": 9,
+          "attack": 1.106,
+          "defense": 0.905
+        },
+        "Eintracht Braunschweig": {
+          "games": 6,
+          "gf": 12,
+          "ga": 13,
+          "attack": 1.207,
+          "defense": 1.307
+        },
+        "VfL Wolfsburg": {
+          "games": 6,
+          "gf": 15,
+          "ga": 8,
+          "attack": 1.508,
+          "defense": 0.804
+        },
+        "1. FC Kaiserslautern": {
+          "games": 6,
+          "gf": 6,
+          "ga": 4,
+          "attack": 0.603,
+          "defense": 0.402
+        },
+        "FC St. Pauli": {
+          "games": 6,
+          "gf": 8,
+          "ga": 8,
+          "attack": 0.804,
+          "defense": 0.804
+        },
+        "SpVgg Greuther Fürth": {
+          "games": 6,
+          "gf": 9,
+          "ga": 11,
+          "attack": 0.905,
+          "defense": 1.106
+        },
+        "1. FC Nürnberg": {
+          "games": 6,
+          "gf": 16,
+          "ga": 6,
+          "attack": 1.609,
+          "defense": 0.603
+        },
+        "Dynamo Dresden": {
+          "games": 6,
+          "gf": 8,
+          "ga": 14,
+          "attack": 0.804,
+          "defense": 1.408
+        },
+        "Energie Cottbus": {
+          "games": 6,
+          "gf": 14,
+          "ga": 13,
+          "attack": 1.408,
+          "defense": 1.307
+        },
+        "Hannover 96": {
+          "games": 6,
+          "gf": 7,
+          "ga": 9,
+          "attack": 0.704,
+          "defense": 0.905
         }
       }
     }
