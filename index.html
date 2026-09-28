@@ -228,7 +228,10 @@
   /* ── WEAK AREAS + SHOT MAP ── */
   .shots-layout { display: grid; grid-template-columns: 1.35fr 1fr; gap: 24px; align-items: start; }
   @media (max-width: 900px) { .shots-layout { grid-template-columns: 1fr; } }
-  .shots-toggle { margin-bottom: 10px; display: inline-flex; }
+  .shots-toggle { margin-bottom: 12px; display: inline-flex; }
+  .shots-legend { display: flex; flex-wrap: wrap; gap: 8px 20px; padding-top: 12px; font-size: 13px; font-weight: 700; color: var(--text); }
+  .lg-dot { display: inline-block; width: 11px; height: 11px; border-radius: 50%; margin-right: 7px; vertical-align: -1px; }
+  .lg-diamond { display: inline-block; width: 9px; height: 9px; transform: rotate(45deg); margin-right: 9px; vertical-align: 0; }
 
   /* ── RECRUITMENT ── */
   .budget-panel { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin: 4px 0 8px; }
@@ -661,8 +664,8 @@ function renderStatsTiles() {
   const data = state.data;
   const row = data.predicted_table.find(t => t.team === state.selectedClub);
   const tiles = [
-    { label: 'Attack rating · 1.00 = avg', value: row.attack_rating.toFixed(2) },
-    { label: 'Defense rating · lower = stronger', value: row.defense_rating.toFixed(2) },
+    { label: 'Model attack rating (prediction input) · 1.00 = avg', value: row.attack_rating.toFixed(2) },
+    { label: 'Model defense rating (prediction input) · lower = stronger', value: row.defense_rating.toFixed(2) },
     { label: 'Avg. projected finish', value: row.avg_projected_position.toFixed(1) },
     { label: 'Simulations run', value: data.n_simulations.toLocaleString() },
   ];
@@ -1053,7 +1056,7 @@ function buildReportModel(data, club) {
     lastSeason, analogues, history: { series, change }, form, nSim: data.n_simulations
   };
   const cg = (data.conceded_goals || {})[club] || {};
-  model.units = teamUnitAssessment(data, club);
+  model.units = teamUnitAssessment(data, club, state.weakView || 'both');
   model.conceded = { last: cg[previousSeasonLabel(data.current_season)] || null, now: cg[data.current_season] || null };
   model.pitch = data.pitch || DEFAULT_PITCH;
   model.narrative = buildNarrative(model);
@@ -1323,30 +1326,78 @@ function renderReportPage() {
 }
 
 /* ══════════════ WEAK AREAS + CONCEDED-GOAL MAP ══════════════
-   Team-level units first (attack vs defence ratings), then where every goal
-   against was shot from. Both feed the Recruitment tab's positional analysis. */
+   One season toggle (Both / This season / Last season) drives both the attack/defence ranks and the
+   shot map. Ranks come from each season's own goals record; "Both" blends the two seasons weighted by
+   games played. The same unit assessment feeds the Recruitment tab's cross-check. */
 
 const SET_PIECE_SITUATIONS = ['corner', 'set-piece', 'throw-in-set-piece', 'free-kick'];
 const DEFAULT_PITCH = { x_m_per_unit: 0.9565, y_m_per_unit: 0.68 };
 
-/* Where does the club rank in the league on each unit? Attack: higher rating is
-   better. Defence: lower rating is better. Ratings pool last season and this
-   season so far, so early in a season they mostly reflect last season. */
-function teamUnitAssessment(data, club) {
+/* ── colour helpers: last season is drawn in a shade of the club colour ── */
+function hexToRgbArr(hex) {
+  const h = hex.replace('#', '');
+  const n = parseInt(h.length === 3 ? h.split('').map(c => c + c).join('') : h, 16);
+  return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
+}
+function relLuminance(hex) {
+  const [r, g, b] = hexToRgbArr(hex).map(v => { v /= 255; return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); });
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+}
+/* A lighter shade of the club colour; a darker one if the colour is already light (yellow, for example). */
+function seasonShade(hex) {
+  const target = relLuminance(hex) >= 0.4 ? 0 : 255, t = 0.5;
+  return '#' + hexToRgbArr(hex).map(v => Math.round(v * (1 - t) + target * t).toString(16).padStart(2, '0')).join('');
+}
+
+/* ── attack / defence by season view ──
+   Attack = goals scored per game divided by that season's league average per team per game
+   (1.00 = average). Defence = goals conceded the same way (lower is better). Ranks are among the
+   clubs in the pool: every club in that season for "Last season", otherwise the current 18.
+   "Both" = each club's ratings for the two seasons, weighted by games played in each. */
+function teamUnitAssessment(data, club, view) {
+  view = view || 'both';
+  const cur = data.current_season, prev = previousSeasonLabel(cur);
+  const sr = data.season_ratings;
+  if (!sr) return legacyUnitAssessment(data, club);            // older data files carry no per-season records
+  const seasons = view === 'now' ? [cur] : view === 'last' ? [prev] : [prev, cur];
+  const pool = view === 'last' ? Object.keys((sr[prev] || { teams: {} }).teams) : data.predicted_table.map(t => t.team);
+  const blend = team => {
+    let w = 0, a = 0, d = 0, gf = 0, ga = 0;
+    seasons.forEach(s => {
+      const r = sr[s] && sr[s].teams[team];
+      if (r && r.games > 0) { w += r.games; a += r.attack * r.games; d += r.defense * r.games; gf += r.gf; ga += r.ga; }
+    });
+    return w ? { games: w, attack: a / w, defense: d / w, gfpg: gf / w, gapg: ga / w } : null;
+  };
+  const rated = pool.map(t => ({ team: t, r: blend(t) })).filter(x => x.r);
+  const mine = rated.find(x => x.team === club);
+  if (!mine) return { available: false, view, n: rated.length, seasons };
+  const byName = (a, b) => a.team.localeCompare(b.team);
+  const attackRank = [...rated].sort((a, b) => (b.r.attack - a.r.attack) || byName(a, b)).findIndex(x => x.team === club) + 1;
+  const defenseRank = [...rated].sort((a, b) => (a.r.defense - b.r.defense) || byName(a, b)).findIndex(x => x.team === club) + 1;
+  const diff = attackRank - defenseRank;                       // positive: attack ranks worse than defence
+  const weaker = Math.abs(diff) <= 2 ? 'balanced' : (diff > 0 ? 'attack' : 'defence');
+  return { available: true, view, n: rated.length, games: mine.r.games, attackRank, defenseRank,
+           attackRating: mine.r.attack, defenseRating: mine.r.defense, gfpg: mine.r.gfpg, gapg: mine.r.gapg, weaker, seasons };
+}
+
+function legacyUnitAssessment(data, club) {
   const rows = data.predicted_table;
   const row = rows.find(t => t.team === club);
   const attackRank = [...rows].sort((a, b) => b.attack_rating - a.attack_rating).findIndex(t => t.team === club) + 1;
   const defenseRank = [...rows].sort((a, b) => a.defense_rating - b.defense_rating).findIndex(t => t.team === club) + 1;
-  const diff = attackRank - defenseRank;                       // positive: attack ranks worse
-  const weaker = Math.abs(diff) <= 2 ? 'balanced' : (diff > 0 ? 'attack' : 'defence');
-  return { attackRank, defenseRank, attackRating: row.attack_rating, defenseRating: row.defense_rating,
-           weaker, n: rows.length };
+  const diff = attackRank - defenseRank;
+  return { available: true, legacy: true, view: 'both', n: rows.length, attackRank, defenseRank,
+           attackRating: row.attack_rating, defenseRating: row.defense_rating, gfpg: null, gapg: null,
+           weaker: Math.abs(diff) <= 2 ? 'balanced' : (diff > 0 ? 'attack' : 'defence'), seasons: [] };
 }
 
+/* ── the map ── */
 function concededMapSvg(views, pitch, accent) {
   const S = 10;                                                // pixels per metre; drawn to true proportions
   const px = g => g.y * pitch.y_m_per_unit * S;                // across the pitch
   const py = g => 400 - g.x * pitch.x_m_per_unit * S;          // distance from the goal line (bottom)
+  const shade = seasonShade(accent);
   const line = 'stroke="#8B949E" stroke-width="1.5" fill="none" opacity="0.55"';
   let svg = `<svg viewBox="0 0 680 424" width="100%" role="img" aria-label="Map of goals conceded, by shot location" style="max-width:680px; display:block;">`;
   svg += '<rect x="0" y="0" width="680" height="400" fill="rgba(46,125,70,0.06)"/>';
@@ -1360,22 +1411,32 @@ function concededMapSvg(views, pitch, accent) {
   views.forEach(v => v.goals.forEach(g => {
     const cx = Math.round(px(g) * 10) / 10, cy = Math.round(py(g) * 10) / 10;
     const isSet = SET_PIECE_SITUATIONS.includes(g.situation);
-    const fill = v.key === 'now' ? accent : 'rgba(139,148,158,0.55)';
-    const stroke = v.key === 'now' ? '#FFFFFF' : '#8B949E';
+    const fill = v.key === 'now' ? accent : shade;
+    const stroke = v.key === 'now' ? '#FFFFFF' : 'rgba(255,255,255,0.45)';
     const when = g.minute !== null && g.minute !== undefined ? `${g.minute}${g.added ? '+' + g.added : ''}'` : '';
     const tip = esc(`${v.label} · ${when} ${g.scorer || ''} (${g.opponent || ''}) · ${g.situation} · ${g.body}`.replace(/\s+/g, ' '));
     svg += isSet
-      ? `<rect x="${cx - 6}" y="${cy - 6}" width="12" height="12" transform="rotate(45 ${cx} ${cy})" fill="${fill}" stroke="${stroke}" stroke-width="1" opacity="0.85"><title>${tip}</title></rect>`
-      : `<circle cx="${cx}" cy="${cy}" r="6.5" fill="${fill}" stroke="${stroke}" stroke-width="1" opacity="0.85"><title>${tip}</title></circle>`;
+      ? `<rect x="${cx - 6}" y="${cy - 6}" width="12" height="12" transform="rotate(45 ${cx} ${cy})" fill="${fill}" stroke="${stroke}" stroke-width="1" opacity="0.88"><title>${tip}</title></rect>`
+      : `<circle cx="${cx}" cy="${cy}" r="6.5" fill="${fill}" stroke="${stroke}" stroke-width="1" opacity="0.88"><title>${tip}</title></circle>`;
   }));
   return svg + '</svg>';
 }
 
-function shotsSummaryHtml(m) {
+function shotsLegendHtml(views, data, accent) {
+  const shade = seasonShade(accent);
+  const items = views.map(v => `<span><i class="lg-dot" style="background:${v.key === 'now' ? accent : shade}"></i>${esc(v.label)}</span>`);
+  items.push('<span><i class="lg-dot" style="background:#8B949E"></i>Open play or penalty</span>');
+  items.push('<span><i class="lg-diamond" style="background:#8B949E"></i>Set piece</span>');
+  items.push('<span>Goal at the bottom</span>');
+  return `<div class="shots-legend">${items.join('')}</div>`;
+}
+
+function shotsSummaryHtml(m, view) {
   const cols = [
     { key: 'last', label: 'Last season', block: m.conceded.last },
     { key: 'now', label: 'This season so far', block: m.conceded.now }
-  ].filter(c => c.block);
+  ].filter(c => c.block && (view === 'both' || c.key === view));
+  if (!cols.length) return '';
   const rowsDef = [
     ['Goals conceded', s => s.goals],
     ['From set pieces', s => pctH(s.set_piece_share)],
@@ -1388,53 +1449,67 @@ function shotsSummaryHtml(m) {
   const head = cols.map(c => `<th class="num">${esc(c.label)}</th>`).join('');
   const body = rowsDef.map(([label, fn]) =>
     `<tr><td>${label}</td>${cols.map(c => `<td class="num">${c.block.summary ? fn(c.block.summary) : '–'}</td>`).join('')}</tr>`).join('');
-  const small = m.conceded.now && m.conceded.now.summary && m.conceded.now.summary.goals < 10
-    ? `<p class="report-note">This season's sample is only ${m.conceded.now.summary.goals} goal${m.conceded.now.summary.goals === 1 ? '' : 's'}, so a single goal moves these shares a lot.</p>` : '';
+  const nowBlock = cols.find(c => c.key === 'now');
+  const small = nowBlock && nowBlock.block.summary && nowBlock.block.summary.goals < 10
+    ? `<p class="report-note">This season's sample is only ${nowBlock.block.summary.goals} goal${nowBlock.block.summary.goals === 1 ? '' : 's'}, so a single goal moves these shares a lot.</p>` : '';
   return `<table class="mini-table"><thead><tr><th></th>${head}</tr></thead><tbody>${body}</tbody></table>${small}
     <p class="report-note">Distances are approximate: the data source does not document its pitch scale, so the distance axis is calibrated to put penalties on the penalty spot.</p>`;
 }
 
 function shotsCardHtml(m, data) {
-  const U = m.units;
-  const unitLine = (label, rank, rating) =>
-    `<div class="kv"><span>${label}</span><strong>${ordinal(rank)} of ${U.n} <span style="color:var(--text-muted); font-weight:400;">(rating ${twoDp(rating)})</span></strong></div>`;
-  const weakerText = {
-    attack: 'Attack ranks lower than defence, so relative to its own profile it is the weaker unit (it can still be a strong attack in the league). That points to forwards and attacking midfielders.',
-    defence: 'Defence ranks lower than attack, so relative to its own profile it is the weaker unit (it can still be a strong defence in the league). That points to the goalkeeper, defenders and defensive midfielders.',
-    balanced: 'Attack and defence rank within two places of each other, so there is no clear weaker unit at team level.'
-  }[U.weaker];
-  const units = unitLine('Attack', U.attackRank, U.attackRating) + unitLine('Defence', U.defenseRank, U.defenseRating) +
-    `<p class="report-note">${weakerText} Ratings pool last season and this season so far, so early in a season they mostly reflect last season.</p>`;
+  const view = state.weakView || 'both';
+  const cur = data.current_season, prev = previousSeasonLabel(cur);
+  const kv = (l, v) => `<div class="kv"><span>${l}</span><strong>${v}</strong></div>`;
+  const muted = t => `<span style="color:var(--text-muted); font-weight:400;">${t}</span>`;
+  const opts = [['both', 'Both'], ['now', 'This season'], ['last', 'Last season']];
+  const toggle = `<div class="season-tabs shots-toggle">${opts.map(o =>
+    `<button class="season-tab ${o[0] === view ? 'active' : ''}" data-shots-view="${o[0]}">${o[1]}</button>`).join('')}</div>`;
 
-  const have = { last: m.conceded.last && m.conceded.last.goals.length, now: m.conceded.now && m.conceded.now.goals.length };
-  let mapHtml = '<p class="sub">Shot locations are not available for this club yet.</p>', summary = '';
-  if (have.last || have.now) {
-    const opts = [];
-    if (have.last && have.now) opts.push(['both', 'Both']);
-    if (have.now) opts.push(['now', 'This season']);
-    if (have.last) opts.push(['last', 'Last season']);
-    const view = opts.some(o => o[0] === state.shotsView) ? state.shotsView : opts[0][0];
-    const views = [];
-    if ((view === 'last' || view === 'both') && have.last) views.push({ key: 'last', label: previousSeasonLabel(data.current_season), goals: m.conceded.last.goals });
-    if ((view === 'now' || view === 'both') && have.now) views.push({ key: 'now', label: data.current_season, goals: m.conceded.now.goals });
-    const accent = (data.team_colors[m.club] || {}).primary || '#4C8DFF';
-    const toggle = opts.length > 1
-      ? `<div class="season-tabs shots-toggle">${opts.map(o => `<button class="season-tab ${o[0] === view ? 'active' : ''}" data-shots-view="${o[0]}">${o[1]}</button>`).join('')}</div>` : '';
-    const legend = `<div class="chart-legend" style="padding-top:8px;">
-      ${have.now && (view === 'now' || view === 'both') ? `<span><span class="legend-swatch" style="background:${accent}"></span>${esc(data.current_season)}</span>` : ''}
-      ${have.last && (view === 'last' || view === 'both') ? `<span><span class="legend-swatch" style="background:rgba(139,148,158,0.7)"></span>${esc(previousSeasonLabel(data.current_season))}</span>` : ''}
-      <span>Circle = open play or penalty, diamond = set piece. Goal at the bottom.</span></div>`;
-    mapHtml = `${toggle}${concededMapSvg(views, m.pitch, accent)}${legend}`;
-    summary = shotsSummaryHtml(m);
+  /* attack and defence for the chosen view */
+  const U = m.units;
+  let units;
+  if (!U.available) {
+    units = `<p class="sub">${view === 'last'
+      ? `${esc(m.club)} were not in the 2. Bundesliga in ${esc(prev)}, so there is no record for that season.`
+      : 'No games played yet in this view.'}</p>`;
+  } else {
+    const weakerText = {
+      attack: 'Attack ranks lower than defence, so relative to its own profile it is the weaker unit (it can still be a strong attack in the league). That points to forwards and attacking midfielders.',
+      defence: 'Defence ranks lower than attack, so relative to its own profile it is the weaker unit (it can still be a strong defence in the league). That points to the goalkeeper, defenders and defensive midfielders.',
+      balanced: 'Attack and defence rank within two places of each other, so there is no clear weaker unit at team level.'
+    }[U.weaker];
+    const basis = U.legacy
+      ? 'Ratings pool last season and this season so far, so early in a season they mostly reflect last season.'
+      : ({ now: `Based on ${U.games} games this season only, so it moves a lot early on.`,
+           last: `Based on the full ${esc(prev)} season, ranked against the ${U.n} clubs that played it.`,
+           both: 'Both seasons combined, weighted by games played: early in a season last year counts for more, and by matchday 34 the two count equally. Clubs that were not in the league last season are rated on this season only.' })[view];
+    const attackNote = U.gfpg === null ? `rating ${twoDp(U.attackRating)}` : `${twoDp(U.gfpg)} scored per game · ${twoDp(U.attackRating)}× league average`;
+    const defenceNote = U.gapg === null ? `rating ${twoDp(U.defenseRating)}` : `${twoDp(U.gapg)} conceded per game · ${twoDp(U.defenseRating)}× league average`;
+    units = kv('Attack', `${ordinal(U.attackRank)} of ${U.n} ${muted('(' + attackNote + ')')}`) +
+            kv('Defence', `${ordinal(U.defenseRank)} of ${U.n} ${muted('(' + defenceNote + ')')}`) +
+            `<p class="report-note">${weakerText} ${basis}</p>`;
   }
+
+  /* the map for the chosen view */
+  const have = { last: m.conceded.last && m.conceded.last.goals.length, now: m.conceded.now && m.conceded.now.goals.length };
+  const accent = (data.team_colors[m.club] || {}).primary || '#4C8DFF';
+  const views = [];
+  if ((view === 'last' || view === 'both') && have.last) views.push({ key: 'last', label: prev, goals: m.conceded.last.goals });
+  if ((view === 'now' || view === 'both') && have.now) views.push({ key: 'now', label: cur, goals: m.conceded.now.goals });
+  const mapHtml = views.length
+    ? `${concededMapSvg(views, m.pitch, accent)}${shotsLegendHtml(views, data, accent)}`
+    : '<p class="sub">Shot locations are not available for this club in this view yet.</p>';
+  const summary = shotsSummaryHtml(m, view);
+
   return `<div class="report-card wide"><h3>Weak areas: where the goals against come from</h3>
-    <p class="sub">Team-level ratings first, then the location of every goal conceded.</p>
+    <p class="sub">Attack and defence ranks first, then the location of every goal conceded. The season buttons change both.</p>
+    ${toggle}
     <div class="shots-layout"><div>${units}<div style="margin-top:14px;">${mapHtml}</div></div><div>${summary}</div></div></div>`;
 }
 
 function bindShotsHandlers() {
   document.querySelectorAll('[data-shots-view]').forEach(b => b.addEventListener('click', () => {
-    state.shotsView = b.dataset.shotsView;
+    state.weakView = b.dataset.shotsView;
     renderReportPage();
   }));
 }
@@ -1447,6 +1522,11 @@ function bindShotsHandlers() {
 const GROUP_LABELS = { G: 'Goalkeepers', D: 'Defenders', M: 'Midfielders', F: 'Forwards' };
 const GROUP_UNIT = { G: 'defence', D: 'defence', M: 'both', F: 'attack' };
 const GROUP_ORDER = ['G', 'D', 'M', 'F'];
+
+/* Each attribute carries Sofascore's raw 0-100 rating ('value'), Sofascore's average for the position
+   ('avg') and a percentile computed by the pipeline ('pct'). Rankings use the percentile (50 is typical);
+   the radar shows the raw rating against the position average. */
+const axisScore = ax => (ax.pct !== undefined && ax.pct !== null) ? ax.pct : ax.value;
 
 /* Budget is a filter on market value, in two scales: fine (steps of €100k) and coarse (steps of €1m). */
 const BUDGET_MODES = {
@@ -1490,10 +1570,11 @@ function computePositionalWeakness(players, club, minMinutes) {
     const score = own.reduce((a, p) => a + p.overall * p.minutes, 0) / totalMin;
     const acc = {};
     own.forEach(p => (p.axes || []).forEach(ax => {
-      const o = acc[ax.label] || (acc[ax.label] = { sum: 0, w: 0 });
-      o.sum += ax.value * p.minutes; o.w += p.minutes;
+      const o = acc[ax.label] || (acc[ax.label] = { sum: 0, raw: 0, w: 0 });
+      o.sum += axisScore(ax) * p.minutes; o.raw += ax.value * p.minutes; o.w += p.minutes;
     }));
-    const axes = Object.entries(acc).map(([label, o]) => ({ label, value: o.sum / o.w })).sort((a, b) => a.value - b.value);
+    const axes = Object.entries(acc).map(([label, o]) => ({ label, value: o.sum / o.w, raw: o.raw / o.w }))
+      .sort((a, b) => a.value - b.value);
     groups[g] = { group: g, players: own.length, score, gap: 50 - score, axes, weakest: axes[0] || null };
   });
   const ranking = Object.values(groups).filter(x => x.score !== null).sort((a, b) => b.gap - a.gap);
@@ -1507,7 +1588,7 @@ function candidateList(players, club, group, budgetEuro, weakLabels, minMinutes,
     .filter(p => p.team !== club && p.group === group && p.minutes >= minMinutes &&
                  p.value_eur !== null && p.value_eur !== undefined && p.value_eur <= budgetEuro)
     .map(p => {
-      const vals = weakLabels.map(l => (p.axes || []).find(a => a.label === l)).filter(Boolean).map(a => a.value);
+      const vals = weakLabels.map(l => (p.axes || []).find(a => a.label === l)).filter(Boolean).map(axisScore);
       const weakFit = vals.length ? vals.reduce((a, b) => a + b, 0) / vals.length : null;
       const fit = weakFit === null ? p.overall : 0.5 * p.overall + 0.5 * weakFit;
       return Object.assign({}, p, { weakFit, fit, vsOwn: ownScore === null ? null : p.overall - ownScore });
@@ -1529,7 +1610,7 @@ function buildRecruitModel() {
   const players = pd.players, minMin = pd.min_minutes || 450;
   if (rs.club !== club) { rs.club = club; rs.group = null; rs.playerId = null; }
   const weakness = computePositionalWeakness(players, club, minMin);
-  const units = teamUnitAssessment(data, club);
+  const units = teamUnitAssessment(data, club, 'both');
   const weakestGroup = weakness.ranking.length ? weakness.ranking[0].group : null;
   if (!rs.group) rs.group = weakestGroup || 'D';
   const gInfo = weakness.groups[rs.group];
@@ -1564,7 +1645,7 @@ function recruitListHtml(m) {
 function recruitDetailHtml(m) {
   const p = m.selected;
   if (!p) return '<p class="sub">Select a player to see his attribute profile.</p>';
-  const top = [...(p.axes || [])].sort((a, b) => b.value - a.value).slice(0, 2).map(a => esc(a.label)).join(' and ');
+  const top = [...(p.axes || [])].sort((a, b) => axisScore(b) - axisScore(a)).slice(0, 2).map(a => esc(a.label)).join(' and ');
   const kv = (l, v) => `<div class="kv"><span>${l}</span><strong>${v}</strong></div>`;
   return `<h3 style="margin-bottom:2px;">${esc(p.name)}</h3><p class="sub">${esc(p.team)} · ${esc(p.position || GROUP_LABELS[p.group])}</p>
     <div class="radar-holder"><canvas id="recruitRadar" aria-label="Attribute profile of ${esc(p.name)}"></canvas></div>
@@ -1574,7 +1655,7 @@ function recruitDetailHtml(m) {
     ${kv('Minutes played', Math.round(p.minutes))}
     ${kv('Overall / fit', `${Math.round(p.overall)} / ${Math.round(p.fit)}`)}
     ${top ? kv('Strongest attributes', top) : ''}
-    <p class="report-note">Attributes are percentiles against all ${GROUP_LABELS[p.group].toLowerCase()} in the league with at least ${m.minMin} minutes (50 is typical). Market value is an estimate, not a transfer fee, and whether a player is available or willing to move is unknown.</p>`;
+    <p class="report-note">The polygon shows Sofascore's own 0-100 attribute ratings; the dotted line is Sofascore's average for the position. Overall and fit use percentiles computed here against all ${GROUP_LABELS[p.group].toLowerCase()} in the league with at least ${m.minMin} minutes (50 is typical). Market value is an estimate, not a transfer fee, and whether a player is available or willing to move is unknown.</p>`;
 }
 
 function recruitHtml(m) {
@@ -1591,7 +1672,7 @@ function recruitHtml(m) {
   const w = m.weakness.ranking[0];
   const weakText = w
     ? `Weakest group: ${GROUP_LABELS[w.group].toLowerCase()}, ${Math.round(Math.abs(w.gap))} points ${w.gap > 0 ? 'below' : 'above'} the league median` +
-      (w.weakest ? `, with ${esc(w.axes.slice(0, 2).map(a => a.label + ' (' + Math.round(a.value) + ')').join(' and '))} the club's lowest attributes there.` : '.')
+      (w.weakest ? `, with ${esc(w.axes.slice(0, 2).map(a => a.label + ' (' + Math.round(a.value) + ')').join(' and '))} the club's lowest attributes there (percentiles, 50 is typical).` : '.')
     : 'No group of this club has enough minutes in the data to assess.';
   const tabs = GROUP_ORDER.map(g => `<button class="season-tab ${g === m.group ? 'active' : ''}" data-group="${g}">${GROUP_LABELS[g]}</button>`).join('');
   const modeBtns = Object.keys(BUDGET_MODES).map(k => `<button class="season-tab ${k === m.mode ? 'active' : ''}" data-budget-mode="${k}">${BUDGET_MODES[k].label}</button>`).join('');
@@ -1633,7 +1714,7 @@ function drawRecruitRadar(m) {
   const p = m.selected;
   if (!canvas || !p || !(p.axes || []).length) return;
   const labels = p.axes.map(a => a.label);
-  const own = m.gInfo ? labels.map(l => { const f = m.gInfo.axes.find(a => a.label === l); return f ? Math.round(f.value) : null; }) : [];
+  const own = m.gInfo ? labels.map(l => { const f = m.gInfo.axes.find(a => a.label === l); return f ? Math.round(f.raw !== undefined ? f.raw : f.value) : null; }) : [];
   const accent = (state.data.team_colors[m.club] || {}).primary || '#4C8DFF';
   recruitChart = new Chart(canvas, {
     type: 'radar',
@@ -1642,8 +1723,8 @@ function drawRecruitRadar(m) {
         backgroundColor: hexToRgba(accent, 0.25), borderWidth: 2.5, pointRadius: 3 },
       { label: `${m.club} current (avg.)`, data: own, borderColor: '#8B949E',
         backgroundColor: 'rgba(139,148,158,0.12)', borderDash: [5, 3], borderWidth: 1.5, pointRadius: 2 },
-      { label: 'League median', data: labels.map(() => 50), borderColor: 'rgba(139,148,158,0.35)',
-        borderWidth: 1, pointRadius: 0, fill: false }
+      { label: 'Sofascore position average', data: p.axes.map(a => (a.avg === undefined || a.avg === null) ? null : Math.round(a.avg)),
+        borderColor: 'rgba(201,209,217,0.6)', borderDash: [2, 3], borderWidth: 1.4, pointRadius: 0, fill: false }
     ] },
     options: { responsive: true, maintainAspectRatio: false,
       scales: { r: { min: 0, max: 100,
