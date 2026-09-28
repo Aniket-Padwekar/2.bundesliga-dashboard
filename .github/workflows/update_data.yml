@@ -35,6 +35,10 @@ jobs:
         run: pip install requests numpy scipy
 
       - name: Run the data + predictions pipeline
+        env:
+          # Optional: link to a published Google Sheet CSV of conceded goals (Repository variable).
+          # If unset, the pipeline reads data/conceded_goals.csv from the repository instead.
+          CONCEDED_GOALS_CSV_URL: ${{ vars.CONCEDED_GOALS_CSV_URL }}
         run: python update_data.py
 
       - name: Commit and push the updated data file
