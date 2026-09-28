@@ -741,6 +741,157 @@ def summarise_conceded(goals):
             "penalties": pens, "avg_distance_m": round(sum(dist) / n, 1) if n else None}
 
 
+# ── SEASON RECORDS: goals for/against per game, one season at a time ─────────
+def build_season_ratings(all_matches, season_labels):
+    """For each season and club: goals scored and conceded per game, relative to that season's league
+    average (1.00 = average). This is the plain record of that season, with no shrinkage and no pooling,
+    so the dashboard can show attack/defence for last season, this season, or a games-weighted blend."""
+    out = {}
+    for label in season_labels:
+        ms = [m for m in all_matches if m["season"] == label and m["finished"] and m["home_goals"] is not None]
+        if not ms:
+            continue
+        league_avg = sum(m["home_goals"] + m["away_goals"] for m in ms) / (2 * len(ms))   # goals per team per game
+        rec = {}
+        for m in ms:
+            for team, gf, ga in ((m["home"], m["home_goals"], m["away_goals"]), (m["away"], m["away_goals"], m["home_goals"])):
+                r = rec.setdefault(team, {"games": 0, "gf": 0, "ga": 0})
+                r["games"] += 1
+                r["gf"] += gf
+                r["ga"] += ga
+        out[label] = {"league_avg": round(league_avg, 3), "teams": {
+            t: {"games": r["games"], "gf": r["gf"], "ga": r["ga"],
+                "attack": round(r["gf"] / r["games"] / league_avg, 3),
+                "defense": round(r["ga"] / r["games"] / league_avg, 3)} for t, r in rec.items()}}
+    return out
+
+
+# ── PLAYERS (Recruitment tab) ────────────────────────────────────────────────
+PLAYERS_FILE = "data/players.json"
+PLAYER_MIN_MINUTES = 450        # about five full matches since 1 July 2025
+PLAYER_MIN_PEERS = 8            # a percentile needs at least this many comparable players
+PLAYER_MIN_TOTAL = 50           # fewer players than this means a partial collection: publish nothing
+
+
+def _read_csv_rows(text):
+    return list(csv.DictReader(io.StringIO(text.lstrip("\ufeff"))))
+
+
+def load_tab_rows(keyword, env_name):
+    """One collector tab as rows: from a published-CSV URL (env var) if set and usable, otherwise the
+    fullest local file in data/ whose name contains the keyword (the sheet's download name works as-is)."""
+    url = os.environ.get(env_name, "").strip()
+    if url:
+        try:
+            resp = requests.get(url, timeout=30)
+            rows = _read_csv_rows(resp.text) if resp.status_code == 200 else []
+            if rows:
+                return rows, "published CSV URL"
+            print(f"  WARNING: {env_name} gave no usable rows; trying local files")
+        except requests.RequestException as e:
+            print(f"  WARNING: {env_name} failed ({e}); trying local files")
+    best = (None, None)
+    for path in sorted(glob.glob("data/*.csv")):
+        if keyword in os.path.basename(path).lower():
+            with open(path, "r", encoding="utf-8-sig") as f:
+                rows = _read_csv_rows(f.read())
+            if best[0] is None or len(rows) > len(best[0]):
+                best = (rows, path)
+    return best
+
+
+def _axis_label(key):
+    words = re.sub(r"(?<=[a-z0-9])(?=[A-Z])", " ", str(key)).replace("_", " ").strip()
+    return (words[:1].upper() + words[1:].lower()) if words else str(key)
+
+
+def _percentile(values, v):
+    """Mid-rank percentile of v within values (0-100; 50 = typical)."""
+    less = sum(1 for x in values if x < v)
+    equal = sum(1 for x in values if x == v)
+    return 100.0 * (less + 0.5 * equal) / len(values)
+
+
+def build_players(current_teams, now):
+    """Joins the three collector tabs into data/players.json: each current-club player with Sofascore's
+    own attribute ratings (raw, with the position average) plus percentiles computed HERE against every
+    player in the same position group with enough minutes."""
+    squads, _ = load_tab_rows("players_squads", "PLAYERS_SQUADS_CSV_URL")
+    attrs, _ = load_tab_rows("players_attributes", "PLAYERS_ATTRIBUTES_CSV_URL")
+    minutes, _ = load_tab_rows("players_minutes", "PLAYERS_MINUTES_CSV_URL")
+    if not (squads and attrs and minutes):
+        missing = [n for n, r in (("squads", squads), ("attributes", attrs), ("minutes", minutes)) if not r]
+        print(f"  Players: source tab(s) missing ({', '.join(missing)}); the Recruitment tab stays hidden")
+        return None
+
+    def numeric(d):
+        return {k: v for k, v in d.items() if isinstance(v, (int, float)) and not isinstance(v, bool)}
+
+    attr_by_id = {}
+    for r in attrs:
+        pid = (r.get("Player_ID") or "").strip()
+        try:
+            axes, avg = json.loads(r.get("Attr_JSON") or "{}"), json.loads(r.get("Avg_JSON") or "{}")
+        except ValueError:
+            continue
+        axes = numeric(axes)
+        if pid and axes:
+            attr_by_id[pid] = {"axes": axes, "avg": numeric(avg)}
+    minutes_by_id = {(r.get("Player_ID") or "").strip(): r for r in minutes}
+
+    raw = []
+    for r in squads:
+        pid, club = (r.get("Player_ID") or "").strip(), (r.get("Club") or "").strip()
+        group = (r.get("Position") or "").strip().upper()
+        if club not in current_teams or group not in ("G", "D", "M", "F") or pid not in attr_by_id:
+            continue
+        mn = minutes_by_id.get(pid, {})
+        value = _to_float(r.get("Value_Eur"))
+        if value is None:
+            value = _to_float(mn.get("Value_Eur"))
+        raw.append({"pid": pid, "name": (r.get("Name") or "").strip(), "club": club, "group": group,
+                    "height": _to_float(r.get("Height_Cm")) or _to_float(mn.get("Height_Cm")),
+                    "birth": _to_float(r.get("Birth_Ts")) or _to_float(mn.get("Birth_Ts")),
+                    "value": value, "contract": _to_float(r.get("Contract_Ts")),
+                    "minutes": _to_float(mn.get("Minutes")) or 0.0, "attr": attr_by_id[pid]})
+
+    pools = {}                                            # (group, axis) -> values of eligible players
+    for p in raw:
+        if p["minutes"] >= PLAYER_MIN_MINUTES:
+            for k, v in p["attr"]["axes"].items():
+                pools.setdefault((p["group"], k), []).append(v)
+
+    players = []
+    for p in raw:
+        axes = []
+        for k, v in p["attr"]["axes"].items():
+            pool = pools.get((p["group"], k), [])
+            pct = round(_percentile(pool, v), 1) if len(pool) >= PLAYER_MIN_PEERS else None
+            avg = p["attr"]["avg"].get(k)
+            axes.append({"key": k, "label": _axis_label(k), "value": v, "pct": pct, "avg": avg})
+        scored = [a["pct"] if a["pct"] is not None else a["value"] for a in axes]
+        age = int((now.timestamp() - p["birth"]) / (365.2425 * 86400)) if p["birth"] else None
+        contract = (datetime.fromtimestamp(p["contract"], tz=timezone.utc).date().isoformat()
+                    if p["contract"] else None)
+        players.append({"id": int(p["pid"]) if p["pid"].isdigit() else p["pid"], "name": p["name"],
+                        "team": p["club"], "group": p["group"], "age": age,
+                        "height_cm": int(p["height"]) if p["height"] else None,
+                        "value_eur": int(p["value"]) if p["value"] is not None else None,
+                        "contract_until": contract, "minutes": int(p["minutes"]),
+                        "overall": round(sum(scored) / len(scored), 1), "axes": axes})
+
+    if len(players) < PLAYER_MIN_TOTAL:
+        print(f"  WARNING: only {len(players)} players joined (need {PLAYER_MIN_TOTAL}); collection looks partial, "
+              f"not publishing players.json")
+        return None
+    players.sort(key=lambda x: (x["team"], x["group"], x["name"]))
+    return {"generated_at": now.isoformat(), "min_minutes": PLAYER_MIN_MINUTES, "players": players,
+            "source": "Sofascore attribute ratings, squads and lineups (2. Bundesliga, minutes since 1 July 2025). "
+                      "Attribute values are Sofascore's own 0-100 model outputs; percentiles are computed here "
+                      "against players in the same position group with at least "
+                      f"{PLAYER_MIN_MINUTES} minutes."}
+
+
 # ── HISTORY: one snapshot per completed matchday, self-healing ───────────────
 def load_history():
     try:
@@ -817,11 +968,21 @@ def main():
     n_games = max((s["played"] for s in state["stats"].values()), default=0)
     analogues = build_historical_analogues(all_matches, labels[:-1], n_games)
     recent_results = build_recent_results(state)
+    season_ratings = build_season_ratings(all_matches, labels[-2:])
     try:
         conceded_goals = load_conceded_goals(set(state["teams"]))
     except Exception as e:                       # optional feature: never let it break the core update
         print(f"  WARNING: conceded-goals data could not be processed ({type(e).__name__}: {e}); continuing without it")
         conceded_goals = {}
+
+    try:
+        players_json = build_players(set(state["teams"]), datetime.now(timezone.utc))
+        if players_json:
+            with open(PLAYERS_FILE, "w", encoding="utf-8") as f:
+                json.dump(players_json, f, ensure_ascii=False)
+            print(f"  Players: {len(players_json['players'])} written to {PLAYERS_FILE}")
+    except Exception as e:                       # optional feature: never let it break the core update
+        print(f"  WARNING: players data could not be processed ({type(e).__name__}: {e}); continuing without it")
 
     print("Updating history snapshots...")
     history = update_history(all_matches, load_history())
@@ -846,6 +1007,7 @@ def main():
         "historical_analogues": analogues,
         "recent_results": recent_results,
         "conceded_goals": conceded_goals,
+        "season_ratings": season_ratings,
         "pitch": PITCH,
         "history": history,
         "team_colors": team_colors,
