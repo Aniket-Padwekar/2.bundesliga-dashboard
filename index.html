@@ -182,8 +182,29 @@
   .fdr-legend { display: flex; gap: 14px; flex-wrap: wrap; margin: 12px 0 18px; font-size: 12px; color: var(--text-muted); align-items: center; }
   .fdr-legend span { display: inline-flex; align-items: center; gap: 6px; }
   .fdr-chip { width: 16px; height: 16px; border-radius: 4px; display: inline-block; }
+  .fdr-nav { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin: 0 0 12px; }
+  .fdr-nav-btn { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; padding: 9px 14px; border-radius: 8px; border: 1px solid var(--border); background: var(--surface); color: var(--text); cursor: pointer; }
+  .fdr-nav-btn:disabled { opacity: 0.35; cursor: default; }
+  .fdr-nav-btn:not(:disabled):hover { border-color: var(--accent); }
+  .fdr-nav-label { font-size: 12.5px; color: var(--text-muted); font-weight: 600; }
   .fdr-table-wrap { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; overflow: auto; }
   table.fdr { border-collapse: separate; border-spacing: 0; min-width: 900px; }
+  @media (max-width: 680px) {
+    table.fdr { min-width: 0; width: 100%; table-layout: fixed; }
+    .fdr-pill { width: auto; min-width: 46px; padding: 5px 2px; }
+    table.fdr td.fdr-cell { padding: 4px 2px; }
+    table.fdr thead th { padding: 8px 3px; font-size: 10px; }
+    .team-col { max-width: 92px; padding: 8px 6px !important; }
+    .team-col .team-cell { overflow: hidden; gap: 6px; }
+    .team-col .team-name-text { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+  }
+  @media (max-width: 360px) {
+    .wrap { padding-left: 10px; padding-right: 10px; }
+    .fdr-pill { min-width: 40px; padding: 5px 1px; font-size: 10.5px; }
+    table.fdr td.fdr-cell { padding: 3px 1px; }
+    .team-col { max-width: 64px; padding: 8px 4px !important; }
+    .fdr-nav-btn { padding: 8px 8px; font-size: 11.5px; }
+  }
   table.fdr thead th { position: sticky; top: 0; background: var(--surface); z-index: 2; padding: 10px 8px; font-size: 11px; }
   table.fdr thead th.team-col-head { left: 0; z-index: 3; text-align: left; padding-left: 16px; }
   table.fdr td.team-col { position: sticky; left: 0; background: var(--surface); z-index: 1; padding: 8px 16px; border-right: 1px solid var(--border); }
@@ -364,6 +385,7 @@
       Each club's difficulty rating comes directly from the same win-probability model used for the season projection — not a separate scale. Green means the model favors this club in that match; red means the opponent is favored.
     </p>
     <div class="fdr-legend" id="fdrLegend"></div>
+    <div class="fdr-nav" id="fdrNav" style="display:none;"></div>
     <div class="fdr-table-wrap">
       <table class="fdr" id="fdrTable"></table>
     </div>
@@ -784,6 +806,10 @@ function renderTables() {
   });
 }
 
+const FDR_MOBILE_BREAKPOINT = 680;   // matches the CSS mobile breakpoint elsewhere on the page
+const FDR_MOBILE_COLS = 3;           // gameweeks shown at once on a phone, enough to fit without any scrolling
+function isFdrMobile() { return window.matchMedia(`(max-width: ${FDR_MOBILE_BREAKPOINT}px)`).matches; }
+
 function renderFixturesPage() {
   const data = state.data;
   const legendEl = document.getElementById('fdrLegend');
@@ -800,29 +826,60 @@ function renderFixturesPage() {
     data.fixture_difficulty[teams[0]].slice(0, maxGw).forEach(f => gwNumbers.push(f.matchday));
   }
 
+  /* On a phone, a wide table that only scrolls by swiping turned out to be unreliable inside
+     some mobile browsers — the swipe doesn't always reach the table. Tapping a button always
+     works the same way everywhere, so mobile shows a small window of columns with Prev/Next
+     controls instead of depending on a horizontal swipe gesture at all. Desktop is unaffected:
+     a mouse or trackpad scrolls the full table exactly as before. */
+  const mobile = isFdrMobile();
+  if (!mobile) state.fdrWindowStart = 0;
+  const windowSize = mobile ? Math.min(FDR_MOBILE_COLS, maxGw) : maxGw;
+  const maxStart = Math.max(0, maxGw - windowSize);
+  state.fdrWindowStart = Math.max(0, Math.min(state.fdrWindowStart || 0, maxStart));
+  const start = state.fdrWindowStart;
+  const visibleIdx = [];
+  for (let i = start; i < start + windowSize; i++) visibleIdx.push(i);
+
+  const nav = document.getElementById('fdrNav');
+  if (mobile && maxGw > windowSize) {
+    nav.style.display = '';
+    nav.innerHTML = `
+      <button class="fdr-nav-btn" id="fdrPrev" ${start === 0 ? 'disabled' : ''}>&larr; Earlier</button>
+      <span class="fdr-nav-label">GW${gwNumbers[start]}&ndash;GW${gwNumbers[Math.min(start + windowSize - 1, gwNumbers.length - 1)]}</span>
+      <button class="fdr-nav-btn" id="fdrNext" ${start >= maxStart ? 'disabled' : ''}>Later &rarr;</button>`;
+    document.getElementById('fdrPrev').addEventListener('click', () => { state.fdrWindowStart = Math.max(0, start - windowSize); renderFixturesPage(); });
+    document.getElementById('fdrNext').addEventListener('click', () => { state.fdrWindowStart = Math.min(maxStart, start + windowSize); renderFixturesPage(); });
+  } else {
+    nav.style.display = 'none';
+    nav.innerHTML = '';
+  }
+
   const table = document.getElementById('fdrTable');
   let html = '<thead><tr><th class="team-col-head">Club</th>';
-  gwNumbers.forEach(gw => html += `<th>GW${gw}</th>`);
+  visibleIdx.forEach(i => html += `<th>GW${gwNumbers[i]}</th>`);
   html += '</tr></thead><tbody>';
 
   teams.forEach(team => {
     const c = data.team_colors[team] || {};
-    html += `<tr><td class="team-col"><div class="team-cell">${logoSlotHtml(team, data.team_colors, 26)}${team}</div></td>`;
+    html += `<tr><td class="team-col"><div class="team-cell">${logoSlotHtml(team, data.team_colors, 26)}<span class="team-name-text">${team}</span></div></td>`;
     const fixtures = data.fixture_difficulty[team] || [];
-    for (let i = 0; i < maxGw; i++) {
+    visibleIdx.forEach(i => {
       const f = fixtures[i];
-      if (!f) { html += '<td class="fdr-cell"></td>'; continue; }
+      if (!f) { html += '<td class="fdr-cell"></td>'; return; }
       html += `<td class="fdr-cell"><div class="fdr-pill" style="background:${DIFF_COLORS[f.difficulty]}">
         <span class="fdr-opp">${teamCode(f.opponent)}</span>
         <span class="fdr-loc">${f.is_home ? 'H' : 'A'}</span>
       </div></td>`;
-    }
+    });
     html += '</tr>';
   });
   html += '</tbody>';
   table.innerHTML = html;
   hydrateLogoSlots();
 }
+window.addEventListener('resize', () => {
+  if (document.getElementById('page-fixtures') && document.getElementById('page-fixtures').classList.contains('active')) renderFixturesPage();
+});
 
 function renderFooter() {
   const data = state.data;
