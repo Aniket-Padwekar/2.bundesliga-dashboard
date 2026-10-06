@@ -178,9 +178,9 @@ def expected_score(ra, rb):
 def build_elo_ratings(played_matches, snapshot_season=None):
     """Chronological Elo. Returns (final ratings, ratings at the start of
     snapshot_season). New teams start at 1500; ratings regress toward the
-    mean between seasons. NOTE: computed and kept in the data for possible
-    future use, but not displayed anywhere on the dashboard and not an
-    input to the fixture probabilities."""
+    mean between seasons. NOTE: shown on the Promotion report (current
+    rating, and the change since the season started) purely for context —
+    it is not an input to the fixture probabilities or any prediction."""
     ratings = {}
     start_ratings = None
     current_season = None
@@ -433,4 +433,4 @@ def model_snapshot(matches, n_sim=N_SIMULATIONS):
         # Schedule difficulty as a league-average club (attack = defense = 1.0) would
         # experience this fixture. Independent of the club's own strength and results,
         # so strong clubs are not flattered and weak clubs are not punished.
-        avg_hw, avg_dr, _ = match_outcome_probs(league_avg * defense[m["away"]] * HO
+        avg_hw, avg_dr, _ = match_outcome_probs(league
