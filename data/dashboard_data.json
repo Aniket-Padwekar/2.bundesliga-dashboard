@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-05T11:00:33.345276+00:00",
+  "generated_at": "2026-10-06T08:57:12.000639+00:00",
   "current_season": "2026/27",
   "model_version": "v2",
   "n_simulations": 10000,
@@ -27930,5 +27930,5 @@
       "text": "#FFFFFF"
     }
   },
-  "methodology_note": "Fixture probabilities come from a Poisson attack/defense model (last season plus this season so far, shrunk toward average for clubs with few games). The rest of the season is simulated 10,000 times by sampling scorelines, with official tie-breaks. Elo is shown for context and is not an input to the predictions."
+  "methodology_note": "Fixture probabilities come from a Poisson attack/defense model (last season plus this season so far, shrunk toward average for clubs with few games). The rest of the season is simulated 10,000 times by sampling scorelines, with official tie-breaks."
 }
