@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-10-30T10:37:12.573827+00:00",
+  "generated_at": "2026-10-31T10:04:13.092725+00:00",
   "current_season": "2026/27",
   "model_version": "v2",
   "n_simulations": 10000,
-  "league_avg_goals": 1.487,
-  "games_played_max": 9,
-  "games_remaining": 225,
+  "league_avg_goals": 1.488,
+  "games_played_max": 10,
+  "games_remaining": 223,
   "predicted_table": [
     {
       "team": "Hertha BSC",
@@ -17,40 +17,40 @@
       "wins": 8,
       "draws": 1,
       "losses": 0,
-      "avg_projected_position": 2.06,
-      "promotion_probability": 0.7382,
-      "champion_probability": 0.5153,
-      "playoff_probability": 0.1182,
+      "avg_projected_position": 2.07,
+      "promotion_probability": 0.7441,
+      "champion_probability": 0.5162,
+      "playoff_probability": 0.1138,
       "position_distribution": [
-        0.5153,
-        0.2229,
-        0.1182,
-        0.0647,
-        0.0376,
-        0.0181,
-        0.0094,
-        0.0059,
-        0.0033,
-        0.0022,
-        0.0014,
-        0.0005,
-        0.0,
-        0.0005,
+        0.5162,
+        0.2279,
+        0.1138,
+        0.0614,
+        0.0331,
+        0.0216,
+        0.0114,
+        0.007,
+        0.0034,
+        0.0021,
+        0.0012,
+        0.0004,
+        0.0003,
+        0.0002,
         0.0,
         0.0,
         0.0,
         0.0
       ],
       "projected_points": {
-        "mean": 64.2,
+        "mean": 64.3,
         "p10": 56,
         "p50": 64,
         "p90": 73
       },
       "elo_rating": 1574.3,
       "elo_start_of_season": 1508.0,
-      "attack_rating": 1.039,
-      "defense_rating": 0.849
+      "attack_rating": 1.038,
+      "defense_rating": 0.848
     },
     {
       "team": "VfL Wolfsburg",
@@ -62,40 +62,40 @@
       "wins": 4,
       "draws": 4,
       "losses": 1,
-      "avg_projected_position": 3.28,
-      "promotion_probability": 0.4685,
-      "champion_probability": 0.2189,
-      "playoff_probability": 0.1815,
+      "avg_projected_position": 3.32,
+      "promotion_probability": 0.461,
+      "champion_probability": 0.2147,
+      "playoff_probability": 0.1842,
       "position_distribution": [
-        0.2189,
-        0.2496,
-        0.1815,
-        0.1272,
-        0.0791,
-        0.0506,
-        0.0326,
-        0.0203,
-        0.0159,
-        0.0096,
-        0.0055,
-        0.0037,
+        0.2147,
+        0.2463,
+        0.1842,
+        0.124,
+        0.081,
+        0.0546,
+        0.0342,
+        0.0222,
+        0.0126,
+        0.0093,
+        0.0062,
+        0.0045,
         0.0028,
-        0.0015,
-        0.0008,
-        0.0002,
-        0.0002,
+        0.0016,
+        0.0013,
+        0.0004,
+        0.0001,
         0.0
       ],
       "projected_points": {
-        "mean": 59.2,
+        "mean": 59.1,
         "p10": 51,
         "p50": 59,
         "p90": 68
       },
       "elo_rating": 1530.8,
       "elo_start_of_season": 1500,
-      "attack_rating": 1.341,
-      "defense_rating": 1.022
+      "attack_rating": 1.34,
+      "defense_rating": 1.021
     },
     {
       "team": "1. FC Nürnberg",
@@ -107,40 +107,40 @@
       "wins": 5,
       "draws": 3,
       "losses": 1,
-      "avg_projected_position": 4.5,
-      "promotion_probability": 0.2696,
-      "champion_probability": 0.0981,
-      "playoff_probability": 0.1777,
+      "avg_projected_position": 4.53,
+      "promotion_probability": 0.2625,
+      "champion_probability": 0.0985,
+      "playoff_probability": 0.1702,
       "position_distribution": [
-        0.0981,
-        0.1715,
-        0.1777,
-        0.1495,
-        0.1146,
-        0.0849,
-        0.0593,
-        0.045,
-        0.0319,
-        0.0209,
-        0.0199,
-        0.0111,
-        0.0061,
-        0.0048,
-        0.0016,
-        0.002,
-        0.0007,
-        0.0004
+        0.0985,
+        0.164,
+        0.1702,
+        0.1582,
+        0.1193,
+        0.0802,
+        0.0675,
+        0.0425,
+        0.0346,
+        0.02,
+        0.0167,
+        0.0114,
+        0.0067,
+        0.0055,
+        0.0019,
+        0.0023,
+        0.0003,
+        0.0002
       ],
       "projected_points": {
-        "mean": 56.0,
-        "p10": 47,
+        "mean": 56.1,
+        "p10": 48,
         "p50": 56,
         "p90": 65
       },
       "elo_rating": 1537.8,
       "elo_start_of_season": 1508.0,
-      "attack_rating": 1.052,
-      "defense_rating": 0.912
+      "attack_rating": 1.051,
+      "defense_rating": 0.911
     },
     {
       "team": "1. FC Kaiserslautern",
@@ -152,40 +152,40 @@
       "wins": 5,
       "draws": 3,
       "losses": 1,
-      "avg_projected_position": 4.52,
-      "promotion_probability": 0.2611,
-      "champion_probability": 0.1,
-      "playoff_probability": 0.1767,
+      "avg_projected_position": 4.61,
+      "promotion_probability": 0.2572,
+      "champion_probability": 0.0989,
+      "playoff_probability": 0.1664,
       "position_distribution": [
-        0.1,
-        0.1611,
-        0.1767,
-        0.1545,
-        0.1166,
-        0.0859,
-        0.0623,
-        0.0449,
-        0.0318,
-        0.0212,
-        0.017,
-        0.0104,
-        0.0075,
-        0.006,
-        0.0023,
-        0.0009,
-        0.0006,
-        0.0003
+        0.0989,
+        0.1583,
+        0.1664,
+        0.1561,
+        0.1127,
+        0.0902,
+        0.0643,
+        0.0476,
+        0.034,
+        0.0235,
+        0.0183,
+        0.0121,
+        0.0078,
+        0.0046,
+        0.0028,
+        0.0018,
+        0.0004,
+        0.0002
       ],
       "projected_points": {
-        "mean": 56.2,
+        "mean": 56.1,
         "p10": 48,
         "p50": 56,
         "p90": 65
       },
       "elo_rating": 1546.5,
       "elo_start_of_season": 1509.7,
-      "attack_rating": 0.963,
-      "defense_rating": 0.836
+      "attack_rating": 0.962,
+      "defense_rating": 0.835
     },
     {
       "team": "1. FC Magdeburg",
@@ -197,29 +197,29 @@
       "wins": 5,
       "draws": 1,
       "losses": 3,
-      "avg_projected_position": 6.97,
-      "promotion_probability": 0.0881,
-      "champion_probability": 0.0266,
-      "playoff_probability": 0.0885,
+      "avg_projected_position": 7.04,
+      "promotion_probability": 0.0875,
+      "champion_probability": 0.0258,
+      "playoff_probability": 0.0872,
       "position_distribution": [
-        0.0266,
-        0.0615,
-        0.0885,
-        0.1049,
-        0.1176,
-        0.1113,
-        0.0985,
-        0.0845,
-        0.0697,
-        0.0585,
-        0.0489,
-        0.0403,
-        0.0293,
-        0.0257,
-        0.0151,
-        0.0107,
-        0.0062,
-        0.0022
+        0.0258,
+        0.0617,
+        0.0872,
+        0.1012,
+        0.1153,
+        0.1067,
+        0.0944,
+        0.0883,
+        0.0773,
+        0.0643,
+        0.0475,
+        0.0405,
+        0.0303,
+        0.0229,
+        0.0164,
+        0.0122,
+        0.0063,
+        0.0017
       ],
       "projected_points": {
         "mean": 50.7,
@@ -229,8 +229,8 @@
       },
       "elo_rating": 1501.6,
       "elo_start_of_season": 1481.7,
-      "attack_rating": 1.102,
-      "defense_rating": 1.077
+      "attack_rating": 1.101,
+      "defense_rating": 1.076
     },
     {
       "team": "1. FC Heidenheim 1846",
@@ -242,40 +242,40 @@
       "wins": 4,
       "draws": 3,
       "losses": 2,
-      "avg_projected_position": 7.73,
-      "promotion_probability": 0.055,
-      "champion_probability": 0.0134,
-      "playoff_probability": 0.0693,
+      "avg_projected_position": 7.76,
+      "promotion_probability": 0.0557,
+      "champion_probability": 0.0164,
+      "playoff_probability": 0.0707,
       "position_distribution": [
-        0.0134,
-        0.0416,
-        0.0693,
-        0.0929,
-        0.0982,
-        0.108,
-        0.0976,
-        0.0968,
-        0.08,
-        0.0688,
-        0.0598,
-        0.0514,
-        0.0404,
-        0.031,
-        0.0205,
-        0.0157,
-        0.0107,
-        0.0039
+        0.0164,
+        0.0393,
+        0.0707,
+        0.0876,
+        0.0975,
+        0.1,
+        0.1,
+        0.0946,
+        0.0837,
+        0.0731,
+        0.066,
+        0.0524,
+        0.042,
+        0.0249,
+        0.0225,
+        0.0161,
+        0.0084,
+        0.0048
       ],
       "projected_points": {
-        "mean": 49.6,
+        "mean": 49.7,
         "p10": 41,
         "p50": 50,
         "p90": 58
       },
       "elo_rating": 1513.6,
       "elo_start_of_season": 1500,
-      "attack_rating": 1.093,
-      "defense_rating": 1.093
+      "attack_rating": 1.092,
+      "defense_rating": 1.092
     },
     {
       "team": "FC St. Pauli",
@@ -287,85 +287,85 @@
       "wins": 2,
       "draws": 6,
       "losses": 1,
-      "avg_projected_position": 8.22,
-      "promotion_probability": 0.0413,
-      "champion_probability": 0.0103,
-      "playoff_probability": 0.0539,
+      "avg_projected_position": 8.24,
+      "promotion_probability": 0.0428,
+      "champion_probability": 0.0098,
+      "playoff_probability": 0.0546,
       "position_distribution": [
-        0.0103,
-        0.031,
-        0.0539,
-        0.0769,
-        0.098,
-        0.101,
-        0.1026,
-        0.0916,
-        0.0864,
-        0.0742,
-        0.0648,
-        0.0577,
-        0.046,
-        0.0368,
-        0.0296,
-        0.0191,
-        0.014,
-        0.0061
+        0.0098,
+        0.033,
+        0.0546,
+        0.0747,
+        0.0957,
+        0.1002,
+        0.0992,
+        0.0933,
+        0.083,
+        0.0755,
+        0.0675,
+        0.0608,
+        0.0492,
+        0.0392,
+        0.0295,
+        0.0188,
+        0.0113,
+        0.0047
       ],
       "projected_points": {
-        "mean": 48.4,
+        "mean": 48.5,
         "p10": 40,
         "p50": 48,
         "p90": 57
       },
       "elo_rating": 1541.2,
       "elo_start_of_season": 1539.1,
-      "attack_rating": 0.916,
+      "attack_rating": 0.915,
       "defense_rating": 0.845
     },
     {
       "team": "DSC Arminia Bielefeld",
-      "current_points": 11,
-      "current_gd": -1,
-      "current_gf": 13,
-      "current_ga": 14,
-      "matches_played": 9,
-      "wins": 3,
+      "current_points": 14,
+      "current_gd": 1,
+      "current_gf": 16,
+      "current_ga": 15,
+      "matches_played": 10,
+      "wins": 4,
       "draws": 2,
       "losses": 4,
-      "avg_projected_position": 9.63,
-      "promotion_probability": 0.0217,
-      "champion_probability": 0.006,
-      "playoff_probability": 0.0291,
+      "avg_projected_position": 8.58,
+      "promotion_probability": 0.0351,
+      "champion_probability": 0.0086,
+      "playoff_probability": 0.0486,
       "position_distribution": [
-        0.006,
-        0.0157,
-        0.0291,
-        0.0499,
-        0.0619,
-        0.0816,
-        0.0812,
-        0.0877,
+        0.0086,
+        0.0265,
+        0.0486,
+        0.0702,
+        0.084,
+        0.0947,
+        0.0987,
         0.0902,
-        0.0839,
-        0.0827,
-        0.0735,
-        0.065,
-        0.0617,
-        0.049,
-        0.0371,
-        0.0277,
-        0.0161
+        0.0874,
+        0.0833,
+        0.0729,
+        0.0612,
+        0.054,
+        0.0402,
+        0.0329,
+        0.0233,
+        0.0158,
+        0.0075
       ],
       "projected_points": {
-        "mean": 46.1,
-        "p10": 38,
-        "p50": 46,
-        "p90": 55
+        "mean": 48.0,
+        "p10": 40,
+        "p50": 48,
+        "p90": 56
       },
-      "elo_rating": 1480.9,
+      "elo_rating": 1488.4,
       "elo_start_of_season": 1481.0,
-      "attack_rating": 1.026,
-      "defense_rating": 1.014
+      "attack_rating": 1.044,
+      "defense_rating": 1.006
     },
     {
       "team": "Hannover 96",
@@ -377,85 +377,40 @@
       "wins": 2,
       "draws": 2,
       "losses": 5,
-      "avg_projected_position": 9.8,
-      "promotion_probability": 0.0158,
-      "champion_probability": 0.0038,
-      "playoff_probability": 0.0301,
+      "avg_projected_position": 9.77,
+      "promotion_probability": 0.0168,
+      "champion_probability": 0.0041,
+      "playoff_probability": 0.0293,
       "position_distribution": [
-        0.0038,
-        0.012,
-        0.0301,
-        0.0472,
-        0.0645,
-        0.0749,
-        0.082,
-        0.0889,
-        0.0853,
-        0.0806,
-        0.0836,
-        0.0787,
-        0.066,
-        0.06,
-        0.0488,
-        0.0428,
-        0.032,
-        0.0188
+        0.0041,
+        0.0127,
+        0.0293,
+        0.045,
+        0.0647,
+        0.0725,
+        0.0849,
+        0.0875,
+        0.0928,
+        0.0842,
+        0.085,
+        0.0744,
+        0.0627,
+        0.0592,
+        0.0535,
+        0.0371,
+        0.0328,
+        0.0176
       ],
       "projected_points": {
-        "mean": 45.8,
+        "mean": 45.9,
         "p10": 37,
         "p50": 46,
         "p90": 54
       },
       "elo_rating": 1519.0,
       "elo_start_of_season": 1557.6,
-      "attack_rating": 1.052,
+      "attack_rating": 1.051,
       "defense_rating": 0.937
-    },
-    {
-      "team": "Energie Cottbus",
-      "current_points": 10,
-      "current_gd": -1,
-      "current_gf": 17,
-      "current_ga": 18,
-      "matches_played": 9,
-      "wins": 2,
-      "draws": 4,
-      "losses": 3,
-      "avg_projected_position": 10.74,
-      "promotion_probability": 0.012,
-      "champion_probability": 0.0033,
-      "playoff_probability": 0.0172,
-      "position_distribution": [
-        0.0033,
-        0.0087,
-        0.0172,
-        0.0312,
-        0.0441,
-        0.0593,
-        0.0697,
-        0.0748,
-        0.0808,
-        0.0847,
-        0.0846,
-        0.0844,
-        0.0808,
-        0.0744,
-        0.07,
-        0.055,
-        0.046,
-        0.031
-      ],
-      "projected_points": {
-        "mean": 44.1,
-        "p10": 36,
-        "p50": 44,
-        "p90": 53
-      },
-      "elo_rating": 1494.8,
-      "elo_start_of_season": 1500,
-      "attack_rating": 1.128,
-      "defense_rating": 1.164
     },
     {
       "team": "VfL Osnabrück",
@@ -467,40 +422,85 @@
       "wins": 3,
       "draws": 2,
       "losses": 4,
-      "avg_projected_position": 10.81,
-      "promotion_probability": 0.0101,
+      "avg_projected_position": 10.76,
+      "promotion_probability": 0.0105,
       "champion_probability": 0.0021,
-      "playoff_probability": 0.0197,
+      "playoff_probability": 0.0183,
       "position_distribution": [
         0.0021,
-        0.008,
-        0.0197,
-        0.0291,
-        0.0414,
-        0.0558,
-        0.0695,
-        0.0758,
-        0.0815,
-        0.0842,
-        0.086,
-        0.0806,
-        0.0821,
-        0.0792,
-        0.0678,
-        0.0628,
-        0.045,
-        0.0294
+        0.0084,
+        0.0183,
+        0.0289,
+        0.0424,
+        0.0589,
+        0.0682,
+        0.0776,
+        0.0818,
+        0.0854,
+        0.089,
+        0.078,
+        0.0828,
+        0.0756,
+        0.0725,
+        0.0547,
+        0.0481,
+        0.0273
       ],
       "projected_points": {
-        "mean": 44.1,
+        "mean": 44.2,
         "p10": 36,
         "p50": 44,
         "p90": 53
       },
       "elo_rating": 1465.2,
       "elo_start_of_season": 1471.7,
-      "attack_rating": 1.022,
+      "attack_rating": 1.021,
       "defense_rating": 1.057
+    },
+    {
+      "team": "VfL Bochum",
+      "current_points": 11,
+      "current_gd": -3,
+      "current_gf": 8,
+      "current_ga": 11,
+      "matches_played": 10,
+      "wins": 3,
+      "draws": 2,
+      "losses": 5,
+      "avg_projected_position": 11.04,
+      "promotion_probability": 0.0065,
+      "champion_probability": 0.001,
+      "playoff_probability": 0.0163,
+      "position_distribution": [
+        0.001,
+        0.0055,
+        0.0163,
+        0.0234,
+        0.043,
+        0.0511,
+        0.0623,
+        0.0721,
+        0.0775,
+        0.0854,
+        0.0895,
+        0.0889,
+        0.0877,
+        0.0834,
+        0.0734,
+        0.0618,
+        0.0477,
+        0.03
+      ],
+      "projected_points": {
+        "mean": 43.7,
+        "p10": 36,
+        "p50": 44,
+        "p90": 52
+      },
+      "elo_rating": 1484.1,
+      "elo_start_of_season": 1502.9,
+      "attack_rating": 0.894,
+      "defense_rating": 0.907
     },
     {
       "team": "SV Darmstadt 98",
@@ -512,85 +512,85 @@
       "wins": 2,
       "draws": 2,
       "losses": 5,
-      "avg_projected_position": 11.34,
-      "promotion_probability": 0.0074,
-      "champion_probability": 0.0012,
-      "playoff_probability": 0.0121,
+      "avg_projected_position": 11.3,
+      "promotion_probability": 0.008,
+      "champion_probability": 0.0021,
+      "playoff_probability": 0.0154,
       "position_distribution": [
-        0.0012,
-        0.0062,
-        0.0121,
-        0.0237,
-        0.0392,
-        0.0462,
-        0.0612,
-        0.0644,
-        0.0736,
-        0.0864,
-        0.0872,
-        0.0823,
-        0.0881,
-        0.0777,
-        0.0788,
-        0.0668,
-        0.0636,
-        0.0413
+        0.0021,
+        0.0059,
+        0.0154,
+        0.0216,
+        0.0326,
+        0.0502,
+        0.0576,
+        0.0673,
+        0.0792,
+        0.0796,
+        0.0865,
+        0.0943,
+        0.0852,
+        0.0817,
+        0.079,
+        0.0673,
+        0.0535,
+        0.041
       ],
       "projected_points": {
-        "mean": 43.4,
+        "mean": 43.5,
         "p10": 35,
         "p50": 43,
         "p90": 52
       },
       "elo_rating": 1477.7,
       "elo_start_of_season": 1505.3,
-      "attack_rating": 1.014,
-      "defense_rating": 0.988
+      "attack_rating": 1.013,
+      "defense_rating": 0.987
     },
     {
-      "team": "VfL Bochum",
-      "current_points": 8,
-      "current_gd": -4,
-      "current_gf": 6,
-      "current_ga": 10,
-      "matches_played": 9,
+      "team": "Energie Cottbus",
+      "current_points": 10,
+      "current_gd": -2,
+      "current_gf": 18,
+      "current_ga": 20,
+      "matches_played": 10,
       "wins": 2,
-      "draws": 2,
-      "losses": 5,
-      "avg_projected_position": 12.17,
-      "promotion_probability": 0.0039,
-      "champion_probability": 0.0002,
-      "playoff_probability": 0.008,
+      "draws": 4,
+      "losses": 4,
+      "avg_projected_position": 12.04,
+      "promotion_probability": 0.0045,
+      "champion_probability": 0.0008,
+      "playoff_probability": 0.0098,
       "position_distribution": [
-        0.0002,
+        0.0008,
         0.0037,
-        0.008,
-        0.0157,
-        0.0267,
-        0.0337,
-        0.0484,
-        0.055,
-        0.0661,
-        0.0772,
-        0.0746,
-        0.0829,
-        0.0909,
-        0.094,
+        0.0098,
+        0.0145,
+        0.0269,
+        0.0373,
+        0.048,
+        0.0581,
+        0.0647,
+        0.0765,
+        0.0789,
+        0.0828,
+        0.0933,
+        0.1013,
         0.0919,
-        0.0894,
-        0.0807,
-        0.0609
+        0.0837,
+        0.0731,
+        0.0547
       ],
       "projected_points": {
-        "mean": 41.7,
-        "p10": 33,
+        "mean": 41.9,
+        "p10": 34,
         "p50": 42,
         "p90": 50
       },
-      "elo_rating": 1471.7,
-      "elo_start_of_season": 1502.9,
-      "attack_rating": 0.887,
-      "defense_rating": 0.912
+      "elo_rating": 1482.5,
+      "elo_start_of_season": 1500,
+      "attack_rating": 1.105,
+      "defense_rating": 1.172
     },
     {
       "team": "Holstein Kiel",
@@ -602,39 +602,39 @@
       "wins": 1,
       "draws": 5,
       "losses": 3,
-      "avg_projected_position": 12.65,
-      "promotion_probability": 0.0027,
-      "champion_probability": 0.0003,
-      "playoff_probability": 0.0059,
+      "avg_projected_position": 12.69,
+      "promotion_probability": 0.0032,
+      "champion_probability": 0.0005,
+      "playoff_probability": 0.0061,
       "position_distribution": [
-        0.0003,
-        0.0024,
-        0.0059,
-        0.0116,
-        0.0206,
-        0.0287,
-        0.0364,
-        0.0504,
-        0.0576,
-        0.067,
-        0.0787,
-        0.0832,
-        0.0918,
-        0.0979,
-        0.1014,
-        0.0935,
-        0.0968,
-        0.0758
+        0.0005,
+        0.0027,
+        0.0061,
+        0.0124,
+        0.0177,
+        0.0265,
+        0.0392,
+        0.0485,
+        0.0566,
+        0.0697,
+        0.0725,
+        0.0854,
+        0.0919,
+        0.0967,
+        0.0975,
+        0.1018,
+        0.0963,
+        0.078
       ],
       "projected_points": {
-        "mean": 40.7,
-        "p10": 33,
+        "mean": 40.6,
+        "p10": 32,
         "p50": 41,
         "p90": 49
       },
       "elo_rating": 1480.8,
       "elo_start_of_season": 1498.6,
-      "attack_rating": 0.874,
+      "attack_rating": 0.873,
       "defense_rating": 0.937
     },
     {
@@ -647,85 +647,40 @@
       "wins": 2,
       "draws": 2,
       "losses": 5,
-      "avg_projected_position": 12.73,
-      "promotion_probability": 0.0029,
-      "champion_probability": 0.0003,
-      "playoff_probability": 0.0072,
+      "avg_projected_position": 12.74,
+      "promotion_probability": 0.0025,
+      "champion_probability": 0.0002,
+      "playoff_probability": 0.006,
       "position_distribution": [
-        0.0003,
-        0.0026,
-        0.0072,
-        0.012,
-        0.0219,
-        0.0282,
-        0.0417,
-        0.0475,
-        0.0563,
-        0.0669,
-        0.0645,
-        0.0818,
-        0.084,
-        0.0945,
-        0.0985,
-        0.1056,
-        0.0988,
-        0.0877
+        0.0002,
+        0.0023,
+        0.006,
+        0.0128,
+        0.0199,
+        0.0272,
+        0.0364,
+        0.0458,
+        0.0537,
+        0.0667,
+        0.0735,
+        0.0836,
+        0.0923,
+        0.0996,
+        0.1034,
+        0.1032,
+        0.0943,
+        0.0791
       ],
       "projected_points": {
         "mean": 40.8,
-        "p10": 32,
+        "p10": 33,
         "p50": 41,
         "p90": 49
       },
       "elo_rating": 1468.2,
       "elo_start_of_season": 1492.9,
-      "attack_rating": 1.014,
-      "defense_rating": 1.09
-    },
-    {
-      "team": "Eintracht Braunschweig",
-      "current_points": 10,
-      "current_gd": 0,
-      "current_gf": 15,
-      "current_ga": 15,
-      "matches_played": 9,
-      "wins": 3,
-      "draws": 1,
-      "losses": 5,
-      "avg_projected_position": 14.13,
-      "promotion_probability": 0.0012,
-      "champion_probability": 0.0002,
-      "playoff_probability": 0.0022,
-      "position_distribution": [
-        0.0002,
-        0.001,
-        0.0022,
-        0.0039,
-        0.0075,
-        0.015,
-        0.0182,
-        0.0282,
-        0.0357,
-        0.0427,
-        0.0556,
-        0.0711,
-        0.0804,
-        0.0901,
-        0.1171,
-        0.1347,
-        0.1453,
-        0.1511
-      ],
-      "projected_points": {
-        "mean": 38.1,
-        "p10": 30,
-        "p50": 38,
-        "p90": 46
-      },
-      "elo_rating": 1452.3,
-      "elo_start_of_season": 1464.4,
-      "attack_rating": 0.836,
-      "defense_rating": 1.064
+      "attack_rating": 1.013,
+      "defense_rating": 1.089
     },
     {
       "team": "Karlsruher SC",
@@ -737,40 +692,85 @@
       "wins": 2,
       "draws": 2,
       "losses": 5,
-      "avg_projected_position": 14.73,
-      "promotion_probability": 0.0004,
-      "champion_probability": 0.0,
+      "avg_projected_position": 14.7,
+      "promotion_probability": 0.0008,
+      "champion_probability": 0.0002,
       "playoff_probability": 0.0016,
       "position_distribution": [
-        0.0,
-        0.0004,
+        0.0002,
+        0.0006,
         0.0016,
-        0.0028,
-        0.0052,
-        0.0084,
-        0.0151,
-        0.0196,
-        0.0284,
-        0.0374,
-        0.0492,
-        0.0575,
-        0.0722,
-        0.084,
-        0.1037,
-        0.1257,
-        0.1618,
-        0.227
+        0.0032,
+        0.0046,
+        0.0113,
+        0.0128,
+        0.0207,
+        0.0292,
+        0.0356,
+        0.0467,
+        0.0582,
+        0.0684,
+        0.091,
+        0.1016,
+        0.135,
+        0.166,
+        0.2133
       ],
       "projected_points": {
-        "mean": 37.0,
+        "mean": 37.1,
         "p10": 29,
         "p50": 37,
-        "p90": 45
+        "p90": 46
       },
       "elo_rating": 1469.7,
       "elo_start_of_season": 1496.1,
-      "attack_rating": 1.001,
-      "defense_rating": 1.255
+      "attack_rating": 1.0,
+      "defense_rating": 1.253
+    },
+    {
+      "team": "Eintracht Braunschweig",
+      "current_points": 10,
+      "current_gd": -2,
+      "current_gf": 16,
+      "current_ga": 18,
+      "matches_played": 10,
+      "wins": 3,
+      "draws": 1,
+      "losses": 6,
+      "avg_projected_position": 14.86,
+      "promotion_probability": 0.0007,
+      "champion_probability": 0.0001,
+      "playoff_probability": 0.0009,
+      "position_distribution": [
+        0.0001,
+        0.0006,
+        0.0009,
+        0.0026,
+        0.0052,
+        0.0085,
+        0.011,
+        0.0166,
+        0.0236,
+        0.0345,
+        0.0425,
+        0.0545,
+        0.0724,
+        0.0844,
+        0.1116,
+        0.1479,
+        0.1751,
+        0.208
+      ],
+      "projected_points": {
+        "mean": 36.5,
+        "p10": 29,
+        "p50": 36,
+        "p90": 45
+      },
+      "elo_rating": 1444.8,
+      "elo_start_of_season": 1464.4,
+      "attack_rating": 0.832,
+      "defense_rating": 1.081
     },
     {
       "team": "SpVgg Greuther Fürth",
@@ -782,40 +782,40 @@
       "wins": 2,
       "draws": 3,
       "losses": 4,
-      "avg_projected_position": 14.98,
-      "promotion_probability": 0.0001,
+      "avg_projected_position": 14.93,
+      "promotion_probability": 0.0006,
       "champion_probability": 0.0,
-      "playoff_probability": 0.0011,
+      "playoff_probability": 0.0006,
       "position_distribution": [
         0.0,
-        0.0001,
-        0.0011,
-        0.0023,
-        0.0053,
-        0.0084,
-        0.0143,
-        0.0187,
-        0.0255,
-        0.0336,
-        0.036,
-        0.0489,
-        0.0666,
-        0.0802,
-        0.1031,
-        0.138,
-        0.1699,
-        0.248
+        0.0006,
+        0.0006,
+        0.0022,
+        0.0044,
+        0.0083,
+        0.0099,
+        0.0201,
+        0.0249,
+        0.0313,
+        0.0396,
+        0.0566,
+        0.0702,
+        0.088,
+        0.1083,
+        0.1326,
+        0.1705,
+        0.2319
       ],
       "projected_points": {
-        "mean": 36.3,
+        "mean": 36.5,
         "p10": 28,
         "p50": 36,
         "p90": 45
       },
       "elo_rating": 1458.5,
       "elo_start_of_season": 1467.8,
-      "attack_rating": 0.963,
-      "defense_rating": 1.255
+      "attack_rating": 0.962,
+      "defense_rating": 1.253
     }
   ],
   "trajectories": {
@@ -8314,6 +8314,10 @@
         {
           "matchday": 9,
           "points": 8
+        },
+        {
+          "matchday": 10,
+          "points": 11
         }
       ],
       "Hertha BSC": [
@@ -8580,6 +8584,10 @@
         {
           "matchday": 9,
           "points": 11
+        },
+        {
+          "matchday": 10,
+          "points": 14
         }
       ],
       "1. FC Magdeburg": [
@@ -8655,6 +8663,10 @@
         },
         {
           "matchday": 9,
+          "points": 10
+        },
+        {
+          "matchday": 10,
           "points": 10
         }
       ],
@@ -8921,6 +8933,10 @@
         },
         {
           "matchday": 9,
+          "points": 10
+        },
+        {
+          "matchday": 10,
           "points": 10
         }
       ],
@@ -9864,7 +9880,7 @@
         "draw_probability": 0.261,
         "expected_points": 1.418,
         "difficulty": 3,
-        "schedule_ep": 1.29
+        "schedule_ep": 1.291
       },
       {
         "matchday": 11,
@@ -9880,7 +9896,7 @@
         "matchday": 12,
         "opponent": "Dynamo Dresden",
         "is_home": true,
-        "win_probability": 0.489,
+        "win_probability": 0.488,
         "draw_probability": 0.235,
         "expected_points": 1.701,
         "difficulty": 2,
@@ -9902,7 +9918,7 @@
         "is_home": true,
         "win_probability": 0.562,
         "draw_probability": 0.215,
-        "expected_points": 1.902,
+        "expected_points": 1.901,
         "difficulty": 1,
         "schedule_ep": 1.792
       },
@@ -9910,11 +9926,11 @@
         "matchday": 15,
         "opponent": "DSC Arminia Bielefeld",
         "is_home": false,
-        "win_probability": 0.381,
-        "draw_probability": 0.249,
-        "expected_points": 1.391,
+        "win_probability": 0.373,
+        "draw_probability": 0.248,
+        "expected_points": 1.368,
         "difficulty": 3,
-        "schedule_ep": 1.255
+        "schedule_ep": 1.231
       },
       {
         "matchday": 16,
@@ -9930,11 +9946,11 @@
         "matchday": 17,
         "opponent": "Energie Cottbus",
         "is_home": true,
-        "win_probability": 0.485,
+        "win_probability": 0.494,
         "draw_probability": 0.225,
-        "expected_points": 1.679,
+        "expected_points": 1.707,
         "difficulty": 2,
-        "schedule_ep": 1.549
+        "schedule_ep": 1.579
       },
       {
         "matchday": 18,
@@ -9971,7 +9987,7 @@
         "opponent": "SV Darmstadt 98",
         "is_home": false,
         "win_probability": 0.375,
-        "draw_probability": 0.251,
+        "draw_probability": 0.252,
         "expected_points": 1.377,
         "difficulty": 3,
         "schedule_ep": 1.242
@@ -9982,19 +9998,19 @@
         "is_home": true,
         "win_probability": 0.46,
         "draw_probability": 0.235,
-        "expected_points": 1.614,
+        "expected_points": 1.613,
         "difficulty": 2,
-        "schedule_ep": 1.483
+        "schedule_ep": 1.484
       },
       {
         "matchday": 23,
         "opponent": "Eintracht Braunschweig",
         "is_home": false,
-        "win_probability": 0.456,
-        "draw_probability": 0.254,
-        "expected_points": 1.621,
+        "win_probability": 0.463,
+        "draw_probability": 0.252,
+        "expected_points": 1.641,
         "difficulty": 2,
-        "schedule_ep": 1.504
+        "schedule_ep": 1.525
       },
       {
         "matchday": 24,
@@ -10002,7 +10018,7 @@
         "is_home": true,
         "win_probability": 0.468,
         "draw_probability": 0.233,
-        "expected_points": 1.638,
+        "expected_points": 1.637,
         "difficulty": 2,
         "schedule_ep": 1.509
       },
@@ -10010,11 +10026,11 @@
         "matchday": 25,
         "opponent": "VfL Bochum",
         "is_home": false,
-        "win_probability": 0.383,
+        "win_probability": 0.379,
         "draw_probability": 0.267,
-        "expected_points": 1.417,
+        "expected_points": 1.404,
         "difficulty": 3,
-        "schedule_ep": 1.293
+        "schedule_ep": 1.28
       },
       {
         "matchday": 26,
@@ -10042,7 +10058,7 @@
         "is_home": true,
         "win_probability": 0.474,
         "draw_probability": 0.239,
-        "expected_points": 1.661,
+        "expected_points": 1.66,
         "difficulty": 2,
         "schedule_ep": 1.538
       },
@@ -10080,11 +10096,11 @@
         "matchday": 32,
         "opponent": "DSC Arminia Bielefeld",
         "is_home": true,
-        "win_probability": 0.456,
+        "win_probability": 0.448,
         "draw_probability": 0.244,
-        "expected_points": 1.611,
+        "expected_points": 1.589,
         "difficulty": 2,
-        "schedule_ep": 1.487
+        "schedule_ep": 1.463
       },
       {
         "matchday": 33,
@@ -10100,11 +10116,11 @@
         "matchday": 34,
         "opponent": "Energie Cottbus",
         "is_home": false,
-        "win_probability": 0.404,
+        "win_probability": 0.413,
         "draw_probability": 0.233,
-        "expected_points": 1.444,
+        "expected_points": 1.473,
         "difficulty": 3,
-        "schedule_ep": 1.301
+        "schedule_ep": 1.331
       }
     ],
     "Hertha BSC": [
@@ -10112,7 +10128,7 @@
         "matchday": 10,
         "opponent": "1. FC Kaiserslautern",
         "is_home": false,
-        "win_probability": 0.354,
+        "win_probability": 0.353,
         "draw_probability": 0.261,
         "expected_points": 1.321,
         "difficulty": 3,
@@ -10132,11 +10148,11 @@
         "matchday": 12,
         "opponent": "Energie Cottbus",
         "is_home": false,
-        "win_probability": 0.429,
+        "win_probability": 0.439,
         "draw_probability": 0.226,
-        "expected_points": 1.514,
+        "expected_points": 1.543,
         "difficulty": 2,
-        "schedule_ep": 1.301
+        "schedule_ep": 1.331
       },
       {
         "matchday": 13,
@@ -10144,7 +10160,7 @@
         "is_home": true,
         "win_probability": 0.581,
         "draw_probability": 0.203,
-        "expected_points": 1.946,
+        "expected_points": 1.945,
         "difficulty": 1,
         "schedule_ep": 1.756
       },
@@ -10152,7 +10168,7 @@
         "matchday": 14,
         "opponent": "Hannover 96",
         "is_home": false,
-        "win_probability": 0.369,
+        "win_probability": 0.368,
         "draw_probability": 0.246,
         "expected_points": 1.352,
         "difficulty": 3,
@@ -10163,7 +10179,7 @@
         "opponent": "SV Darmstadt 98",
         "is_home": true,
         "win_probability": 0.475,
-        "draw_probability": 0.237,
+        "draw_probability": 0.238,
         "expected_points": 1.664,
         "difficulty": 2,
         "schedule_ep": 1.472
@@ -10192,11 +10208,11 @@
         "matchday": 18,
         "opponent": "VfL Bochum",
         "is_home": true,
-        "win_probability": 0.48,
+        "win_probability": 0.475,
         "draw_probability": 0.251,
-        "expected_points": 1.69,
+        "expected_points": 1.677,
         "difficulty": 2,
-        "schedule_ep": 1.511
+        "schedule_ep": 1.497
       },
       {
         "matchday": 19,
@@ -10204,7 +10220,7 @@
         "is_home": false,
         "win_probability": 0.414,
         "draw_probability": 0.232,
-        "expected_points": 1.476,
+        "expected_points": 1.475,
         "difficulty": 3,
         "schedule_ep": 1.267
       },
@@ -10212,11 +10228,11 @@
         "matchday": 20,
         "opponent": "Eintracht Braunschweig",
         "is_home": true,
-        "win_probability": 0.558,
-        "draw_probability": 0.227,
-        "expected_points": 1.901,
+        "win_probability": 0.565,
+        "draw_probability": 0.225,
+        "expected_points": 1.921,
         "difficulty": 1,
-        "schedule_ep": 1.728
+        "schedule_ep": 1.749
       },
       {
         "matchday": 21,
@@ -10272,11 +10288,11 @@
         "matchday": 26,
         "opponent": "DSC Arminia Bielefeld",
         "is_home": false,
-        "win_probability": 0.404,
-        "draw_probability": 0.242,
-        "expected_points": 1.455,
+        "win_probability": 0.397,
+        "draw_probability": 0.241,
+        "expected_points": 1.432,
         "difficulty": 3,
-        "schedule_ep": 1.255
+        "schedule_ep": 1.231
       },
       {
         "matchday": 27,
@@ -10302,11 +10318,11 @@
         "matchday": 29,
         "opponent": "Energie Cottbus",
         "is_home": true,
-        "win_probability": 0.513,
-        "draw_probability": 0.216,
-        "expected_points": 1.754,
+        "win_probability": 0.522,
+        "draw_probability": 0.215,
+        "expected_points": 1.781,
         "difficulty": 2,
-        "schedule_ep": 1.549
+        "schedule_ep": 1.579
       },
       {
         "matchday": 30,
@@ -10332,7 +10348,7 @@
         "matchday": 32,
         "opponent": "SV Darmstadt 98",
         "is_home": false,
-        "win_probability": 0.399,
+        "win_probability": 0.398,
         "draw_probability": 0.245,
         "expected_points": 1.44,
         "difficulty": 3,
@@ -10357,1014 +10373,6 @@
         "expected_points": 1.324,
         "difficulty": 3,
         "schedule_ep": 1.128
-      }
-    ],
-    "DSC Arminia Bielefeld": [
-      {
-        "matchday": 10,
-        "opponent": "Eintracht Braunschweig",
-        "is_home": true,
-        "win_probability": 0.505,
-        "draw_probability": 0.23,
-        "expected_points": 1.745,
-        "difficulty": 2,
-        "schedule_ep": 1.728
-      },
-      {
-        "matchday": 11,
-        "opponent": "Holstein Kiel",
-        "is_home": false,
-        "win_probability": 0.366,
-        "draw_probability": 0.247,
-        "expected_points": 1.346,
-        "difficulty": 3,
-        "schedule_ep": 1.333
-      },
-      {
-        "matchday": 12,
-        "opponent": "1. FC Magdeburg",
-        "is_home": true,
-        "win_probability": 0.426,
-        "draw_probability": 0.222,
-        "expected_points": 1.499,
-        "difficulty": 2,
-        "schedule_ep": 1.483
-      },
-      {
-        "matchday": 13,
-        "opponent": "SpVgg Greuther Fürth",
-        "is_home": false,
-        "win_probability": 0.449,
-        "draw_probability": 0.219,
-        "expected_points": 1.567,
-        "difficulty": 2,
-        "schedule_ep": 1.551
-      },
-      {
-        "matchday": 14,
-        "opponent": "Dynamo Dresden",
-        "is_home": true,
-        "win_probability": 0.458,
-        "draw_probability": 0.224,
-        "expected_points": 1.596,
-        "difficulty": 2,
-        "schedule_ep": 1.58
-      },
-      {
-        "matchday": 15,
-        "opponent": "1. FC Kaiserslautern",
-        "is_home": true,
-        "win_probability": 0.371,
-        "draw_probability": 0.249,
-        "expected_points": 1.361,
-        "difficulty": 3,
-        "schedule_ep": 1.347
-      },
-      {
-        "matchday": 16,
-        "opponent": "VfL Wolfsburg",
-        "is_home": false,
-        "win_probability": 0.263,
-        "draw_probability": 0.201,
-        "expected_points": 0.991,
-        "difficulty": 4,
-        "schedule_ep": 0.981
-      },
-      {
-        "matchday": 17,
-        "opponent": "Hannover 96",
-        "is_home": true,
-        "win_probability": 0.386,
-        "draw_probability": 0.235,
-        "expected_points": 1.394,
-        "difficulty": 3,
-        "schedule_ep": 1.38
-      },
-      {
-        "matchday": 18,
-        "opponent": "Karlsruher SC",
-        "is_home": true,
-        "win_probability": 0.522,
-        "draw_probability": 0.208,
-        "expected_points": 1.775,
-        "difficulty": 2,
-        "schedule_ep": 1.756
-      },
-      {
-        "matchday": 19,
-        "opponent": "Energie Cottbus",
-        "is_home": false,
-        "win_probability": 0.366,
-        "draw_probability": 0.216,
-        "expected_points": 1.314,
-        "difficulty": 3,
-        "schedule_ep": 1.301
-      },
-      {
-        "matchday": 20,
-        "opponent": "1. FC Nürnberg",
-        "is_home": true,
-        "win_probability": 0.376,
-        "draw_probability": 0.237,
-        "expected_points": 1.365,
-        "difficulty": 3,
-        "schedule_ep": 1.351
-      },
-      {
-        "matchday": 21,
-        "opponent": "FC St. Pauli",
-        "is_home": false,
-        "win_probability": 0.318,
-        "draw_probability": 0.249,
-        "expected_points": 1.203,
-        "difficulty": 3,
-        "schedule_ep": 1.192
-      },
-      {
-        "matchday": 22,
-        "opponent": "SV Darmstadt 98",
-        "is_home": true,
-        "win_probability": 0.418,
-        "draw_probability": 0.233,
-        "expected_points": 1.487,
-        "difficulty": 3,
-        "schedule_ep": 1.472
-      },
-      {
-        "matchday": 23,
-        "opponent": "1. FC Heidenheim 1846",
-        "is_home": false,
-        "win_probability": 0.353,
-        "draw_probability": 0.222,
-        "expected_points": 1.281,
-        "difficulty": 3,
-        "schedule_ep": 1.267
-      },
-      {
-        "matchday": 24,
-        "opponent": "VfL Bochum",
-        "is_home": true,
-        "win_probability": 0.426,
-        "draw_probability": 0.246,
-        "expected_points": 1.526,
-        "difficulty": 2,
-        "schedule_ep": 1.511
-      },
-      {
-        "matchday": 25,
-        "opponent": "VfL Osnabrück",
-        "is_home": false,
-        "win_probability": 0.362,
-        "draw_probability": 0.228,
-        "expected_points": 1.316,
-        "difficulty": 3,
-        "schedule_ep": 1.302
-      },
-      {
-        "matchday": 26,
-        "opponent": "Hertha BSC",
-        "is_home": true,
-        "win_probability": 0.354,
-        "draw_probability": 0.242,
-        "expected_points": 1.303,
-        "difficulty": 3,
-        "schedule_ep": 1.29
-      },
-      {
-        "matchday": 27,
-        "opponent": "Eintracht Braunschweig",
-        "is_home": false,
-        "win_probability": 0.427,
-        "draw_probability": 0.24,
-        "expected_points": 1.52,
-        "difficulty": 2,
-        "schedule_ep": 1.504
-      },
-      {
-        "matchday": 28,
-        "opponent": "Holstein Kiel",
-        "is_home": true,
-        "win_probability": 0.441,
-        "draw_probability": 0.244,
-        "expected_points": 1.568,
-        "difficulty": 2,
-        "schedule_ep": 1.552
-      },
-      {
-        "matchday": 29,
-        "opponent": "1. FC Magdeburg",
-        "is_home": false,
-        "win_probability": 0.345,
-        "draw_probability": 0.221,
-        "expected_points": 1.256,
-        "difficulty": 3,
-        "schedule_ep": 1.243
-      },
-      {
-        "matchday": 30,
-        "opponent": "SpVgg Greuther Fürth",
-        "is_home": true,
-        "win_probability": 0.534,
-        "draw_probability": 0.207,
-        "expected_points": 1.811,
-        "difficulty": 2,
-        "schedule_ep": 1.792
-      },
-      {
-        "matchday": 31,
-        "opponent": "Dynamo Dresden",
-        "is_home": false,
-        "win_probability": 0.376,
-        "draw_probability": 0.227,
-        "expected_points": 1.356,
-        "difficulty": 3,
-        "schedule_ep": 1.342
-      },
-      {
-        "matchday": 32,
-        "opponent": "1. FC Kaiserslautern",
-        "is_home": false,
-        "win_probability": 0.301,
-        "draw_probability": 0.244,
-        "expected_points": 1.145,
-        "difficulty": 3,
-        "schedule_ep": 1.135
-      },
-      {
-        "matchday": 33,
-        "opponent": "VfL Wolfsburg",
-        "is_home": true,
-        "win_probability": 0.34,
-        "draw_probability": 0.212,
-        "expected_points": 1.232,
-        "difficulty": 3,
-        "schedule_ep": 1.219
-      },
-      {
-        "matchday": 34,
-        "opponent": "Hannover 96",
-        "is_home": false,
-        "win_probability": 0.312,
-        "draw_probability": 0.23,
-        "expected_points": 1.165,
-        "difficulty": 3,
-        "schedule_ep": 1.154
-      }
-    ],
-    "Eintracht Braunschweig": [
-      {
-        "matchday": 10,
-        "opponent": "DSC Arminia Bielefeld",
-        "is_home": false,
-        "win_probability": 0.265,
-        "draw_probability": 0.23,
-        "expected_points": 1.025,
-        "difficulty": 4,
-        "schedule_ep": 1.255
-      },
-      {
-        "matchday": 11,
-        "opponent": "Energie Cottbus",
-        "is_home": true,
-        "win_probability": 0.353,
-        "draw_probability": 0.225,
-        "expected_points": 1.284,
-        "difficulty": 3,
-        "schedule_ep": 1.549
-      },
-      {
-        "matchday": 12,
-        "opponent": "1. FC Nürnberg",
-        "is_home": false,
-        "win_probability": 0.23,
-        "draw_probability": 0.226,
-        "expected_points": 0.915,
-        "difficulty": 4,
-        "schedule_ep": 1.128
-      },
-      {
-        "matchday": 13,
-        "opponent": "VfL Wolfsburg",
-        "is_home": true,
-        "win_probability": 0.256,
-        "draw_probability": 0.209,
-        "expected_points": 0.975,
-        "difficulty": 4,
-        "schedule_ep": 1.219
-      },
-      {
-        "matchday": 14,
-        "opponent": "SV Darmstadt 98",
-        "is_home": false,
-        "win_probability": 0.261,
-        "draw_probability": 0.232,
-        "expected_points": 1.015,
-        "difficulty": 4,
-        "schedule_ep": 1.242
-      },
-      {
-        "matchday": 15,
-        "opponent": "Karlsruher SC",
-        "is_home": true,
-        "win_probability": 0.42,
-        "draw_probability": 0.228,
-        "expected_points": 1.488,
-        "difficulty": 3,
-        "schedule_ep": 1.756
-      },
-      {
-        "matchday": 16,
-        "opponent": "1. FC Heidenheim 1846",
-        "is_home": false,
-        "win_probability": 0.269,
-        "draw_probability": 0.221,
-        "expected_points": 1.028,
-        "difficulty": 4,
-        "schedule_ep": 1.267
-      },
-      {
-        "matchday": 17,
-        "opponent": "FC St. Pauli",
-        "is_home": true,
-        "win_probability": 0.307,
-        "draw_probability": 0.26,
-        "expected_points": 1.18,
-        "difficulty": 3,
-        "schedule_ep": 1.404
-      },
-      {
-        "matchday": 18,
-        "opponent": "1. FC Magdeburg",
-        "is_home": true,
-        "win_probability": 0.333,
-        "draw_probability": 0.231,
-        "expected_points": 1.229,
-        "difficulty": 3,
-        "schedule_ep": 1.483
-      },
-      {
-        "matchday": 19,
-        "opponent": "VfL Bochum",
-        "is_home": false,
-        "win_probability": 0.275,
-        "draw_probability": 0.251,
-        "expected_points": 1.074,
-        "difficulty": 4,
-        "schedule_ep": 1.293
-      },
-      {
-        "matchday": 20,
-        "opponent": "Hertha BSC",
-        "is_home": false,
-        "win_probability": 0.215,
-        "draw_probability": 0.227,
-        "expected_points": 0.872,
-        "difficulty": 4,
-        "schedule_ep": 1.075
-      },
-      {
-        "matchday": 21,
-        "opponent": "VfL Osnabrück",
-        "is_home": true,
-        "win_probability": 0.349,
-        "draw_probability": 0.238,
-        "expected_points": 1.286,
-        "difficulty": 3,
-        "schedule_ep": 1.538
-      },
-      {
-        "matchday": 22,
-        "opponent": "Dynamo Dresden",
-        "is_home": false,
-        "win_probability": 0.29,
-        "draw_probability": 0.23,
-        "expected_points": 1.102,
-        "difficulty": 4,
-        "schedule_ep": 1.342
-      },
-      {
-        "matchday": 23,
-        "opponent": "1. FC Kaiserslautern",
-        "is_home": true,
-        "win_probability": 0.29,
-        "draw_probability": 0.254,
-        "expected_points": 1.125,
-        "difficulty": 4,
-        "schedule_ep": 1.347
-      },
-      {
-        "matchday": 24,
-        "opponent": "Holstein Kiel",
-        "is_home": false,
-        "win_probability": 0.286,
-        "draw_probability": 0.252,
-        "expected_points": 1.111,
-        "difficulty": 4,
-        "schedule_ep": 1.333
-      },
-      {
-        "matchday": 25,
-        "opponent": "SpVgg Greuther Fürth",
-        "is_home": true,
-        "win_probability": 0.432,
-        "draw_probability": 0.23,
-        "expected_points": 1.526,
-        "difficulty": 2,
-        "schedule_ep": 1.792
-      },
-      {
-        "matchday": 26,
-        "opponent": "Hannover 96",
-        "is_home": false,
-        "win_probability": 0.237,
-        "draw_probability": 0.226,
-        "expected_points": 0.936,
-        "difficulty": 4,
-        "schedule_ep": 1.154
-      },
-      {
-        "matchday": 27,
-        "opponent": "DSC Arminia Bielefeld",
-        "is_home": true,
-        "win_probability": 0.333,
-        "draw_probability": 0.24,
-        "expected_points": 1.24,
-        "difficulty": 3,
-        "schedule_ep": 1.487
-      },
-      {
-        "matchday": 28,
-        "opponent": "Energie Cottbus",
-        "is_home": false,
-        "win_probability": 0.279,
-        "draw_probability": 0.217,
-        "expected_points": 1.053,
-        "difficulty": 4,
-        "schedule_ep": 1.301
-      },
-      {
-        "matchday": 29,
-        "opponent": "1. FC Nürnberg",
-        "is_home": true,
-        "win_probability": 0.292,
-        "draw_probability": 0.241,
-        "expected_points": 1.118,
-        "difficulty": 4,
-        "schedule_ep": 1.351
-      },
-      {
-        "matchday": 30,
-        "opponent": "VfL Wolfsburg",
-        "is_home": false,
-        "win_probability": 0.192,
-        "draw_probability": 0.188,
-        "expected_points": 0.765,
-        "difficulty": 5,
-        "schedule_ep": 0.981
-      },
-      {
-        "matchday": 31,
-        "opponent": "SV Darmstadt 98",
-        "is_home": true,
-        "win_probability": 0.329,
-        "draw_probability": 0.242,
-        "expected_points": 1.228,
-        "difficulty": 3,
-        "schedule_ep": 1.472
-      },
-      {
-        "matchday": 32,
-        "opponent": "Karlsruher SC",
-        "is_home": false,
-        "win_probability": 0.341,
-        "draw_probability": 0.228,
-        "expected_points": 1.251,
-        "difficulty": 3,
-        "schedule_ep": 1.511
-      },
-      {
-        "matchday": 33,
-        "opponent": "1. FC Heidenheim 1846",
-        "is_home": true,
-        "win_probability": 0.34,
-        "draw_probability": 0.231,
-        "expected_points": 1.252,
-        "difficulty": 3,
-        "schedule_ep": 1.509
-      },
-      {
-        "matchday": 34,
-        "opponent": "FC St. Pauli",
-        "is_home": false,
-        "win_probability": 0.245,
-        "draw_probability": 0.247,
-        "expected_points": 0.984,
-        "difficulty": 4,
-        "schedule_ep": 1.192
-      }
-    ],
-    "Energie Cottbus": [
-      {
-        "matchday": 10,
-        "opponent": "VfL Bochum",
-        "is_home": true,
-        "win_probability": 0.422,
-        "draw_probability": 0.231,
-        "expected_points": 1.498,
-        "difficulty": 2,
-        "schedule_ep": 1.511
-      },
-      {
-        "matchday": 11,
-        "opponent": "Eintracht Braunschweig",
-        "is_home": false,
-        "win_probability": 0.422,
-        "draw_probability": 0.225,
-        "expected_points": 1.49,
-        "difficulty": 2,
-        "schedule_ep": 1.504
-      },
-      {
-        "matchday": 12,
-        "opponent": "Hertha BSC",
-        "is_home": true,
-        "win_probability": 0.345,
-        "draw_probability": 0.226,
-        "expected_points": 1.261,
-        "difficulty": 3,
-        "schedule_ep": 1.29
-      },
-      {
-        "matchday": 13,
-        "opponent": "1. FC Magdeburg",
-        "is_home": false,
-        "win_probability": 0.333,
-        "draw_probability": 0.206,
-        "expected_points": 1.206,
-        "difficulty": 3,
-        "schedule_ep": 1.243
-      },
-      {
-        "matchday": 14,
-        "opponent": "VfL Osnabrück",
-        "is_home": true,
-        "win_probability": 0.437,
-        "draw_probability": 0.213,
-        "expected_points": 1.523,
-        "difficulty": 2,
-        "schedule_ep": 1.538
-      },
-      {
-        "matchday": 15,
-        "opponent": "Dynamo Dresden",
-        "is_home": false,
-        "win_probability": 0.367,
-        "draw_probability": 0.213,
-        "expected_points": 1.313,
-        "difficulty": 3,
-        "schedule_ep": 1.342
-      },
-      {
-        "matchday": 16,
-        "opponent": "Holstein Kiel",
-        "is_home": true,
-        "win_probability": 0.438,
-        "draw_probability": 0.23,
-        "expected_points": 1.543,
-        "difficulty": 2,
-        "schedule_ep": 1.552
-      },
-      {
-        "matchday": 17,
-        "opponent": "1. FC Kaiserslautern",
-        "is_home": false,
-        "win_probability": 0.29,
-        "draw_probability": 0.225,
-        "expected_points": 1.095,
-        "difficulty": 4,
-        "schedule_ep": 1.135
-      },
-      {
-        "matchday": 18,
-        "opponent": "Hannover 96",
-        "is_home": false,
-        "win_probability": 0.3,
-        "draw_probability": 0.214,
-        "expected_points": 1.113,
-        "difficulty": 4,
-        "schedule_ep": 1.154
-      },
-      {
-        "matchday": 19,
-        "opponent": "DSC Arminia Bielefeld",
-        "is_home": true,
-        "win_probability": 0.418,
-        "draw_probability": 0.216,
-        "expected_points": 1.469,
-        "difficulty": 3,
-        "schedule_ep": 1.487
-      },
-      {
-        "matchday": 20,
-        "opponent": "SpVgg Greuther Fürth",
-        "is_home": false,
-        "win_probability": 0.443,
-        "draw_probability": 0.207,
-        "expected_points": 1.535,
-        "difficulty": 2,
-        "schedule_ep": 1.551
-      },
-      {
-        "matchday": 21,
-        "opponent": "VfL Wolfsburg",
-        "is_home": true,
-        "win_probability": 0.327,
-        "draw_probability": 0.197,
-        "expected_points": 1.178,
-        "difficulty": 3,
-        "schedule_ep": 1.219
-      },
-      {
-        "matchday": 22,
-        "opponent": "Karlsruher SC",
-        "is_home": true,
-        "win_probability": 0.52,
-        "draw_probability": 0.196,
-        "expected_points": 1.756,
-        "difficulty": 2,
-        "schedule_ep": 1.756
-      },
-      {
-        "matchday": 23,
-        "opponent": "FC St. Pauli",
-        "is_home": false,
-        "win_probability": 0.309,
-        "draw_probability": 0.231,
-        "expected_points": 1.157,
-        "difficulty": 3,
-        "schedule_ep": 1.192
-      },
-      {
-        "matchday": 24,
-        "opponent": "SV Darmstadt 98",
-        "is_home": true,
-        "win_probability": 0.411,
-        "draw_probability": 0.219,
-        "expected_points": 1.453,
-        "difficulty": 3,
-        "schedule_ep": 1.472
-      },
-      {
-        "matchday": 25,
-        "opponent": "1. FC Nürnberg",
-        "is_home": false,
-        "win_probability": 0.291,
-        "draw_probability": 0.214,
-        "expected_points": 1.086,
-        "difficulty": 4,
-        "schedule_ep": 1.128
-      },
-      {
-        "matchday": 26,
-        "opponent": "1. FC Heidenheim 1846",
-        "is_home": true,
-        "win_probability": 0.427,
-        "draw_probability": 0.208,
-        "expected_points": 1.491,
-        "difficulty": 2,
-        "schedule_ep": 1.509
-      },
-      {
-        "matchday": 27,
-        "opponent": "VfL Bochum",
-        "is_home": false,
-        "win_probability": 0.344,
-        "draw_probability": 0.231,
-        "expected_points": 1.265,
-        "difficulty": 3,
-        "schedule_ep": 1.293
-      },
-      {
-        "matchday": 28,
-        "opponent": "Eintracht Braunschweig",
-        "is_home": true,
-        "win_probability": 0.505,
-        "draw_probability": 0.217,
-        "expected_points": 1.731,
-        "difficulty": 2,
-        "schedule_ep": 1.728
-      },
-      {
-        "matchday": 29,
-        "opponent": "Hertha BSC",
-        "is_home": false,
-        "win_probability": 0.272,
-        "draw_probability": 0.216,
-        "expected_points": 1.031,
-        "difficulty": 4,
-        "schedule_ep": 1.075
-      },
-      {
-        "matchday": 30,
-        "opponent": "1. FC Magdeburg",
-        "is_home": true,
-        "win_probability": 0.418,
-        "draw_probability": 0.209,
-        "expected_points": 1.463,
-        "difficulty": 3,
-        "schedule_ep": 1.483
-      },
-      {
-        "matchday": 31,
-        "opponent": "VfL Osnabrück",
-        "is_home": false,
-        "win_probability": 0.352,
-        "draw_probability": 0.213,
-        "expected_points": 1.27,
-        "difficulty": 3,
-        "schedule_ep": 1.302
-      },
-      {
-        "matchday": 32,
-        "opponent": "Dynamo Dresden",
-        "is_home": true,
-        "win_probability": 0.452,
-        "draw_probability": 0.211,
-        "expected_points": 1.568,
-        "difficulty": 2,
-        "schedule_ep": 1.58
-      },
-      {
-        "matchday": 33,
-        "opponent": "Holstein Kiel",
-        "is_home": false,
-        "win_probability": 0.359,
-        "draw_probability": 0.231,
-        "expected_points": 1.308,
-        "difficulty": 3,
-        "schedule_ep": 1.333
-      },
-      {
-        "matchday": 34,
-        "opponent": "1. FC Kaiserslautern",
-        "is_home": true,
-        "win_probability": 0.363,
-        "draw_probability": 0.233,
-        "expected_points": 1.323,
-        "difficulty": 3,
-        "schedule_ep": 1.347
-      }
-    ],
-    "VfL Bochum": [
-      {
-        "matchday": 10,
-        "opponent": "Energie Cottbus",
-        "is_home": false,
-        "win_probability": 0.346,
-        "draw_probability": 0.231,
-        "expected_points": 1.27,
-        "difficulty": 3,
-        "schedule_ep": 1.301
-      },
-      {
-        "matchday": 11,
-        "opponent": "Karlsruher SC",
-        "is_home": true,
-        "win_probability": 0.491,
-        "draw_probability": 0.227,
-        "expected_points": 1.701,
-        "difficulty": 2,
-        "schedule_ep": 1.756
-      },
-      {
-        "matchday": 12,
-        "opponent": "FC St. Pauli",
-        "is_home": false,
-        "win_probability": 0.301,
-        "draw_probability": 0.267,
-        "expected_points": 1.17,
-        "difficulty": 3,
-        "schedule_ep": 1.192
-      },
-      {
-        "matchday": 13,
-        "opponent": "SV Darmstadt 98",
-        "is_home": true,
-        "win_probability": 0.394,
-        "draw_probability": 0.251,
-        "expected_points": 1.432,
-        "difficulty": 3,
-        "schedule_ep": 1.472
-      },
-      {
-        "matchday": 14,
-        "opponent": "1. FC Nürnberg",
-        "is_home": false,
-        "win_probability": 0.287,
-        "draw_probability": 0.247,
-        "expected_points": 1.109,
-        "difficulty": 4,
-        "schedule_ep": 1.128
-      },
-      {
-        "matchday": 15,
-        "opponent": "1. FC Heidenheim 1846",
-        "is_home": true,
-        "win_probability": 0.409,
-        "draw_probability": 0.238,
-        "expected_points": 1.466,
-        "difficulty": 3,
-        "schedule_ep": 1.509
-      },
-      {
-        "matchday": 16,
-        "opponent": "1. FC Magdeburg",
-        "is_home": true,
-        "win_probability": 0.401,
-        "draw_probability": 0.239,
-        "expected_points": 1.443,
-        "difficulty": 3,
-        "schedule_ep": 1.483
-      },
-      {
-        "matchday": 17,
-        "opponent": "Holstein Kiel",
-        "is_home": false,
-        "win_probability": 0.346,
-        "draw_probability": 0.266,
-        "expected_points": 1.302,
-        "difficulty": 3,
-        "schedule_ep": 1.333
-      },
-      {
-        "matchday": 18,
-        "opponent": "Hertha BSC",
-        "is_home": false,
-        "win_probability": 0.27,
-        "draw_probability": 0.251,
-        "expected_points": 1.06,
-        "difficulty": 4,
-        "schedule_ep": 1.075
-      },
-      {
-        "matchday": 19,
-        "opponent": "Eintracht Braunschweig",
-        "is_home": true,
-        "win_probability": 0.475,
-        "draw_probability": 0.251,
-        "expected_points": 1.675,
-        "difficulty": 2,
-        "schedule_ep": 1.728
-      },
-      {
-        "matchday": 20,
-        "opponent": "VfL Osnabrück",
-        "is_home": false,
-        "win_probability": 0.343,
-        "draw_probability": 0.245,
-        "expected_points": 1.273,
-        "difficulty": 3,
-        "schedule_ep": 1.302
-      },
-      {
-        "matchday": 21,
-        "opponent": "Dynamo Dresden",
-        "is_home": true,
-        "win_probability": 0.431,
-        "draw_probability": 0.242,
-        "expected_points": 1.534,
-        "difficulty": 2,
-        "schedule_ep": 1.58
-      },
-      {
-        "matchday": 22,
-        "opponent": "SpVgg Greuther Fürth",
-        "is_home": false,
-        "win_probability": 0.423,
-        "draw_probability": 0.237,
-        "expected_points": 1.506,
-        "difficulty": 2,
-        "schedule_ep": 1.551
-      },
-      {
-        "matchday": 23,
-        "opponent": "Hannover 96",
-        "is_home": true,
-        "win_probability": 0.364,
-        "draw_probability": 0.252,
-        "expected_points": 1.345,
-        "difficulty": 3,
-        "schedule_ep": 1.38
-      },
-      {
-        "matchday": 24,
-        "opponent": "DSC Arminia Bielefeld",
-        "is_home": false,
-        "win_probability": 0.327,
-        "draw_probability": 0.246,
-        "expected_points": 1.228,
-        "difficulty": 3,
-        "schedule_ep": 1.255
-      },
-      {
-        "matchday": 25,
-        "opponent": "1. FC Kaiserslautern",
-        "is_home": true,
-        "win_probability": 0.349,
-        "draw_probability": 0.267,
-        "expected_points": 1.316,
-        "difficulty": 3,
-        "schedule_ep": 1.347
-      },
-      {
-        "matchday": 26,
-        "opponent": "VfL Wolfsburg",
-        "is_home": false,
-        "win_probability": 0.252,
-        "draw_probability": 0.214,
-        "expected_points": 0.97,
-        "difficulty": 4,
-        "schedule_ep": 0.981
-      },
-      {
-        "matchday": 27,
-        "opponent": "Energie Cottbus",
-        "is_home": true,
-        "win_probability": 0.424,
-        "draw_probability": 0.231,
-        "expected_points": 1.504,
-        "difficulty": 2,
-        "schedule_ep": 1.549
-      },
-      {
-        "matchday": 28,
-        "opponent": "Karlsruher SC",
-        "is_home": false,
-        "win_probability": 0.411,
-        "draw_probability": 0.235,
-        "expected_points": 1.469,
-        "difficulty": 3,
-        "schedule_ep": 1.511
-      },
-      {
-        "matchday": 29,
-        "opponent": "FC St. Pauli",
-        "is_home": true,
-        "win_probability": 0.366,
-        "draw_probability": 0.271,
-        "expected_points": 1.369,
-        "difficulty": 3,
-        "schedule_ep": 1.404
-      },
-      {
-        "matchday": 30,
-        "opponent": "SV Darmstadt 98",
-        "is_home": false,
-        "win_probability": 0.322,
-        "draw_probability": 0.249,
-        "expected_points": 1.216,
-        "difficulty": 3,
-        "schedule_ep": 1.242
-      },
-      {
-        "matchday": 31,
-        "opponent": "1. FC Nürnberg",
-        "is_home": true,
-        "win_probability": 0.355,
-        "draw_probability": 0.254,
-        "expected_points": 1.319,
-        "difficulty": 3,
-        "schedule_ep": 1.351
-      },
-      {
-        "matchday": 32,
-        "opponent": "1. FC Heidenheim 1846",
-        "is_home": false,
-        "win_probability": 0.334,
-        "draw_probability": 0.237,
-        "expected_points": 1.239,
-        "difficulty": 3,
-        "schedule_ep": 1.267
-      },
-      {
-        "matchday": 33,
-        "opponent": "1. FC Magdeburg",
-        "is_home": false,
-        "win_probability": 0.327,
-        "draw_probability": 0.237,
-        "expected_points": 1.216,
-        "difficulty": 3,
-        "schedule_ep": 1.243
-      },
-      {
-        "matchday": 34,
-        "opponent": "Holstein Kiel",
-        "is_home": true,
-        "win_probability": 0.415,
-        "draw_probability": 0.264,
-        "expected_points": 1.508,
-        "difficulty": 3,
-        "schedule_ep": 1.552
       }
     ],
     "FC St. Pauli": [
@@ -11392,11 +10400,11 @@
         "matchday": 12,
         "opponent": "VfL Bochum",
         "is_home": true,
-        "win_probability": 0.432,
+        "win_probability": 0.428,
         "draw_probability": 0.267,
-        "expected_points": 1.564,
+        "expected_points": 1.551,
         "difficulty": 2,
-        "schedule_ep": 1.511
+        "schedule_ep": 1.497
       },
       {
         "matchday": 13,
@@ -11436,17 +10444,17 @@
         "draw_probability": 0.264,
         "expected_points": 1.36,
         "difficulty": 3,
-        "schedule_ep": 1.29
+        "schedule_ep": 1.291
       },
       {
         "matchday": 17,
         "opponent": "Eintracht Braunschweig",
         "is_home": false,
-        "win_probability": 0.434,
-        "draw_probability": 0.26,
-        "expected_points": 1.561,
+        "win_probability": 0.441,
+        "draw_probability": 0.258,
+        "expected_points": 1.58,
         "difficulty": 2,
-        "schedule_ep": 1.504
+        "schedule_ep": 1.525
       },
       {
         "matchday": 18,
@@ -11482,11 +10490,11 @@
         "matchday": 21,
         "opponent": "DSC Arminia Bielefeld",
         "is_home": true,
-        "win_probability": 0.433,
+        "win_probability": 0.426,
         "draw_probability": 0.249,
-        "expected_points": 1.549,
+        "expected_points": 1.526,
         "difficulty": 2,
-        "schedule_ep": 1.487
+        "schedule_ep": 1.463
       },
       {
         "matchday": 22,
@@ -11502,11 +10510,11 @@
         "matchday": 23,
         "opponent": "Energie Cottbus",
         "is_home": true,
-        "win_probability": 0.461,
-        "draw_probability": 0.231,
-        "expected_points": 1.613,
+        "win_probability": 0.47,
+        "draw_probability": 0.23,
+        "expected_points": 1.64,
         "difficulty": 2,
-        "schedule_ep": 1.549
+        "schedule_ep": 1.579
       },
       {
         "matchday": 24,
@@ -11556,17 +10564,17 @@
         "draw_probability": 0.24,
         "expected_points": 1.549,
         "difficulty": 2,
-        "schedule_ep": 1.483
+        "schedule_ep": 1.484
       },
       {
         "matchday": 29,
         "opponent": "VfL Bochum",
         "is_home": false,
-        "win_probability": 0.363,
-        "draw_probability": 0.271,
-        "expected_points": 1.361,
+        "win_probability": 0.359,
+        "draw_probability": 0.27,
+        "expected_points": 1.348,
         "difficulty": 3,
-        "schedule_ep": 1.293
+        "schedule_ep": 1.28
       },
       {
         "matchday": 30,
@@ -11612,11 +10620,11 @@
         "matchday": 34,
         "opponent": "Eintracht Braunschweig",
         "is_home": true,
-        "win_probability": 0.507,
-        "draw_probability": 0.247,
-        "expected_points": 1.769,
+        "win_probability": 0.515,
+        "draw_probability": 0.245,
+        "expected_points": 1.789,
         "difficulty": 2,
-        "schedule_ep": 1.728
+        "schedule_ep": 1.749
       }
     ],
     "1. FC Nürnberg": [
@@ -11634,7 +10642,7 @@
         "matchday": 11,
         "opponent": "SV Darmstadt 98",
         "is_home": true,
-        "win_probability": 0.46,
+        "win_probability": 0.459,
         "draw_probability": 0.234,
         "expected_points": 1.613,
         "difficulty": 2,
@@ -11644,11 +10652,11 @@
         "matchday": 12,
         "opponent": "Eintracht Braunschweig",
         "is_home": true,
-        "win_probability": 0.544,
-        "draw_probability": 0.226,
-        "expected_points": 1.859,
-        "difficulty": 2,
-        "schedule_ep": 1.728
+        "win_probability": 0.552,
+        "draw_probability": 0.224,
+        "expected_points": 1.88,
+        "difficulty": 1,
+        "schedule_ep": 1.749
       },
       {
         "matchday": 13,
@@ -11664,11 +10672,11 @@
         "matchday": 14,
         "opponent": "VfL Bochum",
         "is_home": true,
-        "win_probability": 0.465,
-        "draw_probability": 0.247,
-        "expected_points": 1.643,
+        "win_probability": 0.461,
+        "draw_probability": 0.248,
+        "expected_points": 1.63,
         "difficulty": 2,
-        "schedule_ep": 1.511
+        "schedule_ep": 1.497
       },
       {
         "matchday": 15,
@@ -11724,11 +10732,11 @@
         "matchday": 20,
         "opponent": "DSC Arminia Bielefeld",
         "is_home": false,
-        "win_probability": 0.387,
-        "draw_probability": 0.237,
-        "expected_points": 1.399,
+        "win_probability": 0.38,
+        "draw_probability": 0.236,
+        "expected_points": 1.375,
         "difficulty": 3,
-        "schedule_ep": 1.255
+        "schedule_ep": 1.231
       },
       {
         "matchday": 21,
@@ -11736,7 +10744,7 @@
         "is_home": true,
         "win_probability": 0.48,
         "draw_probability": 0.244,
-        "expected_points": 1.685,
+        "expected_points": 1.684,
         "difficulty": 2,
         "schedule_ep": 1.552
       },
@@ -11774,11 +10782,11 @@
         "matchday": 25,
         "opponent": "Energie Cottbus",
         "is_home": true,
-        "win_probability": 0.495,
-        "draw_probability": 0.214,
-        "expected_points": 1.7,
+        "win_probability": 0.505,
+        "draw_probability": 0.213,
+        "expected_points": 1.729,
         "difficulty": 2,
-        "schedule_ep": 1.549
+        "schedule_ep": 1.579
       },
       {
         "matchday": 26,
@@ -11814,18 +10822,18 @@
         "matchday": 29,
         "opponent": "Eintracht Braunschweig",
         "is_home": false,
-        "win_probability": 0.467,
-        "draw_probability": 0.241,
-        "expected_points": 1.641,
+        "win_probability": 0.474,
+        "draw_probability": 0.239,
+        "expected_points": 1.662,
         "difficulty": 2,
-        "schedule_ep": 1.504
+        "schedule_ep": 1.525
       },
       {
         "matchday": 30,
         "opponent": "1. FC Heidenheim 1846",
         "is_home": true,
         "win_probability": 0.478,
-        "draw_probability": 0.221,
+        "draw_probability": 0.222,
         "expected_points": 1.657,
         "difficulty": 2,
         "schedule_ep": 1.509
@@ -11834,11 +10842,11 @@
         "matchday": 31,
         "opponent": "VfL Bochum",
         "is_home": false,
-        "win_probability": 0.391,
+        "win_probability": 0.387,
         "draw_probability": 0.254,
-        "expected_points": 1.427,
+        "expected_points": 1.414,
         "difficulty": 3,
-        "schedule_ep": 1.293
+        "schedule_ep": 1.28
       },
       {
         "matchday": 32,
@@ -11848,7 +10856,7 @@
         "draw_probability": 0.223,
         "expected_points": 1.632,
         "difficulty": 2,
-        "schedule_ep": 1.483
+        "schedule_ep": 1.484
       },
       {
         "matchday": 33,
@@ -11868,7 +10876,7 @@
         "draw_probability": 0.248,
         "expected_points": 1.428,
         "difficulty": 3,
-        "schedule_ep": 1.29
+        "schedule_ep": 1.291
       }
     ],
     "Hannover 96": [
@@ -11877,7 +10885,7 @@
         "opponent": "Dynamo Dresden",
         "is_home": true,
         "win_probability": 0.492,
-        "draw_probability": 0.222,
+        "draw_probability": 0.223,
         "expected_points": 1.698,
         "difficulty": 2,
         "schedule_ep": 1.58
@@ -11920,7 +10928,7 @@
         "draw_probability": 0.246,
         "expected_points": 1.402,
         "difficulty": 3,
-        "schedule_ep": 1.29
+        "schedule_ep": 1.291
       },
       {
         "matchday": 15,
@@ -11946,21 +10954,21 @@
         "matchday": 17,
         "opponent": "DSC Arminia Bielefeld",
         "is_home": false,
-        "win_probability": 0.379,
-        "draw_probability": 0.235,
-        "expected_points": 1.372,
+        "win_probability": 0.371,
+        "draw_probability": 0.234,
+        "expected_points": 1.347,
         "difficulty": 3,
-        "schedule_ep": 1.255
+        "schedule_ep": 1.231
       },
       {
         "matchday": 18,
         "opponent": "Energie Cottbus",
         "is_home": true,
-        "win_probability": 0.487,
-        "draw_probability": 0.214,
-        "expected_points": 1.673,
+        "win_probability": 0.496,
+        "draw_probability": 0.213,
+        "expected_points": 1.702,
         "difficulty": 2,
-        "schedule_ep": 1.549
+        "schedule_ep": 1.579
       },
       {
         "matchday": 19,
@@ -12006,11 +11014,11 @@
         "matchday": 23,
         "opponent": "VfL Bochum",
         "is_home": false,
-        "win_probability": 0.383,
+        "win_probability": 0.379,
         "draw_probability": 0.252,
-        "expected_points": 1.402,
+        "expected_points": 1.389,
         "difficulty": 3,
-        "schedule_ep": 1.293
+        "schedule_ep": 1.28
       },
       {
         "matchday": 24,
@@ -12020,7 +11028,7 @@
         "draw_probability": 0.222,
         "expected_points": 1.605,
         "difficulty": 2,
-        "schedule_ep": 1.483
+        "schedule_ep": 1.484
       },
       {
         "matchday": 25,
@@ -12036,11 +11044,11 @@
         "matchday": 26,
         "opponent": "Eintracht Braunschweig",
         "is_home": true,
-        "win_probability": 0.537,
-        "draw_probability": 0.226,
-        "expected_points": 1.837,
+        "win_probability": 0.545,
+        "draw_probability": 0.224,
+        "expected_points": 1.858,
         "difficulty": 2,
-        "schedule_ep": 1.728
+        "schedule_ep": 1.749
       },
       {
         "matchday": 27,
@@ -12058,7 +11066,7 @@
         "is_home": true,
         "win_probability": 0.47,
         "draw_probability": 0.221,
-        "expected_points": 1.631,
+        "expected_points": 1.63,
         "difficulty": 2,
         "schedule_ep": 1.509
       },
@@ -12067,7 +11075,7 @@
         "opponent": "SpVgg Greuther Fürth",
         "is_home": false,
         "win_probability": 0.485,
-        "draw_probability": 0.218,
+        "draw_probability": 0.219,
         "expected_points": 1.672,
         "difficulty": 2,
         "schedule_ep": 1.551
@@ -12098,7 +11106,7 @@
         "is_home": true,
         "win_probability": 0.473,
         "draw_probability": 0.244,
-        "expected_points": 1.662,
+        "expected_points": 1.661,
         "difficulty": 2,
         "schedule_ep": 1.552
       },
@@ -12116,11 +11124,11 @@
         "matchday": 34,
         "opponent": "DSC Arminia Bielefeld",
         "is_home": true,
-        "win_probability": 0.458,
-        "draw_probability": 0.23,
-        "expected_points": 1.604,
+        "win_probability": 0.45,
+        "draw_probability": 0.231,
+        "expected_points": 1.581,
         "difficulty": 2,
-        "schedule_ep": 1.487
+        "schedule_ep": 1.463
       }
     ],
     "Dynamo Dresden": [
@@ -12129,7 +11137,7 @@
         "opponent": "Hannover 96",
         "is_home": false,
         "win_probability": 0.286,
-        "draw_probability": 0.222,
+        "draw_probability": 0.223,
         "expected_points": 1.079,
         "difficulty": 4,
         "schedule_ep": 1.154
@@ -12168,21 +11176,21 @@
         "matchday": 14,
         "opponent": "DSC Arminia Bielefeld",
         "is_home": false,
-        "win_probability": 0.319,
-        "draw_probability": 0.224,
-        "expected_points": 1.18,
+        "win_probability": 0.311,
+        "draw_probability": 0.222,
+        "expected_points": 1.155,
         "difficulty": 3,
-        "schedule_ep": 1.255
+        "schedule_ep": 1.231
       },
       {
         "matchday": 15,
         "opponent": "Energie Cottbus",
         "is_home": true,
-        "win_probability": 0.421,
+        "win_probability": 0.431,
         "draw_probability": 0.213,
-        "expected_points": 1.474,
+        "expected_points": 1.505,
         "difficulty": 2,
-        "schedule_ep": 1.549
+        "schedule_ep": 1.579
       },
       {
         "matchday": 16,
@@ -12210,7 +11218,7 @@
         "is_home": true,
         "win_probability": 0.349,
         "draw_probability": 0.232,
-        "expected_points": 1.279,
+        "expected_points": 1.28,
         "difficulty": 3,
         "schedule_ep": 1.351
       },
@@ -12238,21 +11246,21 @@
         "matchday": 21,
         "opponent": "VfL Bochum",
         "is_home": false,
-        "win_probability": 0.327,
-        "draw_probability": 0.242,
-        "expected_points": 1.224,
+        "win_probability": 0.323,
+        "draw_probability": 0.241,
+        "expected_points": 1.21,
         "difficulty": 3,
-        "schedule_ep": 1.293
+        "schedule_ep": 1.28
       },
       {
         "matchday": 22,
         "opponent": "Eintracht Braunschweig",
         "is_home": true,
-        "win_probability": 0.479,
-        "draw_probability": 0.23,
-        "expected_points": 1.668,
+        "win_probability": 0.487,
+        "draw_probability": 0.229,
+        "expected_points": 1.69,
         "difficulty": 2,
-        "schedule_ep": 1.728
+        "schedule_ep": 1.749
       },
       {
         "matchday": 23,
@@ -12260,7 +11268,7 @@
         "is_home": false,
         "win_probability": 0.259,
         "draw_probability": 0.225,
-        "expected_points": 1.002,
+        "expected_points": 1.003,
         "difficulty": 4,
         "schedule_ep": 1.075
       },
@@ -12269,7 +11277,7 @@
         "opponent": "VfL Osnabrück",
         "is_home": true,
         "win_probability": 0.414,
-        "draw_probability": 0.224,
+        "draw_probability": 0.225,
         "expected_points": 1.468,
         "difficulty": 3,
         "schedule_ep": 1.538
@@ -12320,7 +11328,7 @@
         "is_home": true,
         "win_probability": 0.345,
         "draw_probability": 0.244,
-        "expected_points": 1.279,
+        "expected_points": 1.28,
         "difficulty": 3,
         "schedule_ep": 1.347
       },
@@ -12338,21 +11346,21 @@
         "matchday": 31,
         "opponent": "DSC Arminia Bielefeld",
         "is_home": true,
-        "win_probability": 0.396,
+        "win_probability": 0.388,
         "draw_probability": 0.227,
-        "expected_points": 1.416,
+        "expected_points": 1.391,
         "difficulty": 3,
-        "schedule_ep": 1.487
+        "schedule_ep": 1.463
       },
       {
         "matchday": 32,
         "opponent": "Energie Cottbus",
         "is_home": false,
-        "win_probability": 0.337,
-        "draw_probability": 0.211,
-        "expected_points": 1.221,
+        "win_probability": 0.347,
+        "draw_probability": 0.212,
+        "expected_points": 1.252,
         "difficulty": 3,
-        "schedule_ep": 1.301
+        "schedule_ep": 1.331
       },
       {
         "matchday": 33,
@@ -12368,7 +11376,7 @@
         "matchday": 34,
         "opponent": "VfL Wolfsburg",
         "is_home": false,
-        "win_probability": 0.236,
+        "win_probability": 0.237,
         "draw_probability": 0.19,
         "expected_points": 0.9,
         "difficulty": 4,
@@ -12390,11 +11398,11 @@
         "matchday": 11,
         "opponent": "VfL Bochum",
         "is_home": false,
-        "win_probability": 0.282,
-        "draw_probability": 0.227,
-        "expected_points": 1.073,
+        "win_probability": 0.278,
+        "draw_probability": 0.226,
+        "expected_points": 1.059,
         "difficulty": 4,
-        "schedule_ep": 1.293
+        "schedule_ep": 1.28
       },
       {
         "matchday": 12,
@@ -12421,7 +11429,7 @@
         "opponent": "Holstein Kiel",
         "is_home": true,
         "win_probability": 0.368,
-        "draw_probability": 0.234,
+        "draw_probability": 0.235,
         "expected_points": 1.339,
         "difficulty": 3,
         "schedule_ep": 1.552
@@ -12430,11 +11438,11 @@
         "matchday": 15,
         "opponent": "Eintracht Braunschweig",
         "is_home": false,
-        "win_probability": 0.352,
+        "win_probability": 0.359,
         "draw_probability": 0.228,
-        "expected_points": 1.284,
+        "expected_points": 1.304,
         "difficulty": 3,
-        "schedule_ep": 1.504
+        "schedule_ep": 1.525
       },
       {
         "matchday": 16,
@@ -12460,11 +11468,11 @@
         "matchday": 18,
         "opponent": "DSC Arminia Bielefeld",
         "is_home": false,
-        "win_probability": 0.27,
-        "draw_probability": 0.208,
-        "expected_points": 1.018,
+        "win_probability": 0.263,
+        "draw_probability": 0.205,
+        "expected_points": 0.993,
         "difficulty": 4,
-        "schedule_ep": 1.255
+        "schedule_ep": 1.231
       },
       {
         "matchday": 19,
@@ -12480,7 +11488,7 @@
         "matchday": 20,
         "opponent": "VfL Wolfsburg",
         "is_home": false,
-        "win_probability": 0.189,
+        "win_probability": 0.19,
         "draw_probability": 0.168,
         "expected_points": 0.736,
         "difficulty": 5,
@@ -12500,11 +11508,11 @@
         "matchday": 22,
         "opponent": "Energie Cottbus",
         "is_home": false,
-        "win_probability": 0.284,
-        "draw_probability": 0.196,
-        "expected_points": 1.048,
+        "win_probability": 0.294,
+        "draw_probability": 0.199,
+        "expected_points": 1.079,
         "difficulty": 4,
-        "schedule_ep": 1.301
+        "schedule_ep": 1.331
       },
       {
         "matchday": 23,
@@ -12532,7 +11540,7 @@
         "is_home": false,
         "win_probability": 0.266,
         "draw_probability": 0.209,
-        "expected_points": 1.007,
+        "expected_points": 1.008,
         "difficulty": 4,
         "schedule_ep": 1.242
       },
@@ -12544,7 +11552,7 @@
         "draw_probability": 0.21,
         "expected_points": 1.242,
         "difficulty": 3,
-        "schedule_ep": 1.483
+        "schedule_ep": 1.484
       },
       {
         "matchday": 27,
@@ -12560,11 +11568,11 @@
         "matchday": 28,
         "opponent": "VfL Bochum",
         "is_home": true,
-        "win_probability": 0.354,
-        "draw_probability": 0.235,
-        "expected_points": 1.296,
+        "win_probability": 0.349,
+        "draw_probability": 0.234,
+        "expected_points": 1.282,
         "difficulty": 3,
-        "schedule_ep": 1.511
+        "schedule_ep": 1.497
       },
       {
         "matchday": 29,
@@ -12584,7 +11592,7 @@
         "draw_probability": 0.221,
         "expected_points": 1.064,
         "difficulty": 4,
-        "schedule_ep": 1.29
+        "schedule_ep": 1.291
       },
       {
         "matchday": 31,
@@ -12600,11 +11608,11 @@
         "matchday": 32,
         "opponent": "Eintracht Braunschweig",
         "is_home": true,
-        "win_probability": 0.431,
-        "draw_probability": 0.228,
-        "expected_points": 1.521,
+        "win_probability": 0.439,
+        "draw_probability": 0.226,
+        "expected_points": 1.543,
         "difficulty": 2,
-        "schedule_ep": 1.728
+        "schedule_ep": 1.749
       },
       {
         "matchday": 33,
@@ -12632,9 +11640,9 @@
         "matchday": 10,
         "opponent": "Karlsruher SC",
         "is_home": false,
-        "win_probability": 0.438,
+        "win_probability": 0.437,
         "draw_probability": 0.21,
-        "expected_points": 1.523,
+        "expected_points": 1.522,
         "difficulty": 2,
         "schedule_ep": 1.511
       },
@@ -12682,21 +11690,21 @@
         "matchday": 15,
         "opponent": "VfL Bochum",
         "is_home": false,
-        "win_probability": 0.352,
+        "win_probability": 0.348,
         "draw_probability": 0.238,
-        "expected_points": 1.295,
+        "expected_points": 1.281,
         "difficulty": 3,
-        "schedule_ep": 1.293
+        "schedule_ep": 1.28
       },
       {
         "matchday": 16,
         "opponent": "Eintracht Braunschweig",
         "is_home": true,
-        "win_probability": 0.51,
-        "draw_probability": 0.221,
-        "expected_points": 1.751,
+        "win_probability": 0.518,
+        "draw_probability": 0.219,
+        "expected_points": 1.773,
         "difficulty": 2,
-        "schedule_ep": 1.728
+        "schedule_ep": 1.749
       },
       {
         "matchday": 17,
@@ -12726,7 +11734,7 @@
         "draw_probability": 0.232,
         "expected_points": 1.292,
         "difficulty": 3,
-        "schedule_ep": 1.29
+        "schedule_ep": 1.291
       },
       {
         "matchday": 20,
@@ -12744,7 +11752,7 @@
         "is_home": true,
         "win_probability": 0.539,
         "draw_probability": 0.2,
-        "expected_points": 1.817,
+        "expected_points": 1.816,
         "difficulty": 2,
         "schedule_ep": 1.792
       },
@@ -12762,11 +11770,11 @@
         "matchday": 23,
         "opponent": "DSC Arminia Bielefeld",
         "is_home": true,
-        "win_probability": 0.425,
-        "draw_probability": 0.222,
-        "expected_points": 1.498,
-        "difficulty": 2,
-        "schedule_ep": 1.487
+        "win_probability": 0.417,
+        "draw_probability": 0.221,
+        "expected_points": 1.472,
+        "difficulty": 3,
+        "schedule_ep": 1.463
       },
       {
         "matchday": 24,
@@ -12792,11 +11800,11 @@
         "matchday": 26,
         "opponent": "Energie Cottbus",
         "is_home": false,
-        "win_probability": 0.364,
-        "draw_probability": 0.208,
-        "expected_points": 1.301,
+        "win_probability": 0.375,
+        "draw_probability": 0.209,
+        "expected_points": 1.333,
         "difficulty": 3,
-        "schedule_ep": 1.301
+        "schedule_ep": 1.331
       },
       {
         "matchday": 27,
@@ -12833,7 +11841,7 @@
         "opponent": "1. FC Nürnberg",
         "is_home": false,
         "win_probability": 0.3,
-        "draw_probability": 0.221,
+        "draw_probability": 0.222,
         "expected_points": 1.122,
         "difficulty": 3,
         "schedule_ep": 1.128
@@ -12852,21 +11860,21 @@
         "matchday": 32,
         "opponent": "VfL Bochum",
         "is_home": true,
-        "win_probability": 0.429,
+        "win_probability": 0.424,
         "draw_probability": 0.237,
-        "expected_points": 1.524,
+        "expected_points": 1.509,
         "difficulty": 2,
-        "schedule_ep": 1.511
+        "schedule_ep": 1.497
       },
       {
         "matchday": 33,
         "opponent": "Eintracht Braunschweig",
         "is_home": false,
-        "win_probability": 0.429,
-        "draw_probability": 0.231,
-        "expected_points": 1.517,
+        "win_probability": 0.436,
+        "draw_probability": 0.23,
+        "expected_points": 1.538,
         "difficulty": 2,
-        "schedule_ep": 1.504
+        "schedule_ep": 1.525
       },
       {
         "matchday": 34,
@@ -12876,7 +11884,7 @@
         "draw_probability": 0.214,
         "expected_points": 1.494,
         "difficulty": 2,
-        "schedule_ep": 1.483
+        "schedule_ep": 1.484
       }
     ],
     "SV Darmstadt 98": [
@@ -12888,7 +11896,7 @@
         "draw_probability": 0.224,
         "expected_points": 1.511,
         "difficulty": 2,
-        "schedule_ep": 1.483
+        "schedule_ep": 1.484
       },
       {
         "matchday": 11,
@@ -12914,28 +11922,28 @@
         "matchday": 13,
         "opponent": "VfL Bochum",
         "is_home": false,
-        "win_probability": 0.356,
-        "draw_probability": 0.251,
-        "expected_points": 1.317,
+        "win_probability": 0.351,
+        "draw_probability": 0.25,
+        "expected_points": 1.304,
         "difficulty": 3,
-        "schedule_ep": 1.293
+        "schedule_ep": 1.28
       },
       {
         "matchday": 14,
         "opponent": "Eintracht Braunschweig",
         "is_home": true,
-        "win_probability": 0.507,
-        "draw_probability": 0.232,
-        "expected_points": 1.753,
+        "win_probability": 0.515,
+        "draw_probability": 0.229,
+        "expected_points": 1.774,
         "difficulty": 2,
-        "schedule_ep": 1.728
+        "schedule_ep": 1.749
       },
       {
         "matchday": 15,
         "opponent": "Hertha BSC",
         "is_home": false,
         "win_probability": 0.287,
-        "draw_probability": 0.237,
+        "draw_probability": 0.238,
         "expected_points": 1.099,
         "difficulty": 4,
         "schedule_ep": 1.075
@@ -12956,7 +11964,7 @@
         "is_home": false,
         "win_probability": 0.366,
         "draw_probability": 0.231,
-        "expected_points": 1.329,
+        "expected_points": 1.328,
         "difficulty": 3,
         "schedule_ep": 1.302
       },
@@ -12976,7 +11984,7 @@
         "is_home": true,
         "win_probability": 0.46,
         "draw_probability": 0.226,
-        "expected_points": 1.607,
+        "expected_points": 1.606,
         "difficulty": 2,
         "schedule_ep": 1.58
       },
@@ -12995,7 +12003,7 @@
         "opponent": "1. FC Kaiserslautern",
         "is_home": true,
         "win_probability": 0.373,
-        "draw_probability": 0.251,
+        "draw_probability": 0.252,
         "expected_points": 1.372,
         "difficulty": 3,
         "schedule_ep": 1.347
@@ -13004,11 +12012,11 @@
         "matchday": 22,
         "opponent": "DSC Arminia Bielefeld",
         "is_home": false,
-        "win_probability": 0.349,
-        "draw_probability": 0.233,
-        "expected_points": 1.281,
+        "win_probability": 0.342,
+        "draw_probability": 0.232,
+        "expected_points": 1.256,
         "difficulty": 3,
-        "schedule_ep": 1.255
+        "schedule_ep": 1.231
       },
       {
         "matchday": 23,
@@ -13024,11 +12032,11 @@
         "matchday": 24,
         "opponent": "Energie Cottbus",
         "is_home": false,
-        "win_probability": 0.37,
-        "draw_probability": 0.219,
-        "expected_points": 1.328,
+        "win_probability": 0.38,
+        "draw_probability": 0.22,
+        "expected_points": 1.359,
         "difficulty": 3,
-        "schedule_ep": 1.301
+        "schedule_ep": 1.331
       },
       {
         "matchday": 25,
@@ -13054,7 +12062,7 @@
         "matchday": 27,
         "opponent": "1. FC Magdeburg",
         "is_home": false,
-        "win_probability": 0.349,
+        "win_probability": 0.348,
         "draw_probability": 0.224,
         "expected_points": 1.27,
         "difficulty": 3,
@@ -13084,21 +12092,21 @@
         "matchday": 30,
         "opponent": "VfL Bochum",
         "is_home": true,
-        "win_probability": 0.429,
+        "win_probability": 0.424,
         "draw_probability": 0.249,
-        "expected_points": 1.535,
+        "expected_points": 1.522,
         "difficulty": 2,
-        "schedule_ep": 1.511
+        "schedule_ep": 1.497
       },
       {
         "matchday": 31,
         "opponent": "Eintracht Braunschweig",
         "is_home": false,
-        "win_probability": 0.429,
-        "draw_probability": 0.242,
-        "expected_points": 1.53,
+        "win_probability": 0.437,
+        "draw_probability": 0.241,
+        "expected_points": 1.55,
         "difficulty": 2,
-        "schedule_ep": 1.504
+        "schedule_ep": 1.525
       },
       {
         "matchday": 32,
@@ -13108,7 +12116,7 @@
         "draw_probability": 0.245,
         "expected_points": 1.315,
         "difficulty": 3,
-        "schedule_ep": 1.29
+        "schedule_ep": 1.291
       },
       {
         "matchday": 33,
@@ -13125,8 +12133,8 @@
         "opponent": "VfL Osnabrück",
         "is_home": true,
         "win_probability": 0.445,
-        "draw_probability": 0.228,
-        "expected_points": 1.565,
+        "draw_probability": 0.229,
+        "expected_points": 1.564,
         "difficulty": 2,
         "schedule_ep": 1.538
       }
@@ -13156,28 +12164,28 @@
         "matchday": 12,
         "opponent": "DSC Arminia Bielefeld",
         "is_home": false,
-        "win_probability": 0.352,
-        "draw_probability": 0.222,
-        "expected_points": 1.279,
+        "win_probability": 0.344,
+        "draw_probability": 0.221,
+        "expected_points": 1.253,
         "difficulty": 3,
-        "schedule_ep": 1.255
+        "schedule_ep": 1.231
       },
       {
         "matchday": 13,
         "opponent": "Energie Cottbus",
         "is_home": true,
-        "win_probability": 0.461,
+        "win_probability": 0.471,
         "draw_probability": 0.206,
-        "expected_points": 1.588,
+        "expected_points": 1.619,
         "difficulty": 2,
-        "schedule_ep": 1.549
+        "schedule_ep": 1.579
       },
       {
         "matchday": 14,
         "opponent": "VfL Wolfsburg",
         "is_home": false,
         "win_probability": 0.266,
-        "draw_probability": 0.193,
+        "draw_probability": 0.194,
         "expected_points": 0.992,
         "difficulty": 4,
         "schedule_ep": 0.981
@@ -13196,11 +12204,11 @@
         "matchday": 16,
         "opponent": "VfL Bochum",
         "is_home": false,
-        "win_probability": 0.36,
-        "draw_probability": 0.239,
-        "expected_points": 1.318,
+        "win_probability": 0.355,
+        "draw_probability": 0.238,
+        "expected_points": 1.304,
         "difficulty": 3,
-        "schedule_ep": 1.293
+        "schedule_ep": 1.28
       },
       {
         "matchday": 17,
@@ -13216,11 +12224,11 @@
         "matchday": 18,
         "opponent": "Eintracht Braunschweig",
         "is_home": false,
-        "win_probability": 0.437,
-        "draw_probability": 0.231,
-        "expected_points": 1.541,
+        "win_probability": 0.444,
+        "draw_probability": 0.229,
+        "expected_points": 1.562,
         "difficulty": 2,
-        "schedule_ep": 1.504
+        "schedule_ep": 1.525
       },
       {
         "matchday": 19,
@@ -13250,7 +12258,7 @@
         "draw_probability": 0.233,
         "expected_points": 1.316,
         "difficulty": 3,
-        "schedule_ep": 1.29
+        "schedule_ep": 1.291
       },
       {
         "matchday": 22,
@@ -13318,7 +12326,7 @@
         "is_home": false,
         "win_probability": 0.324,
         "draw_probability": 0.24,
-        "expected_points": 1.211,
+        "expected_points": 1.212,
         "difficulty": 3,
         "schedule_ep": 1.192
       },
@@ -13326,21 +12334,21 @@
         "matchday": 29,
         "opponent": "DSC Arminia Bielefeld",
         "is_home": true,
-        "win_probability": 0.434,
+        "win_probability": 0.425,
         "draw_probability": 0.221,
-        "expected_points": 1.523,
+        "expected_points": 1.497,
         "difficulty": 2,
-        "schedule_ep": 1.487
+        "schedule_ep": 1.463
       },
       {
         "matchday": 30,
         "opponent": "Energie Cottbus",
         "is_home": false,
-        "win_probability": 0.373,
-        "draw_probability": 0.209,
-        "expected_points": 1.328,
+        "win_probability": 0.383,
+        "draw_probability": 0.21,
+        "expected_points": 1.36,
         "difficulty": 3,
-        "schedule_ep": 1.301
+        "schedule_ep": 1.331
       },
       {
         "matchday": 31,
@@ -13366,11 +12374,11 @@
         "matchday": 33,
         "opponent": "VfL Bochum",
         "is_home": true,
-        "win_probability": 0.437,
+        "win_probability": 0.432,
         "draw_probability": 0.237,
-        "expected_points": 1.547,
+        "expected_points": 1.532,
         "difficulty": 2,
-        "schedule_ep": 1.511
+        "schedule_ep": 1.497
       },
       {
         "matchday": 34,
@@ -13408,7 +12416,7 @@
         "matchday": 12,
         "opponent": "Hannover 96",
         "is_home": false,
-        "win_probability": 0.228,
+        "win_probability": 0.229,
         "draw_probability": 0.203,
         "expected_points": 0.888,
         "difficulty": 4,
@@ -13418,11 +12426,11 @@
         "matchday": 13,
         "opponent": "DSC Arminia Bielefeld",
         "is_home": true,
-        "win_probability": 0.332,
-        "draw_probability": 0.219,
-        "expected_points": 1.214,
+        "win_probability": 0.324,
+        "draw_probability": 0.218,
+        "expected_points": 1.188,
         "difficulty": 3,
-        "schedule_ep": 1.487
+        "schedule_ep": 1.463
       },
       {
         "matchday": 14,
@@ -13440,7 +12448,7 @@
         "is_home": true,
         "win_probability": 0.246,
         "draw_probability": 0.188,
-        "expected_points": 0.926,
+        "expected_points": 0.927,
         "difficulty": 4,
         "schedule_ep": 1.219
       },
@@ -13488,11 +12496,11 @@
         "matchday": 20,
         "opponent": "Energie Cottbus",
         "is_home": true,
-        "win_probability": 0.351,
-        "draw_probability": 0.207,
-        "expected_points": 1.258,
+        "win_probability": 0.361,
+        "draw_probability": 0.208,
+        "expected_points": 1.29,
         "difficulty": 3,
-        "schedule_ep": 1.549
+        "schedule_ep": 1.579
       },
       {
         "matchday": 21,
@@ -13508,11 +12516,11 @@
         "matchday": 22,
         "opponent": "VfL Bochum",
         "is_home": true,
-        "win_probability": 0.34,
-        "draw_probability": 0.237,
-        "expected_points": 1.257,
+        "win_probability": 0.336,
+        "draw_probability": 0.236,
+        "expected_points": 1.243,
         "difficulty": 3,
-        "schedule_ep": 1.511
+        "schedule_ep": 1.497
       },
       {
         "matchday": 23,
@@ -13532,17 +12540,17 @@
         "draw_probability": 0.221,
         "expected_points": 1.029,
         "difficulty": 4,
-        "schedule_ep": 1.29
+        "schedule_ep": 1.291
       },
       {
         "matchday": 25,
         "opponent": "Eintracht Braunschweig",
         "is_home": false,
-        "win_probability": 0.338,
+        "win_probability": 0.345,
         "draw_probability": 0.23,
-        "expected_points": 1.244,
+        "expected_points": 1.264,
         "difficulty": 3,
-        "schedule_ep": 1.504
+        "schedule_ep": 1.525
       },
       {
         "matchday": 26,
@@ -13579,7 +12587,7 @@
         "opponent": "Hannover 96",
         "is_home": true,
         "win_probability": 0.297,
-        "draw_probability": 0.218,
+        "draw_probability": 0.219,
         "expected_points": 1.109,
         "difficulty": 4,
         "schedule_ep": 1.38
@@ -13588,11 +12596,11 @@
         "matchday": 30,
         "opponent": "DSC Arminia Bielefeld",
         "is_home": false,
-        "win_probability": 0.258,
-        "draw_probability": 0.207,
-        "expected_points": 0.982,
+        "win_probability": 0.251,
+        "draw_probability": 0.205,
+        "expected_points": 0.958,
         "difficulty": 4,
-        "schedule_ep": 1.255
+        "schedule_ep": 1.231
       },
       {
         "matchday": 31,
@@ -13610,7 +12618,7 @@
         "is_home": false,
         "win_probability": 0.18,
         "draw_probability": 0.166,
-        "expected_points": 0.705,
+        "expected_points": 0.706,
         "difficulty": 5,
         "schedule_ep": 0.981
       },
@@ -13650,11 +12658,11 @@
         "matchday": 11,
         "opponent": "DSC Arminia Bielefeld",
         "is_home": true,
-        "win_probability": 0.386,
+        "win_probability": 0.379,
         "draw_probability": 0.247,
-        "expected_points": 1.406,
+        "expected_points": 1.383,
         "difficulty": 3,
-        "schedule_ep": 1.487
+        "schedule_ep": 1.463
       },
       {
         "matchday": 12,
@@ -13662,7 +12670,7 @@
         "is_home": false,
         "win_probability": 0.24,
         "draw_probability": 0.21,
-        "expected_points": 0.929,
+        "expected_points": 0.93,
         "difficulty": 4,
         "schedule_ep": 0.981
       },
@@ -13681,7 +12689,7 @@
         "opponent": "Karlsruher SC",
         "is_home": false,
         "win_probability": 0.397,
-        "draw_probability": 0.234,
+        "draw_probability": 0.235,
         "expected_points": 1.426,
         "difficulty": 3,
         "schedule_ep": 1.511
@@ -13700,21 +12708,21 @@
         "matchday": 16,
         "opponent": "Energie Cottbus",
         "is_home": false,
-        "win_probability": 0.333,
-        "draw_probability": 0.23,
-        "expected_points": 1.228,
+        "win_probability": 0.342,
+        "draw_probability": 0.231,
+        "expected_points": 1.256,
         "difficulty": 3,
-        "schedule_ep": 1.301
+        "schedule_ep": 1.331
       },
       {
         "matchday": 17,
         "opponent": "VfL Bochum",
         "is_home": true,
-        "win_probability": 0.389,
+        "win_probability": 0.384,
         "draw_probability": 0.266,
-        "expected_points": 1.432,
+        "expected_points": 1.419,
         "difficulty": 3,
-        "schedule_ep": 1.511
+        "schedule_ep": 1.497
       },
       {
         "matchday": 18,
@@ -13744,7 +12752,7 @@
         "draw_probability": 0.238,
         "expected_points": 1.401,
         "difficulty": 3,
-        "schedule_ep": 1.483
+        "schedule_ep": 1.484
       },
       {
         "matchday": 21,
@@ -13780,11 +12788,11 @@
         "matchday": 24,
         "opponent": "Eintracht Braunschweig",
         "is_home": true,
-        "win_probability": 0.462,
-        "draw_probability": 0.252,
-        "expected_points": 1.637,
+        "win_probability": 0.469,
+        "draw_probability": 0.25,
+        "expected_points": 1.657,
         "difficulty": 2,
-        "schedule_ep": 1.728
+        "schedule_ep": 1.749
       },
       {
         "matchday": 25,
@@ -13812,7 +12820,7 @@
         "is_home": true,
         "win_probability": 0.489,
         "draw_probability": 0.229,
-        "expected_points": 1.695,
+        "expected_points": 1.694,
         "difficulty": 2,
         "schedule_ep": 1.792
       },
@@ -13820,11 +12828,11 @@
         "matchday": 28,
         "opponent": "DSC Arminia Bielefeld",
         "is_home": false,
-        "win_probability": 0.315,
-        "draw_probability": 0.244,
-        "expected_points": 1.188,
+        "win_probability": 0.308,
+        "draw_probability": 0.242,
+        "expected_points": 1.165,
         "difficulty": 3,
-        "schedule_ep": 1.255
+        "schedule_ep": 1.231
       },
       {
         "matchday": 29,
@@ -13852,7 +12860,7 @@
         "is_home": true,
         "win_probability": 0.477,
         "draw_probability": 0.228,
-        "expected_points": 1.66,
+        "expected_points": 1.659,
         "difficulty": 2,
         "schedule_ep": 1.756
       },
@@ -13870,21 +12878,21 @@
         "matchday": 33,
         "opponent": "Energie Cottbus",
         "is_home": true,
-        "win_probability": 0.41,
-        "draw_probability": 0.231,
-        "expected_points": 1.461,
+        "win_probability": 0.419,
+        "draw_probability": 0.232,
+        "expected_points": 1.49,
         "difficulty": 3,
-        "schedule_ep": 1.549
+        "schedule_ep": 1.579
       },
       {
         "matchday": 34,
         "opponent": "VfL Bochum",
         "is_home": false,
-        "win_probability": 0.321,
+        "win_probability": 0.317,
         "draw_probability": 0.264,
-        "expected_points": 1.228,
+        "expected_points": 1.215,
         "difficulty": 3,
-        "schedule_ep": 1.293
+        "schedule_ep": 1.28
       }
     ],
     "VfL Wolfsburg": [
@@ -13894,7 +12902,7 @@
         "is_home": true,
         "win_probability": 0.557,
         "draw_probability": 0.195,
-        "expected_points": 1.865,
+        "expected_points": 1.864,
         "difficulty": 1,
         "schedule_ep": 1.538
       },
@@ -13904,7 +12912,7 @@
         "is_home": false,
         "win_probability": 0.372,
         "draw_probability": 0.224,
-        "expected_points": 1.341,
+        "expected_points": 1.34,
         "difficulty": 3,
         "schedule_ep": 1.075
       },
@@ -13914,7 +12922,7 @@
         "is_home": true,
         "win_probability": 0.55,
         "draw_probability": 0.21,
-        "expected_points": 1.861,
+        "expected_points": 1.86,
         "difficulty": 1,
         "schedule_ep": 1.552
       },
@@ -13922,21 +12930,21 @@
         "matchday": 13,
         "opponent": "Eintracht Braunschweig",
         "is_home": false,
-        "win_probability": 0.536,
-        "draw_probability": 0.209,
-        "expected_points": 1.816,
+        "win_probability": 0.544,
+        "draw_probability": 0.206,
+        "expected_points": 1.839,
         "difficulty": 2,
-        "schedule_ep": 1.504
+        "schedule_ep": 1.525
       },
       {
         "matchday": 14,
         "opponent": "1. FC Magdeburg",
         "is_home": true,
         "win_probability": 0.54,
-        "draw_probability": 0.193,
+        "draw_probability": 0.194,
         "expected_points": 1.814,
         "difficulty": 2,
-        "schedule_ep": 1.483
+        "schedule_ep": 1.484
       },
       {
         "matchday": 15,
@@ -13952,11 +12960,11 @@
         "matchday": 16,
         "opponent": "DSC Arminia Bielefeld",
         "is_home": true,
-        "win_probability": 0.536,
-        "draw_probability": 0.201,
-        "expected_points": 1.808,
+        "win_probability": 0.527,
+        "draw_probability": 0.202,
+        "expected_points": 1.783,
         "difficulty": 2,
-        "schedule_ep": 1.487
+        "schedule_ep": 1.463
       },
       {
         "matchday": 17,
@@ -14002,11 +13010,11 @@
         "matchday": 21,
         "opponent": "Energie Cottbus",
         "is_home": false,
-        "win_probability": 0.476,
+        "win_probability": 0.487,
         "draw_probability": 0.197,
-        "expected_points": 1.625,
+        "expected_points": 1.657,
         "difficulty": 2,
-        "schedule_ep": 1.301
+        "schedule_ep": 1.331
       },
       {
         "matchday": 22,
@@ -14034,7 +13042,7 @@
         "is_home": true,
         "win_probability": 0.481,
         "draw_probability": 0.213,
-        "expected_points": 1.657,
+        "expected_points": 1.656,
         "difficulty": 2,
         "schedule_ep": 1.351
       },
@@ -14052,11 +13060,11 @@
         "matchday": 26,
         "opponent": "VfL Bochum",
         "is_home": true,
-        "win_probability": 0.534,
-        "draw_probability": 0.214,
-        "expected_points": 1.816,
+        "win_probability": 0.529,
+        "draw_probability": 0.215,
+        "expected_points": 1.802,
         "difficulty": 2,
-        "schedule_ep": 1.511
+        "schedule_ep": 1.497
       },
       {
         "matchday": 27,
@@ -14076,7 +13084,7 @@
         "draw_probability": 0.221,
         "expected_points": 1.584,
         "difficulty": 2,
-        "schedule_ep": 1.29
+        "schedule_ep": 1.291
       },
       {
         "matchday": 29,
@@ -14092,17 +13100,17 @@
         "matchday": 30,
         "opponent": "Eintracht Braunschweig",
         "is_home": true,
-        "win_probability": 0.619,
-        "draw_probability": 0.188,
-        "expected_points": 2.046,
+        "win_probability": 0.628,
+        "draw_probability": 0.186,
+        "expected_points": 2.068,
         "difficulty": 1,
-        "schedule_ep": 1.728
+        "schedule_ep": 1.749
       },
       {
         "matchday": 31,
         "opponent": "1. FC Magdeburg",
         "is_home": false,
-        "win_probability": 0.45,
+        "win_probability": 0.449,
         "draw_probability": 0.205,
         "expected_points": 1.553,
         "difficulty": 2,
@@ -14122,11 +13130,11 @@
         "matchday": 33,
         "opponent": "DSC Arminia Bielefeld",
         "is_home": false,
-        "win_probability": 0.448,
+        "win_probability": 0.439,
         "draw_probability": 0.212,
-        "expected_points": 1.556,
+        "expected_points": 1.53,
         "difficulty": 2,
-        "schedule_ep": 1.255
+        "schedule_ep": 1.231
       },
       {
         "matchday": 34,
@@ -14134,7 +13142,7 @@
         "is_home": true,
         "win_probability": 0.573,
         "draw_probability": 0.19,
-        "expected_points": 1.91,
+        "expected_points": 1.909,
         "difficulty": 1,
         "schedule_ep": 1.58
       }
@@ -14146,7 +13154,7 @@
         "is_home": false,
         "win_probability": 0.249,
         "draw_probability": 0.195,
-        "expected_points": 0.94,
+        "expected_points": 0.941,
         "difficulty": 4,
         "schedule_ep": 0.981
       },
@@ -14156,7 +13164,7 @@
         "is_home": true,
         "win_probability": 0.357,
         "draw_probability": 0.246,
-        "expected_points": 1.316,
+        "expected_points": 1.317,
         "difficulty": 3,
         "schedule_ep": 1.347
       },
@@ -14184,11 +13192,11 @@
         "matchday": 14,
         "opponent": "Energie Cottbus",
         "is_home": false,
-        "win_probability": 0.35,
-        "draw_probability": 0.213,
-        "expected_points": 1.263,
+        "win_probability": 0.36,
+        "draw_probability": 0.215,
+        "expected_points": 1.295,
         "difficulty": 3,
-        "schedule_ep": 1.301
+        "schedule_ep": 1.331
       },
       {
         "matchday": 15,
@@ -14234,7 +13242,7 @@
         "matchday": 19,
         "opponent": "1. FC Magdeburg",
         "is_home": false,
-        "win_probability": 0.33,
+        "win_probability": 0.329,
         "draw_probability": 0.218,
         "expected_points": 1.206,
         "difficulty": 3,
@@ -14244,21 +13252,21 @@
         "matchday": 20,
         "opponent": "VfL Bochum",
         "is_home": true,
-        "win_probability": 0.413,
+        "win_probability": 0.408,
         "draw_probability": 0.245,
-        "expected_points": 1.483,
+        "expected_points": 1.469,
         "difficulty": 3,
-        "schedule_ep": 1.511
+        "schedule_ep": 1.497
       },
       {
         "matchday": 21,
         "opponent": "Eintracht Braunschweig",
         "is_home": false,
-        "win_probability": 0.412,
-        "draw_probability": 0.238,
-        "expected_points": 1.475,
+        "win_probability": 0.42,
+        "draw_probability": 0.237,
+        "expected_points": 1.496,
         "difficulty": 3,
-        "schedule_ep": 1.504
+        "schedule_ep": 1.525
       },
       {
         "matchday": 22,
@@ -14266,7 +13274,7 @@
         "is_home": false,
         "win_probability": 0.27,
         "draw_probability": 0.229,
-        "expected_points": 1.039,
+        "expected_points": 1.04,
         "difficulty": 4,
         "schedule_ep": 1.075
       },
@@ -14285,7 +13293,7 @@
         "opponent": "Dynamo Dresden",
         "is_home": false,
         "win_probability": 0.361,
-        "draw_probability": 0.224,
+        "draw_probability": 0.225,
         "expected_points": 1.308,
         "difficulty": 3,
         "schedule_ep": 1.342
@@ -14294,11 +13302,11 @@
         "matchday": 25,
         "opponent": "DSC Arminia Bielefeld",
         "is_home": true,
-        "win_probability": 0.409,
+        "win_probability": 0.401,
         "draw_probability": 0.228,
-        "expected_points": 1.456,
+        "expected_points": 1.431,
         "difficulty": 3,
-        "schedule_ep": 1.487
+        "schedule_ep": 1.463
       },
       {
         "matchday": 26,
@@ -14354,11 +13362,11 @@
         "matchday": 31,
         "opponent": "Energie Cottbus",
         "is_home": true,
-        "win_probability": 0.434,
+        "win_probability": 0.445,
         "draw_probability": 0.213,
-        "expected_points": 1.516,
+        "expected_points": 1.547,
         "difficulty": 2,
-        "schedule_ep": 1.549
+        "schedule_ep": 1.579
       },
       {
         "matchday": 32,
@@ -14385,10 +13393,978 @@
         "opponent": "SV Darmstadt 98",
         "is_home": false,
         "win_probability": 0.326,
-        "draw_probability": 0.228,
+        "draw_probability": 0.229,
         "expected_points": 1.207,
         "difficulty": 3,
         "schedule_ep": 1.242
+      }
+    ],
+    "Eintracht Braunschweig": [
+      {
+        "matchday": 11,
+        "opponent": "Energie Cottbus",
+        "is_home": true,
+        "win_probability": 0.356,
+        "draw_probability": 0.226,
+        "expected_points": 1.293,
+        "difficulty": 3,
+        "schedule_ep": 1.579
+      },
+      {
+        "matchday": 12,
+        "opponent": "1. FC Nürnberg",
+        "is_home": false,
+        "win_probability": 0.224,
+        "draw_probability": 0.224,
+        "expected_points": 0.897,
+        "difficulty": 4,
+        "schedule_ep": 1.128
+      },
+      {
+        "matchday": 13,
+        "opponent": "VfL Wolfsburg",
+        "is_home": true,
+        "win_probability": 0.25,
+        "draw_probability": 0.206,
+        "expected_points": 0.955,
+        "difficulty": 4,
+        "schedule_ep": 1.219
+      },
+      {
+        "matchday": 14,
+        "opponent": "SV Darmstadt 98",
+        "is_home": false,
+        "win_probability": 0.256,
+        "draw_probability": 0.229,
+        "expected_points": 0.996,
+        "difficulty": 4,
+        "schedule_ep": 1.242
+      },
+      {
+        "matchday": 15,
+        "opponent": "Karlsruher SC",
+        "is_home": true,
+        "win_probability": 0.413,
+        "draw_probability": 0.228,
+        "expected_points": 1.468,
+        "difficulty": 3,
+        "schedule_ep": 1.756
+      },
+      {
+        "matchday": 16,
+        "opponent": "1. FC Heidenheim 1846",
+        "is_home": false,
+        "win_probability": 0.263,
+        "draw_probability": 0.219,
+        "expected_points": 1.008,
+        "difficulty": 4,
+        "schedule_ep": 1.267
+      },
+      {
+        "matchday": 17,
+        "opponent": "FC St. Pauli",
+        "is_home": true,
+        "win_probability": 0.301,
+        "draw_probability": 0.258,
+        "expected_points": 1.162,
+        "difficulty": 3,
+        "schedule_ep": 1.404
+      },
+      {
+        "matchday": 18,
+        "opponent": "1. FC Magdeburg",
+        "is_home": true,
+        "win_probability": 0.326,
+        "draw_probability": 0.229,
+        "expected_points": 1.208,
+        "difficulty": 3,
+        "schedule_ep": 1.484
+      },
+      {
+        "matchday": 19,
+        "opponent": "VfL Bochum",
+        "is_home": false,
+        "win_probability": 0.265,
+        "draw_probability": 0.248,
+        "expected_points": 1.044,
+        "difficulty": 4,
+        "schedule_ep": 1.28
+      },
+      {
+        "matchday": 20,
+        "opponent": "Hertha BSC",
+        "is_home": false,
+        "win_probability": 0.21,
+        "draw_probability": 0.225,
+        "expected_points": 0.854,
+        "difficulty": 4,
+        "schedule_ep": 1.075
+      },
+      {
+        "matchday": 21,
+        "opponent": "VfL Osnabrück",
+        "is_home": true,
+        "win_probability": 0.343,
+        "draw_probability": 0.237,
+        "expected_points": 1.266,
+        "difficulty": 3,
+        "schedule_ep": 1.538
+      },
+      {
+        "matchday": 22,
+        "opponent": "Dynamo Dresden",
+        "is_home": false,
+        "win_probability": 0.284,
+        "draw_probability": 0.229,
+        "expected_points": 1.082,
+        "difficulty": 4,
+        "schedule_ep": 1.342
+      },
+      {
+        "matchday": 23,
+        "opponent": "1. FC Kaiserslautern",
+        "is_home": true,
+        "win_probability": 0.285,
+        "draw_probability": 0.252,
+        "expected_points": 1.107,
+        "difficulty": 4,
+        "schedule_ep": 1.347
+      },
+      {
+        "matchday": 24,
+        "opponent": "Holstein Kiel",
+        "is_home": false,
+        "win_probability": 0.281,
+        "draw_probability": 0.25,
+        "expected_points": 1.093,
+        "difficulty": 4,
+        "schedule_ep": 1.333
+      },
+      {
+        "matchday": 25,
+        "opponent": "SpVgg Greuther Fürth",
+        "is_home": true,
+        "win_probability": 0.425,
+        "draw_probability": 0.23,
+        "expected_points": 1.506,
+        "difficulty": 2,
+        "schedule_ep": 1.792
+      },
+      {
+        "matchday": 26,
+        "opponent": "Hannover 96",
+        "is_home": false,
+        "win_probability": 0.231,
+        "draw_probability": 0.224,
+        "expected_points": 0.918,
+        "difficulty": 4,
+        "schedule_ep": 1.154
+      },
+      {
+        "matchday": 27,
+        "opponent": "DSC Arminia Bielefeld",
+        "is_home": true,
+        "win_probability": 0.32,
+        "draw_probability": 0.237,
+        "expected_points": 1.197,
+        "difficulty": 3,
+        "schedule_ep": 1.463
+      },
+      {
+        "matchday": 28,
+        "opponent": "Energie Cottbus",
+        "is_home": false,
+        "win_probability": 0.281,
+        "draw_probability": 0.217,
+        "expected_points": 1.061,
+        "difficulty": 4,
+        "schedule_ep": 1.331
+      },
+      {
+        "matchday": 29,
+        "opponent": "1. FC Nürnberg",
+        "is_home": true,
+        "win_probability": 0.287,
+        "draw_probability": 0.239,
+        "expected_points": 1.099,
+        "difficulty": 4,
+        "schedule_ep": 1.351
+      },
+      {
+        "matchday": 30,
+        "opponent": "VfL Wolfsburg",
+        "is_home": false,
+        "win_probability": 0.187,
+        "draw_probability": 0.186,
+        "expected_points": 0.746,
+        "difficulty": 5,
+        "schedule_ep": 0.981
+      },
+      {
+        "matchday": 31,
+        "opponent": "SV Darmstadt 98",
+        "is_home": true,
+        "win_probability": 0.323,
+        "draw_probability": 0.241,
+        "expected_points": 1.209,
+        "difficulty": 3,
+        "schedule_ep": 1.472
+      },
+      {
+        "matchday": 32,
+        "opponent": "Karlsruher SC",
+        "is_home": false,
+        "win_probability": 0.335,
+        "draw_probability": 0.226,
+        "expected_points": 1.231,
+        "difficulty": 3,
+        "schedule_ep": 1.511
+      },
+      {
+        "matchday": 33,
+        "opponent": "1. FC Heidenheim 1846",
+        "is_home": true,
+        "win_probability": 0.334,
+        "draw_probability": 0.23,
+        "expected_points": 1.232,
+        "difficulty": 3,
+        "schedule_ep": 1.509
+      },
+      {
+        "matchday": 34,
+        "opponent": "FC St. Pauli",
+        "is_home": false,
+        "win_probability": 0.24,
+        "draw_probability": 0.245,
+        "expected_points": 0.966,
+        "difficulty": 4,
+        "schedule_ep": 1.192
+      }
+    ],
+    "Energie Cottbus": [
+      {
+        "matchday": 11,
+        "opponent": "Eintracht Braunschweig",
+        "is_home": false,
+        "win_probability": 0.419,
+        "draw_probability": 0.226,
+        "expected_points": 1.482,
+        "difficulty": 3,
+        "schedule_ep": 1.525
+      },
+      {
+        "matchday": 12,
+        "opponent": "Hertha BSC",
+        "is_home": true,
+        "win_probability": 0.335,
+        "draw_probability": 0.226,
+        "expected_points": 1.232,
+        "difficulty": 3,
+        "schedule_ep": 1.291
+      },
+      {
+        "matchday": 13,
+        "opponent": "1. FC Magdeburg",
+        "is_home": false,
+        "win_probability": 0.323,
+        "draw_probability": 0.206,
+        "expected_points": 1.175,
+        "difficulty": 3,
+        "schedule_ep": 1.243
+      },
+      {
+        "matchday": 14,
+        "opponent": "VfL Osnabrück",
+        "is_home": true,
+        "win_probability": 0.425,
+        "draw_probability": 0.215,
+        "expected_points": 1.491,
+        "difficulty": 2,
+        "schedule_ep": 1.538
+      },
+      {
+        "matchday": 15,
+        "opponent": "Dynamo Dresden",
+        "is_home": false,
+        "win_probability": 0.356,
+        "draw_probability": 0.213,
+        "expected_points": 1.282,
+        "difficulty": 3,
+        "schedule_ep": 1.342
+      },
+      {
+        "matchday": 16,
+        "opponent": "Holstein Kiel",
+        "is_home": true,
+        "win_probability": 0.427,
+        "draw_probability": 0.231,
+        "expected_points": 1.513,
+        "difficulty": 2,
+        "schedule_ep": 1.552
+      },
+      {
+        "matchday": 17,
+        "opponent": "1. FC Kaiserslautern",
+        "is_home": false,
+        "win_probability": 0.281,
+        "draw_probability": 0.225,
+        "expected_points": 1.069,
+        "difficulty": 4,
+        "schedule_ep": 1.135
+      },
+      {
+        "matchday": 18,
+        "opponent": "Hannover 96",
+        "is_home": false,
+        "win_probability": 0.291,
+        "draw_probability": 0.213,
+        "expected_points": 1.085,
+        "difficulty": 4,
+        "schedule_ep": 1.154
+      },
+      {
+        "matchday": 19,
+        "opponent": "DSC Arminia Bielefeld",
+        "is_home": true,
+        "win_probability": 0.398,
+        "draw_probability": 0.217,
+        "expected_points": 1.411,
+        "difficulty": 3,
+        "schedule_ep": 1.463
+      },
+      {
+        "matchday": 20,
+        "opponent": "SpVgg Greuther Fürth",
+        "is_home": false,
+        "win_probability": 0.431,
+        "draw_probability": 0.208,
+        "expected_points": 1.502,
+        "difficulty": 2,
+        "schedule_ep": 1.551
+      },
+      {
+        "matchday": 21,
+        "opponent": "VfL Wolfsburg",
+        "is_home": true,
+        "win_probability": 0.316,
+        "draw_probability": 0.197,
+        "expected_points": 1.146,
+        "difficulty": 3,
+        "schedule_ep": 1.219
+      },
+      {
+        "matchday": 22,
+        "opponent": "Karlsruher SC",
+        "is_home": true,
+        "win_probability": 0.508,
+        "draw_probability": 0.199,
+        "expected_points": 1.722,
+        "difficulty": 2,
+        "schedule_ep": 1.756
+      },
+      {
+        "matchday": 23,
+        "opponent": "FC St. Pauli",
+        "is_home": false,
+        "win_probability": 0.3,
+        "draw_probability": 0.23,
+        "expected_points": 1.13,
+        "difficulty": 4,
+        "schedule_ep": 1.192
+      },
+      {
+        "matchday": 24,
+        "opponent": "SV Darmstadt 98",
+        "is_home": true,
+        "win_probability": 0.401,
+        "draw_probability": 0.22,
+        "expected_points": 1.422,
+        "difficulty": 3,
+        "schedule_ep": 1.472
+      },
+      {
+        "matchday": 25,
+        "opponent": "1. FC Nürnberg",
+        "is_home": false,
+        "win_probability": 0.282,
+        "draw_probability": 0.213,
+        "expected_points": 1.058,
+        "difficulty": 4,
+        "schedule_ep": 1.128
+      },
+      {
+        "matchday": 26,
+        "opponent": "1. FC Heidenheim 1846",
+        "is_home": true,
+        "win_probability": 0.416,
+        "draw_probability": 0.209,
+        "expected_points": 1.457,
+        "difficulty": 3,
+        "schedule_ep": 1.509
+      },
+      {
+        "matchday": 27,
+        "opponent": "VfL Bochum",
+        "is_home": false,
+        "win_probability": 0.33,
+        "draw_probability": 0.231,
+        "expected_points": 1.222,
+        "difficulty": 3,
+        "schedule_ep": 1.28
+      },
+      {
+        "matchday": 28,
+        "opponent": "Eintracht Braunschweig",
+        "is_home": true,
+        "win_probability": 0.502,
+        "draw_probability": 0.217,
+        "expected_points": 1.722,
+        "difficulty": 2,
+        "schedule_ep": 1.749
+      },
+      {
+        "matchday": 29,
+        "opponent": "Hertha BSC",
+        "is_home": false,
+        "win_probability": 0.263,
+        "draw_probability": 0.215,
+        "expected_points": 1.004,
+        "difficulty": 4,
+        "schedule_ep": 1.075
+      },
+      {
+        "matchday": 30,
+        "opponent": "1. FC Magdeburg",
+        "is_home": true,
+        "win_probability": 0.407,
+        "draw_probability": 0.21,
+        "expected_points": 1.431,
+        "difficulty": 3,
+        "schedule_ep": 1.484
+      },
+      {
+        "matchday": 31,
+        "opponent": "VfL Osnabrück",
+        "is_home": false,
+        "win_probability": 0.342,
+        "draw_probability": 0.213,
+        "expected_points": 1.24,
+        "difficulty": 3,
+        "schedule_ep": 1.302
+      },
+      {
+        "matchday": 32,
+        "opponent": "Dynamo Dresden",
+        "is_home": true,
+        "win_probability": 0.441,
+        "draw_probability": 0.212,
+        "expected_points": 1.535,
+        "difficulty": 2,
+        "schedule_ep": 1.58
+      },
+      {
+        "matchday": 33,
+        "opponent": "Holstein Kiel",
+        "is_home": false,
+        "win_probability": 0.349,
+        "draw_probability": 0.232,
+        "expected_points": 1.279,
+        "difficulty": 3,
+        "schedule_ep": 1.333
+      },
+      {
+        "matchday": 34,
+        "opponent": "1. FC Kaiserslautern",
+        "is_home": true,
+        "win_probability": 0.354,
+        "draw_probability": 0.233,
+        "expected_points": 1.294,
+        "difficulty": 3,
+        "schedule_ep": 1.347
+      }
+    ],
+    "DSC Arminia Bielefeld": [
+      {
+        "matchday": 11,
+        "opponent": "Holstein Kiel",
+        "is_home": false,
+        "win_probability": 0.374,
+        "draw_probability": 0.247,
+        "expected_points": 1.37,
+        "difficulty": 3,
+        "schedule_ep": 1.333
+      },
+      {
+        "matchday": 12,
+        "opponent": "1. FC Magdeburg",
+        "is_home": true,
+        "win_probability": 0.435,
+        "draw_probability": 0.221,
+        "expected_points": 1.526,
+        "difficulty": 2,
+        "schedule_ep": 1.484
+      },
+      {
+        "matchday": 13,
+        "opponent": "SpVgg Greuther Fürth",
+        "is_home": false,
+        "win_probability": 0.459,
+        "draw_probability": 0.218,
+        "expected_points": 1.594,
+        "difficulty": 2,
+        "schedule_ep": 1.551
+      },
+      {
+        "matchday": 14,
+        "opponent": "Dynamo Dresden",
+        "is_home": true,
+        "win_probability": 0.467,
+        "draw_probability": 0.222,
+        "expected_points": 1.623,
+        "difficulty": 2,
+        "schedule_ep": 1.58
+      },
+      {
+        "matchday": 15,
+        "opponent": "1. FC Kaiserslautern",
+        "is_home": true,
+        "win_probability": 0.379,
+        "draw_probability": 0.248,
+        "expected_points": 1.384,
+        "difficulty": 3,
+        "schedule_ep": 1.347
+      },
+      {
+        "matchday": 16,
+        "opponent": "VfL Wolfsburg",
+        "is_home": false,
+        "win_probability": 0.271,
+        "draw_probability": 0.202,
+        "expected_points": 1.015,
+        "difficulty": 4,
+        "schedule_ep": 0.981
+      },
+      {
+        "matchday": 17,
+        "opponent": "Hannover 96",
+        "is_home": true,
+        "win_probability": 0.395,
+        "draw_probability": 0.234,
+        "expected_points": 1.419,
+        "difficulty": 3,
+        "schedule_ep": 1.38
+      },
+      {
+        "matchday": 18,
+        "opponent": "Karlsruher SC",
+        "is_home": true,
+        "win_probability": 0.532,
+        "draw_probability": 0.205,
+        "expected_points": 1.802,
+        "difficulty": 2,
+        "schedule_ep": 1.756
+      },
+      {
+        "matchday": 19,
+        "opponent": "Energie Cottbus",
+        "is_home": false,
+        "win_probability": 0.385,
+        "draw_probability": 0.217,
+        "expected_points": 1.372,
+        "difficulty": 3,
+        "schedule_ep": 1.331
+      },
+      {
+        "matchday": 20,
+        "opponent": "1. FC Nürnberg",
+        "is_home": true,
+        "win_probability": 0.385,
+        "draw_probability": 0.236,
+        "expected_points": 1.39,
+        "difficulty": 3,
+        "schedule_ep": 1.351
+      },
+      {
+        "matchday": 21,
+        "opponent": "FC St. Pauli",
+        "is_home": false,
+        "win_probability": 0.325,
+        "draw_probability": 0.249,
+        "expected_points": 1.225,
+        "difficulty": 3,
+        "schedule_ep": 1.192
+      },
+      {
+        "matchday": 22,
+        "opponent": "SV Darmstadt 98",
+        "is_home": true,
+        "win_probability": 0.427,
+        "draw_probability": 0.232,
+        "expected_points": 1.512,
+        "difficulty": 2,
+        "schedule_ep": 1.472
+      },
+      {
+        "matchday": 23,
+        "opponent": "1. FC Heidenheim 1846",
+        "is_home": false,
+        "win_probability": 0.362,
+        "draw_probability": 0.221,
+        "expected_points": 1.306,
+        "difficulty": 3,
+        "schedule_ep": 1.267
+      },
+      {
+        "matchday": 24,
+        "opponent": "VfL Bochum",
+        "is_home": true,
+        "win_probability": 0.43,
+        "draw_probability": 0.245,
+        "expected_points": 1.536,
+        "difficulty": 2,
+        "schedule_ep": 1.497
+      },
+      {
+        "matchday": 25,
+        "opponent": "VfL Osnabrück",
+        "is_home": false,
+        "win_probability": 0.371,
+        "draw_probability": 0.228,
+        "expected_points": 1.341,
+        "difficulty": 3,
+        "schedule_ep": 1.302
+      },
+      {
+        "matchday": 26,
+        "opponent": "Hertha BSC",
+        "is_home": true,
+        "win_probability": 0.362,
+        "draw_probability": 0.241,
+        "expected_points": 1.327,
+        "difficulty": 3,
+        "schedule_ep": 1.291
+      },
+      {
+        "matchday": 27,
+        "opponent": "Eintracht Braunschweig",
+        "is_home": false,
+        "win_probability": 0.443,
+        "draw_probability": 0.237,
+        "expected_points": 1.566,
+        "difficulty": 2,
+        "schedule_ep": 1.525
+      },
+      {
+        "matchday": 28,
+        "opponent": "Holstein Kiel",
+        "is_home": true,
+        "win_probability": 0.45,
+        "draw_probability": 0.242,
+        "expected_points": 1.592,
+        "difficulty": 2,
+        "schedule_ep": 1.552
+      },
+      {
+        "matchday": 29,
+        "opponent": "1. FC Magdeburg",
+        "is_home": false,
+        "win_probability": 0.353,
+        "draw_probability": 0.221,
+        "expected_points": 1.281,
+        "difficulty": 3,
+        "schedule_ep": 1.243
+      },
+      {
+        "matchday": 30,
+        "opponent": "SpVgg Greuther Fürth",
+        "is_home": true,
+        "win_probability": 0.544,
+        "draw_probability": 0.205,
+        "expected_points": 1.837,
+        "difficulty": 2,
+        "schedule_ep": 1.792
+      },
+      {
+        "matchday": 31,
+        "opponent": "Dynamo Dresden",
+        "is_home": false,
+        "win_probability": 0.385,
+        "draw_probability": 0.227,
+        "expected_points": 1.382,
+        "difficulty": 3,
+        "schedule_ep": 1.342
+      },
+      {
+        "matchday": 32,
+        "opponent": "1. FC Kaiserslautern",
+        "is_home": false,
+        "win_probability": 0.308,
+        "draw_probability": 0.244,
+        "expected_points": 1.167,
+        "difficulty": 3,
+        "schedule_ep": 1.135
+      },
+      {
+        "matchday": 33,
+        "opponent": "VfL Wolfsburg",
+        "is_home": true,
+        "win_probability": 0.349,
+        "draw_probability": 0.212,
+        "expected_points": 1.258,
+        "difficulty": 3,
+        "schedule_ep": 1.219
+      },
+      {
+        "matchday": 34,
+        "opponent": "Hannover 96",
+        "is_home": false,
+        "win_probability": 0.319,
+        "draw_probability": 0.231,
+        "expected_points": 1.189,
+        "difficulty": 3,
+        "schedule_ep": 1.154
+      }
+    ],
+    "VfL Bochum": [
+      {
+        "matchday": 11,
+        "opponent": "Karlsruher SC",
+        "is_home": true,
+        "win_probability": 0.497,
+        "draw_probability": 0.226,
+        "expected_points": 1.716,
+        "difficulty": 2,
+        "schedule_ep": 1.756
+      },
+      {
+        "matchday": 12,
+        "opponent": "FC St. Pauli",
+        "is_home": false,
+        "win_probability": 0.305,
+        "draw_probability": 0.267,
+        "expected_points": 1.182,
+        "difficulty": 3,
+        "schedule_ep": 1.192
+      },
+      {
+        "matchday": 13,
+        "opponent": "SV Darmstadt 98",
+        "is_home": true,
+        "win_probability": 0.398,
+        "draw_probability": 0.25,
+        "expected_points": 1.446,
+        "difficulty": 3,
+        "schedule_ep": 1.472
+      },
+      {
+        "matchday": 14,
+        "opponent": "1. FC Nürnberg",
+        "is_home": false,
+        "win_probability": 0.292,
+        "draw_probability": 0.248,
+        "expected_points": 1.122,
+        "difficulty": 4,
+        "schedule_ep": 1.128
+      },
+      {
+        "matchday": 15,
+        "opponent": "1. FC Heidenheim 1846",
+        "is_home": true,
+        "win_probability": 0.415,
+        "draw_probability": 0.238,
+        "expected_points": 1.481,
+        "difficulty": 3,
+        "schedule_ep": 1.509
+      },
+      {
+        "matchday": 16,
+        "opponent": "1. FC Magdeburg",
+        "is_home": true,
+        "win_probability": 0.406,
+        "draw_probability": 0.238,
+        "expected_points": 1.457,
+        "difficulty": 3,
+        "schedule_ep": 1.484
+      },
+      {
+        "matchday": 17,
+        "opponent": "Holstein Kiel",
+        "is_home": false,
+        "win_probability": 0.35,
+        "draw_probability": 0.266,
+        "expected_points": 1.315,
+        "difficulty": 3,
+        "schedule_ep": 1.333
+      },
+      {
+        "matchday": 18,
+        "opponent": "Hertha BSC",
+        "is_home": false,
+        "win_probability": 0.274,
+        "draw_probability": 0.251,
+        "expected_points": 1.072,
+        "difficulty": 4,
+        "schedule_ep": 1.075
+      },
+      {
+        "matchday": 19,
+        "opponent": "Eintracht Braunschweig",
+        "is_home": true,
+        "win_probability": 0.487,
+        "draw_probability": 0.248,
+        "expected_points": 1.709,
+        "difficulty": 2,
+        "schedule_ep": 1.749
+      },
+      {
+        "matchday": 20,
+        "opponent": "VfL Osnabrück",
+        "is_home": false,
+        "win_probability": 0.347,
+        "draw_probability": 0.245,
+        "expected_points": 1.286,
+        "difficulty": 3,
+        "schedule_ep": 1.302
+      },
+      {
+        "matchday": 21,
+        "opponent": "Dynamo Dresden",
+        "is_home": true,
+        "win_probability": 0.436,
+        "draw_probability": 0.241,
+        "expected_points": 1.548,
+        "difficulty": 2,
+        "schedule_ep": 1.58
+      },
+      {
+        "matchday": 22,
+        "opponent": "SpVgg Greuther Fürth",
+        "is_home": false,
+        "win_probability": 0.428,
+        "draw_probability": 0.236,
+        "expected_points": 1.521,
+        "difficulty": 2,
+        "schedule_ep": 1.551
+      },
+      {
+        "matchday": 23,
+        "opponent": "Hannover 96",
+        "is_home": true,
+        "win_probability": 0.369,
+        "draw_probability": 0.252,
+        "expected_points": 1.359,
+        "difficulty": 3,
+        "schedule_ep": 1.38
+      },
+      {
+        "matchday": 24,
+        "opponent": "DSC Arminia Bielefeld",
+        "is_home": false,
+        "win_probability": 0.325,
+        "draw_probability": 0.245,
+        "expected_points": 1.219,
+        "difficulty": 3,
+        "schedule_ep": 1.231
+      },
+      {
+        "matchday": 25,
+        "opponent": "1. FC Kaiserslautern",
+        "is_home": true,
+        "win_probability": 0.354,
+        "draw_probability": 0.267,
+        "expected_points": 1.329,
+        "difficulty": 3,
+        "schedule_ep": 1.347
+      },
+      {
+        "matchday": 26,
+        "opponent": "VfL Wolfsburg",
+        "is_home": false,
+        "win_probability": 0.256,
+        "draw_probability": 0.215,
+        "expected_points": 0.983,
+        "difficulty": 4,
+        "schedule_ep": 0.981
+      },
+      {
+        "matchday": 27,
+        "opponent": "Energie Cottbus",
+        "is_home": true,
+        "win_probability": 0.439,
+        "draw_probability": 0.231,
+        "expected_points": 1.548,
+        "difficulty": 2,
+        "schedule_ep": 1.579
+      },
+      {
+        "matchday": 28,
+        "opponent": "Karlsruher SC",
+        "is_home": false,
+        "win_probability": 0.416,
+        "draw_probability": 0.234,
+        "expected_points": 1.484,
+        "difficulty": 3,
+        "schedule_ep": 1.511
+      },
+      {
+        "matchday": 29,
+        "opponent": "FC St. Pauli",
+        "is_home": true,
+        "win_probability": 0.37,
+        "draw_probability": 0.27,
+        "expected_points": 1.382,
+        "difficulty": 3,
+        "schedule_ep": 1.404
+      },
+      {
+        "matchday": 30,
+        "opponent": "SV Darmstadt 98",
+        "is_home": false,
+        "win_probability": 0.327,
+        "draw_probability": 0.249,
+        "expected_points": 1.23,
+        "difficulty": 3,
+        "schedule_ep": 1.242
+      },
+      {
+        "matchday": 31,
+        "opponent": "1. FC Nürnberg",
+        "is_home": true,
+        "win_probability": 0.36,
+        "draw_probability": 0.254,
+        "expected_points": 1.332,
+        "difficulty": 3,
+        "schedule_ep": 1.351
+      },
+      {
+        "matchday": 32,
+        "opponent": "1. FC Heidenheim 1846",
+        "is_home": false,
+        "win_probability": 0.339,
+        "draw_probability": 0.237,
+        "expected_points": 1.254,
+        "difficulty": 3,
+        "schedule_ep": 1.267
+      },
+      {
+        "matchday": 33,
+        "opponent": "1. FC Magdeburg",
+        "is_home": false,
+        "win_probability": 0.331,
+        "draw_probability": 0.237,
+        "expected_points": 1.231,
+        "difficulty": 3,
+        "schedule_ep": 1.243
+      },
+      {
+        "matchday": 34,
+        "opponent": "Holstein Kiel",
+        "is_home": true,
+        "win_probability": 0.419,
+        "draw_probability": 0.264,
+        "expected_points": 1.522,
+        "difficulty": 3,
+        "schedule_ep": 1.552
       }
     ]
   },
@@ -14425,9 +14401,9 @@
     },
     "DSC Arminia Bielefeld": {
       "in_league_last_season": true,
-      "matches": 9,
-      "points_then": 10,
-      "gf_then": 17,
+      "matches": 10,
+      "points_then": 13,
+      "gf_then": 19,
       "ga_then": 16,
       "final_position_last_season": 13,
       "final_points_last_season": 39
@@ -14443,10 +14419,10 @@
     },
     "Eintracht Braunschweig": {
       "in_league_last_season": true,
-      "matches": 9,
+      "matches": 10,
       "points_then": 10,
       "gf_then": 11,
-      "ga_then": 17,
+      "ga_then": 20,
       "final_position_last_season": 15,
       "final_points_last_season": 37
     },
@@ -14512,10 +14488,10 @@
     },
     "VfL Bochum": {
       "in_league_last_season": true,
-      "matches": 9,
-      "points_then": 6,
-      "gf_then": 11,
-      "ga_then": 17,
+      "matches": 10,
+      "points_then": 7,
+      "gf_then": 12,
+      "ga_then": 18,
       "final_position_last_season": 9,
       "final_points_last_season": 44
     },
@@ -14527,12 +14503,12 @@
     }
   },
   "historical_analogues": {
-    "matches_played": 9,
+    "matches_played": 10,
     "rows": [
       {
         "season": "2023/24",
         "team": "FC St. Pauli",
-        "points_after_n": 19,
+        "points_after_n": 20,
         "final_position": 1,
         "final_points": 69,
         "outcome": "promoted"
@@ -14540,7 +14516,7 @@
       {
         "season": "2023/24",
         "team": "Holstein Kiel",
-        "points_after_n": 16,
+        "points_after_n": 19,
         "final_position": 2,
         "final_points": 68,
         "outcome": "promoted"
@@ -14548,7 +14524,7 @@
       {
         "season": "2023/24",
         "team": "Fortuna Düsseldorf",
-        "points_after_n": 15,
+        "points_after_n": 18,
         "final_position": 3,
         "final_points": 63,
         "outcome": "playoff"
@@ -14556,7 +14532,7 @@
       {
         "season": "2023/24",
         "team": "Hamburger SV",
-        "points_after_n": 17,
+        "points_after_n": 20,
         "final_position": 4,
         "final_points": 58,
         "outcome": "midtable"
@@ -14564,7 +14540,7 @@
       {
         "season": "2023/24",
         "team": "Karlsruher SC",
-        "points_after_n": 9,
+        "points_after_n": 12,
         "final_position": 5,
         "final_points": 55,
         "outcome": "midtable"
@@ -14572,7 +14548,7 @@
       {
         "season": "2023/24",
         "team": "Hannover 96",
-        "points_after_n": 15,
+        "points_after_n": 18,
         "final_position": 6,
         "final_points": 52,
         "outcome": "midtable"
@@ -14580,7 +14556,7 @@
       {
         "season": "2023/24",
         "team": "SC Paderborn 07",
-        "points_after_n": 14,
+        "points_after_n": 15,
         "final_position": 7,
         "final_points": 52,
         "outcome": "midtable"
@@ -14612,7 +14588,7 @@
       {
         "season": "2023/24",
         "team": "SV 07 Elversberg",
-        "points_after_n": 12,
+        "points_after_n": 15,
         "final_position": 11,
         "final_points": 43,
         "outcome": "midtable"
@@ -14620,7 +14596,7 @@
       {
         "season": "2023/24",
         "team": "1. FC Nürnberg",
-        "points_after_n": 12,
+        "points_after_n": 15,
         "final_position": 12,
         "final_points": 40,
         "outcome": "midtable"
@@ -14652,7 +14628,7 @@
       {
         "season": "2023/24",
         "team": "SV Wehen Wiesbaden",
-        "points_after_n": 9,
+        "points_after_n": 12,
         "final_position": 16,
         "final_points": 32,
         "outcome": "relegation_playoff"
@@ -14692,7 +14668,7 @@
       {
         "season": "2024/25",
         "team": "SV 07 Elversberg",
-        "points_after_n": 13,
+        "points_after_n": 16,
         "final_position": 3,
         "final_points": 58,
         "outcome": "playoff"
@@ -14700,7 +14676,7 @@
       {
         "season": "2024/25",
         "team": "SC Paderborn 07",
-        "points_after_n": 16,
+        "points_after_n": 19,
         "final_position": 4,
         "final_points": 55,
         "outcome": "midtable"
@@ -14724,7 +14700,7 @@
       {
         "season": "2024/25",
         "team": "1. FC Kaiserslautern",
-        "points_after_n": 12,
+        "points_after_n": 15,
         "final_position": 7,
         "final_points": 53,
         "outcome": "midtable"
@@ -14740,7 +14716,7 @@
       {
         "season": "2024/25",
         "team": "Hannover 96",
-        "points_after_n": 16,
+        "points_after_n": 19,
         "final_position": 9,
         "final_points": 51,
         "outcome": "midtable"
@@ -14748,7 +14724,7 @@
       {
         "season": "2024/25",
         "team": "1. FC Nürnberg",
-        "points_after_n": 13,
+        "points_after_n": 16,
         "final_position": 10,
         "final_points": 48,
         "outcome": "midtable"
@@ -14756,7 +14732,7 @@
       {
         "season": "2024/25",
         "team": "Hertha BSC",
-        "points_after_n": 14,
+        "points_after_n": 17,
         "final_position": 11,
         "final_points": 44,
         "outcome": "midtable"
@@ -14764,7 +14740,7 @@
       {
         "season": "2024/25",
         "team": "SV Darmstadt 98",
-        "points_after_n": 9,
+        "points_after_n": 10,
         "final_position": 12,
         "final_points": 42,
         "outcome": "midtable"
@@ -14772,7 +14748,7 @@
       {
         "season": "2024/25",
         "team": "SpVgg Greuther Fürth",
-        "points_after_n": 10,
+        "points_after_n": 13,
         "final_position": 13,
         "final_points": 39,
         "outcome": "midtable"
@@ -14788,7 +14764,7 @@
       {
         "season": "2024/25",
         "team": "Preußen Münster",
-        "points_after_n": 6,
+        "points_after_n": 7,
         "final_position": 15,
         "final_points": 36,
         "outcome": "midtable"
@@ -14796,7 +14772,7 @@
       {
         "season": "2024/25",
         "team": "Eintracht Braunschweig",
-        "points_after_n": 7,
+        "points_after_n": 8,
         "final_position": 16,
         "final_points": 35,
         "outcome": "relegation_playoff"
@@ -14804,7 +14780,7 @@
       {
         "season": "2024/25",
         "team": "SSV Ulm 1846",
-        "points_after_n": 7,
+        "points_after_n": 8,
         "final_position": 17,
         "final_points": 30,
         "outcome": "relegated"
@@ -14820,7 +14796,7 @@
       {
         "season": "2025/26",
         "team": "FC Schalke 04",
-        "points_after_n": 21,
+        "points_after_n": 24,
         "final_position": 1,
         "final_points": 70,
         "outcome": "promoted"
@@ -14836,7 +14812,7 @@
       {
         "season": "2025/26",
         "team": "SC Paderborn 07",
-        "points_after_n": 20,
+        "points_after_n": 23,
         "final_position": 3,
         "final_points": 62,
         "outcome": "playoff"
@@ -14844,7 +14820,7 @@
       {
         "season": "2025/26",
         "team": "Hannover 96",
-        "points_after_n": 17,
+        "points_after_n": 20,
         "final_position": 4,
         "final_points": 60,
         "outcome": "midtable"
@@ -14860,7 +14836,7 @@
       {
         "season": "2025/26",
         "team": "1. FC Kaiserslautern",
-        "points_after_n": 18,
+        "points_after_n": 19,
         "final_position": 6,
         "final_points": 52,
         "outcome": "midtable"
@@ -14868,7 +14844,7 @@
       {
         "season": "2025/26",
         "team": "Hertha BSC",
-        "points_after_n": 11,
+        "points_after_n": 14,
         "final_position": 7,
         "final_points": 51,
         "outcome": "midtable"
@@ -14876,7 +14852,7 @@
       {
         "season": "2025/26",
         "team": "1. FC Nürnberg",
-        "points_after_n": 8,
+        "points_after_n": 9,
         "final_position": 8,
         "final_points": 46,
         "outcome": "midtable"
@@ -14884,7 +14860,7 @@
       {
         "season": "2025/26",
         "team": "VfL Bochum",
-        "points_after_n": 6,
+        "points_after_n": 7,
         "final_position": 9,
         "final_points": 44,
         "outcome": "midtable"
@@ -14892,7 +14868,7 @@
       {
         "season": "2025/26",
         "team": "Karlsruher SC",
-        "points_after_n": 15,
+        "points_after_n": 18,
         "final_position": 10,
         "final_points": 44,
         "outcome": "midtable"
@@ -14908,7 +14884,7 @@
       {
         "season": "2025/26",
         "team": "Holstein Kiel",
-        "points_after_n": 11,
+        "points_after_n": 12,
         "final_position": 12,
         "final_points": 41,
         "outcome": "midtable"
@@ -14916,7 +14892,7 @@
       {
         "season": "2025/26",
         "team": "DSC Arminia Bielefeld",
-        "points_after_n": 10,
+        "points_after_n": 13,
         "final_position": 13,
         "final_points": 39,
         "outcome": "midtable"
@@ -14924,7 +14900,7 @@
       {
         "season": "2025/26",
         "team": "1. FC Magdeburg",
-        "points_after_n": 4,
+        "points_after_n": 7,
         "final_position": 14,
         "final_points": 39,
         "outcome": "midtable"
@@ -15134,14 +15110,6 @@
     ],
     "DSC Arminia Bielefeld": [
       {
-        "matchday": 5,
-        "opponent": "SV Darmstadt 98",
-        "is_home": false,
-        "gf": 1,
-        "ga": 2,
-        "result": "L"
-      },
-      {
         "matchday": 6,
         "opponent": "1. FC Heidenheim 1846",
         "is_home": true,
@@ -15172,6 +15140,14 @@
         "gf": 0,
         "ga": 1,
         "result": "L"
+      },
+      {
+        "matchday": 10,
+        "opponent": "Eintracht Braunschweig",
+        "is_home": true,
+        "gf": 3,
+        "ga": 1,
+        "result": "W"
       }
     ],
     "Dynamo Dresden": [
@@ -15218,14 +15194,6 @@
     ],
     "Eintracht Braunschweig": [
       {
-        "matchday": 5,
-        "opponent": "Dynamo Dresden",
-        "is_home": true,
-        "gf": 2,
-        "ga": 2,
-        "result": "D"
-      },
-      {
         "matchday": 6,
         "opponent": "1. FC Kaiserslautern",
         "is_home": false,
@@ -15256,17 +15224,17 @@
         "gf": 2,
         "ga": 0,
         "result": "W"
+      },
+      {
+        "matchday": 10,
+        "opponent": "DSC Arminia Bielefeld",
+        "is_home": false,
+        "gf": 1,
+        "ga": 3,
+        "result": "L"
       }
     ],
     "Energie Cottbus": [
-      {
-        "matchday": 5,
-        "opponent": "Karlsruher SC",
-        "is_home": false,
-        "gf": 3,
-        "ga": 0,
-        "result": "W"
-      },
       {
         "matchday": 6,
         "opponent": "FC St. Pauli",
@@ -15298,6 +15266,14 @@
         "gf": 1,
         "ga": 1,
         "result": "D"
+      },
+      {
+        "matchday": 10,
+        "opponent": "VfL Bochum",
+        "is_home": true,
+        "gf": 1,
+        "ga": 2,
+        "result": "L"
       }
     ],
     "FC St. Pauli": [
@@ -15596,14 +15572,6 @@
     ],
     "VfL Bochum": [
       {
-        "matchday": 5,
-        "opponent": "SpVgg Greuther Fürth",
-        "is_home": true,
-        "gf": 1,
-        "ga": 1,
-        "result": "D"
-      },
-      {
         "matchday": 6,
         "opponent": "Hannover 96",
         "is_home": false,
@@ -15634,6 +15602,14 @@
         "gf": 1,
         "ga": 1,
         "result": "D"
+      },
+      {
+        "matchday": 10,
+        "opponent": "Energie Cottbus",
+        "is_home": false,
+        "gf": 2,
+        "ga": 1,
+        "result": "W"
       }
     ],
     "VfL Osnabrück": [
@@ -26471,133 +26447,133 @@
       }
     },
     "2026/27": {
-      "league_avg": 1.512,
+      "league_avg": 1.518,
       "teams": {
         "VfL Bochum": {
-          "games": 9,
-          "gf": 6,
-          "ga": 10,
-          "attack": 0.441,
-          "defense": 0.735
+          "games": 10,
+          "gf": 8,
+          "ga": 11,
+          "attack": 0.527,
+          "defense": 0.725
         },
         "Hertha BSC": {
           "games": 9,
           "gf": 20,
           "ga": 8,
-          "attack": 1.469,
-          "defense": 0.588
+          "attack": 1.464,
+          "defense": 0.586
         },
         "1. FC Heidenheim 1846": {
           "games": 9,
           "gf": 16,
           "ga": 16,
-          "attack": 1.176,
-          "defense": 1.176
+          "attack": 1.171,
+          "defense": 1.171
         },
         "VfL Osnabrück": {
           "games": 9,
           "gf": 14,
           "ga": 15,
-          "attack": 1.029,
-          "defense": 1.102
+          "attack": 1.025,
+          "defense": 1.098
         },
         "SV Darmstadt 98": {
           "games": 9,
           "gf": 8,
           "ga": 18,
-          "attack": 0.588,
-          "defense": 1.322
+          "attack": 0.586,
+          "defense": 1.317
         },
         "Holstein Kiel": {
           "games": 9,
           "gf": 10,
           "ga": 11,
-          "attack": 0.735,
-          "defense": 0.808
+          "attack": 0.732,
+          "defense": 0.805
         },
         "Karlsruher SC": {
           "games": 9,
           "gf": 11,
           "ga": 20,
-          "attack": 0.808,
-          "defense": 1.469
+          "attack": 0.805,
+          "defense": 1.464
         },
         "DSC Arminia Bielefeld": {
-          "games": 9,
-          "gf": 13,
-          "ga": 14,
-          "attack": 0.955,
-          "defense": 1.029
+          "games": 10,
+          "gf": 16,
+          "ga": 15,
+          "attack": 1.054,
+          "defense": 0.988
         },
         "1. FC Magdeburg": {
           "games": 9,
           "gf": 20,
           "ga": 12,
-          "attack": 1.469,
-          "defense": 0.882
+          "attack": 1.464,
+          "defense": 0.878
         },
         "Eintracht Braunschweig": {
-          "games": 9,
-          "gf": 15,
-          "ga": 15,
-          "attack": 1.102,
-          "defense": 1.102
+          "games": 10,
+          "gf": 16,
+          "ga": 18,
+          "attack": 1.054,
+          "defense": 1.186
         },
         "VfL Wolfsburg": {
           "games": 9,
           "gf": 23,
           "ga": 14,
-          "attack": 1.69,
-          "defense": 1.029
+          "attack": 1.683,
+          "defense": 1.025
         },
         "1. FC Kaiserslautern": {
           "games": 9,
           "gf": 9,
           "ga": 4,
-          "attack": 0.661,
-          "defense": 0.294
+          "attack": 0.659,
+          "defense": 0.293
         },
         "FC St. Pauli": {
           "games": 9,
           "gf": 11,
           "ga": 9,
-          "attack": 0.808,
-          "defense": 0.661
+          "attack": 0.805,
+          "defense": 0.659
         },
         "SpVgg Greuther Fürth": {
           "games": 9,
           "gf": 12,
           "ga": 16,
-          "attack": 0.882,
-          "defense": 1.176
+          "attack": 0.878,
+          "defense": 1.171
         },
         "1. FC Nürnberg": {
           "games": 9,
           "gf": 21,
           "ga": 12,
-          "attack": 1.543,
-          "defense": 0.882
+          "attack": 1.537,
+          "defense": 0.878
         },
         "Dynamo Dresden": {
           "games": 9,
           "gf": 11,
           "ga": 18,
-          "attack": 0.808,
-          "defense": 1.322
+          "attack": 0.805,
+          "defense": 1.317
         },
         "Energie Cottbus": {
-          "games": 9,
-          "gf": 17,
-          "ga": 18,
-          "attack": 1.249,
-          "defense": 1.322
+          "games": 10,
+          "gf": 18,
+          "ga": 20,
+          "attack": 1.186,
+          "defense": 1.317
         },
         "Hannover 96": {
           "games": 9,
           "gf": 8,
           "ga": 15,
-          "attack": 0.588,
-          "defense": 1.102
+          "attack": 0.586,
+          "defense": 1.098
         }
       }
     }
